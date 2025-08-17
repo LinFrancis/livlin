@@ -14,92 +14,72 @@
   <meta property="og:url" content="https://TU_USUARIO.github.io/" />
   <meta property="og:image" content="https://TU_DOMINIO_O_REPO/og-image.jpg" />
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Fonts (system) & Base CSS -->
   <style>
     :root{
-      --bg:#0b1020;       /* azul noche */
-      --card:#121933;
-      --text:#f5f7fb;
-      --muted:#b8c2d6;
-      --accent:#0ea5e9;   /* cian */
-      --accent-2:#22c55e; /* verde */
-      --border:#1f2a4a;
+      --bg:#0b1020; --card:#121933; --text:#f5f7fb; --muted:#b8c2d6;
+      --accent:#0ea5e9; --accent-2:#22c55e; --border:#1f2a4a;
       --shadow: 0 10px 30px rgba(2,8,23,.35);
-      --radius:18px;
-      --pad: clamp(16px, 2.5vw, 28px);
-      --max: 1080px;
+      --radius:18px; --pad: clamp(16px, 2.5vw, 28px); --max:1080px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text); background: radial-gradient(1200px 700px at 70% -10%, #13203f 0%, var(--bg) 60%);
-    }
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
+      color:var(--text); background: radial-gradient(1200px 700px at 70% -10%, #13203f 0%, var(--bg) 60%);}
     a{color:var(--accent); text-decoration:none}
     a:hover{opacity:.9}
     .container{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
-    .btn{
-      display:inline-block; padding:12px 18px; border-radius:14px; font-weight:600;
-      background:linear-gradient(135deg,var(--accent),#38bdf8); color:#031225; box-shadow:var(--shadow);
-    }
-    .btn.alt{
-      background:linear-gradient(135deg,var(--accent-2),#86efac); color:#032414;
-    }
-    /* Header */
+    .btn{display:inline-block; padding:12px 18px; border-radius:14px; font-weight:600;
+      background:linear-gradient(135deg,var(--accent),#38bdf8); color:#031225; box-shadow:var(--shadow)}
+    .btn.alt{background:linear-gradient(135deg,var(--accent-2),#86efac); color:#032414}
+
+    /* Header fijo + menú mobile cerrado por defecto */
     header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%) blur(8px);
-      background:rgba(11,16,32,.6); border-bottom:1px solid var(--border);
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(150%) blur(8px);
+      background:rgba(11,16,32,.75); border-bottom:1px solid var(--border);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between; height:64px;
-    }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
     .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
     .brand img{width:34px; height:34px; border-radius:10px; border:1px solid var(--border)}
-    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
-    nav a{color:var(--muted); font-weight:600}
-    nav a:hover{color:var(--text)}
-    /* Hero */
-    .hero{
-      padding: clamp(48px, 8vw, 96px) 0 32px;
+
+    /* menú */
+    .menu{display:flex; align-items:center; gap:18px}
+    .menu a{color:var(--muted); font-weight:600}
+    .menu a:hover{color:var(--text)}
+    .hamb{display:none; border:1px solid var(--border); background:#0f1733; color:#dbe7ff;
+      border-radius:12px; padding:8px 10px; font-weight:700}
+
+    @media (max-width: 900px){
+      .menu{display:none; position:absolute; top:64px; right:var(--pad); left:var(--pad);
+        flex-direction:column; gap:12px; padding:14px; border:1px solid var(--border);
+        background:#0e152e; border-radius:14px; box-shadow:var(--shadow)}
+      .menu.open{display:flex}
+      .hamb{display:inline-block}
     }
-    .hero-grid{
-      display:grid; grid-template-columns: 1.1fr .9fr; gap: clamp(18px, 3vw, 28px); align-items:center;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
-      border:1px solid var(--border); border-radius:var(--radius); padding: var(--pad); box-shadow:var(--shadow);
-    }
-    h1{
-      font-size: clamp(28px, 4.5vw, 48px); line-height:1.15; margin:0 0 12px; letter-spacing:.2px;
-      background: linear-gradient(180deg,#fff, #e2e8f0 80%, #a7b3c7); -webkit-background-clip:text; color:transparent;
-    }
+
+    /* Hero y secciones */
+    .hero{padding: clamp(48px, 8vw, 96px) 0 32px;}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap: clamp(18px, 3vw, 28px); align-items:center;}
+    .card{background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border:1px solid var(--border); border-radius:var(--radius); padding: var(--pad); box-shadow:var(--shadow)}
+    h1{font-size: clamp(28px, 4.5vw, 48px); line-height:1.15; margin:0 0 12px; letter-spacing:.2px;
+      background: linear-gradient(180deg,#fff, #e2e8f0 80%, #a7b3c7); -webkit-background-clip:text; color:transparent}
     .lead{color:var(--muted); font-size: clamp(16px, 2vw, 18px); margin: 10px 0 18px}
-    .badges{display:flex; gap:10px; flex-wrap:wrap; margin: 12px 0 18px}
-    .badge{
-      padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:#dbe7ff; background:#0f1733;
-      font-size:13px; font-weight:600;
-    }
-    .hero-visual{
-      aspect-ratio: 4/3; border-radius:var(--radius);
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 18px}
+    .badge{padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:#dbe7ff; background:#0f1733; font-size:13px; font-weight:600}
+    .hero-visual{aspect-ratio:4/3; border-radius:var(--radius);
       background:
         radial-gradient(400px 120px at 30% 20%, rgba(56,189,248,.25), transparent 60%),
         radial-gradient(500px 160px at 80% 30%, rgba(34,197,94,.18), transparent 60%),
         linear-gradient(180deg, #0e152e, #0b1020 60%);
-      border:1px solid var(--border); box-shadow:var(--shadow); position:relative; overflow:hidden;
-    }
-    .orbit{
-      position:absolute; inset:0; background:
-        conic-gradient(from 0deg, transparent 0 330deg, rgba(14,165,233,.6) 330deg 360deg);
-      mask: radial-gradient(circle at 50% 50%, transparent 36%, black 36.5%);
-      animation: spin 12s linear infinite;
-      opacity:.6;
-    }
+      border:1px solid var(--border); box-shadow:var(--shadow); position:relative; overflow:hidden}
+    .orbit{position:absolute; inset:0;
+      background:conic-gradient(from 0deg, transparent 0 330deg, rgba(14,165,233,.6) 330deg 360deg);
+      mask: radial-gradient(circle at 50% 50%, transparent 36%, black 36.5%); animation: spin 12s linear infinite; opacity:.6}
     @keyframes spin{to{transform: rotate(360deg)}}
 
-    /* Sections */
     section{padding: clamp(48px, 7vw, 84px) 0}
     h2{font-size: clamp(22px, 3.2vw, 32px); margin:0 0 20px}
     .grid{display:grid; gap:18px}
@@ -109,19 +89,15 @@
       .hero-grid{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
-      nav ul{display:none} /* simple mobile: podrías añadir un menú hamburguesa si lo necesitas */
     }
 
     .service h3{margin:0 0 6px}
     .muted{color:var(--muted)}
     .list{margin:10px 0 0; padding:0 0 0 18px}
-    .pill{
-      display:inline-block; padding:6px 10px; border-radius:999px; border:1px dashed var(--border); color:var(--muted); font-size:13px; margin:4px 6px 0 0
-    }
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px dashed var(--border); color:var(--muted); font-size:13px; margin:4px 6px 0 0}
     .flag{display:flex; gap:10px; align-items:center}
     .flag img{width:22px; height:22px; border-radius:4px; border:1px solid var(--border)}
 
-    /* Footer */
     footer{padding:24px 0 50px; color:var(--muted); border-top:1px solid var(--border)}
     .footgrid{display:grid; gap:18px; grid-template-columns: 1fr auto}
     @media (max-width: 700px){ .footgrid{grid-template-columns:1fr} }
@@ -129,7 +105,7 @@
     .credit a{color:#9ed1ff}
   </style>
 
-  <!-- JSON-LD (Organization + Website) -->
+  <!-- JSON-LD (Organization + Founder) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -137,7 +113,12 @@
     "name":"Livlin",
     "url":"https://www.livlin.cl",
     "logo":"https://TU_DOMINIO_O_REPO/logo.png",
-    "sameAs":["https://livling.org","https://github.com/TU_USUARIO"],
+    "founder":{
+      "@type":"Person",
+      "name":"Francis Mason",
+      "jobTitle":"CEO",
+      "sameAs":["https://github.com/TU_USUARIO"]
+    },
     "description":"Servicios profesionales para la regeneración: huertas urbanas, wicking beds, compostaje, cosecha de aguas lluvias, diseño agroecológico y facilitación comunitaria.",
     "areaServed":["CL","CN","DK"]
   }
@@ -150,14 +131,17 @@
         <img src="logo.png" alt="Livlin logo" onerror="this.style.visibility='hidden'">
         <span>Livlin</span>
       </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="#quienes">Quiénes somos</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#territorios">Territorios</a></li>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+
+      <!-- Botón hamburguesa (mobile) + menú cerrado por defecto -->
+      <button class="hamb" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#quienes">Quiénes somos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#territorios">Territorios</a>
+        <a href="#nombre">Por qué “Livlin”</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -172,20 +156,15 @@
             Diseñamos y construimos soluciones agroecológicas urbanas: <strong>wicking beds</strong>, huertas, <strong>compostaje y lombricultura</strong>, cosecha de aguas lluvias, invernaderos y puntos limpios con enfoque comunitario. Facilitamos talleres prácticos para que <em>más personas</em> lo repliquen en sus casas y barrios.
           </p>
           <div class="badges">
-            <span class="badge">Chile</span>
-            <span class="badge">China</span>
-            <span class="badge">Dinamarca</span>
-            <span class="badge">Huertas urbanas</span>
-            <span class="badge">Infraestructura agroecológica</span>
+            <span class="badge">Chile</span><span class="badge">China</span><span class="badge">Dinamarca</span>
+            <span class="badge">Huertas urbanas</span><span class="badge">Infraestructura agroecológica</span>
           </div>
           <div style="display:flex; gap:10px; flex-wrap:wrap">
             <a class="btn" href="#contacto">Pide una asesoría</a>
             <a class="btn alt" href="#servicios" aria-label="Ver servicios">Ver servicios</a>
           </div>
         </div>
-        <div class="hero-visual card" aria-hidden="true">
-          <div class="orbit"></div>
-        </div>
+        <div class="hero-visual card" aria-hidden="true"><div class="orbit"></div></div>
       </div>
     </section>
 
@@ -194,12 +173,8 @@
       <div class="container grid grid-2">
         <div class="card">
           <h2>Quiénes somos</h2>
-          <p>
-            <strong>Livlin</strong> es la línea profesional de <em>servicios para la regeneración</em>. Acompañamos a personas, organizaciones y municipios a diseñar, implementar y mantener soluciones de agricultura urbana y manejo de agua, con foco en aprendizaje práctico y participación comunitaria.
-          </p>
-          <p class="muted">
-            <em>Livling.org</em> es nuestro lado social y de voluntariado, apoyando iniciativas comunitarias que no pueden costear consultorías. Ambas líneas comparten el mismo corazón: cuidar de las personas, de la tierra y multiplicar los aprendizajes.
-          </p>
+          <p><strong>Livlin</strong> es la línea profesional de <em>servicios para la regeneración</em>. Acompañamos a personas, organizaciones y municipios a diseñar, implementar y mantener soluciones de agricultura urbana y manejo de agua, con foco en aprendizaje práctico y participación comunitaria.</p>
+          <p class="muted"><em>Livling.org</em> es nuestro lado social y de voluntariado, apoyando iniciativas comunitarias que no pueden costear consultorías. Compartimos un mismo corazón: cuidar de las personas, de la tierra y multiplicar los aprendizajes.</p>
         </div>
         <div class="card">
           <h3>Nuestro enfoque</h3>
@@ -210,11 +185,31 @@
             <li>Medición simple de resultados (participantes, módulos construidos, litros de agua gestionada, residuos orgánicos recuperados).</li>
           </ul>
           <div style="margin-top:10px">
-            <span class="pill">Wicking beds</span>
-            <span class="pill">Compostaje/Lombricultura</span>
-            <span class="pill">Cosecha de aguas lluvias</span>
-            <span class="pill">Invernaderos</span>
-            <span class="pill">Punto limpio</span>
+            <span class="pill">Wicking beds</span><span class="pill">Compostaje/Lombricultura</span>
+            <span class="pill">Cosecha de aguas lluvias</span><span class="pill">Invernaderos</span><span class="pill">Punto limpio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2>Sobre mí</h2>
+          <p><strong>Francis Mason</strong> — Socio Fundador y CEO. Sociólogo y desarrollador en Python, con experiencia en formación intercultural, diseño agroecológico y facilitación comunitaria. He trabajado entre Chile y China impulsando iniciativas de agricultura urbana, datos abiertos y herramientas digitales para la resiliencia climática.</p>
+          <p class="muted">Creo que los desafíos del cambio climático son oportunidades para aprender de la naturaleza y encender esperanza en el presente y en las generaciones futuras.</p>
+        </div>
+        <div class="card">
+          <h3>Trayectoria breve</h3>
+          <ul class="list">
+            <li>MA en Sociología (UAH, Chile) y Diplomado en Estudios Chinos (U. de Chile).</li>
+            <li>Formación en diseño de sistemas agroecológicos y compostaje.</li>
+            <li>Métricas y datos para resiliencia climática (experiencia en CR2/RtR).</li>
+            <li>Educación práctica: talleres para 30+ comunidades y colegios.</li>
+          </ul>
+          <div style="margin-top:10px">
+            <a class="btn" href="#contacto">Conversemos</a>
           </div>
         </div>
       </div>
@@ -228,56 +223,32 @@
           <div class="card service">
             <h3>Asesoría técnica</h3>
             <p class="muted">Diagnóstico del lugar, diseño funcional y plan de implementación. Ideal para hogares, colegios y centros comunitarios.</p>
-            <ul class="list">
-              <li>Plan maestro de huerta e infraestructura.</li>
-              <li>Especificaciones y listas de materiales.</li>
-              <li>Acompañamiento de montaje y puesta en marcha.</li>
-            </ul>
+            <ul class="list"><li>Plan maestro de huerta e infraestructura.</li><li>Especificaciones y listas de materiales.</li><li>Acompañamiento de montaje y puesta en marcha.</li></ul>
           </div>
           <div class="card service">
             <h3>Construcción de wicking beds</h3>
             <p class="muted">Camas elevadas con manejo resiliente del agua. Menos riego, más estabilidad hídrica.</p>
-            <ul class="list">
-              <li>Diseño modular y desarmable.</li>
-              <li>Capas y materiales óptimos (forro, drenaje, sustrato).</li>
-              <li>Manual de uso y mantenimiento.</li>
-            </ul>
+            <ul class="list"><li>Diseño modular y desarmable.</li><li>Capas y materiales óptimos.</li><li>Manual de uso y mantenimiento.</li></ul>
           </div>
           <div class="card service">
             <h3>Compostaje y lombricultura</h3>
             <p class="muted">Sistemas domiciliarios y comunitarios, incluyendo “hoteles de lombrices”.</p>
-            <ul class="list">
-              <li>Dimensionamiento y contenedores.</li>
-              <li>Manejo de humedad/temperatura.</li>
-              <li>Control de plagas y cosecha de humus.</li>
-            </ul>
+            <ul class="list"><li>Dimensionamiento y contenedores.</li><li>Manejo de humedad/temperatura.</li><li>Control de plagas y cosecha de humus.</li></ul>
           </div>
           <div class="card service">
             <h3>Cosecha de aguas lluvias</h3>
             <p class="muted">Desde canaletas y pre-filtros hasta almacenamiento seguro y riego.</p>
-            <ul class="list">
-              <li>Captación y pre-filtrado.</li>
-              <li>Calculo de volúmenes (techumbre/pluviosidad).</li>
-              <li>Integración con huertas e invernaderos.</li>
-            </ul>
+            <ul class="list"><li>Captación y pre-filtrado.</li><li>Cálculo de volúmenes.</li><li>Integración con huertas e invernaderos.</li></ul>
           </div>
           <div class="card service">
             <h3>Invernaderos</h3>
             <p class="muted">Jornadas de carpintería para construir un invernadero eficiente y duradero.</p>
-            <ul class="list">
-              <li>Estructuras modulares y anclajes.</li>
-              <li>Ventilación e iluminación natural.</li>
-              <li>Cubiertas y sombreados.</li>
-            </ul>
+            <ul class="list"><li>Estructuras modulares y anclajes.</li><li>Ventilación e iluminación natural.</li><li>Cubiertas y sombreados.</li></ul>
           </div>
           <div class="card service">
             <h3>Puntos limpios con enfoque de género</h3>
             <p class="muted">Diseño y construcción con participación y seguridad de todas las personas.</p>
-            <ul class="list">
-              <li>Separación de residuos y flujos.</li>
-              <li>Señalética clara y educativa.</li>
-              <li>Protocolos de uso y mantención.</li>
-            </ul>
+            <ul class="list"><li>Separación de residuos y flujos.</li><li>Señalética clara y educativa.</li><li>Protocolos de uso y mantención.</li></ul>
           </div>
         </div>
       </div>
@@ -304,40 +275,33 @@
       </div>
     </section>
 
-    <!-- PORTAFOLIO (placeholder simple) -->
-    <section id="portafolio">
-      <div class="container">
-        <h2>Portafolio</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Wicking beds · Colegio</h3>
-            <p class="muted">Instalación de 6 módulos con riego por capilaridad y guía docente.</p>
-          </div>
-          <div class="card">
-            <h3>Compostaje · Condominio</h3>
-            <p class="muted">Sistema comunitario con capacitación a residentes y calendario de turnos.</p>
-          </div>
-          <div class="card">
-            <h3>Punto limpio · Centro comunitario</h3>
-            <p class="muted">Infraestructura de separación con señalética y protocolo de uso.</p>
-          </div>
+    <!-- POR QUÉ “LIVLIN” -->
+    <section id="nombre">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2>Por qué “Livlin”</h2>
+          <p><strong>Liv</strong> significa <em>vida</em> en danés; evoca lo cotidiano bien diseñado y la cultura de soluciones urbanas eficientes. <strong>Lin</strong> resuena con <em>林</em> (lín, “bosque”) en chino, símbolo de regeneración y diversidad. Además, aparece el carácter <em>利</em> (lì), presente en el nombre de Chile en chino (智<strong>利</strong>) y asociado a “beneficio/valor”.</p>
+          <p class="muted">Juntas, estas referencias representan nuestro puente entre <strong>Chile</strong>, <strong>China</strong> y <strong>Dinamarca</strong>: vida que quiere volverse bosque, con diseño práctico y beneficios tangibles para las personas y los territorios.</p>
+        </div>
+        <div class="card">
+          <h3>Qué expresa el nombre</h3>
+          <ul class="list">
+            <li><strong>Vida</strong> cotidiana que se regenera (liv).</li>
+            <li><strong>Bosque</strong> como sistema vivo y diverso (林).</li>
+            <li><strong>Valor</strong> social y ambiental (利) conectado con Chile.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIOS (placeholder simple) -->
-    <section id="testimonios">
+    <!-- PORTAFOLIO -->
+    <section id="portafolio">
       <div class="container">
-        <h2>Testimonios</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <p>“Aprendimos haciendo y ya replicamos dos camas de cultivo en casas del barrio.”</p>
-            <p class="muted">— Comunidad Vecinal TU_BARRIO</p>
-          </div>
-          <div class="card">
-            <p>“El sistema de lombrices redujo notablemente nuestros residuos orgánicos.”</p>
-            <p class="muted">— Administrador de Condominio</p>
-          </div>
+        <h2>Portafolio</h2>
+        <div class="grid grid-3">
+          <div class="card"><h3>Wicking beds · Colegio</h3><p class="muted">Instalación de 6 módulos con riego por capilaridad y guía docente.</p></div>
+          <div class="card"><h3>Compostaje · Condominio</h3><p class="muted">Sistema comunitario con capacitación a residentes y calendario de turnos.</p></div>
+          <div class="card"><h3>Punto limpio · Centro comunitario</h3><p class="muted">Infraestructura de separación con señalética y protocolo de uso.</p></div>
         </div>
       </div>
     </section>
@@ -350,8 +314,7 @@
           <p>Cuéntanos tu idea o problema y te proponemos una solución concreta, con presupuesto y cronograma.</p>
           <p><strong>Email:</strong> <a href="mailto:TU_EMAIL">TU_EMAIL</a><br/>
              <strong>WhatsApp:</strong> <a href="https://wa.me/TU_NUMERO" target="_blank" rel="noopener">+56 TU_NUMERO</a><br/>
-             <strong>GitHub:</strong> <a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">@TU_USUARIO</a>
-          </p>
+             <strong>GitHub:</strong> <a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">@TU_USUARIO</a></p>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
             <a class="btn" href="mailto:TU_EMAIL?subject=Quiero%20una%20asesor%C3%ADa%20Livlin">Escríbenos</a>
             <a class="btn alt" href="#servicios">Catálogo de servicios</a>
@@ -360,11 +323,7 @@
         <div class="card">
           <h3>Agenda una visita técnica</h3>
           <p class="muted">Levantamos medidas, evaluamos agua/sol y definimos el plan. Si avanzas con el proyecto, la visita se descuenta del total.</p>
-          <ul class="list">
-            <li>Visita en RM: desde $ TU_VALOR</li>
-            <li>Otras regiones: a convenir</li>
-            <li>Informe y lista de materiales</li>
-          </ul>
+          <ul class="list"><li>Visita en RM: desde $ TU_VALOR</li><li>Otras regiones: a convenir</li><li>Informe y lista de materiales</li></ul>
         </div>
       </div>
     </section>
@@ -389,6 +348,21 @@
   <script>
     // Año dinámico
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Menú mobile: cerrado por defecto; abre/cierra con la hamburguesa.
+    const hamb = document.querySelector('.hamb');
+    const menu = document.getElementById('menu');
+    hamb.addEventListener('click', ()=>{
+      const open = menu.classList.toggle('open');
+      hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Cierra el menú al navegar a una sección (mejor UX)
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> {
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        hamb.setAttribute('aria-expanded','false');
+      }
+    }));
   </script>
 </body>
 </html>
