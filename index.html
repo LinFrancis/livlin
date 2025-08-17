@@ -1,52 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livlin - Servicios Profesionales para la Regeneración</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livlin — Servicios profesionales para la regeneración</title>
+  <meta name="description" content="Livlin — Servicios profesionales para la regeneración + Plataforma de estudio.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>林</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Servicios Profesionales para la Regeneración</h1>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="inicio">
-            <h2>Transformando el futuro con soluciones regenerativas</h2>
-            <p>En Livlin.cl nos especializamos en proyectos que restauran ecosistemas y comunidades.</p>
-            <img src="img/naturaleza.jpg" alt="Regeneración ecológica" class="hero-image">
-        </section>
-
-        <section id="servicios-destacados">
-            <h3>Nuestros enfoques</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>Restauración Ambiental</h4>
-                    <p>Recuperación de suelos y biodiversidad.</p>
-                </div>
-                <div class="card">
-                    <h4>Economía Circular</h4>
-                    <p>Soluciones sostenibles para empresas.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contacto">
-        <div class="container">
-            <h3>Contacto</h3>
-            <p>Email: <a href="mailto:info@livlin.cl">info@livlin.cl</a></p>
-            <p>© 2023 Livlin.cl - Todos los derechos reservados</p>
-        </div>
-    </footer>
+  <header class="site-header">
+    <div class="brand">Livlin</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#key">Key&nbsp;Messages</a>
+      <a href="#dict">Dictionary</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="section hero">
+      <h1>Servicios profesionales para la regeneración <span class="muted">+ Plataforma de estudio</span></h1>
+      <p class="lead">Del territorio al mundo: proyectos regenerativos con impacto medible.</p>
+      <div class="cta-row">
+        <a class="btn" href="#services">Ver servicios</a>
+        <a class="btn ghost" href="#projects">Ver proyectos</a>
+      </div>
+    </section>
+    <section id="key" class="section">
+      <h2>Key Messages</h2>
+      <div class="toggles">
+        <label><input type="checkbox" id="showES" checked> ES</label>
+        <label><input type="checkbox" id="showEN" checked> EN</label>
+        <label><input type="checkbox" id="showZH" checked> 中</label>
+        <label><input type="checkbox" id="showPY"> Pinyin</label>
+      </div>
+      <div id="kmList" class="card-list"></div>
+    </section>
+    <section id="dict" class="section">
+      <h2>Dictionary</h2>
+      <div class="filters">
+        <input id="q" type="search" placeholder="Buscar / Search…" />
+        <label class="inline"><input type="checkbox" id="pyToggle"> Mostrar pinyin</label>
+      </div>
+      <div id="dictList" class="grid"></div>
+      <p id="dictCount" class="muted small"></p>
+    </section>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <p>Alianzas y plataforma de estudio (demo). Edita este texto en <code>index.html</code> cuando quieras.</p>
+    </section>
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <ul>
+        <li>Agua — wicking beds, captación y riego eficiente.</li>
+        <li>Suelo — compostaje, lombricultura, biofertilizantes.</li>
+        <li>Cultivo — diseño de bancales y huertas urbanas.</li>
+        <li>Comunidad — talleres y programas escolares.</li>
+        <li>Asesoría — teorías de cambio y estructuras de trabajo.</li>
+      </ul>
+    </section>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p><strong>Livlin</strong> es un estudio y plataforma con enfoque de negocios y propósito regenerativo, conectando lo local y lo global.</p>
+    </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>La forma más simple que siempre funciona en Pages: envíame un correo.</p>
+      <p><a class="btn" href="mailto:francis.mason@gmail.com?subject=Contacto%20Livlin">Escríbeme</a></p>
+      <p class="muted small">Más adelante puedes agregar un formulario con Formspree u otro servicio.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>© Livlin 2025</span>
+  </footer>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
