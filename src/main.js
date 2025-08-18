@@ -1,4 +1,34 @@
-import './styles.css'; import {dictionaries as D} from './i18n.js'; const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
-const langSel=$('#lang'); const cur=localStorage.getItem('lang')||'es'; if(langSel) langSel.value=cur;
-function t(lang){const d=D[lang]||D.es; $$('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];}); document.documentElement.lang=lang; localStorage.setItem('lang',lang);}
-langSel&&langSel.addEventListener('change',e=>t(e.target.value)); t(cur);
+import { dictionaries } from './i18n.js';
+
+let showPinyin = localStorage.getItem('pinyin') === 'true';
+
+function stripPinyin(html) {
+  return html.replace(/<span class=['"]pinyin['"]>.*?<\/span>/g, '');
+}
+
+function applyLang(lang) {
+  const dict = dictionaries[lang] || dictionaries.es;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    let val = dict[key] || '';
+    if (lang === 'zh' && !showPinyin) val = stripPinyin(val);
+    el.innerHTML = val;
+  });
+  document.documentElement.lang = (lang === 'zh' ? 'zh-Hans' : lang);
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('pinyin', showPinyin);
+}
+
+document.getElementById('lang')?.addEventListener('change', e => {
+  applyLang(e.target.value);
+});
+
+document.getElementById('pinyinToggle')?.addEventListener('click', () => {
+  showPinyin = !showPinyin;
+  applyLang(document.getElementById('lang').value);
+});
+
+// init
+const savedLang = localStorage.getItem('lang') || 'es';
+applyLang(savedLang);
+document.getElementById('lang').value = savedLang;
