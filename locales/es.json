@@ -25,18 +25,18 @@
     "hire_facilitation": "Contrata estos servicios"
   },
   "home": {
-    "title": "Servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza",
+    "title": "Servicios para la regeneración, la eco-alfabetización",
     "lead": "Acompañamos a personas, comunidades y empresas a reconectar sanamente con la naturaleza, visualizar nuevos horizontes y generar cambios transformadores.",
-    "what_title": "¿Qué es Livlin?",
-    "what_p1": "Livlin es una empresa de servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza.",
-    "what_p2": "Ante la triple crisis planetaria —cambio climático, contaminación y pérdida de biodiversidad— trabajamos con un enfoque colaborativo y pedagógico, integrando ciencia, saberes locales y prácticas regenerativas para impulsar transformaciones reales.",
-    "card1_title": "Agroecología y Soluciones Basadas en la Naturaleza",
-    "card1_text": "Diseño e implementación de prácticas adaptadas a entornos urbanos, periurbanos y rurales.",
-    "card1_cta": "Ver servicios"
+    "what_title": "¿Qué es mueve?",
+    "what_p2": "Livlin es una empresa de servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza.",
+    "what_p1": "Ante la triple crisis planetaria —cambio climático, contaminación y pérdida de biodiversidad— trabajamos con un enfoque colaborativo y pedagógico, integrando ciencia, saberes locales y prácticas regenerativas para impulsar transformaciones reales.",
+    "card1_title": "Servicios y Soluciones Basadas en la Naturaleza",
+    "card1_text": "Explora los Servicios Profesionales de Livlin y descubre cómo podemos ayudarte a crear soluciones sostenibles y efectivas. Ofrecemos experiencia en Agroecología y Soluciones basadas en la Naturaleza, utilizando la ciencia y la tecnología para desarrollar proyectos que se adapten a tu entorno, ya sea urbano o rural. También te acompañamos con Investigación y Gestión del Conocimiento, Soluciones Digitales innovadoras y Facilitación y Formación para guiar a tu equipo en procesos de aprendizaje y cambio. Te invitamos a explorar todos nuestros servicios. Si te interesa alguno, contáctanos.",
+    "card1_cta": "Ir a servicios"
   },
   "services": {
     "title": "Servicios Profesionales Livlin",
-    "lead": "Cuatro líneas estratégicas para integrar ciencia, práctica y tecnología.",
+    "lead": "Cuatro grupos de servicios para integrar ciencia, práctica y regeneración.",
     "s1": {
       "title": "Agroecología y Soluciones Basadas en la Naturaleza",
       "desc": "Diseño e implementación de prácticas agroecológicas adaptadas a distintas realidades.",
