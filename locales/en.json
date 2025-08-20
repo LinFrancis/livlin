@@ -1,0 +1,86 @@
+{
+  "titles": {
+    "home": "Livlin · Regeneration Services",
+    "services": "Livlin · Services",
+    "about": "Livlin · About",
+    "contact": "Livlin · Contact"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copy": "© 2025 Livlin. All rights reserved."
+  },
+  "lang": {
+    "choose": "Idioma / Language / 语言"
+  },
+  "ui": {
+    "read_more": "Read more",
+    "hire_nbs": "Hire these services",
+    "hire_research": "Hire these services",
+    "hire_digital": "Hire these services",
+    "hire_facilitation": "Hire these services"
+  },
+  "home": {
+    "title": "Services for regeneration, eco-literacy, and nature-based solutions",
+    "lead": "We help people, communities, and organizations reconnect with nature, imagine new horizons, and drive transformative change.",
+    "what_title": "What is Livlin?",
+    "what_p1": "Livlin offers services for regeneration, eco-literacy, and nature-based solutions.",
+    "what_p2": "Facing the planetary triple crisis—climate change, pollution, and biodiversity loss—we work with a collaborative and educational approach, bringing together science, local knowledge, and regenerative practices to deliver real change.",
+    "card1_title": "Agroecology & Nature-based Solutions",
+    "card1_text": "Design and implementation of practices adapted to urban, peri-urban, and rural contexts.",
+    "card1_cta": "See services"
+  },
+  "services": {
+    "title": "Livlin Professional Services",
+    "lead": "Four strategic lines integrating science, practice, and technology.",
+    "s1": {
+      "title": "Agroecology & Nature-based Solutions",
+      "desc": "Agroecological practices adapted to different realities.",
+      "li1": "Urban and community gardens (yards, rooftops, schools, shared spaces).",
+      "li2": "Wicking beds (self-watering planters) for water efficiency and stable production.",
+      "li3": "Composting & vermiculture: organic waste systems and training.",
+      "li4": "Replication kits and manuals to scale solutions."
+    },
+    "s2": {
+      "title": "Research & Knowledge Management",
+      "desc": "Scientific rigor and participatory methods for sound decisions.",
+      "li1": "Participatory Action Research with communities.",
+      "li2": "Mixed methods: interviews, surveys, mapping, network analysis, statistics.",
+      "li3": "Social and environmental impact evaluation in people and territories."
+    },
+    "s3": {
+      "title": "Digital Solutions",
+      "desc": "Open and sustainable tech for management, learning, and decision-making.",
+      "li1": "Information management and planning tools (web platforms).",
+      "li2": "Territorial, social, or environmental data explorers.",
+      "li3": "Monitoring dashboards with exportable visuals.",
+      "li4": "Interactive educational apps (games, simulators, learning apps)."
+    },
+    "s4": {
+      "title": "Facilitation & Training",
+      "desc": "Organizational support and transformative learning.",
+      "li1": "Theories of Change with strategic focus and MEL.",
+      "li2": "Facilitation of participatory processes (workshops, visual methods).",
+      "li3": "Indicator systems aligned with national and global frameworks.",
+      "li4": "Hands-on workshops: gardening, composting, irrigation, vermiculture, recycling, biodiversity.",
+      "li5": "Training on simple technologies and open digital tools.",
+      "li6": "Individual and group mentoring for regenerative projects."
+    }
+  },
+  "about": {
+    "title": "About us",
+    "lead": "We connect science, technology, and agroecological practice to transform places.",
+    "subtitle": "Sociologist | Permaculture Designer",
+    "bio_html": "\n    <div class='bio'>\n      <p>I am a Sociologist and Data Officer at the technical secretariat of the <a href='https://unfccc.int/race-to-resilience-campaign' target='_blank'>Global Race to Resilience Campaign</a>, where I combine applied social research, data analysis, and digital app development to support global climate action.</p>\n      <p>In parallel, I am part of the <a href='https://www.instagram.com/aucca.ecopedagogico/' target='_blank'>AUCCA Ecopedagogical Center</a> and a coordinator in the <a href='https://www.instagram.com/mov.agroecologia.urbana/' target='_blank'>Urban Agroecology Movement (MAU, Chile)</a>, strengthening community regenerative practices.</p>\n      <p>As the founder of <strong>Livlin</strong>, I offer professional services for regeneration, eco-literacy, and nature-based approaches, combining agroecology consulting, organic waste and compost systems, resilient growing with self-watering planters and capillary irrigation, as well as web app development and facilitation using Theory of Change.</p>\n      <p>My background includes an MA and BA in Sociology (UAH), a Diploma in Chinese Studies (U. of Chile), and a Permaculture Design Certificate (El Manzano, Chile).</p>\n      <p>I believe global climate challenges are chances to learn from nature and plant hope. My purpose is to contribute to the global pulse of regeneration by connecting science, technology, and agroecological practice to transform our places and organizations.</p>\n    </div>\n    "
+  },
+  "contact": {
+    "title": "Contact us",
+    "lead": "Let’s build agreements and collaborate.",
+    "write": "Write to us",
+    "note": "Thanks for your interest. We’ll get back to you soon."
+  }
+}

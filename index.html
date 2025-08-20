@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="titles.home">Livlin</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="icon" href="/images/logo_livlin.png">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <img src="/images/logo_livlin.png" alt="Livlin logo" />
+        <div class="title">Livlin</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Quiénes somos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="home.title">Servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza</h1>
+    <p data-i18n="home.lead">
+      Acompañamos a personas, comunidades y empresas a reconectar sanamente con la naturaleza, visualizar nuevos horizontes y generar cambios transformadores.
+    </p>
+  </div>
+</section>
+
+<section class="container">
+  <div class="grid grid-2">
+    <div>
+      <h2 data-i18n="home.what_title">¿Qué es Livlin?</h2>
+      <p data-i18n="home.what_p1">
+        Livlin es una empresa de servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza.
+      </p>
+      <p data-i18n="home.what_p2">
+        Ante la triple crisis planetaria —cambio climático, contaminación y pérdida de biodiversidad— trabajamos con un enfoque colaborativo y pedagógico, integrando ciencia, saberes locales y prácticas regenerativas para impulsar transformaciones reales.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon"><img src="/images/soluciones_basadas_naturaleza.png" alt="Agroecología y NbS"></div>
+      <h3 data-i18n="home.card1_title">Agroecología y Soluciones Basadas en la Naturaleza</h3>
+      <p data-i18n="home.card1_text">Diseño e implementación de prácticas adaptadas a entornos urbanos, periurbanos y rurales.</p>
+      <a class="cta" href="services.html" data-i18n="home.card1_cta">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer.copy">© 2025 Livlin. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="float-lang">
+    <button class="lang-btn" data-role="toggle" data-i18n="lang.choose">Idioma / Language / 语言</button>
+    <div class="lang-menu">
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+  </div>
+
+  <script type="module">
+    import { loadLang, setupLangSwitcher, setActiveNav, observeFadeIns } from '/src/i18n.js';
+    await loadLang(localStorage.getItem('lang') || 'es');
+    setupLangSwitcher();
+    setActiveNav();
+    observeFadeIns();
+  </script>
+</body>
+</html>

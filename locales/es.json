@@ -1,0 +1,86 @@
+{
+  "titles": {
+    "home": "Livlin · Servicios para la regeneración",
+    "services": "Livlin · Servicios",
+    "about": "Livlin · Quiénes somos",
+    "contact": "Livlin · Contacto"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Quiénes somos",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copy": "© 2025 Livlin. Todos los derechos reservados."
+  },
+  "lang": {
+    "choose": "Idioma / Language / 语言"
+  },
+  "ui": {
+    "read_more": "Leer más",
+    "hire_nbs": "Contrata estos servicios",
+    "hire_research": "Contrata estos servicios",
+    "hire_digital": "Contrata estos servicios",
+    "hire_facilitation": "Contrata estos servicios"
+  },
+  "home": {
+    "title": "Servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza",
+    "lead": "Acompañamos a personas, comunidades y empresas a reconectar sanamente con la naturaleza, visualizar nuevos horizontes y generar cambios transformadores.",
+    "what_title": "¿Qué es Livlin?",
+    "what_p1": "Livlin es una empresa de servicios para la regeneración, la eco-alfabetización y las soluciones basadas en la naturaleza.",
+    "what_p2": "Ante la triple crisis planetaria —cambio climático, contaminación y pérdida de biodiversidad— trabajamos con un enfoque colaborativo y pedagógico, integrando ciencia, saberes locales y prácticas regenerativas para impulsar transformaciones reales.",
+    "card1_title": "Agroecología y Soluciones Basadas en la Naturaleza",
+    "card1_text": "Diseño e implementación de prácticas adaptadas a entornos urbanos, periurbanos y rurales.",
+    "card1_cta": "Ver servicios"
+  },
+  "services": {
+    "title": "Servicios Profesionales Livlin",
+    "lead": "Cuatro líneas estratégicas para integrar ciencia, práctica y tecnología.",
+    "s1": {
+      "title": "Agroecología y Soluciones Basadas en la Naturaleza",
+      "desc": "Diseño e implementación de prácticas agroecológicas adaptadas a distintas realidades.",
+      "li1": "Huertas urbanas y comunitarias (patios, techos, escuelas, espacios colectivos).",
+      "li2": "Wicking beds (macetas auto-regantes) para eficiencia hídrica y producción estable.",
+      "li3": "Compostaje y lombricultura: sistemas de manejo de residuos orgánicos y capacitación.",
+      "li4": "Kits y manuales de réplica para multiplicar soluciones."
+    },
+    "s2": {
+      "title": "Investigación y Gestión del Conocimiento",
+      "desc": "Rigor científico y metodologías participativas para decisiones sólidas.",
+      "li1": "Investigación-Acción participativa con comunidades.",
+      "li2": "Metodologías mixtas: entrevistas, encuestas, mapeos, análisis de redes, estadística.",
+      "li3": "Evaluación de impacto social y ambiental en poblaciones y territorios."
+    },
+    "s3": {
+      "title": "Soluciones Digitales",
+      "desc": "Tecnología abierta y sostenible para gestión, aprendizaje y decisión.",
+      "li1": "Herramientas de gestión de información y planificación (plataformas web).",
+      "li2": "Exploradores de datos territoriales, sociales o ambientales.",
+      "li3": "Tableros de monitoreo de indicadores con visualizaciones exportables.",
+      "li4": "Aplicaciones educativas interactivas (juegos, simuladores, apps)."
+    },
+    "s4": {
+      "title": "Facilitación y Formación",
+      "desc": "Acompañamiento organizacional y aprendizaje transformador.",
+      "li1": "Teorías de Cambio con enfoque estratégico y MEL.",
+      "li2": "Facilitación de procesos participativos (talleres, metodologías visuales).",
+      "li3": "Sistemas de indicadores y métricas alineados a marcos nacionales y globales.",
+      "li4": "Talleres prácticos: huerta, compostaje, riego, lombricultura, reciclaje, biodiversidad.",
+      "li5": "Capacitaciones en tecnologías simples y herramientas digitales abiertas.",
+      "li6": "Mentorías individuales y grupales para proyectos regenerativos."
+    }
+  },
+  "about": {
+    "title": "Quiénes somos",
+    "lead": "Conectamos ciencia, tecnología y prácticas agroecológicas para transformar territorios.",
+    "subtitle": "Sociólogo | Diseñador en Permacultura",
+    "bio_html": "\n    <div class='bio'>\n      <p>Actualmente soy Sociólogo y Data Officer en la secretaría técnica de la <a href='https://unfccc.int/race-to-resilience-campaign' target='_blank'>Campaña Global Race to Resilience</a>, donde integro investigación social aplicada, análisis de datos y desarrollo de aplicaciones digitales para apoyar la acción climática global.</p>\n      <p>En paralelo, soy miembro del <a href='https://www.instagram.com/aucca.ecopedagogico/' target='_blank'>Centro Ecopedagógico AUCCA</a> y coordinador en el <a href='https://www.instagram.com/mov.agroecologia.urbana/' target='_blank'>Movimiento de Agroecología Urbana (MAU, Chile)</a> fortaleciendo prácticas regenerativas comunitarias.</p>\n      <p>Como fundador de <strong>Livlin</strong>, ofrezco servicios profesionales para la regeneración, eco-alfabetización y soluciones basadas en la naturaleza, combinando consultoría en agroecología, manejo de residuos orgánicos y compostaje, cultivos resilientes en macetas autoregantes y sistemas capilares de riego, así como desarrollo de aplicaciones web y facilitación de procesos organizacionales con Teoría de Cambio.</p>\n      <p>Mi formación incluye un Magíster y Licenciatura en Sociología (UAH), un Diplomado en Estudios Chinos (U. de Chile) y certificación en Diseño en Permacultura (Eco-escuela El Manzano, Chile).</p>\n      <p>Creo que los desafíos climáticos globales son oportunidades para aprender de la naturaleza y sembrar esperanza. Mi propósito es aportar al pulso global de la regeneración, conectando ciencia, tecnología y prácticas agroecológicas para transformar nuestros territorios y organizaciones.</p>\n    </div>\n    "
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "lead": "Formemos acuerdos y colaboremos.",
+    "write": "Escríbenos",
+    "note": "Gracias por tu interés. Te responderemos pronto."
+  }
+}
