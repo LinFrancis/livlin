@@ -36,16 +36,16 @@
   },
   "services": {
     "title": "Servicios Profesionales Livlin",
-    "lead": "Cuatro grupos de servicios para integrar ciencia, práctica y regeneración.",
+    "lead": "Cuatro grupos de servicios para integrar ciencia, práctica y regeneración con soluciones basadas en la naturaleza",
     "s1": {
-      "title": "Agroecología y Soluciones Basadas en la Naturaleza",
-      "desc": "Diseño e implementación de prácticas agroecológicas adaptadas a distintas realidades.",
+      "title": "Agroecología",
+      "desc": "Asistencia técnica para el diseño e implementación de prácticas agroecológicas adaptadas a distintas realidades.",
       "li1": "Huertas urbanas y comunitarias (patios, techos, escuelas, espacios colectivos).",
       "li2": "Wicking beds (macetas auto-regantes) para eficiencia hídrica y producción estable.",
       "li3": "Compostaje y lombricultura: sistemas de manejo de residuos orgánicos y capacitación.",
       "li4": "Kits y manuales de réplica para multiplicar soluciones."
     },
-    "s2": {
+    "s4": {
       "title": "Investigación y Gestión del Conocimiento",
       "desc": "Rigor científico y metodologías participativas para decisiones sólidas.",
       "li1": "Investigación-Acción participativa con comunidades.",
@@ -53,15 +53,15 @@
       "li3": "Evaluación de impacto social y ambiental en poblaciones y territorios."
     },
     "s3": {
-      "title": "Soluciones Digitales",
+      "title": "Soluciones Digitales Personalizadas",
       "desc": "Tecnología abierta y sostenible para gestión, aprendizaje y decisión.",
       "li1": "Herramientas de gestión de información y planificación (plataformas web).",
       "li2": "Exploradores de datos territoriales, sociales o ambientales.",
       "li3": "Tableros de monitoreo de indicadores con visualizaciones exportables.",
       "li4": "Aplicaciones educativas interactivas (juegos, simuladores, apps)."
     },
-    "s4": {
-      "title": "Facilitación y Formación",
+    "s2": {
+      "title": "Facilitación y Formación para el cambio",
       "desc": "Acompañamiento organizacional y aprendizaje transformador.",
       "li1": "Teorías de Cambio con enfoque estratégico y MEL.",
       "li2": "Facilitación de procesos participativos (talleres, metodologías visuales).",
