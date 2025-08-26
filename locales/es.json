@@ -37,7 +37,7 @@
     "title": "Servicios Profesionales Livlin",
     "lead": "Ofrecemos cuatro grupos de servicios que integran ciencia, tecnología y prácticas regenerativas para diseñar, implementar y escalar soluciones basadas en la naturaleza.",
     "s1": {
-      "title": "Agroecología",
+      "title": "Agroecología y cultura regenerativa",
       "desc": "Asistencia técnica para el diseño e implementación de huertas y sistemas productivos urbanos/comunitarios, con foco en agua, suelo y biodiversidad.",
       "li1": "Huertas urbanas y comunitarias (patios, techos, escuelas, espacios colectivos).",
       "li2": "Wicking beds (macetas auto-regantes) para eficiencia hídrica y producción estable.",
@@ -46,7 +46,7 @@
       "img_alt": "Ilustración de soluciones basadas en la naturaleza"
     },
     "s2": {
-      "title": "Facilitación y Formación para el cambio",
+      "title": "Facilitación y formación para el cambio",
       "desc": "Diseñamos y facilitamos procesos de aprendizaje y transformación para equipos y proyectos, con metodologías participativas y evaluación.",
       "li1": "Teorías de Cambio con enfoque estratégico y MEL.",
       "li2": "Facilitación de procesos participativos (talleres, metodologías visuales).",
@@ -57,7 +57,7 @@
       "img_alt": "Facilitación y formación para el cambio"
     },
     "s3": {
-      "title": "Soluciones Digitales Personalizadas",
+      "title": "Soluciones digitales personalizadas",
       "desc": "Creamos soluciones digitales para explorar datos, gestionar información y comunicar resultados, conectando pasado, presente y futuro para decisiones estratégicas.",
       "li1": "Herramientas de gestión de información y planificación (plataformas web).",
       "li2": "Exploradores de datos territoriales, sociales o ambientales.",
@@ -66,7 +66,7 @@
       "img_alt": "Soluciones digitales personalizadas"
     },
     "s4": {
-      "title": "Investigación y Gestión del Conocimiento",
+      "title": "Investigación y gestión del conocimiento",
       "desc": "Combinamos rigor científico con metodologías participativas para generar evidencia, aprender y mejorar decisiones estratégicas.",
       "li1": "Investigación-Acción participativa con comunidades.",
       "li2": "Metodologías mixtas: entrevistas, encuestas, mapeos, análisis de datos y estadística.",
