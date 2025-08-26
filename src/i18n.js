@@ -1,53 +1,89 @@
-// Simple i18n loader using external JSON files (ES/EN/ZH).
-// Stores chosen language in localStorage and updates all [data-i18n] elements.
+// src/i18n.js
 const SUPPORTED = ['es','en','zh'];
-const DEFAULT_LANG = localStorage.getItem('lang') || navigator.language.slice(0,2).toLowerCase();
+const DEFAULT_LANG = (localStorage.getItem('lang') || navigator.language.slice(0,2)).toLowerCase();
 export let currentLang = SUPPORTED.includes(DEFAULT_LANG) ? DEFAULT_LANG : 'es';
 
 let dictionary = {};
 
-export async function loadLang(lang){
-  if(!SUPPORTED.includes(lang)) lang = 'es';
-  const res = await fetch(`/locales/${lang}.json`);
-  dictionary = await res.json();
-  currentLang = lang;
-  localStorage.setItem('lang', lang);
-  translatePage();
+function t(key){
+  // Búsqueda "a.b.c" en el diccionario
+  return key.split('.').reduce((o,k)=> (o && o[k] != null) ? o[k] : null, dictionary) ?? null;
 }
 
-export function t(key){ return key.split('.').reduce((o,k)=> (o||{})[k], dictionary) || key; }
+export async function loadLang(lang){
+  if(!SUPPORTED.includes(lang)) lang = 'es';
+  try{
+    // IMPORTANTE: ruta relativa para GitHub Pages
+    const res = await fetch(`locales/${lang}.json`, {cache:'no-cache'});
+    if(!res.ok) throw new Error(`Fetch locales/${lang}.json -> ${res.status}`);
+    dictionary = await res.json();
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+    translatePage();
+  }catch(err){
+    console.error('i18n loadLang error:', err);
+    // Fallback: no rompe la página si falla el JSON
+    dictionary = {};
+  }
+}
 
-export function translatePage(){
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
+function translateTextNodes(){
+  document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const val = t(key);
-    if(val){
-      if(el.tagName === 'INPUT' && el.placeholder !== undefined){
-        el.placeholder = val;
-      } else {
-        el.innerHTML = val;
-      }
-    }
+    if(val != null) el.textContent = val;
   });
-  // also update title
-  const titleKey = document.querySelector('title')?.getAttribute('data-i18n');
-  if(titleKey){ document.title = t(titleKey); }
+}
+
+export function translateAttributes(){
+  // Ej: data-i18n-attr="alt:services.s1.img_alt,aria-label:nav.aria_label"
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const spec = el.getAttribute('data-i18n-attr') || '';
+    spec.split(',').forEach(pair=>{
+      const [attr, keyRaw] = pair.split(':').map(s=> s && s.trim());
+      if(!attr || !keyRaw) return;
+      const val = t(keyRaw);
+      if(val != null) el.setAttribute(attr, val);
+    });
+  });
+}
+
+function translateTitle(){
+  const titleEl = document.querySelector('title');
+  const key = titleEl?.getAttribute('data-i18n');
+  if(key){
+    const val = t(key);
+    if(val != null) document.title = val;
+  }
+}
+
+function translatePage(){
+  translateTextNodes();
+  translateAttributes();
+  translateTitle();
 }
 
 export function setupLangSwitcher(){
   const float = document.querySelector('.float-lang');
   if(!float) return;
   const toggle = float.querySelector('.lang-btn[data-role="toggle"]');
-  const esBtn = float.querySelector('.lang-btn[data-lang="es"]');
-  const enBtn = float.querySelector('.lang-btn[data-lang="en"]');
-  const zhBtn = float.querySelector('.lang-btn[data-lang="zh"]');
+  const setExpanded = (state)=> toggle && toggle.setAttribute('aria-expanded', String(state));
 
-  toggle?.addEventListener('click', ()=> float.classList.toggle('open'));
-  [esBtn,enBtn,zhBtn].forEach(btn => btn?.addEventListener('click', async e=>{
-    const lang = e.currentTarget.getAttribute('data-lang');
-    await loadLang(lang);
-    float.classList.remove('open');
-  }));
+  toggle?.addEventListener('click', ()=>{
+    const open = !float.classList.contains('open');
+    float.classList.toggle('open');
+    setExpanded(open);
+  });
+
+  ['es','en','zh'].forEach(code=>{
+    const btn = float.querySelector(`.lang-btn[data-lang="${code}"]`);
+    btn?.addEventListener('click', async ()=>{
+      await loadLang(code);
+      float.classList.remove('open');
+      setExpanded(false);
+    });
+  });
 }
 
 export function setActiveNav(){
@@ -58,7 +94,6 @@ export function setActiveNav(){
   });
 }
 
-// Intersection animation
 export function observeFadeIns(){
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('fade-in'); io.unobserve(e.target); } });

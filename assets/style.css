@@ -77,3 +77,153 @@ nav a.active, nav a:hover{background:var(--cream);}
   .grid-2{grid-template-columns:1fr}
   nav ul{gap:.35rem}
 }
+
+/* === Services: texto + imagen lado a lado dentro de la card === */
+.card .card-row{
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* texto | imagen */
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.card .card-text h3{ margin: 0 0 .5rem; }
+.card .card-text p{ margin: 0 0 1rem; }
+
+.card .card-text ul{
+  margin: 0 0 1.25rem 1.1rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.card .card-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+  object-fit: contain;
+  background: #fff;
+  padding: .5rem;
+}
+
+/* Botón dentro de servicios: usa tu .btn existente, refuerzo leve */
+.card .btn{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: .7rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card .btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,.10); }
+
+/* Responsive: en móvil apilar texto sobre imagen */
+@media (max-width: 900px){
+  .card .card-row{ grid-template-columns: 1fr; }
+  .card .card-text{ order: 1; }
+  .card .card-media{ order: 2; }
+}
+
+
+/* Índice de servicios */
+.service-toc{
+  display: flex; gap: .75rem; flex-wrap: wrap;
+  margin: .75rem 0 1.25rem;
+}
+.service-toc a{
+  font-size: .95rem; padding: .35rem .6rem; border-radius: 999px;
+  background: #f3f5f7; text-decoration: none;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.service-toc a:hover{ background: #eef2f6; }
+
+/* Texto + imagen en la card (reutiliza tu .card) */
+.card .card-row{
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* texto | imagen */
+  gap: 1.25rem;
+  align-items: center;
+}
+.card .card-text h3{ margin: 0 0 .5rem }
+.card .card-text p{ margin: 0 0 1rem }
+.card .card-text ul{
+  margin: 0 0 1.25rem 1.1rem; padding: 0; list-style: disc;
+}
+
+/* Imagen con buena estabilidad de layout */
+.card .card-media{
+  display: grid; place-items: center;
+}
+.card .card-media img{
+  width: 100%; height: auto; display: block;
+  border-radius: 14px; background: #fff; padding: .5rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+  object-fit: contain;
+  /* Evita “saltos” de contenido */
+  aspect-ratio: 4 / 3;
+}
+
+/* Accesibilidad foco */
+a:focus-visible, .btn:focus-visible{
+  outline: 3px solid #112E4D; outline-offset: 2px;
+}
+
+/* Responsive: apila en móvil */
+@media (max-width: 900px){
+  .card .card-row{ grid-template-columns: 1fr }
+  .card .card-text{ order: 1 }
+  .card .card-media{ order: 2 }
+}
+
+/* (Opcional) alterna derecha/izquierda en desktop para variedad */
+@media (min-width: 901px){
+  .grid .card:nth-child(even) .card-text{ order: 2 }
+  .grid .card:nth-child(even) .card-media{ order: 1 }
+}
+
+
+/* About layout: texto + foto */
+.about-row{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* texto | foto */
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0 3rem;
+}
+
+.about-card h3{ margin-top: 0; }
+.about-card p{ margin: .25rem 0 1rem; }
+
+.about-photo{
+  margin: 0;
+  display: grid;
+  place-items: start;
+}
+.about-photo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  object-fit: cover;
+  max-height: 480px;
+  background: var(--cream, #faf7f2);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .about-row{ grid-template-columns: 1fr; }
+  .about-photo img{ max-height: none; }
+}
+
+
+/* Alternar orden: foto izquierda, texto derecha en desktop */
+@media (min-width: 961px){
+  .about-row.reverse{
+    grid-template-columns: 1fr 1.4fr; /* foto | texto */
+  }
+  .about-row.reverse .about-photo{ order: 1; }
+  .about-row.reverse .about-card{ order: 2; }
+}

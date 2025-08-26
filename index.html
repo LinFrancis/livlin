@@ -2,19 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="titles.home">Livlin</title>
-  <link rel="stylesheet" href="/assets/style.css" />
-  <link rel="icon" href="/images/logo_livlin.png">
+
+  <!-- SEO básico -->
+  <meta name="description" content="Servicios para la regeneración, ecoalfabetización y soluciones basadas en la naturaleza.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#112E4D">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Livlin · Servicios para la regeneración">
+  <meta property="og:description" content="Conectamos ciencia, tecnología y prácticas agroecológicas para impulsar cambios transformadores.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo_livlin.png">
+  <meta property="og:url" content="https://linfrancis.github.io/livlin/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Prefetch de páginas internas (suave mejora UX) -->
+  <link rel="prefetch" href="services.html">
+  <link rel="prefetch" href="about.html">
+  <link rel="prefetch" href="contact.html">
+
+  <link rel="icon" href="images/logo_livlin.png">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <!-- Skip to content (accesibilidad teclado) -->
+  <a class="skip-link" href="#main" data-i18n="ui.skip_to_content">Saltar al contenido principal</a>
+
   <header class="nav">
     <div class="nav-inner container">
       <div class="brand">
-        <img src="/images/logo_livlin.png" alt="Livlin logo" />
+        <img src="images/logo_livlin.png" alt="Livlin" loading="lazy" decoding="async" />
         <div class="title">Livlin</div>
       </div>
-      <nav>
+      <nav data-i18n-attr="aria-label:nav.aria_label">
         <ul>
           <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
           <li><a href="services.html" data-i18n="nav.services">Servicios</a></li>
@@ -25,58 +49,55 @@
     </div>
   </header>
 
-  
-<section class="hero">
-  <div class="container">
-    <h1 data-i18n="home.title">Servicios Profesionales para la Regeneración y la Ecoalfabetización</h1>
-    <p data-i18n="home.lead">
-      Acompañamos a personas, comunidades y empresas a reconectar sanamente con la naturaleza, visualizar nuevos horizontes y generar cambios transformadores.
-    </p>
-  </div>
-</section>
+  <main id="main">
+    <section class="hero container">
+      <h1 data-i18n="home.title"></h1>
+      <p data-i18n="home.lead"></p>
+    </section>
 
-<section class="container">
-  <div class="grid grid-2">
-    <div>
-      <h2 data-i18n="home.what_title">¿Qué nos mueve?</h2>
-      <p data-i18n="home.what_p1">
-        Ante la triple crisis planetaria —cambio climático, contaminación y pérdida de biodiversidad— trabajamos con un enfoque colaborativo y pedagógico, integrando ciencia, saberes locales y prácticas regenerativas para impulsar transformaciones reales.
-      </p>
-      <p data-i18n="home.what_p2">
-        En Livlin, impulsamos la regeneración ecosocial y la eco-alfabetización. Nuestra misión es crear y aplicar soluciones basadas en la naturaleza que transformen comunidades y proyectos, facilitando ecosistemas de vida saludables y sostenibles para toda la comunidad de la vida.
-      </p>
-    </div>
-    <div class="card">
-      <div class="icon"><img src="/images/soluciones_basadas_naturaleza.png" alt="Agroecología y NbS"></div>
-      <h3 data-i18n="home.card1_title">Soluciones Basadas en la Naturaleza</h3>
-      <p data-i18n="home.card1_text">Descubre cómo los servicios profesionales de Livlin pueden ayudarte a crear soluciones sostenibles y efectivas. Ofrecemos Agroecología, Investigación, Soluciones Digitales y Formación para transformar proyectos y equipos. ¡Explora nuestros servicios y contáctanos para empezar!</p>
-      <a class="cta" href="services.html" data-i18n="home.card1_cta">Ver servicios</a>
-    </div>
-  </div>
-</section>
-
+    <section class="container">
+      <h2 data-i18n="home.what_title"></h2>
+      <p data-i18n="home.what_p1"></p>
+      <p data-i18n="home.what_p2"></p>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <p data-i18n="footer.copy">© 2025 Livlin. Todos los derechos reservados.</p>
+      <p>
+        <span data-i18n="footer.copy">© <span id="year"></span> Livlin. Todos los derechos reservados.</span>
+      </p>
     </div>
   </footer>
 
+  <!-- Selector flotante de idioma -->
   <div class="float-lang">
-    <button class="lang-btn" data-role="toggle" data-i18n="lang.choose">Idioma / Language / 语言</button>
+    <button class="lang-btn" data-role="toggle" data-i18n="lang.choose" aria-expanded="false">Idioma</button>
     <div class="lang-menu">
-      <button class="lang-btn" data-lang="es">ES</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="zh">中文</button>
+      <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="zh" aria-label="中文">中文</button>
     </div>
   </div>
 
+
   <script type="module">
-    import { loadLang, setupLangSwitcher, setActiveNav, observeFadeIns } from '/src/i18n.js';
+    import { loadLang, setupLangSwitcher, setActiveNav, observeFadeIns, translateAttributes } from './src/i18n.js';
     await loadLang(localStorage.getItem('lang') || 'es');
     setupLangSwitcher();
     setActiveNav();
     observeFadeIns();
+    translateAttributes(); // OK ahora
+ 
+
+    // Año dinámico
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Atributos traducibles en nav/lang
+    translateAttributes?.();
   </script>
+
+  <noscript>Activa JavaScript para ver el contenido multilenguaje.</noscript>
 </body>
 </html>

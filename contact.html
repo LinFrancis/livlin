@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="titles.contact">Livlin</title>
-  <link rel="stylesheet" href="/assets/style.css" />
-  <link rel="icon" href="/images/logo_livlin.png">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="images/logo_livlin.png">
 </head>
 <body>
   <header class="nav">
     <div class="nav-inner container">
       <div class="brand">
-        <img src="/images/logo_livlin.png" alt="Livlin logo" />
+        <img src="images/logo_livlin.png" alt="Livlin logo" />
         <div class="title">Livlin</div>
       </div>
       <nav>
@@ -25,30 +25,24 @@
     </div>
   </header>
 
-  
-<section class="hero">
-  <div class="container">
-    <h1 data-i18n="contact.title">Contáctanos</h1>
-    <p data-i18n="contact.lead">Formemos acuerdos y colaboremos.</p>
-  </div>
-</section>
+  <section class="container">
+    <h1 data-i18n="contact.title"></h1>
+    <p class="lead" data-i18n="contact.lead"></p>
 
-<section class="container grid grid-2">
-  <div class="card">
-    <h3 data-i18n="contact.write">Escríbenos</h3>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:francis.mason@gmail.com">francis.mason@gmail.com</a></li>
-      <li><strong>WhatsApp:</strong> <a href="https://wa.me/56951108051" target="_blank">+56 9 5110 8051</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/francismasonb/" target="_blank">/in/francismasonb/</a></li>
-      <li><strong>WeChat:</strong> <span>francismason</span></li>
-    </ul>
-  </div>
-  <div class="card">
-    <div class="icon"><img src="/images/contacto_union.png" alt="Unión y colaboración"></div>
-    <p data-i18n="contact.note">Gracias por tu interés. Te responderemos pronto.</p>
-  </div>
-</section>
+    <div class="card">
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:francis.mason@gmail.com">francis.mason@gmail.com</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/56951108051" target="_blank">+56 9 5110 8051</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/francismasonb/" target="_blank">/in/francismasonb/</a></li>
+        <li><strong>WeChat:</strong> <span>francismason</span></li>
+      </ul>
+    </div>
 
+    <div class="card">
+      <div class="icon"><img src="images/contacto_union.png" alt="Unión y colaboración"></div>
+      <p data-i18n="contact.note"></p>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
@@ -57,7 +51,7 @@
   </footer>
 
   <div class="float-lang">
-    <button class="lang-btn" data-role="toggle" data-i18n="lang.choose">Idioma / Language / 语言</button>
+    <button class="lang-btn" data-role="toggle" data-i18n="lang.choose">Idioma</button>
     <div class="lang-menu">
       <button class="lang-btn" data-lang="es">ES</button>
       <button class="lang-btn" data-lang="en">EN</button>
@@ -66,11 +60,12 @@
   </div>
 
   <script type="module">
-    import { loadLang, setupLangSwitcher, setActiveNav, observeFadeIns } from '/src/i18n.js';
+    import { loadLang, setupLangSwitcher, setActiveNav, observeFadeIns } from './src/i18n.js';
     await loadLang(localStorage.getItem('lang') || 'es');
     setupLangSwitcher();
     setActiveNav();
     observeFadeIns();
+    translateAttributes();
   </script>
 </body>
 </html>
