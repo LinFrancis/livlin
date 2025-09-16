@@ -227,3 +227,38 @@ a:focus-visible, .btn:focus-visible{
   .about-row.reverse .about-photo{ order: 1; }
   .about-row.reverse .about-card{ order: 2; }
 }
+
+.instagram-section h2 {
+  font-size: 1.8rem;
+  color: #112E4D;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.instagram-media {
+  margin: 0 auto !important; /* quita márgenes extra de Instagram */
+  max-width: 100% !important;
+  width: 100% !important;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.instagram-section .btn {
+  background: #112E4D;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.instagram-section .btn:hover {
+  background: #FF37D5;
+}
