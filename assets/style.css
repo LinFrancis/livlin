@@ -667,9 +667,10 @@ a:focus-visible, .btn:focus-visible {
   .contact__row {
     padding: 1rem;
   }
-  .contact__media img {
+   
+  /* .contact__media img {
     max-height: 120px;
-  }
+  } */
 
   /* Botón de descarga más compacto */
   .download-btn {
@@ -687,6 +688,7 @@ a:focus-visible, .btn:focus-visible {
 html {
   scroll-padding-top: 80px; /* ajusta a la altura real de tu nav */
 }
+
 
 
 
