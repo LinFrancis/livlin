@@ -602,7 +602,7 @@ a:focus-visible, .btn:focus-visible {
 
 
 /* Mejoras para móviles muy pequeños */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
   /* Reducir títulos */
   h1, .hero__title {
@@ -670,4 +670,5 @@ a:focus-visible, .btn:focus-visible {
 html {
   scroll-padding-top: 80px; /* ajusta a la altura real de tu nav */
 }
+
 
