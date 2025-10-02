@@ -504,9 +504,9 @@ nav a.active, nav a:hover {
     text-align: center;
   }
 
-  .contact__media {
+  /* .contact__media {
     grid-template-columns: 1fr; /* apilar imágenes */
-  }
+  } */
 
   .contact__media img {
     height: auto; /* evitar cortes agresivos en móvil */
@@ -688,6 +688,7 @@ a:focus-visible, .btn:focus-visible {
 html {
   scroll-padding-top: 80px; /* ajusta a la altura real de tu nav */
 }
+
 
 
 
