@@ -72,15 +72,30 @@
     }
   },
   "about": {
-    "title": "About us",
-    "lead": "We connect science, technology, and agroecological practice to transform places.",
+    "title": "About Us",
+    "lead": "We regenerate creatively and holistically to transcend in community, applying the wisdom of nature to move towards a future in harmony and balance among all beings.",
     "subtitle": "Sociologist | Permaculture Designer",
-    "bio_html": "\n    <div class='bio'>\n      <p>I am a Sociologist and Data Officer at the technical secretariat of the <a href='https://unfccc.int/race-to-resilience-campaign' target='_blank'>Global Race to Resilience Campaign</a>, where I combine applied social research, data analysis, and digital app development to support global climate action.</p>\n      <p>In parallel, I am part of the <a href='https://www.instagram.com/aucca.ecopedagogico/' target='_blank'>AUCCA Ecopedagogical Center</a> and a coordinator in the <a href='https://www.instagram.com/mov.agroecologia.urbana/' target='_blank'>Urban Agroecology Movement (MAU, Chile)</a>, strengthening community regenerative practices.</p>\n      <p>As the founder of <strong>Livlin</strong>, I offer professional services for regeneration, eco-literacy, and nature-based approaches, combining agroecology consulting, organic waste and compost systems, resilient growing with self-watering planters and capillary irrigation, as well as web app development and facilitation using Theory of Change.</p>\n      <p>My background includes an MA and BA in Sociology (UAH), a Diploma in Chinese Studies (U. of Chile), and a Permaculture Design Certificate (El Manzano, Chile).</p>\n      <p>I believe global climate challenges are chances to learn from nature and plant hope. My purpose is to contribute to the global pulse of regeneration by connecting science, technology, and agroecological practice to transform our places and organizations.</p>\n    </div>\n    "
+    "bio_html": "I currently facilitate processes of change and build open digital tools so that people and organizations can make better decisions in the face of socio-environmental challenges. I believe in situated learning, collaborative work, and the integration of scientific knowledge with local practices.</p>\n      <p>My purpose is to contribute to the regeneration of life, strengthening capacities and weaving networks that care for people, the Earth, and communities. Through Livlin, we seek simple, replicable solutions with real impact in our territories and organizations."
   },
   "contact": {
-    "title": "Contact us",
-    "lead": "Let’s build agreements and collaborate.",
+    "title": "Contact",
+    "lead": "Connect through any of these channels",
     "write": "Write to us",
-    "note": "Thanks for your interest. We’ll get back to you soon."
+    "note": "Thank you for your interest. We will get back to you soon.",
+    "wechat": "WeChat",
+    "line": "Line",
+    "whatsapp": "WhatsApp"
+  },
+  "mensaje": {
+    "hoteles_lombrices": "Worm hotel in raised bed for food cultivation",
+    "habas": "Broad beans cultivation in winter",
+    "cosecha": "Gratitude during food harvest"
+  },
+  "instagram": {
+    "title": "Latest on Instagram"
+  },
+  "download_guia": {
+    "guia": "Download the Introduction to Regeneration Guide",
+    "btn_download_guia": "Download Guide"
   }
 }

@@ -73,14 +73,29 @@
   },
   "about": {
     "title": "关于我们",
-    "lead": "把科学、技术与生态农业实践连在一起，让地方更好。",
+    "lead": "我们以创造性和整体性的方式进行再生，在社区中共同成长，运用大自然的智慧迈向人与万物和谐平衡的未来。",
     "subtitle": "社会学家 | 永续设计师",
-    "bio_html": "\n    <div class='bio'>\n      <p>我是 <a href='https://unfccc.int/race-to-resilience-campaign' target='_blank'>全球“奔向韧性”行动</a> 技术秘书处的数据专员和社会学家。我把应用社会研究、数据分析与数字应用开发结合起来，支持全球气候行动。</p>\n      <p>同时，我参加 <a href='https://www.instagram.com/aucca.ecopedagogico/' target='_blank'>AUCCA 生态教育中心</a>，也是 <a href='https://www.instagram.com/mov.agroecologia.urbana/' target='_blank'>城市生态农业运动（MAU，智利）</a> 的协调人，一起推进社区再生实践。</p>\n      <p>作为 <strong>Livlin</strong> 的创始人，我提供关于再生、生态学习和“用自然的方法”的专业服务，包括生态农业咨询、有机垃圾与堆肥系统、自吸水花箱与渗水灌溉等种植方法，以及网站应用开发和用“变化理论”的过程引导。</p>\n      <p>我的学习背景：社会学学士与硕士（UAH），中国研究文凭（智利大学），以及永续设计课程证书（El Manzano，智利）。</p>\n      <p>我认为气候挑战是向自然学习的机会，也能带来希望。我的目标是把科学、技术和生态农业实践连起来，让我们的社区和机构更有生命力。</p>\n    </div>\n    "
+    "bio_html": "我目前正在推动变革过程，并构建开放的数字工具，使个人和组织能够在面对社会与环境挑战时做出更好的决策。我相信情境化学习、协作工作，以及科学知识与在地实践的融合。</p>\n      <p>我的使命是为生命的再生做出贡献，加强能力建设，并编织关怀人类、大地和社区的网络。通过 Livlin，我们寻求简单、可复制且对我们的社区和组织有实际影响的解决方案。"
   },
   "contact": {
-    "title": "联系我们",
-    "lead": "一起合作，互相帮助。",
-    "write": "给我们写信",
-    "note": "感谢你的关注，我们会尽快回复。"
+    "title": "联系",
+    "lead": "通过以下方式与我们联系",
+    "write": "写信给我们",
+    "note": "感谢您的关注。我们会尽快回复您。",
+    "wechat": "微信",
+    "line": "Line",
+    "whatsapp": "WhatsApp"
+  },
+  "mensaje": {
+    "hoteles_lombrices": "菜床里的蚯蚓旅馆，用于食物种植",
+    "habas": "冬季种植蚕豆",
+    "cosecha": "丰收的感恩"
+  },
+  "instagram": {
+    "title": "Instagram 最新动态"
+  },
+  "download_guia": {
+    "guia": "下载《再生导论》指南",
+    "btn_download_guia": "📘 下载指南"
   }
 }

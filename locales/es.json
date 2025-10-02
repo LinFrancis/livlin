@@ -1,9 +1,9 @@
 {
   "titles": {
-    "home": "Livlin · Servicios para la regeneración",
-    "services": "Livlin · Servicios",
-    "about": "Livlin · Quiénes somos",
-    "contact": "Livlin · Contacto"
+    "home": "LivLin · Servicios para la regeneración",
+    "services": "LivLin · Servicios",
+    "about": "LivLin · Quiénes somos",
+    "contact": "LivLin · Contacto"
   },
   "nav": {
     "home": "Inicio",
@@ -13,7 +13,7 @@
     "aria_label": "Navegación principal"
   },
   "footer": {
-    "copy": "© 2025 Livlin. Todos los derechos reservados."
+    "copy": "© 2025 LivLin. Todos los derechos reservados."
   },
   "lang": {
     "choose": "Idioma / Language / 语言"
@@ -30,15 +30,15 @@
     "title": "Ecoalfabetización para la regeneración",
     "lead": "Acompañamos a personas, comunidades y empresas a reconectar sanamente con la naturaleza, visualizar nuevos horizontes y generar cambios transformadores.",
     "what_title": "¿Qué nos mueve?",
-    "what_p1": "Livlin ofrece servicios profesionales para la regeneración, la ecoalfabetización y soluciones basadas en la naturaleza.",
+    "what_p1": "LivLin ofrece servicios profesionales para la regeneración, la ecoalfabetización y soluciones basadas en la naturaleza.",
     "what_p2": "Integramos ciencia, tecnología y prácticas agroecológicas para impulsar proyectos con sentido, con resultados medibles que contribuyan positivamente a una cultura regenerativa."
   },
   "services": {
-    "title": "Servicios Profesionales Livlin",
+    "title": "Servicios Profesionales LivLin",
     "lead": "Ofrecemos cuatro grupos de servicios que integran ciencia, tecnología y prácticas regenerativas para diseñar, implementar y escalar soluciones basadas en la naturaleza.",
     "s1": {
       "title": "Agroecología y cultura regenerativa",
-      "desc": "Asistencia técnica para el diseño e implementación de huertas y sistemas productivos urbanos/comunitarios, con foco en agua, suelo y biodiversidad.",
+      "desc": "Asistencia técnica para el diseño e implementación de huertas y sistemas productivos urbanos/comunitarios.",
       "li1": "Huertas urbanas y comunitarias (patios, techos, escuelas, espacios colectivos).",
       "li2": "Wicking beds (macetas auto-regantes) para eficiencia hídrica y producción estable.",
       "li3": "Compostaje y lombricultura: sistemas de manejo de residuos orgánicos y capacitación.",
@@ -76,14 +76,29 @@
   },
   "about": {
     "title": "Quiénes somos",
-    "lead": "Conectamos ciencia, tecnología y prácticas agroecológicas para transformar territorios.",
+    "lead": "Regeneramos creativa e integralmente para trascender en comunidad aplicando la sabiduría de la naturaleza para avanzar hacia un futuro en armonía y equilibrio entre todos los seres",
     "subtitle": "Sociólogo | Diseñador en Permacultura",
-    "bio_html": "\n    <div class='bio'>\n      <p>Actualmente facilito procesos de cambio y construyo herramientas digitales abiertas para que personas y organizaciones puedan tomar mejores decisiones frente a los desafíos socioambientales. Creo en el aprendizaje situado, el trabajo colaborativo y la integración entre conocimiento científico y prácticas locales.</p>\n      <p>Mi propósito es aportar a la regeneración de la vida, fortaleciendo capacidades y tejiendo redes que cuiden de las personas, de la tierra y de las comunidades. Desde Livlin, buscamos soluciones simples, replicables y con impacto real en nuestros territorios y organizaciones.</p>\n    </div>\n    "
+    "bio_html": "Actualmente facilito procesos de cambio y construyo herramientas digitales abiertas para que personas y organizaciones puedan tomar mejores decisiones frente a los desafíos socioambientales. Creo en el aprendizaje situado, el trabajo colaborativo y la integración entre conocimiento científico y prácticas locales.</p>\n      <p>Mi propósito es aportar a la regeneración de la vida, fortaleciendo capacidades y tejiendo redes que cuiden de las personas, de la tierra y de las comunidades. Desde Livlin, buscamos soluciones simples, replicables y con impacto real en nuestros territorios y organizaciones."
   },
   "contact": {
-    "title": "Contáctanos",
-    "lead": "Formemos acuerdos y colaboremos.",
+    "title": "Contacto",
+    "lead": "Conecta con cualquiera de estos medios",
     "write": "Escríbenos",
-    "note": "Gracias por tu interés. Te responderemos pronto."
+    "note": "Gracias por tu interés. Te responderemos pronto.",
+    "wechat": "Wechat",
+    "line": "Line",
+    "whatsapp" : "WhatsApp"
+  },
+   "mensaje": {
+    "hoteles_lombrices": "Hotel de lombrices en bancal para cultivo de alimentos",
+    "habas": "Cultivo de habas en invierno",
+    "cosecha": "Gratitud en la cosecha de alimentos"
+  },
+  "instagram":{
+    "title":"Últimos en Instagram"
+  },
+  "download_guia":{
+    "guia":"Descarga la Guía de Introducción a la Regeneración",
+    "btn_download_guia":"Descargar Guía"
   }
 }
