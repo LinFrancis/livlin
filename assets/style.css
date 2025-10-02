@@ -386,6 +386,23 @@ nav a.active, nav a:hover {
   }
 }
 
+/* Menú más compacto en móviles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;       /* permite que los enlaces salten de línea */
+    gap: .3rem;
+    justify-content: center;
+  }
+  nav a {
+    font-size: 0.85rem;    /* texto más pequeño */
+    padding: .4rem .6rem;
+  }
+  .lang-switcher {
+    margin-top: 0.3rem;    /* que no se desarme */
+  }
+}
+
+
 
 
 
@@ -670,5 +687,6 @@ a:focus-visible, .btn:focus-visible {
 html {
   scroll-padding-top: 80px; /* ajusta a la altura real de tu nav */
 }
+
 
 
