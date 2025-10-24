@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="titles.home">LivLin · Servicios para la regeneración</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="icon" href="images/logo_livlin.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Scripts -->
+  <script type="module" src="js/i18n.js"></script>
+
+</head>
+
+<body>
+  <a class="skip" href="#main" data-i18n="ui.skip_to_content">Saltar al contenido principal</a>
+
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <img src="images/logo_livlin.png" alt="LivLin logo" class="logo" width="48" height="48">
+        <span class="brand-name">LivLin</span>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="#about" data-i18n="nav.about">Quiénes somos</a></li>
+          <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+          <li><a href="#instagram" data-i18n="nav.gallery">Galería</a></li>
+          <li><a href="#download" data-i18n="nav.recursos">Recursos</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-wrap">
+        <label for="lang-switcher" class="visually-hidden" data-i18n="lang.choose">Idioma / Language / 语言</label>
+        <select id="lang-switcher" aria-label="Language selector">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="dk">DK</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio" data-bg="images/banner_horizontal.png">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay">
+    <div class="hero__content container">
+      <h1 class="hero__title" data-i18n="home.title"></h1>
+      <p class="hero__subtitle" data-i18n="home.lead"></p>
+
+      <div class="hero__model-links">
+        <a href="#service-s1" class="model-link s1" data-i18n="model.s1_head"></a>
+        <a href="#service-s2" class="model-link s2" data-i18n="model.s2_head"></a>
+        <a href="#service-s3" class="model-link s3" data-i18n="model.s3_head"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- About -->
+    <section id="about" class="container section fade-in">
+      <div class="about-grid">
+        <div class="about-block">
+          <h2 data-i18n="home.what_title_p1">Quiénes somos</h2>
+          <p data-i18n="home.what_p1">Somos una empresa de servicios...</p>
+        </div>
+        <div class="about-block">
+          <h3 data-i18n="home.what_title_p2">Cómo trabajamos</h3>
+          <p data-i18n="home.what_p2">Trabajamos en tres ejes...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelo-servicios" class="container section fade-in">
+    <h2 data-i18n="model.model_title"></h2>
+
+    <div class="modelo-circulo">
+      <div class="centro">
+        <p data-i18n="model.center_text"></p>
+      </div>
+
+      <div class="sector sector1">
+        <h3 data-i18n="model.s1_head"></h3>
+        <p data-i18n="model.s1_desc"></p>
+      </div>
+
+      <div class="sector sector2">
+        <h3 data-i18n="model.s2_head"></h3>
+        <p data-i18n="model.s2_desc"></p>
+      </div>
+
+      <div class="sector sector3">
+        <h3 data-i18n="model.s3_head"></h3>
+        <p data-i18n="model.s3_desc"></p>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+<!-- Services -->
+<section id="services" class="container section fade-in" aria-labelledby="services-title">
+  <h2 id="services-title" data-i18n="services.title">
+    Oferta de servicios profesionales para la regeneración ecosocial
+  </h2>
+  <p class="section-lead" data-i18n="services.lead"></p>
+
+  <!-- s1 -->
+  <article id="service-s1" class="service-card">
+    <figure class="service-media">
+      <img
+        src="images/plantando.png"
+        loading="lazy" decoding="async"
+        alt=""
+        data-i18n-attr="alt:services.s1.img_alt" />
+      <figcaption class="sr-only" data-i18n="services.s1.img_alt"></figcaption>
+    </figure>
+    <div class="service-content">
+      <header class="card-head">
+        <h3 data-i18n="services.s1.title"></h3>
+      </header>
+      <div class="card-body">
+        <p data-i18n="services.s1.desc"></p>
+        <ul>
+          <li data-i18n="services.s1.li1"></li>
+          <li data-i18n="services.s1.li2"></li>
+          <li data-i18n="services.s1.li3"></li>
+        </ul>
+      </div>
+      <p class="service-cta">
+        <a class="cta" href="#contact" data-i18n="ui.hire_nbs">Contrata estos servicios</a>
+      </p>
+    </div>
+  </article>
+
+  <!-- s2 (alternado) -->
+  <article id="service-s2" class="service-card alt">
+    <figure class="service-media">
+      <img
+        src="images/formacion_con_gente.png"
+        loading="lazy" decoding="async"
+        alt=""
+        data-i18n-attr="alt:services.s2.img_alt" />
+      <figcaption class="sr-only" data-i18n="services.s2.img_alt"></figcaption>
+    </figure>
+    <div class="service-content">
+      <header class="card-head">
+        <h3 data-i18n="services.s2.title"></h3>
+      </header>
+      <div class="card-body">
+        <p data-i18n="services.s2.desc"></p>
+        <ul>
+          <li data-i18n="services.s2.li1"></li>
+          <li>
+            <span data-i18n="services.s2.li2"></span>
+            <ul class="sublist">
+              <li data-i18n="services.s2.sub_li2_1"></li>
+              <li data-i18n="services.s2.sub_li2_2"></li>
+              <li data-i18n="services.s2.sub_li2_3"></li>
+            </ul>
+          </li>
+          <li data-i18n="services.s2.li3"></li>
+          <li data-i18n="services.s2.li4"></li>
+        </ul>
+      </div>
+      <p class="service-cta">
+        <a class="cta" href="#contact" data-i18n="ui.hire_facilitation">Contrata estos servicios</a>
+      </p>
+    </div>
+  </article>
+
+  <!-- s3 -->
+  <article id="service-s3" class="service-card">
+    <figure class="service-media">
+      <img
+        src="images/apps.png"
+        loading="lazy" decoding="async"
+        alt=""
+        data-i18n-attr="alt:services.s3.img_alt" />
+      <figcaption class="sr-only" data-i18n="services.s3.img_alt"></figcaption>
+    </figure>
+    <div class="service-content">
+      <header class="card-head">
+        <h3 data-i18n="services.s3.title"></h3>
+      </header>
+      <div class="card-body">
+        <p data-i18n="services.s3.desc"></p>
+        <ul>
+          <li data-i18n="services.s3.li1"></li>
+          <li>
+            <span data-i18n="services.s3.li2"></span>
+            <ul class="sublist">
+              <li data-i18n="services.s3.sub_li2_1"></li>
+              <li data-i18n="services.s3.sub_li2_2"></li>
+              <li data-i18n="services.s3.sub_li2_3"></li>
+              <li data-i18n="services.s3.sub_li2_4"></li>
+              <li data-i18n="services.s3.sub_li2_5"></li>
+              <li data-i18n="services.s3.sub_li2_6"></li>
+              <li data-i18n="services.s3.sub_li2_7"></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <p class="service-cta">
+        <a class="cta" href="#contact" data-i18n="ui.hire_digital">Contrata estos servicios</a>
+      </p>
+    </div>
+  </article>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Value Proposition -->
+    <section id="propuesta_valor" class="container section fade-in">
+      <h2 data-i18n="propuesta_valor.title"></h2>
+      <p data-i18n="propuesta_valor.desc"></p>
+      <ul class="value-list">
+        <li data-i18n="propuesta_valor.li1"></li>
+        <li data-i18n="propuesta_valor.li2"></li>
+        <li data-i18n="propuesta_valor.li3"></li>
+        <li data-i18n="propuesta_valor.li4"></li>
+        <li data-i18n="propuesta_valor.li5"></li>
+      </ul>
+    </section>
+
+    <!-- Audience -->
+    <section id="publico_interes" class="container section fade-in">
+      <h2 data-i18n="publico_interes.title"></h2>
+      <ul class="audience-list">
+        <li data-i18n="publico_interes.li1"></li>
+        <li data-i18n="publico_interes.li2"></li>
+        <li data-i18n="publico_interes.li3"></li>
+        <li data-i18n="publico_interes.li4"></li>
+        <li data-i18n="publico_interes.li5"></li>
+        <li data-i18n="publico_interes.li6"></li>
+      </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Download Guide -->
+    <section id="download" class="container section fade-in">
+      <h2 data-i18n="download_guia.guia">Descarga la Guía de Introducción a la Regeneración</h2>
+      <p><a class="cta" href="#" data-i18n="download_guia.btn_download_guia">Descargar Guía</a></p>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+<section class="contact-section fade-in" id="contact">
+  <div class="contact-card container">
+    <!-- Información de contacto -->
+    <div class="contact-info">
+      <h2 data-i18n="contact.title">Contacto</h2>
+      <p data-i18n="contact.lead">Conecta con cualquiera de estos medios</p>
+
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:francis.mason@gmail.com">francis.mason@gmail.com</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/56951108051" target="_blank">+56 9 5110 8051</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/francismasonb/" target="_blank">/in/francismasonb/</a></li>
+        <li><strong>WeChat:</strong> <span>francismason</span></li>
+      </ul>
+    </div>
+
+    <!-- Códigos QR -->
+    <div class="contact-media">
+      <figure>
+        <img src="images/whatsapp_code.png" alt="WhatsApp" loading="lazy" decoding="async">
+        <figcaption>WhatsApp</figcaption>
+      </figure>
+      <figure>
+        <img src="images/wechat_code.png" alt="WeChat" loading="lazy" decoding="async">
+        <figcaption>WeChat</figcaption>
+      </figure>
+      <figure>
+        <img src="images/line_code.png" alt="Line" loading="lazy" decoding="async">
+        <figcaption>Line</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Instagram -->
+    <section id="instagram" class="container section fade-in">
+      <h2 data-i18n="instagram.title">Últimos en Instagram</h2>
+      <div class="insta-grid">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNybEXwYrm2/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DN2J0bPYpgo/?img_index=1" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNLidzbREMJ/" data-instgrm-version="14"></blockquote>
+      </div>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer.copy">© 2025 LivLin. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    // 🌿 Imagen de fondo dinámica del hero
+    const hero = document.querySelector('.hero');
+    const bg = hero?.dataset.bg;
+    const bgDiv = hero?.querySelector('.hero__bg');
+    if (bg && bgDiv) {
+      bgDiv.style.backgroundImage = `url('${bg}')`;
+    }
+  </script>
+
+<script type="module">
+  import { loadLang, translateAttributes } from './js/i18n.js';
+
+  // 🗣 Detect language from URL (?lang=en)
+  function getLangFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("lang");
+  }
+
+  const select = document.getElementById('lang-switcher');
+  let lang = getLangFromUrl() || localStorage.getItem('lang') || 'es';
+
+  // ✅ Aquí va el bloque que mencionas
+  if (!getLangFromUrl() && !localStorage.getItem('lang')) {
+    const browserLang = navigator.language.slice(0, 2);
+    if (['es', 'en', 'zh', 'dk'].includes(browserLang)) {
+      lang = browserLang;
+    }
+  }
+
+  // 🌐 Load chosen language
+  await loadLang(lang);
+  translateAttributes?.();
+  select.value = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang; // SEO + accesibilidad
+
+  // 🔄 When user changes language
+  select.addEventListener('change', async (e) => {
+    const newLang = e.target.value;
+    localStorage.setItem('lang', newLang);
+    await loadLang(newLang);
+    translateAttributes?.();
+    document.documentElement.lang = newLang;
+
+    // Update URL without reloading
+    const url = new URL(window.location);
+    url.searchParams.set('lang', newLang);
+    window.history.replaceState({}, '', url);
+  });
+</script>
+
+
+
+</body>
+</html>

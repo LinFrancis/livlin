@@ -1,0 +1,122 @@
+{
+  "titles": {
+    "home": "LivLin · Tjenester for regenerering",
+    "services": "LivLin · Tjenester",
+    "about": "LivLin · Om os",
+    "contact": "LivLin · Kontakt"
+  },
+  "nav": {
+    "home": "Forside",
+    "services": "Tjenester",
+    "about": "Om os",
+    "contact": "Kontakt",
+    "gallery":"Gallery",
+    "recursos":"Resources",
+    "aria_label": "Hovednavigation"
+  },
+  "footer": {
+    "copy": "© 2025 LivLin. Alle rettigheder forbeholdes."
+  },
+  "lang": {
+    "choose": "Sprog / Language / 语言"
+  },
+  "ui": {
+    "skip_to_content": "Gå til hovedindhold",
+    "read_more": "Læs mere",
+    "hire_nbs": "Bestil disse tjenester",
+    "hire_research": "Bestil disse tjenester",
+    "hire_digital": "Bestil disse tjenester",
+    "hire_facilitation": "Bestil disse tjenester"
+  },
+  "model": {
+    "model_title": "Strategiske akser",
+    "s1_head": "Praksis",
+    "s1_desc": "Byhaver, agroøkologi og regenerative løsninger",
+    "s2_head": "Følge og støtte",
+    "s2_desc": "Uddannelse, facilitering og organisatorisk transformation",
+    "s3_head": "Passende teknologier",
+    "s3_desc": "Skræddersyede digitale løsninger",
+    "center_text": "En regenerativ og bæredygtig fremtid"
+  },
+
+  "home": {
+    "title": "Når planeten bliver syg, er regenerering at helbrede og fejre livet",
+    "lead": "Overfor de globale udfordringer med klimaforandringer, forurening og tab af biodiversitet tilbyder vi lokale og praktiske løsninger, der genskaber de økosystemer, som opretholder livet for nuværende og kommende generationer.",
+    "what_title_p1": "Hvem vi er",
+    "what_p1": "Vi er en professionel virksomhed, der tilbyder tjenester til at genoprette de betingelser, der gør livet muligt, og som i dag er truet af klimaforandringer, forurening og tab af biodiversitet.",
+    "what_title_p2": "Hvordan vi arbejder",
+    "what_p2": "Vi arbejder ud fra tre sammenhængende søjler, hvor praksis, følgeskab og passende teknologi går hånd i hånd for at skabe den forandring, der skal til for at leve tættere på visionen om en regenerativ og bæredygtig fremtid."
+  },
+  "services": {
+    "title": "Professionelle tjenester for økosocial regenerering",
+    "lead": "Vores arbejde er organiseret i tre områder, der kan anvendes af både enkeltpersoner og organisationer. Hver handling – stor eller lille – har potentielle miljøpåvirkninger. Der er altid plads til regenerering, og LivLin er her for at hjælpe.",
+    "s1": {
+      "title": "Praksis – Byhaver, agroøkologi og regenerative løsninger",
+      "desc": "Vi fremmer naturens udtryk i byen. Fra altaner til store haver, parker og jordlodder arbejder vi med miljøundervisning og genforbindelse til naturens rytmer – naturen som lærer for et bedre liv.",
+      "li1": "Rådgivning om haveudformning og/eller 'stedets ånd' for korrekt etablering af en økologisk have fri for giftstoffer.",
+      "li2": "Rådgivning og implementering af passende teknologier, herunder solenergi, effektive vandingssystemer, husholdningskompostering og mere.",
+      "li3": "Personlig teknisk støtte til økologisk dyrkning i byområder: design af byhave, organisk affaldshåndtering, kompostering og ormekompost, effektive vandingssystemer, jordforbedring, frøpleje, jordens sundhed og støtte gennem alle vækstfaser.",
+      "img_alt": "Illustration af naturbaserede løsninger"
+    },
+    "s2": {
+      "title": "Følgeskab – Uddannelse, facilitering og organisatorisk forandring",
+      "desc": "Vi støtter mennesker og organisationer i dybe forandringsprocesser, der styrker regenerative evner og opretholder livets kontinuitet – sundt og rigt på biodiversitet.",
+      "li1": "Facilitering af strategisk planlægning gennem Theory of Change-modellen, med klare mål, indikatorer og læringsplaner for dem, der ønsker at definere og nå deres ønskede forandring.",
+      "li2": "Kombination af avancerede samfundsvidenskabelige metoder til regenerative formål for at høste viden, lære og forbedre beslutninger, som forbinder lokale og globale netværk.",
+      "sub_li2_1": "Kvantitativ forskning: spørgeskemaer, dataanalyse, visualisering.",
+      "sub_li2_2": "Kvalitativ forskning: interviews, fokusgrupper, kortlægning.",
+      "sub_li2_3": "Deltagende forskning: ledelsesformer som 'world café', samtalekredse og åbne rum.",
+      "li3": "Facilitering af workshops, træning og mentorforløb for at fremme regenerativ praksis og bæredygtig læring for alle aldre.",
+      "li4": "Rådgivning om udvikling og gennemførelse af miljøprojekter med offentlig eller privat finansiering.",
+      "img_alt": "Facilitering og uddannelse for forandring"
+    },
+    "s3": {
+      "title": "Passende teknologi – Skræddersyede digitale løsninger",
+      "desc": "Ved at udvikle webapplikationer åbner vi processer, der hjælper organisationer, der arbejder for regenerering. Vi skaber billige, personlige digitale værktøjer, der støtter ledelse, kommunikation og læring med fokus på ansvarlig brug af teknologi.",
+      "li1": "Oprettelse af hjemmesider for din organisation.",
+      "li2": "Udvikling af webapplikationer tilpasset dine behov:",
+      "sub_li2_1": "Systemer til økonomi og opsparing i organisationer.",
+      "sub_li2_2": "Systemer til planlægning og opfølgning af opgaver og aftaler.",
+      "sub_li2_3": "Dynamiske dashboards til at udforske data og kommunikere resultater.",
+      "sub_li2_4": "Geografiske, sociale eller miljømæssige dataudforskere.",
+      "sub_li2_5": "Indikator-dashboards med eksportmuligheder.",
+      "sub_li2_6": "Pædagogiske værktøjer.",
+      "sub_li2_7": "Vi designer ud fra dine behov.",
+      "img_alt": "Tilpassede digitale løsninger"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "lead": "Du kan kontakte os på disse måder",
+    "write": "Skriv til os",
+    "note": "Tak for din interesse. Vi vender snart tilbage.",
+    "wechat": "WeChat",
+    "line": "Line",
+    "whatsapp": "WhatsApp"
+  },
+  "propuesta_valor": {
+    "title": "Værditilbud",
+    "desc": "Alle vores professionelle tjenester bygger på en vision for nutiden og fremtiden, hvor:",
+    "li1": "De globale udfordringer med klimaændringer, biodiversitetstab og forurening mødes i fællesskab af mennesker, organisationer, fællesskaber og virksomheder, der arbejder for livet.",
+    "li2": "Regenerering af livets betingelser er kernen i bestræbelserne på et bedre liv.",
+    "li3": "Vi er villige til at ændre tankegang og bryde med lineære og nedbrydende mønstre, der fører til mere forurening og tab af natur.",
+    "li4": "Vi indtager nye roller ved at integrere naturlige og menneskelige systemer for begge parters sundhed.",
+    "li5": "Vi ser arbejdet som en vedvarende proces, hvor regenerative mål rækker ud over vores egen levetid og overdrages til kommende generationer."
+  },
+  "publico_interes": {
+    "title": "Hvem vi primært tjener",
+    "li1": "Alle, der ønsker at deltage i regenerering og søger vejledning.",
+    "li2": "Personer og fællesskaber, der ønsker at lære at dyrke deres egen mad og starte en have.",
+    "li3": "Mennesker, der oplever økoangst og ønsker konkrete handlinger for at forbedre deres egen og naturens sundhed.",
+    "li4": "Fagfolk og teknikere, der arbejder med social påvirkning og ønsker at gøre deres indsats mere positiv for økosystemet.",
+    "li5": "Organisationer og virksomheder, der ønsker at styrke deres bæredygtighedspraksis og skabe resultater, der gavner både dem selv og miljøet.",
+    "li6": "Uddannelsesinstitutioner, der ønsker at fremme miljøundervisning gennem konkrete regenerative handlinger i deres læringsrum."
+  },
+  "instagram": {
+    "title": "Seneste på Instagram"
+  },
+  "download_guia": {
+    "guia": "Download guiden: Introduktion til regenerering",
+    "btn_download_guia": "Download guide"
+  }
+}

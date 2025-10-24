@@ -1,0 +1,120 @@
+{
+  "titles": {
+    "home": "LivLin · Services for Regeneration",
+    "services": "LivLin · Services",
+    "about": "LivLin · About Us",
+    "contact": "LivLin · Contact"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "gallery":"Gallery",
+    "recursos":"Resources",
+    "aria_label": "Main Navigation"
+  },
+  "footer": {
+    "copy": "© 2025 LivLin. All rights reserved."
+  },
+  "lang": {
+    "choose": "Language / Idioma / 语言"
+  },
+  "ui": {
+    "skip_to_content": "Skip to main content",
+    "read_more": "Read more",
+    "hire_nbs": "Hire these services",
+    "hire_research": "Hire these services",
+    "hire_digital": "Hire these services",
+    "hire_facilitation": "Hire these services"
+  },
+  "model": {
+    "model_title": "Strategic Axes",
+    "s1_head": "Practice",
+    "s1_desc": "Urban gardening, agroecology, and regenerative solutions",
+    "s2_head": "Accompaniment",
+    "s2_desc": "Training, facilitation, and organizational transformation",
+    "s3_head": "Appropriate Technologies",
+    "s3_desc": "Tailored digital solutions",
+    "center_text": "Regenerative and sustainable future"
+  },
+  "home": {
+    "title": "When the planet becomes ill, to regenerate is to improve health and celebrate life",
+    "lead": "In the face of global challenges such as climate change, the pollution crisis, and biodiversity loss, we offer local and practical solutions that regenerate the ecosystems sustaining life for present and future generations.",
+    "what_title_p1": "Who we are",
+    "what_p1": "We are a company offering professional services for the regeneration of the conditions that sustain life, which today are threatened by climate change, pollution, and biodiversity loss.",
+    "what_title_p2": "How we work",
+    "what_p2": "We work through three strategic axes that nurture each other, combining practice, accompaniment, and appropriate technology to drive the transformative change needed to live closer to the vision of a regenerative and sustainable future for present and future generations."
+  },
+  "services": {
+    "title": "Professional service offer for ecosocial regeneration",
+    "lead": "We are organized into three service areas that apply to individuals and organizations alike. Every action—individual or collective, no matter how simple—has potential environmental impacts, both desired and undesired, on the greater natural ecosystem that sustains life. In this sense, there is always room to regenerate, and LivLin is here to help make that happen.",
+    "s1": {
+      "title": "Practice – Urban gardens, agroecology, and regenerative solutions",
+      "desc": "We promote the expression of nature in the city, from small to large spaces—from apartment terraces to homes, parks, and large plots. We cultivate environmental education and reconnection with the rhythms of nature, learning from it as a teacher for better living.",
+      "li1": "Advisory services for garden design and/or 'the essence of place' associated with your project, for the proper implementation of an agroecological garden (free from agrotoxins and other poisons from conventional agriculture).",
+      "li2": "Consulting in the design and implementation of appropriate technologies for your project, including solar energy systems, various efficient irrigation systems, household organic waste management, composting, and more.",
+      "li3": "Personalized technical consulting for agroecological cultivation in urban contexts: Urban garden design; Household organic waste management; Composting and vermiculture; Efficient irrigation systems; Creation of suitable substrates; Care and propagation of seeds; Soil health care and protection; Support through all stages of food cultivation; Customized educational content.",
+      "img_alt": "Illustration of nature-based solutions"
+    },
+    "s2": {
+      "title": "Accompaniment – Training, facilitation, and organizational transformation",
+      "desc": "We accompany deep change processes in people and organizations, strengthening regenerative capacities that sustain the necessary conditions to ensure life’s continuity—healthy and vibrant in biodiversity.",
+      "li1": "Facilitation of processes and strategic planning based on the Theory of Change model, which articulates how to achieve the desired change, including indicator definition, follow-up plans, and learning evaluation. This applies to individuals and organizations seeking to engage in the processes necessary to define their pathway and reach the change they aspire to.",
+      "li2": "Integration of advanced social science research methods for regenerative purposes, in order to harvest evidence, learn, and improve strategic decisions that connect with broader local and global conceptual frameworks and enable engagement with aligned local and international networks.",
+      "sub_li2_1": "Quantitative social research: surveys, statistical analysis, data visualization.",
+      "sub_li2_2": "Qualitative social research: interviews, group interviews, focus groups, mappings.",
+      "sub_li2_3": "Participatory research: fostering participatory leadership through techniques such as world cafés, talking circles, open spaces, wise action design, among others.",
+      "li3": "Facilitation of workshops and training, individual and group mentoring on various practices and local actions that contribute positively to a regenerative and sustainable vision of the future. The content addresses diverse environmental education topics and promotes experiential learning for all ages through a participatory leadership approach.",
+      "li4": "Consulting for the preparation and implementation of projects applying to public and private funding, both nationally and internationally.",
+      "img_alt": "Facilitation and training for change"
+    },
+    "s3": {
+      "title": "Appropriate Technologies – Customized digital solutions",
+      "desc": "By creating web applications, we unlock practical processes that help organizations working for regeneration to advance smoothly. We do this by developing low-cost, customized digital tools that support the management, communication, and learning of like-minded human groups, always within a critical reflection on the use of technology for regenerative purposes.",
+      "li1": "Creation of websites for your organization.",
+      "li2": "Creation of custom web applications tailored to your needs and interests:",
+      "sub_li2_1": "Systems for managing money and savings within an organization.",
+      "sub_li2_2": "Systems for organizing and tracking tasks and agreements.",
+      "sub_li2_3": "Dynamic monitoring dashboards to explore data, manage information, and communicate results.",
+      "sub_li2_4": "Territorial, social, or environmental data explorers.",
+      "sub_li2_5": "Indicator monitoring dashboards with exportable visualizations.",
+      "sub_li2_6": "Pedagogical tools.",
+      "sub_li2_7": "We design according to your needs.",
+      "img_alt": "Customized digital solutions"
+    }},
+    "contact": {
+      "title": "Contact",
+      "lead": "Connect through any of these channels",
+      "write": "Write to us",
+      "note": "Thank you for your interest. We will reply soon.",
+      "wechat": "WeChat",
+      "line": "Line",
+      "whatsapp": "WhatsApp"
+    },
+    "propuesta_valor": {
+      "title": "Value Proposition",
+      "desc": "All professional services offered are sustained by a present and future vision where:",
+      "li1": "The global challenges of climate change, biodiversity loss, and the pollution crisis are faced collectively by people, organizations, communities, and companies committed to life.",
+      "li2": "The act of regenerating the conditions for the continuity of life is central to guiding efforts toward a better way of living.",
+      "li3": "We are willing to embrace a mindset shift that breaks away from linear and degenerative life patterns that result in greater pollution and biodiversity loss.",
+      "li4": "We adopt new roles by integrating natural and human systems, in favor of the health of both.",
+      "li5": "We assume that this work is in permanent evolution, as the regenerative perspective involves achieving goals whose timescale surpasses our human lifetimes; that is, objectives that transcend into future generations."
+    },
+    "publico_interes": {
+      "title": "Who We Primarily Serve",
+      "li1": "Anyone interested in joining the pulse of regeneration and seeking guidance.",
+      "li2": "Individuals and communities interested in learning to grow their own food and starting a garden.",
+      "li3": "People experiencing eco-anxiety who need help taking concrete actions to improve their health and that of the ecosystem.",
+      "li4": "Professionals and technicians creating social impact who need support to ensure their work also contributes positively to the health of the greater ecosystem.",
+      "li5": "Organizations and companies seeking to strengthen their sustainability practices, generating an impact that benefits both their well-being and that of the ecosystems where they live and envision their future.",
+      "li6": "Educational institutions that need to strengthen their approach to environmental education through concrete regenerative actions within their spaces, enriching the meaning of their educational projects."
+    },
+    "instagram": {
+      "title": "Latest on Instagram"
+    },
+    "download_guia": {
+      "guia": "Download the Introduction to Regeneration Guide",
+      "btn_download_guia": "Download Guide"
+  }
+}
