@@ -96,34 +96,220 @@ h3{ font-size: clamp(1.2rem, 2.3vw, 1.4rem); font-weight:700; color: var(--amber
 }
 .card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); }
 
-/* ------------------------------
-   2) Navegación / Header
------------------------------- */
-.nav{
-  position: sticky; top:0; z-index: 100;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,.05);
-  box-shadow: 0 2px 14px rgba(0,0,0,.04);
+/* ===== NAVBAR ===== */
+.nav {
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-.nav-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:.65rem 0;
-}
-.brand{ display:flex; align-items:center; gap:.6rem; }
-.logo{ width:48px; height:48px; }
-.brand-name{ font-weight:700; letter-spacing:.3px; }
 
-.nav-links{ display:flex; gap:1.1rem; list-style:none; margin:0; padding:0; }
-.nav-links a{
-  color: var(--text); font-weight:600; padding:.45rem .6rem; border-radius:10px;
+/* Contenedor principal */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.nav-links a:hover{ background: var(--cream); color: var(--teal); }
 
-.lang-wrap select{
-  border-radius: 10px; border:1px solid var(--teal);
-  padding:.35rem .55rem; background: var(--cream); color: var(--text); font-weight:600;
+/* Marca y logo */
+.brand {
+  order: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+.brand img.logo {
+  width: 42px;
+  height: auto;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #112E4D;
+}
+
+/* Selector de idioma */
+.lang-wrap {
+  order: 1;
+  margin-left: 1rem;
+}
+
+.lang-wrap select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #112E4D;
+  font-weight: 500;
+}
+
+/* Menú principal */
+.nav-menu {
+  order: 2;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #112E4D;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #239BA7;
+}
+
+/* Submenú */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > a::after {
+  content: " ▾";
+  font-size: 0.7em;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 180px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.submenu li {
+  padding: 0.4rem 1rem;
+}
+
+.submenu li a {
+  display: block;
+  color: #112E4D;
+}
+
+.submenu li a:hover {
+  color: #239BA7;
+  background: #f7f7f7;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+/* Botón hamburguesa */
+.nav-toggle {
+  order: 3;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  width: 24px;
+  height: 2px;
+  background-color: #112E4D;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  /* Botón visible en móvil */
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Menú oculto y desplegable */
+  .nav-menu {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #ffffff;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-menu.open {
+    max-height: 600px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .submenu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background: #fafafa;
+    border-radius: 8px;
+    margin-top: 0.4rem;
+  }
+
+  .submenu li a {
+    padding: 0.5rem;
+  }
+
+  .lang-wrap {
+    order: 3;
+    margin: 0.5rem auto 0;
+  }
+}
+
+/* ===== OPCIONAL: animación hamburguesa en "X" ===== */
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+
 
 /* ------------------------------
    3) Hero

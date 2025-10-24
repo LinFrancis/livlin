@@ -22,36 +22,58 @@
 <body>
   <a class="skip" href="#main" data-i18n="ui.skip_to_content">Saltar al contenido principal</a>
 
-  <!-- Header / Nav -->
-  <header class="nav">
-    <div class="nav-inner container">
-      <div class="brand">
-        <img src="images/logo_livlin.png" alt="LivLin logo" class="logo" width="48" height="48">
-        <span class="brand-name">LivLin</span>
-      </div>
-
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
-          <li><a href="#about" data-i18n="nav.about">Quiénes somos</a></li>
-          <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
-          <li><a href="#instagram" data-i18n="nav.gallery">Galería</a></li>
-          <li><a href="#download" data-i18n="nav.recursos">Recursos</a></li>
-        </ul>
-      </nav>
-
-      <div class="lang-wrap">
-        <label for="lang-switcher" class="visually-hidden" data-i18n="lang.choose">Idioma / Language / 语言</label>
-        <select id="lang-switcher" aria-label="Language selector">
-          <option value="es">ES</option>
-          <option value="en">EN</option>
-          <option value="zh">中文</option>
-          <option value="dk">DK</option>
-        </select>
-      </div>
+<header class="nav">
+  <div class="nav-inner container">
+    <!-- Brand -->
+    <div class="brand">
+      <img src="images/logo_livlin.png" alt="LivLin logo" class="logo" width="48" height="48">
+      <span class="brand-name">LivLin</span>
     </div>
-  </header>
+
+    <!-- Language selector (moved left) -->
+    <div class="lang-wrap">
+      <label for="lang-switcher" class="visually-hidden" data-i18n="lang.choose">
+        Idioma / Language / 语言
+      </label>
+      <select id="lang-switcher" aria-label="Language selector">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="zh">中文</option>
+        <option value="dk">DK</option>
+      </select>
+    </div>
+
+    <!-- Hamburguesa -->
+    <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation" class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#about" data-i18n="nav.about">Quiénes somos</a></li>
+
+        <li class="has-submenu">
+          <a href="#services" data-i18n="nav.services">Servicios ▾</a>
+          <ul class="submenu">
+            <li><a href="#service-s1" data-i18n="model.s1_head"></a></li>
+            <li><a href="#service-s2" data-i18n="model.s2_head"></a></li>
+            <li><a href="#service-s3" data-i18n="model.s3_head"></a></li>
+          </ul>
+        </li>
+
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+        <li><a href="#instagram" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="#download" data-i18n="nav.recursos">Recursos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
 
   <section class="hero" id="inicio" data-bg="images/banner_horizontal.png">
   <div class="hero__bg"></div>
@@ -379,6 +401,18 @@
     window.history.replaceState({}, '', url);
   });
 </script>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
 
 
 
