@@ -136,7 +136,8 @@
           <!-- Texto -->
           <div class="service-text">
             <ul class="main-list">
-              <li data-i18n="services.s1.li1"></li>
+            <li>
+              <div data-i18n="services.s1.li1"></div>
               <ul class="sublist two-cols">
                 <li data-i18n="services.s1.sub_li3_1"></li>
                 <li data-i18n="services.s1.sub_li3_2"></li>
@@ -146,8 +147,9 @@
                 <li data-i18n="services.s1.sub_li3_6"></li>
                 <li data-i18n="services.s1.sub_li3_7"></li>
               </ul>
-              </li>
-            </ul>
+            </li>
+          </ul>
+
 
             <p class="service-cta">
               <a class="cta" href="#contact" data-i18n="ui.hire_nbs">Contrata estos servicios</a>
@@ -186,13 +188,7 @@
         </div>
       </article>
 
-      <!-- Lightbox global (una vez) -->
-      <div id="lb" class="lb hidden" aria-hidden="true">
-        <button class="lb-btn lb-close" aria-label="Cerrar">×</button>
-        <button class="lb-btn lb-prev"  aria-label="Anterior">‹</button>
-        <img class="lb-img" alt="" />
-        <button class="lb-btn lb-next"  aria-label="Siguiente">›</button>
-      </div>
+      
 
      <!-- ===== S2 (homogeneizado con tiras + lightbox) ===== -->
 <article id="service-facilitacion" class="service-card service-s1">
@@ -479,51 +475,84 @@
     })();
   </script>
 
+
+
+
+  
   <!-- Lightbox (único script) -->
+
+<!-- ✅ Lightbox global, fuera de #services y demás secciones -->
+<div id="lb" class="lb hidden" aria-hidden="true">
+  <button class="lb-btn lb-close" aria-label="Cerrar">×</button>
+  <button class="lb-btn lb-prev"  aria-label="Anterior">‹</button>
+  <img class="lb-img" alt="" />
+  <button class="lb-btn lb-next"  aria-label="Siguiente">›</button>
+</div>
+
+
   <script>
     (function(){
-      const lb = document.getElementById('lb');
-      const lbImg = lb.querySelector('.lb-img');
-      const btnClose = lb.querySelector('.lb-close');
-      const btnPrev  = lb.querySelector('.lb-prev');
-      const btnNext  = lb.querySelector('.lb-next');
+  const lb = document.getElementById('lb');
+  const lbImg = lb.querySelector('.lb-img');
+  const btnClose = lb.querySelector('.lb-close');
+  const btnPrev  = lb.querySelector('.lb-prev');
+  const btnNext  = lb.querySelector('.lb-next');
 
-      // Construir galerías por cada strip dentro de .service-media
-      const strips = document.querySelectorAll('.service-media .media-strip');
-      const galleries = {};
-      strips.forEach(strip=>{
-        const group = strip.dataset.group || 'default';
-        galleries[group] = Array.from(strip.querySelectorAll('img')).map(img => ({
-          src: img.getAttribute('src'), el: img
-        }));
-        strip.addEventListener('click', e=>{
-          const img = e.target.closest('img'); if(!img) return;
-          openLB(group, galleries[group].findIndex(i => i.el===img));
-        });
-      });
+  // ✅ Reubicar el overlay como hijo directo de <body>
+  if (lb && lb.parentElement !== document.body) {
+    document.body.appendChild(lb);
+  }
 
-      let currentGroup = null, currentIndex = 0;
-      function openLB(group, index){ currentGroup=group; currentIndex=index; updateLB();
-        lb.classList.remove('hidden'); lb.setAttribute('aria-hidden','false'); }
-      function closeLB(){ lb.classList.add('hidden'); lb.setAttribute('aria-hidden','true'); }
-      function updateLB(){ const it = galleries[currentGroup][currentIndex]; lbImg.src = it.src; }
-      function next(){ currentIndex=(currentIndex+1)%galleries[currentGroup].length; updateLB(); }
-      function prev(){ currentIndex=(currentIndex-1+galleries[currentGroup].length)%galleries[currentGroup].length; updateLB(); }
+  // Construir galerías por grupo (tal como ya haces)
+  const strips = document.querySelectorAll('.service-media .media-strip');
+  const galleries = {};
+  strips.forEach(strip=>{
+    const group = strip.dataset.group || 'default';
+    galleries[group] = Array.from(strip.querySelectorAll('img')).map(img => ({ src: img.src, el: img }));
+    strip.addEventListener('click', e=>{
+      const img = e.target.closest('img'); if(!img) return;
+      openLB(group, galleries[group].findIndex(i=>i.el===img));
+    });
+  });
 
-      btnClose.addEventListener('click', closeLB);
-      btnNext.addEventListener('click', next);
-      btnPrev.addEventListener('click', prev);
-      lb.addEventListener('click', e=>{ if(e.target===lb) closeLB(); });
-      window.addEventListener('keydown', e=>{
-        if(lb.classList.contains('hidden')) return;
-        if(e.key==='Escape') closeLB();
-        if(e.key==='ArrowRight') next();
-        if(e.key==='ArrowLeft')  prev();
-      });
-    })();
+  let currentGroup = null, currentIndex = 0;
+
+  function openLB(group, index){
+    currentGroup = group;
+    currentIndex = index;
+    updateLB();
+    lb.classList.remove('hidden');
+    lb.setAttribute('aria-hidden','false');
+    document.body.classList.add('lb-open');   // 🔒 bloquear scroll de fondo
+  }
+
+  function closeLB(){
+    lb.classList.add('hidden');
+    lb.setAttribute('aria-hidden','true');
+    document.body.classList.remove('lb-open'); // 🔓 restaurar scroll
+  }
+
+  function updateLB(){
+    const item = galleries[currentGroup][currentIndex];
+    lbImg.src = item.src;
+  }
+  function next(){ currentIndex = (currentIndex+1) % galleries[currentGroup].length; updateLB(); }
+  function prev(){ currentIndex = (currentIndex-1+galleries[currentGroup].length) % galleries[currentGroup].length; updateLB(); }
+
+  btnClose.addEventListener('click', closeLB);
+  btnNext.addEventListener('click', next);
+  btnPrev.addEventListener('click', prev);
+  lb.addEventListener('click', e=>{ if(e.target===lb) closeLB(); });
+  window.addEventListener('keydown', e=>{
+    if(lb.classList.contains('hidden')) return;
+    if(e.key==='Escape') closeLB();
+    if(e.key==='ArrowRight') next();
+    if(e.key==='ArrowLeft')  prev();
+  });
+})();
+
   </script>
 
-  <!-- Instagram embed -->
-  <script async src="//www.instagram.com/embed.js"></script>
+  
 </body>
 </html>

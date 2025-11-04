@@ -56,3 +56,10 @@ export async function loadLang(lang) {
 export function getCurrentTranslations() {
   return CURRENT_TRANSLATIONS;
 }
+
+
+function updateLB(){
+  const item = galleries[currentGroup][currentIndex];
+  lbImg.src = item.src;
+  lbImg.alt = item.el?.alt || '';
+}
