@@ -226,12 +226,68 @@ h3{ font-size: clamp(1.2rem, 2.3vw, 1.4rem); font-weight:700; color: var(--amber
 /* ==========================================================
    4) About
    ========================================================== */
-.about-grid{
-  display:grid; gap:1.25rem; grid-template-columns: 1fr 1fr;
-  background: var(--card); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-soft);
+
+#about {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
 }
-.about-block p{ color: var(--muted); }
-@media (max-width:900px){ .about-grid{ grid-template-columns:1fr; } }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.about-photo {
+  text-align: center;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.03);
+}
+
+.photo-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.about-text h2,
+.about-text h3 {
+  color: #112E4D;
+  margin-bottom: 0.75rem;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-width: 240px;
+  }
+
+  .about-text {
+    margin-top: 1.5rem;
+  }
+}
 
 /* ==========================================================
    5) Servicios
