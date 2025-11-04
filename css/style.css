@@ -398,6 +398,37 @@ h3{ font-size: clamp(1.2rem, 2.3vw, 1.4rem); font-weight:700; color: var(--amber
   border-radius:var(--radius-sm); box-shadow:0 1px 2px rgba(0,0,0,.04); scroll-snap-align:center; cursor:zoom-in;
 }
 
+/* Imagen destacada por servicio — versión con imagen completa (sin recorte) */
+.feature-media {
+  margin: 1.25rem auto 1.5rem;
+  text-align: center;
+  max-width: 520px;           /* 🔹 controla el tamaño total */
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 0.6rem;            /* 🔹 pequeño marco alrededor */
+}
+
+.feature-media img {
+  width: 100%;
+  height: auto;               /* 🔹 mantiene proporción natural */
+  object-fit: contain;        /* 🔹 sin recorte */
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.feature-media:hover img {
+  transform: scale(1.02);
+}
+
+/* CTA centrado al final del artículo */
+.service-cta {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
 /* Lightbox */
 .lb{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.75); z-index:9999; }
 .lb.hidden{ display:none; }
