@@ -29,13 +29,15 @@
     "hire_facilitation": "Bestil disse tjenester"
   },
   "home": {
-    "title": "Når planeten bliver syg, er at regenerere at hele og fejre livet",
-    "lead": "Over for de globale udfordringer med klimaforandringer, forurening og tab af biodiversitet tilbyder vi lokale og praktiske løsninger, der regenererer de økosystemer, som opretholder livet for nuværende og kommende generationer.",
-    "what_title_p1": "Hvem vi er",
-    "what_p1": "Jeg er Francis Mason 林高天 (Lín Gāotiān), sociolog og permakulturist. Jeg leder dette initiativ, som har til formål at tilbyde praktiske og bæredygtige løsninger til mennesker, fællesskaber og virksomheder som svar på den tredobbelte miljøkrise, vi står overfor. Jeg koordinerer et aktivt og voksende fællesskab for bylandbrug, som fra Chile – Sydamerika, verdens sydlige del – forbinder viden og erfaring for at sameksistere i en bedre nutid og samskabe en bedre fremtid. Velkommen til LivLin!",
-    "what_title_p2": "Hvordan vi arbejder",
-    "what_p2": "Vi forener praksis, ledsagelse og passende brug af teknologi for at fremme den transformative forandring, der er nødvendig for at leve tættere på en regenerativ og bæredygtig fremtid for nuværende og kommende generationer."
-  },
+  "title": "Når planeten bliver syg, er at regenerere at helbrede og fejre livet",
+  "lead": "Over for de globale udfordringer med klimaforandringer, forurening og tab af biodiversitet tilbyder vi lokale og praktiske løsninger, der regenererer de økosystemer, som opretholder livet for nuværende og kommende generationer.",
+  "what_title_p1": "Hvem vi er",
+  "what_p1": "Jeg er Francis Mason 林高天 (Lín Gāotiān), sociolog og permakulturpraktiker. Jeg leder dette initiativ, der har til formål at tilbyde praktiske og bæredygtige løsninger til mennesker, fællesskaber og virksomheder, der står over for den tredobbelte miljøkrise, vi lever i.",
+  "what_p2": "Jeg koordinerer et aktivt og voksende fællesskab inden for bylandbrug, som fra Chile, Sydamerika, forbinder viden og erfaringer for at skabe et bedre nu og samskabe en bedre fremtid.",
+  "what_p3": "Vi forener praksis, vejledning og passende brug af teknologi for at fremme den transformative forandring, der er nødvendig for at leve tættere på en regenerativ og bæredygtig fremtid for nuværende og kommende generationer.",
+  "what_p4": "Velkommen til LivLin!"
+},
+
 
   "model": {
     "model_title": "LivLin Tjenestemodel",

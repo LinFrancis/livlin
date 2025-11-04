@@ -28,14 +28,16 @@
     "hire_digital": "Hire these services",
     "hire_facilitation": "Hire these services"
   },
-  "home": {
-    "title": "When the planet gets sick, to regenerate is to heal and celebrate life",
-    "lead": "In the face of global challenges such as climate change, pollution crises, and biodiversity loss, we offer local and practical solutions that regenerate the ecosystems sustaining life for present and future generations.",
-    "what_title_p1": "Who we are",
-    "what_p1": "I’m Francis Mason 林高天 (Lín Gāotiān), a sociologist and permaculturist. I lead this initiative that aims to offer practical and sustainable solutions for individuals, communities, and organizations in response to the triple environmental crisis we face. I coordinate an active and ever-growing community of urban agriculture practitioners that, from Chile—South America, the southern part of the world—connects knowledge and wisdom to co-inhabit a better present and co-design a better future. Welcome to LivLin!",
-    "what_title_p2": "How we work",
-    "what_p2": "We combine practice, accompaniment, and the appropriate use of technologies to drive the transformational change needed to live closer to a regenerative and sustainable vision for present and future generations."
-  },
+ "home": {
+  "title": "When the planet gets sick, to regenerate is to heal and celebrate life",
+  "lead": "Faced with the global challenges of climate change, pollution, and biodiversity loss, we offer local and practical solutions that regenerate the ecosystems sustaining life for present and future generations.",
+  "what_title_p1": "Who we are",
+  "what_p1": "I am Francis Mason 林高天 (Lín Gāotiān), sociologist and permaculture practitioner. I lead this initiative to offer practical and sustainable solutions for people, communities, and organizations facing the triple environmental crisis we are living through.",
+  "what_p2": "I coordinate an active and growing urban agriculture community of practice that, from Chile, South America, connects knowledge and wisdom to co-inhabit a better present and co-design a better future.",
+  "what_p3": "We combine practice, accompaniment, and the appropriate use of technologies to drive the transformative change needed to live closer to a regenerative and sustainable future for present and future generations.",
+  "what_p4": "Welcome to LivLin!"
+},
+
 
   "model": {
     "model_title": "LivLin Services Model",
