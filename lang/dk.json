@@ -1,0 +1,146 @@
+{
+  "titles": {
+    "home": "LivLin · Tjenester for Regeneration",
+    "services": "LivLin · Tjenester",
+    "about": "LivLin · Om os",
+    "contact": "LivLin · Kontakt"
+  },
+  "nav": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "about": "Om os",
+    "contact": "Kontakt",
+    "gallery": "Galleri",
+    "recursos": "Ressourcer",
+    "aria_label": "Hovednavigation"
+  },
+  "footer": {
+    "copy": "© 2025 LivLin. Alle rettigheder forbeholdes."
+  },
+  "lang": {
+    "choose": "Sprog / Idioma / 语言"
+  },
+  "ui": {
+    "skip_to_content": "Gå til hovedindhold",
+    "read_more": "Læs mere",
+    "hire_nbs": "Bestil disse tjenester",
+    "hire_research": "Bestil disse tjenester",
+    "hire_digital": "Bestil disse tjenester",
+    "hire_facilitation": "Bestil disse tjenester"
+  },
+  "home": {
+    "title": "Når planeten bliver syg, er at regenerere at hele og fejre livet",
+    "lead": "Over for de globale udfordringer med klimaforandringer, forurening og tab af biodiversitet tilbyder vi lokale og praktiske løsninger, der regenererer de økosystemer, som opretholder livet for nuværende og kommende generationer.",
+    "what_title_p1": "Hvem vi er",
+    "what_p1": "Vi er en virksomhed, der tilbyder professionelle tjenester til at regenerere de betingelser, som sikrer livets fortsættelse – betingelser, der i dag er truet af klimaforandringer, forurening og tab af biodiversitet.",
+    "what_title_p2": "Hvordan vi arbejder",
+    "what_p2": "Vi forener praksis, ledsagelse og passende brug af teknologi for at fremme den transformative forandring, der er nødvendig for at leve tættere på en regenerativ og bæredygtig fremtid for nuværende og kommende generationer."
+  },
+
+  "model": {
+    "model_title": "LivLin Tjenestemodel",
+    "s1_head": "Bylandbrug og agroøkologi",
+    "s1_desc": "Design og etablering af urbane haver",
+    "s2_head": "Regenerativ ledsagelse og læring",
+    "s2_desc": "Facilitering og læring til forandring",
+    "s3_head": "Digitale værktøjer til regeneration",
+    "s3_desc": "Teknologi til ansvarlig brug",
+    "center_text": "En regenerativ fremtid"
+  },
+
+  "services": {
+    "title": "Professionelle tjenester for økosocial regeneration",
+    "lead": "Vi er organiseret i tre hovedområder, der henvender sig til både enkeltpersoner og organisationer:",
+    "lead_emotional": "Enhver handling — individuel eller kollektiv, uanset hvor lille den synes — har en miljøpåvirkning gennem både sine tilsigtede og utilsigtede effekter på det større naturlige økosystem, som opretholder alt liv.",
+
+    "s1": {
+      "title": "Bylandbrug og Agroøkologi",
+      "subtitle": "Design og etablering af levende urbane haver og økosystemer",
+      "desc": "Vi fremmer naturens udtryk i byen — fra terrasser og gårdhaver til pladser og åbne arealer — og styrker miljøundervisning og genforbindelse med livets rytmer. Vi fremmer en regenerativ, pesticidfri bylandbrugspraksis, der er tilpasset hver kontekst.",
+      "li1": "Personlig teknisk vejledning gennem alle stadier af urban agroøkologisk dyrkning:",
+      "sub_li3_1": "Håndtering af husholdningsaffald og organisk materiale",
+      "sub_li3_2": "Kompostering og ormebrug",
+      "sub_li3_3": "Effektive vandingssystemer",
+      "sub_li3_4": "Pleje og formering af frø",
+      "sub_li3_5": "Jordens sundhed og regeneration",
+      "sub_li3_6": "Støtte i såning, pleje og høst",
+      "sub_li3_7": "Vi tilpasser os dine behov",
+      "img_alt": "Illustration af urban agroøkologisk have"
+    },
+
+    "s2": {
+      "title": "Regenerativ ledsagelse og uddannelse",
+      "subtitle": "Facilitering, forskning og kapacitetsopbygning til forandring",
+      "desc": "Vi ledsager dybe forandringsprocesser i mennesker og organisationer og styrker regenerative evner, der opretholder betingelserne for et sundt og biodivers liv.",
+      "li1": "Procesfacilitering og strategisk planlægning baseret på Theory of Change-modellen",
+      "li1_desc": "Theory of Change er en planlægningsproces, der tydeliggør, hvordan man opnår ønsket forandring – inklusive definition af indikatorer, opfølgningsplaner og evaluering for læring. Den anvendes af personer og organisationer, der ønsker at definere deres vej mod forandring.",
+      "li2": "Kombination af avancerede samfundsvidenskabelige forskningsmetoder til regenerative formål",
+      "li2_desc": "Videnskab til at høste viden, lære og forbedre strategiske beslutninger, som forbinder lokale og globale perspektiver og muliggør deltagelse i beslægtede netværk.",
+      "sub_li2_1": "Kvantitativ samfundsforskning:",
+      "sub_li2_1_desc": "Spørgeskemaer, statistisk analyse, datavisualisering",
+      "sub_li2_2": "Kvalitativ samfundsforskning:",
+      "sub_li2_2_desc": "Interviews, gruppeinterviews, fokusgrupper, kortlægninger",
+      "sub_li2_3": "Deltagende forskning:",
+      "sub_li2_3_desc": "Fremme af deltagende lederskab gennem metoder som World Café, samtalekredse, åbne rum og Wise Action Design.",
+      "li3": "Facilitering af workshops og træning, individuel og gruppementorering",
+      "li3_desc": "Emnerne dækker forskellige lokale praksisser og handlinger, der bidrager positivt til en regenerativ og bæredygtig fremtidsvision. Indholdet fremmer erfaringsbaseret læring for alle aldre gennem et deltagende lederskabsperspektiv.",
+      "li4": "Rådgivning om udarbejdelse og gennemførelse af projektforslag til offentlige og private fonde",
+      "li4_desc": "Gælder både i national og international sammenhæng.",
+      "img_alt": "Facilitering og uddannelse for forandring"
+    },
+
+    "s3": {
+      "title": "Digitale værktøjer til regeneration",
+      "subtitle": "Skræddersyede teknologiske løsninger i bæredygtighedens tjeneste",
+      "desc": "Ved at udvikle webapplikationer frigør vi praktiske processer, der hjælper organisationer, som arbejder for regeneration, med at bevæge sig mere flydende fremad. Vi designer prisvenlige, skræddersyede digitale værktøjer, der støtter ledelse, kommunikation og læring i fællesskaber – altid med et kritisk blik på teknologiens rolle i det regenerative arbejde.",
+      "li1": "Udvikling af hjemmesider til din organisation",
+      "li1_desc": "Enkle og prisvenlige hjemmesider, der formidler værdien af dit projekt eller din organisation.",
+      "li2": "Udvikling af skræddersyede webapplikationer tilpasset dine behov og interesser:",
+      "li2_desc": "Vi samskaber digitale løsninger til forskellige organisatoriske udfordringer og regenerative initiativer.",
+      "sub_li2_1": "Systemer til økonomi- og opsparingsstyring i organisationer",
+      "sub_li2_2": "Systemer til opfølgning på opgaver og aftaler",
+      "sub_li2_3": "Dynamiske dashboards til udforskning og kommunikation af data",
+      "sub_li2_4": "Geospatiale, sociale eller miljømæssige data-explorers",
+      "sub_li2_5": "Indikator-monitoreringsværktøjer med eksportérbare visualiseringer",
+      "sub_li2_6": "Pædagogiske værktøjer",
+      "sub_li2_7": "Vi designer, som du har brug for det",
+      "img_alt": "Skræddersyede digitale løsninger"
+    }
+  
+
+  },
+  "contact": {
+    "title": "Kontakt",
+    "lead": "Du kan kontakte os på disse måder",
+    "write": "Skriv til os",
+    "note": "Tak for din interesse. Vi vender snart tilbage.",
+    "wechat": "WeChat",
+    "line": "Line",
+    "whatsapp": "WhatsApp"
+  },
+  "propuesta_valor": {
+    "title": "Værditilbud",
+    "desc": "Alle vores professionelle tjenester bygger på en vision for nutiden og fremtiden, hvor:",
+    "li1": "De globale udfordringer med klimaændringer, biodiversitetstab og forurening mødes i fællesskab af mennesker, organisationer, fællesskaber og virksomheder, der arbejder for livet.",
+    "li2": "Regenerering af livets betingelser er kernen i bestræbelserne på et bedre liv.",
+    "li3": "Vi er villige til at ændre tankegang og bryde med lineære og nedbrydende mønstre, der fører til mere forurening og tab af natur.",
+    "li4": "Vi indtager nye roller ved at integrere naturlige og menneskelige systemer for begge parters sundhed.",
+    "li5": "Vi ser arbejdet som en vedvarende proces, hvor regenerative mål rækker ud over vores egen levetid og overdrages til kommende generationer."
+  },
+  "publico_interes": {
+    "title": "Hvem vi primært tjener",
+    "li1": "Alle, der ønsker at deltage i regenerering og søger vejledning.",
+    "li2": "Personer og fællesskaber, der ønsker at lære at dyrke deres egen mad og starte en have.",
+    "li3": "Mennesker, der oplever økoangst og ønsker konkrete handlinger for at forbedre deres egen og naturens sundhed.",
+    "li4": "Fagfolk og teknikere, der arbejder med social påvirkning og ønsker at gøre deres indsats mere positiv for økosystemet.",
+    "li5": "Organisationer og virksomheder, der ønsker at styrke deres bæredygtighedspraksis og skabe resultater, der gavner både dem selv og miljøet.",
+    "li6": "Uddannelsesinstitutioner, der ønsker at fremme miljøundervisning gennem konkrete regenerative handlinger i deres læringsrum."
+  },
+  "instagram": {
+    "title": "Seneste på Instagram"
+  },
+  "download_guia": {
+    "guia": "Download guiden: Introduktion til regenerering",
+    "btn_download_guia": "Download guide"
+  }
+}

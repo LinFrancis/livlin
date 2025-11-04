@@ -1,0 +1,148 @@
+{
+  "titles": {
+    "home": "LivLin · Servicios para la regeneración",
+    "services": "LivLin · Servicios",
+    "about": "LivLin · Quiénes somos",
+    "contact": "LivLin · Contacto"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Quiénes somos",
+    "contact": "Contacto",
+    "gallery":"Galeria",
+    "recursos":"Recursos",
+    "aria_label": "Navegación principal"
+  },
+  "footer": {
+    "copy": "© 2025 LivLin. Todos los derechos reservados."
+  },
+  "lang": {
+    "choose": "Idioma / Language / 语言"
+  },
+  "ui": {
+    "skip_to_content": "Saltar al contenido principal",
+    "read_more": "Leer más",
+    "hire_nbs": "Contrata estos servicios",
+    "hire_research": "Contrata estos servicios",
+    "hire_digital": "Contrata estos servicios",
+    "hire_facilitation": "Contrata estos servicios"
+  },
+  "home": {
+    "title": "Cuando el planeta enferma, regenerar es mejorar la salud y celebrar la vida",
+    "lead": "Frente a los desafíos globales del cambio climático, crisis de contaminación y pérdida de biodiversidad, ofrecemos soluciones locales y prácticas que regeneran los ecosistemas que sostienen la vida de las presentes y futuras generaciones",
+    "what_title_p1": "Quiénes somos",
+    "what_p1": "Somos una empresa de servicios profesionales para la regeneración de las condiciones para la continuidad de la vida que hoy se ven amenazadas por el cambio climático, la crisis de contaminación y pérdida de biodiversidad.",
+    "what_title_p2": "Cómo trabajamos",
+    "what_p2": "Unimos practica, acompañamiento y uso apropiado de tecnologías para impulsar el cambio transformador necesario para vivir más cerca de una visión de futuro regenerativo y sostenible para las presentes y futuras generaciones."
+  },
+  "model": {
+  "model_title": "Modelo Servicios Livlin",
+  "s1_head": "Agricultura Urbana Agroecológica",
+  "s1_desc": "Diseño e implementación de huerta urbana",
+  "s2_head": "Acompañamiento y Formación Regenerativa",
+  "s2_desc": "Facilitación y aprendizaje para el cambio",
+  "s3_head": "Herramientas Digitales para la Regeneración",
+  "s3_desc": "Tecnología de uso apropiado",
+  "center_text": "Futuro regenerativo y sostenible"
+},
+
+"services": {
+  "title": "Servicios profesionales para la regeneración ecosocial",
+  "lead": "Nos organizamos en tres ejes de servicios que aplican a todo público y organizaciones:",
+  "lead_emotional" : "Siempre, toda acción, individual, grupal, por más simple que parezca, tiene impacto ambiental debido a sus efectos deseados y no deseados en el ecosistema natural mayor que sostiene la vida en general.",
+  "s1": {
+  "title": "Agricultura Urbana Agroecológica",
+  "subtitle": "Diseño e implementación de huertas y ecosistemas urbanos vivos",
+  "desc": "Favorecemos la expresión de la naturaleza en la ciudad, desde terrazas y patios hasta plazas y terrenos, cultivando educación ambiental y reconexión con los ritmos de la vida. Promovemos una agricultura urbana libre de agrotóxicos, regenerativa y adaptada a cada entorno.",
+  "li1": "Acompañamiento técnico personalizado en todas las etapas del cultivo agroecológico urbano:",
+  "sub_li3_2": "Compostaje y lombricultura",
+  "sub_li3_3": "Sistemas de riego eficientes",
+  "sub_li3_4": "Cuidado y propagación de semillas",
+  "sub_li3_5": "Salud y regeneración del suelo",
+  "sub_li3_6": "Acompañamiento en siembra, manejo y cosecha",
+  "sub_li3_1": "Gestión de residuos orgánicos domiciliarios",
+  "sub_li3_7": "Nos acomodamos a sus necesidades",
+  "img_alt": "Ilustración de agricultura urbana agroecológica"
+  },
+    "s2": {
+      "title": "Acompañamiento y Formación Regenerativa",
+      "subtitle":"Facilitación, investigación y fortalecimiento de capacidades para el cambio",
+      "desc": "Acompañamos procesos de cambio profundo en personas y organizaciones, fortaleciendo capacidades regenerativas que sostengan las condiciones necesarias para asegurar la continuidad de la vida, saludable y vibrante en biodiversidad.",
+      "li1": "Facilitación de procesos y planificación estratégica en base al modelo de Teoría de Cambio",
+      "li1_desc": "Teoría de Cambio refiere a un proceso de planificación que articula cómo lograr el cambio deseado, incluyendo definición de indicadores, planes de seguimiento y evaluación para el aprendizaje. Esto aplica a personas y organizaciones que deseen vivir los procesos necesarios para definir la ruta a seguir y así alcanzar el cambio deseado.",
+      "li2": "Combinación de métodos avanzados de investigación de las ciencias sociales para fines regenerativos",
+      "li2_desc": "Ciencia para cosechar evidencia, aprender y mejorar decisiones estratégicas que conecten con marcos conceptuales locales y globales más amplios, y permitan sumarse a más redes locales e internacionales afines.",
+      "sub_li2_1":"Investigación social cuantitativa:",
+      "sub_li2_1_desc":"Encuestas, análisis estadísticos, visualización de datos",
+      "sub_li2_2":"Investigación social cualitativa:",
+      "sub_li2_2_desc":"Entrevistas, entrevistas grupales, grupos focales, mapeos",
+      "sub_li2_3":"Investigación participativa:",
+      "sub_li2_3_desc":"Promoción de liderazgo participativo a través de tecnologías como café del mundo, círculos de palabra, espacios abiertos, diseño de acción sabia, entre otros.",
+      "li3": "Facilitación de talleres y capacitación, mentorías individuales y grupales",
+      "li3_desc": "Temáticas sobre diversas prácticas y acciones locales que contribuyen positivamente a una visión de futuro regenerativo y sostenible. Los contenidos abordan diversos temas de educación ambiental promoviendo aprendizaje experiencial para todas las edades, a través de un enfoque de liderazgo participativo.",
+      "li4": "Asesoría en la postulación y ejecución de proyectos a fondos concursables públicos y privados",
+      "li4_desc": "Aplica para contexto nacional como internacional",
+      "img_alt": "Facilitación y formación para el cambio"
+    },
+    "s3": {
+      "title": "Herramientas Digitales para la Regeneración",
+      "subtitle":"Soluciones tecnológicas personalizadas al servicio de la sostenibilidad",
+      "desc": "Creando aplicaciones web destrabamos procesos prácticos que facilitan el avanzar fluido de organizaciones que trabajan a favor de la regeneración. Lo hacemos creando herramientas tecnológicas digitales personalizadas de bajo costo que apoyan la gestión, comunicación y aprendizaje de grupos humanos afines, siempre en el marco de un cuestionamiento crítico respecto del uso de la tecnología para fines regenerativos.",
+      "li1": "Creación de páginas web para su organización.",
+      "li1_desc": "Páginas simples y de bajo costo para comunicar lo valioso de su proyecto y/o organización",
+      "li2": "Creación de aplicaciones web a medida de sus necesidades e intereses:",
+      "li2:_desc": "Co-construimos una solución digital para diferentes desafios organizacionales y en el trabajo para la regeneración",
+      "sub_li2_1":"Sistemas de gestión de dinero y ahorro en una organización",
+      "sub_li2_2":"Sistemas de organización y seguimiento de tareas y acuerdos",
+      "sub_li2_3":"Tableros dinámicos de monitoreo para explorar datos, gestionar información y comunicar resultados",
+      "sub_li2_4":"Exploradores de datos territoriales, sociales o ambientales",
+      "sub_li2_5":"Tableros de monitoreo de indicadores con visualizaciones exportables",
+      "sub_li2_6":"Herramientas pedagógicas",
+      "sub_li2_7":"Diseñamos a la medida que necesite.",
+      "img_alt": "Soluciones digitales personalizadas"
+    }
+  },
+
+
+
+
+
+  "contact": {
+    "title": "Contacto",
+    "lead": "Conecta con cualquiera de estos medios",
+    "write": "Escríbenos",
+    "note": "Gracias por tu interés. Te responderemos pronto.",
+    "wechat": "Wechat",
+    "line": "Line",
+    "whatsapp" : "WhatsApp",
+    "img1_caption": "Huerta urbana y soluciones regenerativas",
+    "img2_caption": "Procesos de facilitación y acompañamiento",
+    "img3_caption": "Desarrollo de soluciones digitales sostenibles"
+  },
+   "propuesta_valor": {
+    "title":"Propuesta de Valor",
+    "desc": "Todos los servicios profesionales ofrecidos se sostienen en una visión de presente y futuro, donde:",
+    "li1": "Los desafíos globales del cambio climático, la pérdida de biodiversidad y la crisis de contaminación son enfrentados colectivamente por personas, organizaciones, comunidades y empresas comprometidas con la vida",
+    "li2": "La acción de regenerar las condiciones para la continuidad de la vida es central para orientar los esfuerzos hacia un mejor vivir.",
+    "li3": "Estamos dispuestos a un cambio de mentalidad que rompa con los patrones lineales y degenerativos de vida que se traducen en mayor contaminación y pérdida de biodiversidad.",
+    "li4": "Adoptamos nuevos roles al integrar los sistemas naturales y humanos, en favor de la salud de ambos.",
+    "li5": "Asumimos que el trabajo está en permanente avance, dado que la mirada regenerativa supone alcanzar metas cuya temporalidad supera el tiempo de nuestras vidas humanas; es decir, objetivos que trascienden hacia las generaciones futuras."
+  },
+   "publico_interes": {
+    "title":"A quiénes servimos principalmente",
+    "li1": "Toda persona interesada en sumarse al pulso de la regeneración y que necesite orientaciones.",
+    "li2": "Personas y comunidades interesadas en aprender a cultivar su alimento y quieran empezar una huerta",
+    "li3": "Personas que viven eco-ansiedad y necesiten ayuda con formas concretas de acción para mejorar su salud y la del ecosistema",
+    "li4": "Profesionales y técnicos que generan impacto social y que necesiten apoyo para que este impacto sume también positivamente en la salud del ecosistema mayor.",
+    "li5": "Organizaciones y empresas que buscan potenciar sus prácticas para la sustentabilidad generando un impacto que favorezca su salud, y la del ecosistema donde viven el presente y proyectan el futuro.",
+    "li6": "Establecimientos educativos que necesiten fortalecer su aproximación a la educación medioambiental a partir de acciones regenerativas concretas en sus espacios, nutriendo de sentido sus proyectos educativos."
+  },
+  "instagram":{
+    "title":"Últimos en Instagram"
+  },
+  "download_guia":{
+    "guia":"Descarga la Guía de Introducción a la Regeneración",
+    "btn_download_guia":"Descargar Guía"
+  }
+}

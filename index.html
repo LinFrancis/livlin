@@ -11,88 +11,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="icon" href="images/logo_livlin.png" />
+  <link rel="icon" href="images/web/logo_livlin.png" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Scripts -->
+  <!-- i18n base (se mantiene) -->
   <script type="module" src="js/i18n.js"></script>
-
 </head>
 
 <body>
   <a class="skip" href="#main" data-i18n="ui.skip_to_content">Saltar al contenido principal</a>
 
-<header class="nav">
-  <div class="nav-inner container">
-    <!-- Brand -->
-    <div class="brand">
-      <img src="images/logo_livlin.png" alt="LivLin logo" class="logo" width="48" height="48">
-      <span class="brand-name">LivLin</span>
-    </div>
-
-    <!-- Language selector (moved left) -->
-    <div class="lang-wrap">
-      <label for="lang-switcher" class="visually-hidden" data-i18n="lang.choose">
-        Idioma / Language / 语言
-      </label>
-      <select id="lang-switcher" aria-label="Language selector">
-        <option value="es">ES</option>
-        <option value="en">EN</option>
-        <option value="zh">中文</option>
-        <option value="dk">DK</option>
-      </select>
-    </div>
-
-    <!-- Hamburguesa -->
-    <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <!-- Navigation -->
-    <nav aria-label="Main Navigation" class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
-        <li><a href="#about" data-i18n="nav.about">Quiénes somos</a></li>
-
-        <li class="has-submenu">
-          <a href="#services" data-i18n="nav.services">Servicios ▾</a>
-          <ul class="submenu">
-            <li><a href="#service-s1" data-i18n="model.s1_head"></a></li>
-            <li><a href="#service-s2" data-i18n="model.s2_head"></a></li>
-            <li><a href="#service-s3" data-i18n="model.s3_head"></a></li>
-          </ul>
-        </li>
-
-        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
-        <li><a href="#instagram" data-i18n="nav.gallery">Galería</a></li>
-        <li><a href="#download" data-i18n="nav.recursos">Recursos</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-
-  <section class="hero" id="inicio" data-bg="images/banner_horizontal.png">
-  <div class="hero__bg"></div>
-  <div class="hero__overlay">
-    <div class="hero__content container">
-      <h1 class="hero__title" data-i18n="home.title"></h1>
-      <p class="hero__subtitle" data-i18n="home.lead"></p>
-
-      <div class="hero__model-links">
-        <a href="#service-s1" class="model-link s1" data-i18n="model.s1_head"></a>
-        <a href="#service-s2" class="model-link s2" data-i18n="model.s2_head"></a>
-        <a href="#service-s3" class="model-link s3" data-i18n="model.s3_head"></a>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="nav-inner container">
+      <!-- Marca -->
+      <div class="brand">
+        <img src="images/web/logo_livlin.png" alt="LivLin" class="logo" width="48" height="48">
+        <span class="brand-name">LivLin</span>
       </div>
+
+      <!-- Menú principal -->
+      <nav class="nav-menu" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#inicio"  data-i18n="nav.home">Inicio</a></li>
+          <li><a href="#about"   data-i18n="nav.about">Quiénes somos</a></li>
+          <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+          <li><a href="#instagram" data-i18n="nav.gallery">Galería</a></li>
+        </ul>
+      </nav>
+
+      <!-- Idioma -->
+      <div class="lang-wrap">
+        <select id="lang-switcher" aria-label="Idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="dk">DK</option>
+        </select>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle" id="nav-toggle"
+              aria-label="Abrir menú"
+              aria-controls="main-nav"
+              aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="inicio" data-bg="images/web/banner_horizontal.png">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay">
+        <div class="hero__content container">
+          <h1 class="hero__title" data-i18n="home.title"></h1>
+          <p class="hero__subtitle" data-i18n="home.lead"></p>
 
-
+          <div class="hero__model-links">
+            <a href="#service-agroecologia" class="model-link s1" data-i18n="model.s1_head"></a>
+            <a href="#service-facilitacion" class="model-link s2" data-i18n="model.s2_head"></a>
+            <a href="#service-datos" class="model-link s3" data-i18n="model.s3_head"></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- About -->
     <section id="about" class="container section fade-in">
@@ -108,144 +93,243 @@
       </div>
     </section>
 
-    <section id="modelo-servicios" class="container section fade-in">
-    <h2 data-i18n="model.model_title"></h2>
-
-    <div class="modelo-circulo">
-      <div class="centro">
-        <p data-i18n="model.center_text"></p>
-      </div>
-
-      <div class="sector sector1">
-        <h3 data-i18n="model.s1_head"></h3>
-        <p data-i18n="model.s1_desc"></p>
-      </div>
-
-      <div class="sector sector2">
-        <h3 data-i18n="model.s2_head"></h3>
-        <p data-i18n="model.s2_desc"></p>
-      </div>
-
-      <div class="sector sector3">
-        <h3 data-i18n="model.s3_head"></h3>
-        <p data-i18n="model.s3_desc"></p>
-      </div>
-    </div>
-  </section>
+    <!-- Services -->
+    <section id="services" class="container section fade-in" aria-labelledby="services-title">
+      <h2 id="services-title" data-i18n="services.title">
+        Oferta de servicios profesionales para la regeneración ecosocial
+      </h2>
+      <p class="section-lead" data-i18n="services.lead"></p>
+     
 
 
+      <!-- Modelo circular (se respeta tal cual) -->
+      <section id="modelo-servicios" class="container section fade-in">
+        <h4 data-i18n="model.model_title"></h4>
+        <div class="modelo-circulo">
+          <div class="centro"><p data-i18n="model.center_text"></p></div>
+          <div class="sector sector1">
+            <h3 data-i18n="model.s1_head"></h3>
+            <p data-i18n="model.s1_desc"></p>
+          </div>
+          <div class="sector sector2">
+            <h3 data-i18n="model.s2_head"></h3>
+            <p data-i18n="model.s2_desc"></p>
+          </div>
+          <div class="sector sector3">
+            <h3 data-i18n="model.s3_head"></h3>
+            <p data-i18n="model.s3_desc"></p>
+          </div>
+        </div>
+      </section>
 
-  
+       <p class="section-lead_emotional" data-i18n="services.lead_emotional"></p>
 
-<!-- Services -->
-<section id="services" class="container section fade-in" aria-labelledby="services-title">
-  <h2 id="services-title" data-i18n="services.title">
-    Oferta de servicios profesionales para la regeneración ecosocial
-  </h2>
-  <p class="section-lead" data-i18n="services.lead"></p>
+      <!-- ===== S1: Agroecología (tiras, lightbox) ===== -->
+      <article id="service-agroecologia" class="service-card service-s1">
+        <header class="service-header">
+          <h3 data-i18n="services.s1.title"></h3>
+          <h4 class="subtitle" data-i18n="services.s1.subtitle"></h4>
+          <p class="lead-quote" data-i18n="services.s1.desc"></p>
+        </header>
 
-  <!-- s1 -->
-  <article id="service-s1" class="service-card">
-    <figure class="service-media">
-      <img
-        src="images/plantando.png"
-        loading="lazy" decoding="async"
-        alt=""
-        data-i18n-attr="alt:services.s1.img_alt" />
-      <figcaption class="sr-only" data-i18n="services.s1.img_alt"></figcaption>
-    </figure>
-    <div class="service-content">
-      <header class="card-head">
-        <h3 data-i18n="services.s1.title"></h3>
-      </header>
-      <div class="card-body">
-        <p data-i18n="services.s1.desc"></p>
-        <ul>
-          <li data-i18n="services.s1.li1"></li>
-          <li data-i18n="services.s1.li2"></li>
-          <li data-i18n="services.s1.li3"></li>
-        </ul>
-      </div>
-      <p class="service-cta">
-        <a class="cta" href="#contact" data-i18n="ui.hire_nbs">Contrata estos servicios</a>
-      </p>
-    </div>
-  </article>
-
-  <!-- s2 (alternado) -->
-  <article id="service-s2" class="service-card alt">
-    <figure class="service-media">
-      <img
-        src="images/formacion_con_gente.png"
-        loading="lazy" decoding="async"
-        alt=""
-        data-i18n-attr="alt:services.s2.img_alt" />
-      <figcaption class="sr-only" data-i18n="services.s2.img_alt"></figcaption>
-    </figure>
-    <div class="service-content">
-      <header class="card-head">
-        <h3 data-i18n="services.s2.title"></h3>
-      </header>
-      <div class="card-body">
-        <p data-i18n="services.s2.desc"></p>
-        <ul>
-          <li data-i18n="services.s2.li1"></li>
-          <li>
-            <span data-i18n="services.s2.li2"></span>
-            <ul class="sublist">
-              <li data-i18n="services.s2.sub_li2_1"></li>
-              <li data-i18n="services.s2.sub_li2_2"></li>
-              <li data-i18n="services.s2.sub_li2_3"></li>
+        <div class="service-layout">
+          <!-- Texto -->
+          <div class="service-text">
+            <ul class="main-list">
+              <li data-i18n="services.s1.li1"></li>
+              <ul class="sublist two-cols">
+                <li data-i18n="services.s1.sub_li3_1"></li>
+                <li data-i18n="services.s1.sub_li3_2"></li>
+                <li data-i18n="services.s1.sub_li3_3"></li>
+                <li data-i18n="services.s1.sub_li3_4"></li>
+                <li data-i18n="services.s1.sub_li3_5"></li>
+                <li data-i18n="services.s1.sub_li3_6"></li>
+                <li data-i18n="services.s1.sub_li3_7"></li>
+              </ul>
+              </li>
             </ul>
-          </li>
-          <li data-i18n="services.s2.li3"></li>
-          <li data-i18n="services.s2.li4"></li>
-        </ul>
+
+            <p class="service-cta">
+              <a class="cta" href="#contact" data-i18n="ui.hire_nbs">Contrata estos servicios</a>
+            </p>
+          </div>
+
+          <!-- Media: Tiras por tema (sin recorte) -->
+          <aside class="service-media no-crop">
+            <div class="media-group">
+              <div class="group-title">Diseño & transformación</div>
+              <div class="media-strip" data-group="s1-diseno">
+                <img src="images/s1/1_collage_antes_despues.png" alt="" loading="lazy" decoding="async" />
+                <img src="images/s1/2_bancales_collage.png"      alt="" loading="lazy" decoding="async" />
+                <img src="images/s1/0_plantando.png"             alt="" loading="lazy" decoding="async" />
+              </div>
+            </div>
+
+            <div class="media-group">
+              <div class="group-title">Cultivo & cosecha</div>
+              <div class="media-strip" data-group="s1-cultivo">
+                <img src="images/s1/3_cosechas.png"       alt="" loading="lazy" decoding="async" />
+                <img src="images/s1/4_habas_invierno.png" alt="" loading="lazy" decoding="async" />
+              </div>
+            </div>
+
+            <div class="media-group">
+              <div class="group-title">Lombricultura & compost</div>
+              <div class="media-strip" data-group="s1-lombrices">
+                <img src="images/s1/6_collage_lombrices.png" alt="" loading="lazy" decoding="async" />
+                <img src="images/s1/5_hotel_lombrices.png"  alt="" loading="lazy" decoding="async" />
+              </div>
+            </div>
+
+            <figcaption class="sr-only" data-i18n="services.s1.img_alt"></figcaption>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Lightbox global (una vez) -->
+      <div id="lb" class="lb hidden" aria-hidden="true">
+        <button class="lb-btn lb-close" aria-label="Cerrar">×</button>
+        <button class="lb-btn lb-prev"  aria-label="Anterior">‹</button>
+        <img class="lb-img" alt="" />
+        <button class="lb-btn lb-next"  aria-label="Siguiente">›</button>
       </div>
+
+     <!-- ===== S2 (homogeneizado con tiras + lightbox) ===== -->
+<article id="service-facilitacion" class="service-card service-s1">
+  <header class="service-header">
+    <h3 data-i18n="services.s2.title"></h3>
+    <h4 class="subtitle" data-i18n="services.s2.subtitle"></h4>
+    <p class="lead-quote" data-i18n="services.s2.desc"></p>
+  </header>
+
+  <div class="service-layout">
+    <!-- Texto -->
+    <div class="service-text">
+      <ul class="main-list">
+        <li>
+          <div data-i18n="services.s2.li1"></div>
+          <p class="muted" data-i18n="services.s2.li1_desc"></p>
+        </li>
+
+        <li>
+          <div data-i18n="services.s2.li2"></div>
+          <p class="muted" data-i18n="services.s2.li2_desc"></p>
+          <ul class="sublist two-cols">
+            <li><strong data-i18n="services.s2.sub_li2_1"></strong> — <span data-i18n="services.s2.sub_li2_1_desc"></span></li>
+            <li><strong data-i18n="services.s2.sub_li2_2"></strong> <span data-i18n="services.s2.sub_li2_2_desc"></span></li>
+            <li><strong data-i18n="services.s2.sub_li2_3"></strong> — <span data-i18n="services.s2.sub_li2_3_desc"></span></li>
+          </ul>
+        </li>
+
+        <li>
+          <div data-i18n="services.s2.li3"></div>
+          <p class="muted" data-i18n="services.s2.li3_desc"></p>
+        </li>
+
+        <li>
+          <div data-i18n="services.s2.li4"></div>
+          <p class="muted" data-i18n="services.s2.li4_desc"></p>
+        </li>
+      </ul>
+
       <p class="service-cta">
         <a class="cta" href="#contact" data-i18n="ui.hire_facilitation">Contrata estos servicios</a>
       </p>
     </div>
-  </article>
 
-  <!-- s3 -->
-  <article id="service-s3" class="service-card">
-    <figure class="service-media">
-      <img
-        src="images/apps.png"
-        loading="lazy" decoding="async"
-        alt=""
-        data-i18n-attr="alt:services.s3.img_alt" />
-      <figcaption class="sr-only" data-i18n="services.s3.img_alt"></figcaption>
-    </figure>
-    <div class="service-content">
-      <header class="card-head">
-        <h3 data-i18n="services.s3.title"></h3>
-      </header>
-      <div class="card-body">
-        <p data-i18n="services.s3.desc"></p>
-        <ul>
-          <li data-i18n="services.s3.li1"></li>
-          <li>
-            <span data-i18n="services.s3.li2"></span>
-            <ul class="sublist">
-              <li data-i18n="services.s3.sub_li2_1"></li>
-              <li data-i18n="services.s3.sub_li2_2"></li>
-              <li data-i18n="services.s3.sub_li2_3"></li>
-              <li data-i18n="services.s3.sub_li2_4"></li>
-              <li data-i18n="services.s3.sub_li2_5"></li>
-              <li data-i18n="services.s3.sub_li2_6"></li>
-              <li data-i18n="services.s3.sub_li2_7"></li>
-            </ul>
-          </li>
-        </ul>
+    <!-- Medios: tiras sin recorte -->
+    <aside class="service-media no-crop" aria-label="Galería Acompañamiento y Formación">
+      <div class="media-group">
+        <div class="group-title">Talleres & métodos</div>
+        <div class="media-strip" data-group="s2-metodos">
+          <img src="images/s2/lombricera_taller.png"                   alt="" loading="lazy" decoding="async" />
+          <img src="images/s2/metodologias_participativas_lienzo.jpg" alt="" loading="lazy" decoding="async" />
+        </div>
       </div>
+
+      <div class="media-group">
+        <div class="group-title">Registro & comunidad</div>
+        <div class="media-strip" data-group="s2-registro">
+          <img src="images/s2/registro_taller_en_aucca_charla.png" alt="" loading="lazy" decoding="async" />
+          <img src="images/s2/registro_taller_en_aucca.png"       alt="" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="media-group">
+        <div class="group-title">Acompañamiento</div>
+        <div class="media-strip" data-group="s2-acompanamiento">
+          <img src="images/s2/acompanamiento_con_gente.png" alt="" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <figcaption class="sr-only" data-i18n="services.s2.img_alt"></figcaption>
+    </aside>
+  </div>
+</article>
+
+<!-- ===== S3 (homogeneizado con tiras + lightbox) ===== -->
+<article id="service-datos" class="service-card service-s1">
+  <header class="service-header">
+    <h3 data-i18n="services.s3.title"></h3>
+    <h4 class="subtitle" data-i18n="services.s3.subtitle"></h4>
+    <p class="lead-quote" data-i18n="services.s3.desc"></p>
+  </header>
+
+  <div class="service-layout">
+    <!-- Texto -->
+    <div class="service-text">
+      <ul class="main-list">
+        <li>
+          <div data-i18n="services.s3.li1"></div>
+          <p class="muted" data-i18n="services.s3.li1_desc"></p>
+        </li>
+
+        <li>
+          <div data-i18n="services.s3.li2"></div>
+          <!-- Si en tu JSON existe 'li2:_desc', tu JS de i18n ya hace fallback a 'li2_desc' -->
+          <p class="muted" data-i18n="services.s3.li2_desc"></p>
+          <ul class="sublist two-cols">
+            <li data-i18n="services.s3.sub_li2_1"></li>
+            <li data-i18n="services.s3.sub_li2_2"></li>
+            <li data-i18n="services.s3.sub_li2_3"></li>
+            <li data-i18n="services.s3.sub_li2_4"></li>
+            <li data-i18n="services.s3.sub_li2_5"></li>
+            <li data-i18n="services.s3.sub_li2_6"></li>
+            <li data-i18n="services.s3.sub_li2_7"></li>
+          </ul>
+        </li>
+      </ul>
+
       <p class="service-cta">
         <a class="cta" href="#contact" data-i18n="ui.hire_digital">Contrata estos servicios</a>
       </p>
     </div>
-  </article>
-</section>
+
+    <!-- Medios: tiras sin recorte -->
+    <aside class="service-media no-crop" aria-label="Galería Herramientas Digitales">
+      <div class="media-group">
+        <div class="group-title">Apps & soluciones</div>
+        <div class="media-strip" data-group="s3-apps">
+          <img src="images/s3/s3_soluciones_digitales.png" alt="" loading="lazy" decoding="async" />
+          <img src="images/s3/s3_apps.png"                  alt="" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <figcaption class="sr-only" data-i18n="services.s3.img_alt"></figcaption>
+    </aside>
+  </div>
+</article>
+
+
+
+
+
+    </section>
+
+
+
+
+
 
 
 
@@ -280,57 +364,42 @@
       </ul>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- Download Guide -->
     <section id="download" class="container section fade-in">
       <h2 data-i18n="download_guia.guia">Descarga la Guía de Introducción a la Regeneración</h2>
       <p><a class="cta" href="#" data-i18n="download_guia.btn_download_guia">Descargar Guía</a></p>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-<section class="contact-section fade-in" id="contact">
-  <div class="contact-card container">
-    <!-- Información de contacto -->
-    <div class="contact-info">
-      <h2 data-i18n="contact.title">Contacto</h2>
-      <p data-i18n="contact.lead">Conecta con cualquiera de estos medios</p>
+    <!-- CONTACT -->
+    <section class="contact-section fade-in" id="contact">
+      <div class="contact-card container">
+        <div class="contact-info">
+          <h2 data-i18n="contact.title">Contacto</h2>
+          <p data-i18n="contact.lead">Conecta con cualquiera de estos medios</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:francis.mason@gmail.com">francis.mason@gmail.com</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/56951108051" target="_blank">+56 9 5110 8051</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/francismasonb/" target="_blank">/in/francismasonb/</a></li>
+            <li><strong>WeChat:</strong> <span>francismason</span></li>
+          </ul>
+        </div>
 
-      <ul class="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:francis.mason@gmail.com">francis.mason@gmail.com</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/56951108051" target="_blank">+56 9 5110 8051</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/francismasonb/" target="_blank">/in/francismasonb/</a></li>
-        <li><strong>WeChat:</strong> <span>francismason</span></li>
-      </ul>
-    </div>
-
-    <!-- Códigos QR -->
-    <div class="contact-media">
-      <figure>
-        <img src="images/whatsapp_code.png" alt="WhatsApp" loading="lazy" decoding="async">
-        <figcaption>WhatsApp</figcaption>
-      </figure>
-      <figure>
-        <img src="images/wechat_code.png" alt="WeChat" loading="lazy" decoding="async">
-        <figcaption>WeChat</figcaption>
-      </figure>
-      <figure>
-        <img src="images/line_code.png" alt="Line" loading="lazy" decoding="async">
-        <figcaption>Line</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
+        <div class="contact-media">
+          <figure>
+            <img src="images/contact/whatsapp_code.png" alt="WhatsApp" loading="lazy" decoding="async">
+            <figcaption>WhatsApp</figcaption>
+          </figure>
+          <figure>
+            <img src="images/contact/wechat_code.png" alt="WeChat" loading="lazy" decoding="async">
+            <figcaption>WeChat</figcaption>
+          </figure>
+          <figure>
+            <img src="images/contact/line_code.png" alt="Line" loading="lazy" decoding="async">
+            <figcaption>Line</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <!-- Instagram -->
     <section id="instagram" class="container section fade-in">
@@ -344,77 +413,117 @@
     </section>
   </main>
 
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <p data-i18n="footer.copy">© 2025 LivLin. Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <!-- Hero background dinámico -->
   <script type="module">
-    // 🌿 Imagen de fondo dinámica del hero
     const hero = document.querySelector('.hero');
     const bg = hero?.dataset.bg;
     const bgDiv = hero?.querySelector('.hero__bg');
-    if (bg && bgDiv) {
-      bgDiv.style.backgroundImage = `url('${bg}')`;
-    }
+    if (bg && bgDiv) { bgDiv.style.backgroundImage = `url('${bg}')`; }
   </script>
 
-<script type="module">
-  import { loadLang, translateAttributes } from './js/i18n.js';
+  <!-- i18n: selección de idioma + fallback de clave li2:_desc -->
+  <script type="module">
+    import { loadLang, translateAttributes, getCurrentTranslations } from './js/i18n.js';
 
-  // 🗣 Detect language from URL (?lang=en)
-  function getLangFromUrl() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("lang");
-  }
+    function getLangFromUrl(){ const p=new URLSearchParams(location.search); return p.get("lang"); }
 
-  const select = document.getElementById('lang-switcher');
-  let lang = getLangFromUrl() || localStorage.getItem('lang') || 'es';
+    const select = document.getElementById('lang-switcher');
+    let lang = getLangFromUrl() || localStorage.getItem('lang') || 'es';
 
-  // ✅ Aquí va el bloque que mencionas
-  if (!getLangFromUrl() && !localStorage.getItem('lang')) {
-    const browserLang = navigator.language.slice(0, 2);
-    if (['es', 'en', 'zh', 'dk'].includes(browserLang)) {
-      lang = browserLang;
+    if (!getLangFromUrl() && !localStorage.getItem('lang')) {
+      const browserLang = navigator.language.slice(0,2);
+      if (['es','en','zh','dk'].includes(browserLang)) lang = browserLang;
     }
-  }
 
-  // 🌐 Load chosen language
-  await loadLang(lang);
-  translateAttributes?.();
-  select.value = lang;
-  localStorage.setItem('lang', lang);
-  document.documentElement.lang = lang; // SEO + accesibilidad
+    async function setLang(newLang){
+      await loadLang(newLang);
+      // Fallback para typo en JSON
+      try{
+        const tr = getCurrentTranslations?.();
+        const bad = tr?.services?.s3?.['li2:_desc'];
+        if(bad && !tr.services.s3['li2_desc']) tr.services.s3['li2_desc'] = bad;
+      }catch(e){ console.warn('[i18n] Fallback no aplicado', e); }
+      translateAttributes?.();
+      localStorage.setItem('lang', newLang);
+      document.documentElement.lang = newLang;
+      const url = new URL(location); url.searchParams.set('lang', newLang); history.replaceState({},'',url);
+    }
 
-  // 🔄 When user changes language
-  select.addEventListener('change', async (e) => {
-    const newLang = e.target.value;
-    localStorage.setItem('lang', newLang);
-    await loadLang(newLang);
-    translateAttributes?.();
-    document.documentElement.lang = newLang;
+    await setLang(lang);
+    select.value = lang;
+    select.addEventListener('change', e => setLang(e.target.value));
+  </script>
 
-    // Update URL without reloading
-    const url = new URL(window.location);
-    url.searchParams.set('lang', newLang);
-    window.history.replaceState({}, '', url);
-  });
-</script>
+  <!-- Menú móvil -->
+  <script>
+    (function(){
+      const toggle = document.getElementById('nav-toggle');
+      const menu   = document.getElementById('main-nav');
+      if(!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        toggle.classList.toggle('active', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      menu.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.remove('open'); toggle.classList.remove('active'); toggle.setAttribute('aria-expanded','false');
+        });
+      });
+    })();
+  </script>
 
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('.nav-menu');
+  <!-- Lightbox (único script) -->
+  <script>
+    (function(){
+      const lb = document.getElementById('lb');
+      const lbImg = lb.querySelector('.lb-img');
+      const btnClose = lb.querySelector('.lb-close');
+      const btnPrev  = lb.querySelector('.lb-prev');
+      const btnNext  = lb.querySelector('.lb-next');
 
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    toggle.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', open);
-  });
-</script>
+      // Construir galerías por cada strip dentro de .service-media
+      const strips = document.querySelectorAll('.service-media .media-strip');
+      const galleries = {};
+      strips.forEach(strip=>{
+        const group = strip.dataset.group || 'default';
+        galleries[group] = Array.from(strip.querySelectorAll('img')).map(img => ({
+          src: img.getAttribute('src'), el: img
+        }));
+        strip.addEventListener('click', e=>{
+          const img = e.target.closest('img'); if(!img) return;
+          openLB(group, galleries[group].findIndex(i => i.el===img));
+        });
+      });
 
+      let currentGroup = null, currentIndex = 0;
+      function openLB(group, index){ currentGroup=group; currentIndex=index; updateLB();
+        lb.classList.remove('hidden'); lb.setAttribute('aria-hidden','false'); }
+      function closeLB(){ lb.classList.add('hidden'); lb.setAttribute('aria-hidden','true'); }
+      function updateLB(){ const it = galleries[currentGroup][currentIndex]; lbImg.src = it.src; }
+      function next(){ currentIndex=(currentIndex+1)%galleries[currentGroup].length; updateLB(); }
+      function prev(){ currentIndex=(currentIndex-1+galleries[currentGroup].length)%galleries[currentGroup].length; updateLB(); }
 
+      btnClose.addEventListener('click', closeLB);
+      btnNext.addEventListener('click', next);
+      btnPrev.addEventListener('click', prev);
+      lb.addEventListener('click', e=>{ if(e.target===lb) closeLB(); });
+      window.addEventListener('keydown', e=>{
+        if(lb.classList.contains('hidden')) return;
+        if(e.key==='Escape') closeLB();
+        if(e.key==='ArrowRight') next();
+        if(e.key==='ArrowLeft')  prev();
+      });
+    })();
+  </script>
 
-
+  <!-- Instagram embed -->
+  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
