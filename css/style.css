@@ -453,8 +453,41 @@ h3{ font-size: clamp(1.2rem, 2.3vw, 1.4rem); font-weight:700; color: var(--amber
 /* ==========================================================
    7) Descarga guía
    ========================================================== */
-#download{ text-align:center; }
-#download .cta{ margin-top:.5rem; }
+#download {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--surface-alt, #f7fafc);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+#download h2 {
+  margin-bottom: 1rem;
+}
+
+#download .cta {
+  margin-top: 0.5rem;
+}
+
+#download .download-meta {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted, #4a5568);
+}
+
+#download .download-meta a {
+  text-decoration: underline;
+}
+
+#download .download-license {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted, #718096);
+}
+
 
 /* ==========================================================
    8) Contacto
@@ -585,3 +618,4 @@ h3{ font-size: clamp(1.2rem, 2.3vw, 1.4rem); font-weight:700; color: var(--amber
 #modelo-servicios h4[data-i18n="model.model_title"]{
   text-align:center; font-size:1.4rem; font-weight:700; color:var(--text); margin-bottom:1.5rem;
 }
+
