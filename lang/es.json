@@ -38,19 +38,23 @@
     "what_p4":"¡Bienvenidos a LivLin!"
    },
   "model": {
-  "model_title": "Modelo Servicios Livlin",
-  "s1_head": "Agricultura Urbana Agroecológica",
-  "s1_desc": "Diseño e implementación de huerta urbana",
-  "s2_head": "Acompañamiento y Formación Regenerativa",
-  "s2_desc": "Facilitación y aprendizaje para el cambio",
-  "s3_head": "Herramientas Digitales para la Regeneración",
-  "s3_desc": "Tecnología de uso apropiado",
-  "center_text": "Futuro regenerativo y sostenible"
+  "model_title": "Servicios Livlin",
+  
+  "s1_head": "Diseño de Ecosistemas Regenerativos",
+  "s1_desc": "Cultiva abundancia donde habitas",
+    
+  "s2_head": "Transformación Organizacional",
+  "s2_desc": "Consultoría y Formación",
+  
+  "s3_head": "Monitoreo y Evaluación de Acción Climática",
+  "s3_desc": "Datos que impulsan decisiones",
+  
+  "center_text": "Vida Regenerativa"
 },
 
 "services": {
-  "title": "Servicios profesionales para la regeneración ecosocial",
-  "lead": "Nos organizamos en tres ejes de servicios que aplican a todo público y organizaciones:",
+  "title": "Servicios profesionales para una vida regenerativa",
+  "lead": "Nos organizamos en tres ejes de servicios:",
   "lead_emotional" : "Siempre, toda acción, individual, grupal, por más simple que parezca, tiene impacto ambiental debido a sus efectos deseados y no deseados en el ecosistema natural mayor que sostiene la vida en general.",
   "s1": {
   "title": "Agricultura Urbana Agroecológica",
