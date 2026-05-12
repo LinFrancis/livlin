@@ -29,7 +29,7 @@
 
 <body>
 
-  <!-- NAVBAR -->
+    <!-- NAVBAR -->
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="LivLin home">
@@ -41,19 +41,27 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link-active">Inicio</a></li>
-        <li><a href="hogares.html">Hogares</a></li>
-        <li><a href="organizaciones.html">Organizaciones</a></li>
+        <li class="nav-item-dropdown">
+          <a href="index.html#servicios">Servicios</a>
+          <ul class="dropdown-menu">
+            <li><a href="hogares.html"><img src="images/icons/home.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Hogares</a></li>
+            <li><a href="organizaciones.html"><img src="images/icons/org.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Organizaciones</a></li>
+            <li><hr style="margin:4px 0; border:0; border-top:1px solid var(--border); opacity:0.5;"></li>
+            <li><a href="servicios/diseno.html">Diseño Regenerativo</a></li>
+            <li><a href="servicios/monitoreo.html">Sistemas MEL</a></li>
+          </ul>
+        </li>
         <li class="nav-item-dropdown">
           <a href="herramientas.html">Herramientas</a>
           <ul class="dropdown-menu">
-            <li><a href="servicios/plataforma-livlin.html">Indagación Regenerativa</a></li>
-            <li><a href="servicios/plantae.html">Plantae</a></li>
-            <li><a href="servicios/theory-of-change.html">Teoría del Cambio</a></li>
             <li><a href="herramientas.html">Ver ecosistema completo</a></li>
+            <li><a href="servicios/plataforma-livlin.html">Indagación Regenerativa</a></li>
+            <li><a href="https://plantae.streamlit.app/" target="_blank">Plantae</a></li>
+            <li><a href="servicios/theory-of-change.html">Teoría del Cambio</a></li>
           </ul>
         </li>
         <li><a href="recursos.html">Publicaciones</a></li>
-      <li><a href="sobre.html">Sobre Livlin</a></li>
+        <li><a href="sobre.html">Sobre LivLin</a></li>
         <li><a href="contacto.html" class="nav-cta-green">Contacto</a></li>
       </ul>
     </div>
