@@ -238,62 +238,95 @@
     </div>
   </section>
 
-  <!-- HERRAMIENTAS -->
-  <section id="herramientas" style="background:var(--cream);">
+  <!-- HERRAMIENTAS (Ecosistema Dinámico) -->
+  <section style="background:var(--cream)" id="herramientas">
     <div class="container">
       <div class="section-header center fade-in">
-        <span class="eyebrow">Herramientas digitales LivLin</span>
-        <h2>Plataformas propias que transforman observaciones en decisiones estratégicas</h2>
-        <p class="lead" style="margin:0 auto;">Metodologías participativas y herramientas digitales diseñadas para el
-          monitoreo y aprendizaje en sistemas regenerativos.</p>
+        <span class="eyebrow">Ecosistema completo</span>
+        <h2>Herramientas y Plataformas Disponibles</h2>
+        <p class="lead" style="margin:0 auto;">Metodologías participativas y herramientas digitales diseñadas para el monitoreo y aprendizaje en sistemas regenerativos. Soluciones de acceso público y a medida.</p>
       </div>
-      <div class="tools-trio">
-        <div class="tool-trio-card fade-in stagger-1">
-          <div class="tool-mockup">
-            <img src="images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png"
-              alt="Plataforma Indagación Regenerativa">
+      <div class="tools-with-sidebar" style="margin-top:48px;">
+        <aside class="tools-sidebar fade-in">
+          <div class="tools-sidebar-title">En esta sección</div>
+          <a href="#mapeo-cuencas" class="tools-sidebar-link"><span class="tag-dot live"></span>Mapeo de Cuencas</a>
+          <a href="#agentes-red" class="tools-sidebar-link"><span class="tag-dot live"></span>Agentes en Red</a>
+          <a href="#gestion-acuerdos" class="tools-sidebar-link"><span class="tag-dot custom"></span>Gestión Organizacional</a>
+          <a href="#gestion-eventos" class="tools-sidebar-link"><span class="tag-dot custom"></span>Gestión de Eventos</a>
+          <a href="#diagnosticos" class="tools-sidebar-link"><span class="tag-dot custom"></span>Diagnósticos Médicos</a>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+            <div style="font-size:0.75rem;color:var(--muted);margin-bottom:8px">
+              <span style="display:inline-flex;align-items:center;gap:6px;margin-bottom:4px"><span class="tag-dot live"></span> Demo pública</span><br>
+              <span style="display:inline-flex;align-items:center;gap:6px"><span class="tag-dot custom"></span> Solución a medida</span>
+            </div>
           </div>
-          <div class="tool-trio-body">
-            <span class="eyebrow">Diagnóstico</span>
-            <h4>Plataforma de Indagación Regenerativa</h4>
-            <p>Diagnóstico multidimensional para espacios y organizaciones. Evalúa 10 dimensiones del potencial
-              regenerativo.</p>
-            <a href="servicios/plataforma-livlin.html" class="btn btn-primary" style="width:fit-content;">Ver plataforma
-              →</a>
-          </div>
+        </aside>
+
+        <div class="tools-content">
+
+          <article class="tool-section fade-in" id="mapeo-cuencas">
+            <div class="tool-header">
+              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
+              <h3>Mapeo de Cuencas Participativo</h3>
+              <p class="lead">Plataforma colaborativa para analizar territorios de cuenca: registra conflictos socioambientales, iniciativas locales y actores clave en un sistema georreferenciado compartido.</p>
+            </div>
+            <div class="tool-info-grid">
+              <div class="tool-info-block">
+                <h5>Problema que resuelve</h5>
+                <p>La información sobre conflictos del agua y actores territoriales existe dispersa en informes y conversaciones. Esta plataforma la centraliza, la hace visible y permite analizarla a escala de cuenca o subcuenca.</p>
+              </div>
+              <div class="tool-info-block">
+                <h5>Funcionalidades</h5>
+                <ul class="tool-func-list">
+                  <li>Registro georreferenciado de conflictos e iniciativas</li>
+                  <li>Mapas de calor y coropléticos por subcuenca</li>
+                  <li>Radar de salud ecosistémica en múltiples dimensiones</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tool-img-grid">
+              <img class="img-wide" src="images/apps/cuencas_part/01_mapeo_cuencas_intro.png" alt="Mapeo de Cuencas · Inicio">
+            </div>
+            <div class="tool-actions">
+              <a href="https://mapeocuencas.streamlit.app/" target="_blank" rel="noopener" class="tool-link-btn">Abrir demo</a>
+              <a href="servicios/monitoreo.html#mapeo-cuencas" class="tool-link-btn secondary">Ver más detalles</a>
+            </div>
+          </article>
+
+          <article class="tool-section fade-in" id="agentes-red">
+            <div class="tool-header">
+              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
+              <h3>Agentes Regenerativos en Red</h3>
+              <p class="lead">Directorio interactivo y mapa global de actores regenerativos. Visualiza conexiones, calcula niveles de influencia y facilita alianzas estratégicas.</p>
+            </div>
+            <div class="tool-img-grid">
+              <img class="img-wide" src="images/apps/reg_red/01_regenerando_red_horizontal.png" alt="Agentes en Red · Vista global">
+            </div>
+            <div class="tool-actions">
+              <a href="https://puentesregenerativos.streamlit.app/" target="_blank" rel="noopener" class="tool-link-btn">Abrir demo</a>
+              <a href="servicios/monitoreo.html#agentes-red" class="tool-link-btn secondary">Ver más detalles</a>
+            </div>
+          </article>
+
+          <article class="tool-section fade-in" id="gestion-acuerdos">
+            <div class="tool-header">
+              <span class="platform-tool-tag tag-custom">Solución a medida</span>
+              <h3>Intranet de Gestión Organizacional</h3>
+              <p class="lead">Plataforma interna para centralizar acuerdos, roles semanales, documentos clave y métricas financieras para organizaciones autogestionadas.</p>
+            </div>
+            <div class="tool-img-grid">
+              <img class="img-wide" src="images/apps/acuerdos_org/01_acuerdos_internos.png" alt="Intranet · Acuerdos internos">
+            </div>
+            <div class="tool-actions">
+              <a href="servicios/monitoreo.html#gestion-acuerdos" class="tool-link-btn">Ver más detalles</a>
+            </div>
+          </article>
+
         </div>
-        <div class="tool-trio-card fade-in stagger-2">
-          <div class="tool-mockup">
-            <img src="images/apps/plantae/01_plantae_horizontal.png" alt="Plantae - Explorador Agroecológico">
-          </div>
-          <div class="tool-trio-body">
-            <span class="eyebrow">Biodiversidad</span>
-            <h4>Proyecto Plantae</h4>
-            <p>Consulta avanzada para centralizar y democratizar el acceso a conocimientos críticos sobre agroecología,
-              regeneración y agroforestería.</p>
-            <a href="https://plantae.streamlit.app/" target="_blank" class="btn btn-primary"
-              style="width:fit-content;">Explorar Plantae →</a>
-          </div>
-        </div>
-        <div class="tool-trio-card fade-in stagger-3">
-          <div class="tool-mockup">
-            <img src="images/apps/teoria_cambio/01_t_cambio_intro.png" alt="Teoría del Cambio">
-          </div>
-          <div class="tool-trio-body">
-            <span class="eyebrow">Estrategia</span>
-            <h4>Plataforma Teoría de Cambio</h4>
-            <p>Diseño, visualización y monitoreo de estrategias de impacto. Conecta acciones con resultados medibles.
-            </p>
-            <a href="servicios/theory-of-change.html" class="btn btn-primary" style="width:fit-content;">Ver herramienta
-              →</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="herramientas.html" class="btn btn-secondary">Ver ecosistema completo →</a>
       </div>
     </div>
   </section>
+
 
   <!-- POR QUÉ LIVLIN -->
   <section style="background:white;">
