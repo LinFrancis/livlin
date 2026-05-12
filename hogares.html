@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogares · Regenera tu hogar con LivLin</title>
+  <meta name="description"
+    content="Evalúa el potencial regenerativo de tu casa, balcón, patio o parcela. Diagnóstico personalizado, plan por etapas y acompañamiento real.">
+  <link rel="icon" type="image/png" href="images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/ui/logo.png?v=2" alt="LivLin"></a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="hogares.html" class="nav-link-active">Hogares</a></li>
+        <li><a href="organizaciones.html">Organizaciones</a></li>
+        <li class="nav-item-dropdown">
+          <a href="herramientas.html">Herramientas</a>
+          <ul class="dropdown-menu">
+            <li><a href="servicios/plataforma-livlin.html">Indagación Regenerativa</a></li>
+            <li><a href="servicios/plantae.html">Plantae</a></li>
+            <li><a href="servicios/theory-of-change.html">Teoría del Cambio</a></li>
+            <li><a href="herramientas.html">Ver ecosistema completo</a></li>
+          </ul>
+        </li>
+        <li><a href="recursos.html">Publicaciones</a></li>
+      <li><a href="sobre.html">Sobre Livlin</a></li>
+        <li><a href="contacto.html" class="nav-cta-green">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero-slim">
+    <div class="container">
+      <div style="max-width:720px;">
+        <span class="eyebrow">Para personas y familias</span>
+        <h1>Regenera tu hogar con LivLin</h1>
+        <p class="lead">Evalúa el potencial de tu casa, balcón, patio o parcela y recibe un plan personalizado para
+          transformarlo en un sistema productivo, biodiverso y regenerativo.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="contacto.html" class="btn btn-primary btn-large">Solicitar evaluación →</a>
+          <a href="#como-funciona" class="btn btn-secondary btn-large">¿Cómo funciona?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ PODEMOS ACTIVAR -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Qué podemos activar</span>
+        <h2>Tu espacio tiene más potencial del que imaginas</h2>
+        <p class="lead">Desde un pequeño balcón hasta una parcela rural, diseñamos sistemas adaptados a tu contexto,
+          clima y capacidad.</p>
+      </div>
+      <div class="activations-grid">
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/leaf.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Huertas productivas</h4>
+          <p>Diseño de huertos agroecológicos para producción anual con mínimo esfuerzo.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/worm.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Compostaje y lombricultura</h4>
+          <p>Sistema circular de gestión de residuos orgánicos que alimenta tus cultivos.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/butterfly.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Biodiversidad funcional</h4>
+          <p>Diseño de corredores y refugios que atraen polinizadores y controlan plagas.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/droplet.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Gestión del agua</h4>
+          <p>Captación, reutilización y riego eficiente para reducir consumo y aumentar resiliencia.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/leaf.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Salud y bienestar</h4>
+          <p>Plantas medicinales, espacios de descanso y conexión con los ciclos naturales.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img src="images/icons/zap.svg" class="inline-icon"
+              style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+          <h4>Eficiencia energética</h4>
+          <p>Diagnóstico del consumo y recomendaciones para reducir la huella del hogar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section style="background:var(--cream);" id="como-funciona">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;">
+        <div class="fade-in">
+          <span class="eyebrow">Servicio principal</span>
+          <h2>Diagnóstico regenerativo del hogar</h2>
+          <p>Un proceso estructurado para entender el estado actual de tu espacio, su potencial regenerativo y el camino
+            hacia un sistema que funcione para ti y para el ecosistema.</p>
+          <div style="margin-top:32px;">
+            <h4 style="margin-bottom:16px;">El proceso incluye:</h4>
+            <ul class="deliverables-list">
+              <li><span class="check">1</span>Formulario de contexto inicial (online)</li>
+              <li><span class="check">2</span>Visita presencial al espacio (o videollamada)</li>
+              <li><span class="check">3</span>Evaluación con la plataforma LivLin</li>
+              <li><span class="check">4</span>Sesión de revisión y co-diseño</li>
+              <li><span class="check">5</span>Entrega del plan y acompañamiento</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fade-in">
+          <h4 style="margin-bottom:16px;">Qué recibes al finalizar:</h4>
+          <ul class="deliverables-list">
+            <li><span class="check">✓</span>Perfil regenerativo de tu espacio (informe PDF)</li>
+            <li><span class="check">✓</span>Mapa de oportunidades prioritarias</li>
+            <li><span class="check">✓</span>Plan de acción por etapas (corto, mediano y largo plazo)</li>
+            <li><span class="check">✓</span>Acceso a la plataforma LivLin para seguimiento</li>
+            <li><span class="check">✓</span>Guía de especies y recursos recomendados</li>
+          </ul>
+          <div
+            style="margin-top:32px; padding:24px; background:white; border-radius:var(--radius); border:1px solid var(--border);">
+            <p style="font-size:0.9rem; color:var(--muted); margin-bottom:12px; font-style:italic;">«El diagnóstico me
+              abrió los ojos a todo lo que mi balcón podía hacer. Ahora produzco hierbas frescas todo el año.»</p>
+            <p style="font-size:0.85rem; font-weight:600; color:var(--text);">— Cliente, Santiago de Chile</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE PROYECTOS -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Proyectos reales</span>
+        <h2>Transformaciones que ya están ocurriendo</h2>
+        <p class="lead" style="margin:0 auto;">Cada espacio tiene su propia historia regenerativa. Aquí algunos ejemplos
+          del trabajo en terreno.</p>
+      </div>
+      <div class="project-gallery fade-in">
+        <div class="gallery-item">
+          <img src="images/projects/bancales.png" alt="Bancales agroecológicos">
+        </div>
+        <div class="gallery-item">
+          <img src="images/projects/cosechas.png" alt="Cosechas del huerto">
+        </div>
+        <div class="gallery-item">
+          <img src="images/projects/hotel_lombrices.png" alt="Hotel de lombrices">
+        </div>
+        <div class="gallery-item">
+          <img src="images/projects/habas_invierno.png" alt="Habas en invierno">
+        </div>
+        <div class="gallery-item">
+          <img src="images/projects/riego_capilaridad.png" alt="Sistema de riego por capilaridad">
+        </div>
+        <div class="gallery-item">
+          <img src="images/projects/lombricultura.png" alt="Sistema de lombricultura">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--cream);">
+    <div class="container" style="max-width:760px;">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>¿Tienes dudas?</h2>
+      </div>
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <button class="faq-question">¿Sirve si tengo poco espacio o solo un balcón? <span
+              class="faq-arrow">+</span></button>
+          <div class="faq-answer">
+            <p>Sí. El diagnóstico se adapta a cualquier escala: desde un balcón de 4m² hasta una parcela de varias
+              hectáreas. El plan siempre parte del potencial real de tu espacio.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuánto tiempo toma el proceso? <span class="faq-arrow">+</span></button>
+          <div class="faq-answer">
+            <p>El diagnóstico completo toma entre 2 y 3 semanas desde el primer contacto hasta la entrega del plan. El
+              acompañamiento posterior se acuerda según tus necesidades.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Necesito tener experiencia previa en jardinería o permacultura? <span
+              class="faq-arrow">+</span></button>
+          <div class="faq-answer">
+            <p>No es necesario. El proceso está diseñado para cualquier nivel de experiencia. Parte de nuestro trabajo
+              es transferirte el conocimiento que necesitas para que puedas ser autónomo/a.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Hacen visitas fuera de Santiago? <span class="faq-arrow">+</span></button>
+          <div class="faq-answer">
+            <p>Sí, con coordinación previa. También ofrecemos modalidad remota para diagnósticos en otras regiones o
+              países, con el mismo nivel de profundidad metodológica.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuál es el costo del diagnóstico? <span class="faq-arrow">+</span></button>
+          <div class="faq-answer">
+            <p>El costo varía según el tamaño del espacio y la profundidad del diagnóstico requerido. Contáctanos para
+              recibir una propuesta personalizada sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final-banner">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green-light);">Comienza aquí</span>
+      <h2>¿Listo para transformar tu espacio?</h2>
+      <p>Cuéntanos sobre tu hogar y exploraremos juntos el potencial regenerativo que ya existe ahí.</p>
+      <a href="contacto.html" class="btn btn-large"
+        style="background:var(--green-light); color:var(--text); font-weight:700;">Solicitar evaluación inicial →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/ui/logo.png?v=2" alt="LivLin" style="height:36px; margin-bottom:16px;">
+          <p>Consultora estratégica en diseño regenerativo y sistemas de datos.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">«Más naturaleza»</p>
+          <div class="footer-social-links" style="margin-top:20px;">
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img
+                src="images/icons/github.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg"
+                class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Para ti</h5>
+          <ul>
+            <li><a href="hogares.html">Hogares</a></li>
+            <li><a href="organizaciones.html">Organizaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Herramientas</h5>
+          <ul>
+            <li><a href="servicios/plataforma-livlin.html">Indagación Regenerativa</a></li>
+            <li><a href="servicios/plantae.html">Plantae</a></li>
+            <li><a href="servicios/theory-of-change.html">Teoría del Cambio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Livlin</h5>
+          <ul>
+            <li><a href="recursos.html">Publicaciones</a></li>
+      <li><a href="sobre.html">Sobre Livlin</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Livlin · www.livlin.cl</span>
+        <span>Hecho con cuidado en Santiago de Chile </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

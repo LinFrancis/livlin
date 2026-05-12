@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-es="Proyecto Plantae · Gestión Agrícola · LivLin" data-en="Plantae Project · Agricultural Management · LivLin">Proyecto Plantae · Gestión Agrícola · LivLin</title>
+<meta name="description" content="Plataforma para la gestión inteligente de cultivos y monitoreo de biodiversidad. Parte del ecosistema MEL de LivLin.">
+<link rel="icon" type="image/svg+xml" href="../images/logo_livlin.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="LivLin home">
+      <img src="../images/ui/logo.png?v=2" alt="LivLin" />
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../hogares.html">Hogares</a></li>
+      <li><a href="../organizaciones.html">Organizaciones</a></li>
+      <li class="nav-item-dropdown">
+        <a href="../herramientas.html" class="nav-link-active">Herramientas</a>
+        <ul class="dropdown-menu">
+          <li><a href="../herramientas.html">Ver ecosistema completo</a></li>
+          <li><a href="plataforma-livlin.html">Indagación Regenerativa</a></li>
+          <li><a href="plantae.html">Plantae</a></li>
+          <li><a href="theory-of-change.html">Teoría del Cambio</a></li>
+        </ul>
+      </li>
+      <li><a href="../recursos.html">Publicaciones</a></li>
+      <li><a href="../sobre.html">Sobre Livlin</a></li>
+      <li><a href="../contacto.html" class="nav-cta-green">Solicitar diagnóstico</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="page-hero" style="padding-bottom:60px;">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div class="fade-in">
+        <div class="breadcrumb">
+          <a href="../index.html" data-es="Inicio" data-en="Home">Inicio</a> ·
+          <a href="monitoreo.html#herramientas" data-es="Herramientas" data-en="Tools">Herramientas</a> ·
+          <span data-es="Proyecto Plantae" data-en="Plantae Project">Proyecto Plantae</span>
+        </div>
+        <span class="eyebrow" data-es="Herramienta en Desarrollo" data-en="Tool in Development">Herramienta en Desarrollo</span>
+        <h1 data-es="Proyecto Plantae" data-en="Plantae Project">Proyecto Plantae</h1>
+        <p class="lead" data-es="Herramienta de consulta avanzada diseñada para centralizar y democratizar el acceso a conocimientos críticos sobre agroecología, regeneración y agroforestería." data-en="Advanced consultation tool designed to centralize and democratize access to critical knowledge on agroecology, regeneration and agroforestry.">
+          Herramienta de consulta avanzada diseñada para centralizar y democratizar el acceso a conocimientos críticos sobre agroecología, regeneración y agroforestería.
+        </p>
+        
+        <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="https://plantae.streamlit.app/" target="_blank" class="btn btn-primary btn-large">
+            <span data-es="<img src="../images/icons/leaf.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Ir a Proyecto Plantae" data-en="<img src="../images/icons/leaf.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Go to Plantae Project"><img src="../images/icons/leaf.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Ir a Proyecto Plantae</span>
+          </a>
+          <a href="../contacto.html" class="btn btn-secondary btn-large" data-es="<img src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Consultar por colaboración" data-en="<img src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Consult for collaboration"><img src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Consultar por colaboración</a>
+        </div>
+      </div>
+      
+      <div class="page-hero-image fade-in">
+        <div class="mockup">
+          <img src="../images/apps/plantae/01_plantae_horizontal.png" alt="Plantae Project" style="border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.15);">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg);">
+  <div class="container">
+    <div class="service-block fade-in">
+      <h3 data-es="¿Cómo sacarle el máximo provecho?" data-en="How to get the most out of it?">¿Cómo sacarle el máximo provecho?</h3>
+      <p class="lead" data-es="Proyecto Plantae integra múltiples bases de datos para que agricultores y regeneradores tomen decisiones informadas:" data-en="Plantae Project integrates multiple databases so that farmers and regenerators make informed decisions:">
+        Proyecto Plantae integra múltiples bases de datos para que agricultores y regeneradores tomen decisiones informadas:
+      </p>
+
+      <div class="feature-showcase" style="margin-top:40px;">
+        <!-- Feature 1 -->
+        <div class="feature-item">
+          <div class="feature-text">
+            <h5 data-es="Gestión de Especies y Biodiversidad" data-en="Species and Biodiversity Management">Gestión de Especies y Biodiversidad</h5>
+            <p data-es="Base de datos inteligente de cultivos con requerimientos específicos de riego, suelo y asociaciones beneficiosas para maximizar la biodiversidad y salud sistémica." data-en="Smart crop database with specific requirements for irrigation, soil and beneficial associations to maximize biodiversity and systemic health.">
+              Base de datos inteligente de cultivos con requerimientos específicos de riego, suelo y asociaciones beneficiosas para maximizar la biodiversidad y salud sistémica.
+            </p>
+          </div>
+          <div class="feature-image">
+            <div class="browser-mockup">
+              <img src="../images/apps/plantae/01_plantae_horizontal.png" alt="Gestión de Especies">
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item">
+          <div class="feature-image" style="order:2;">
+            <div style="max-width:280px; margin:0 auto;">
+              <img src="../images/apps/plantae/03_plantae_vertical_front.png" alt="Plantae Mobile" style="border-radius:25px; border:8px solid #333;">
+            </div>
+          </div>
+          <div class="feature-text" style="order:1;">
+            <h5 data-es="Planificación y Calendario Móvil" data-en="Planning and Mobile Calendar">Planificación y Calendario Móvil</h5>
+            <p data-es="Lleva el control de tus siembras y tareas directamente al terreno. La interfaz móvil permite registrar acciones en tiempo real, asegurando que ningún dato se pierda." data-en="Take control of your sowing and tasks directly to the field. The mobile interface allows recording actions in real time, ensuring no data is lost.">
+              Lleva el control de tus siembras y tareas directamente al terreno. La interfaz móvil permite registrar acciones en tiempo real, asegurando que ningún dato se pierda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+          <div class="feature-text">
+            <h5 data-es="Búsqueda y Monitoreo" data-en="Search and Monitoring">Búsqueda y Monitoreo</h5>
+            <p data-es="Encuentra rápidamente información sobre cualquier especie en tu sistema y monitorea su evolución. Ideal para proyectos de restauración y huertos urbanos complejos." data-en="Quickly find information about any species in your system and monitor its evolution. Ideal for restoration projects and complex urban gardens.">
+              Encuentra rápidamente información sobre cualquier especie en tu sistema y monitorea su evolución. Ideal para proyectos de restauración y huertos urbanos complejos.
+            </p>
+          </div>
+          <div class="feature-image">
+            <div style="max-width:280px; margin:0 auto;">
+              <img src="../images/apps/plantae/02_plantae_vertical_search.png" alt="Buscador Plantae" style="border-radius:25px; border:8px solid #333;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-block fade-in" style="background:var(--cream); padding:40px; border-radius:20px; margin-top:40px;">
+      <div style="max-width:800px; margin:0 auto; text-align:center;">
+        <h3 data-es="Sincronización total con MEL" data-en="Full integration with MEL">Sincronización total con MEL</h3>
+        <p data-es="Plantae no es solo una base de datos; es una herramienta de monitoreo (MEL) que permite evidenciar la regeneración de la capa vegetal y la biodiversidad en el tiempo." data-en="Plantae is not just a database; it is a monitoring tool (MEL) that allows evidencing the regeneration of the vegetation layer and biodiversity over time.">
+          Plantae es una herramienta de monitoreo (MEL) que permite evidenciar la regeneración de la capa vegetal y la biodiversidad en el tiempo.
+        </p>
+        <a href="monitoreo.html" class="btn btn-amber" style="margin-top:20px;" data-es="Ver sistemas de monitoreo" data-en="See monitoring systems">Ver sistemas de monitoreo</a>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/ui/logo.png?v=2" alt="LivLin" style="height:36px; margin-bottom:16px;">
+        <p>Consultora estratégica en diseño regenerativo y sistemas de datos.</p>
+        <p style="font-style:italic; color:var(--green-light); margin-top:8px;">«Más naturaleza»</p>
+        <div class="footer-social-links" style="margin-top:20px;">
+          <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="../images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+          <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="../images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+          <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img src="../images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+          <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="../hogares.html">Hogares</a></li>
+          <li><a href="../organizaciones.html">Organizaciones</a></li>
+          <li><a href="../contacto.html">Solicitar diagnóstico</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Herramientas</h5>
+        <ul>
+          <li><a href="../herramientas.html">Ecosistema</a></li>
+          <li><a href="plataforma-livlin.html">Indagación</a></li>
+          <li><a href="plantae.html">Plantae</a></li>
+          <li><a href="theory-of-change.html">Teoría del Cambio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Livlin</h5>
+        <ul>
+          <li><a href="../recursos.html">Publicaciones</a></li>
+      <li><a href="../sobre.html">Sobre Livlin</a></li>
+          <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Livlin · www.livlin.cl</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

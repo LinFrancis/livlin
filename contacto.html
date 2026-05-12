@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Agenda una evaluación inicial · LivLin</title>
+  <meta name="description"
+    content="Solicita un diagnóstico regenerativo para tu hogar u organización. Agenda una reunión exploratoria sin compromiso con LivLin.">
+  <link rel="icon" type="image/png" href="images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/ui/logo.png?v=2" alt="LivLin"></a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="hogares.html">Hogares</a></li>
+        <li><a href="organizaciones.html">Organizaciones</a></li>
+        <li class="nav-item-dropdown">
+          <a href="herramientas.html">Herramientas</a>
+          <ul class="dropdown-menu">
+            <li><a href="servicios/plataforma-livlin.html">Indagación Regenerativa</a></li>
+            <li><a href="servicios/plantae.html">Plantae</a></li>
+            <li><a href="servicios/theory-of-change.html">Teoría del Cambio</a></li>
+            <li><a href="herramientas.html">Ver ecosistema completo</a></li>
+          </ul>
+        </li>
+        <li><a href="recursos.html">Publicaciones</a></li>
+      <li><a href="sobre.html">Sobre Livlin</a></li>
+        <li><a href="contacto.html" class="nav-cta-green">Solicitar diagnóstico</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero-slim">
+    <div class="container">
+      <div style="max-width:760px;">
+        <span class="eyebrow">Contacto</span>
+        <h1>Agenda una evaluación inicial</h1>
+        <p class="lead">Estamos listos para escucharte. Ya sea para un pequeño jardín o una gran organización, cada
+          camino regenerativo comienza con una conversación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM (Simulation) -->
+        <div class="contact-form fade-in">
+          <h3 style="margin-bottom:24px;">Envíanos un mensaje</h3>
+          <form id="livlin-contact">
+            <div class="form-group">
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="client-type">Tipo de cliente</label>
+              <select id="client-type" name="client-type">
+                <option value="hogar">Hogar / Parcela</option>
+                <option value="organizacion">Organización / Institución</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">¿En qué podemos ayudarte?</label>
+              <textarea id="message" name="message" placeholder="Cuéntanos sobre tu espacio o proyecto..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-large" style="width:100%;">Enviar mensaje →</button>
+            <p style="font-size:0.75rem; color:var(--muted); margin-top:16px; text-align:center;">Al hacer clic, se
+              abrirá tu cliente de WhatsApp para finalizar el envío.</p>
+          </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="contact-info fade-in stagger-1">
+          <h3 style="margin-bottom:24px;">Información de contacto</h3>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><img src="images/icons/phone.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+            <div>
+              <h5>WhatsApp</h5>
+              <p>Respuesta rápida para consultas directas.</p>
+              <a href="https://wa.me/56967971910" target="_blank" rel="noopener"
+                style="font-weight:600; color:var(--teal);">+56 9 6797 1910</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><img src="images/icons/mail.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+            <div>
+              <h5>Correo electrónico</h5>
+              <p>Para propuestas detalladas o convenios.</p>
+              <a href="mailto:contacto.livlin@gmail.com"
+                style="font-weight:600; color:var(--teal);">contacto.livlin@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><img src="images/icons/map-pin.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+            <div>
+              <h5>Ubicación</h5>
+              <p>Santiago, Chile. Realizamos consultoría en todo el país y el extranjero de forma remota.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><img src="images/icons/link.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+            <div>
+              <h5>LinkedIn</h5>
+              <p>Sigue nuestras actualizaciones profesionales.</p>
+              <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener"
+                style="font-weight:600; color:var(--teal);">linkedin.com/in/francismasonb</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><img src="images/icons/github.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"></div>
+            <div>
+              <h5>GitHub</h5>
+              <p>Plataformas y herramientas open source.</p>
+              <a href="https://github.com/francismasonb" target="_blank" rel="noopener"
+                style="font-weight:600; color:var(--teal);">github.com/francismasonb</a>
+            </div>
+          </div>
+
+          <!-- FOUNDER SMALL CARD -->
+          <div
+            style="margin-top:40px; padding:24px; background:white; border-radius:var(--radius); border:1px solid var(--border); display:flex; gap:16px; align-items:center;">
+            <img src="images/people/francis.png" alt="Francis Mason"
+              style="width:64px; height:64px; border-radius:50%; object-fit:cover;">
+            <div>
+              <h5 style="margin-bottom:4px;">Francis Mason 林高天</h5>
+              <p style="font-size:0.8rem; color:var(--muted);">Fundador · livlin.cl</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/ui/logo.png?v=2" alt="LivLin" style="height:36px; margin-bottom:16px;">
+          <p>Consultora estratégica en diseño regenerativo y sistemas de datos.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">«Más naturaleza»</p>
+          <div class="footer-social-links" style="margin-top:20px;">
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img
+                src="images/icons/github.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg"
+                class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Explora</h5>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="hogares.html">Hogares</a></li>
+            <li><a href="organizaciones.html">Organizaciones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Herramientas</h5>
+          <ul>
+            <li><a href="herramientas.html">Herramientas</a></li>
+            <li><a href="sobre.html">Sobre nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/56967971910" target="_blank" rel="noopener">WhatsApp +56 9 6797 1910</a></li>
+            <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Livlin · www.livlin.cl</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+  <script>
+    // Form handling simulation
+    document.getElementById('livlin-contact').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const type = document.getElementById('client-type').value;
+      const msg = document.getElementById('message').value;
+
+      // WhatsApp format
+      const text = `Hola LivLin, soy ${name}. Me interesa el servicio para ${type}. Mensaje: ${msg}`;
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/56967971910?text=${encoded}`, '_blank');
+    });
+  </script>
+</body>
+
+</html>

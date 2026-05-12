@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ADAA5"/>
+      <stop offset="100%" stop-color="#239BA7"/>
+    </linearGradient>
+  </defs>
+  <!-- Hoja/spiral icon -->
+  <g transform="translate(8, 12)">
+    <path d="M18 0 C 8 4, 0 12, 0 22 C 0 32, 8 38, 18 36 C 28 34, 36 26, 36 18 C 36 10, 28 2, 18 0 Z M18 8 C 24 8, 30 14, 30 20 C 30 26, 24 30, 18 30 C 14 30, 10 28, 10 24 C 10 20, 14 16, 18 16 C 22 16, 24 18, 24 20" 
+          fill="url(#leafGrad)" stroke="none"/>
+  </g>
+  <!-- Texto LivLin -->
+  <text x="56" y="38" font-family="Merriweather, Georgia, serif" font-weight="900" font-size="26" fill="#112E4D" letter-spacing="-1">LivLin</text>
+</svg>
