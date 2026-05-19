@@ -7,6 +7,9 @@
 
 /* ---------- 1. Variables y reset ---------- */
 :root {
+  --pink: #FF37D5;
+  --pink-soft: #ff8de8;
+  --pink-glow: rgba(255, 55, 213, 0.15);
   --green-light: #7ADAA5;
   --green-dark: #4FB87E;
   --teal: #239BA7;

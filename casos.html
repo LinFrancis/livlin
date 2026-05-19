@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos · Proyectos regenerativos · Livlin</title>
+  <meta name="description" content="Casos de estudio de diseño regenerativo: departamento urbano, restaurante sostenible y escuela regenerativa. Desafío, diagnóstico, solución y resultado.">
+  <link rel="icon" type="image/png" href="images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .case-study { background:var(--card); border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-soft); margin-bottom:48px; transition:var(--transition); }
+    .case-study:hover { box-shadow:var(--shadow-medium); }
+    .case-study:last-child { margin-bottom:0; }
+    .case-body { padding:48px 40px; display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+    @media(max-width:768px) { .case-body { grid-template-columns:1fr; padding:28px 24px; } }
+    .case-label { display:inline-block; padding:4px 14px; border-radius:100px; font-size:0.75rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:16px; }
+    .case-label.hogar { background:#e8f7ef; color:#1a4d2e; }
+    .case-label.restaurante { background:#fdf3e0; color:#6b4c0e; }
+    .case-label.escuela { background:#d3eef0; color:var(--teal-dark); }
+    .case-label.centro { background:#f5e6fe; color:#5c007a; }
+    .case-label.lavaseco { background:#e6f0fa; color:#0d47a1; }
+    .case-body h3 { font-size:1.5rem; margin-bottom:16px; }
+    .case-detail { margin-bottom:20px; }
+    .case-detail h5 { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:700; margin-bottom:8px; }
+    .case-detail p { font-size:0.95rem; color:var(--text-soft); }
+    .case-images { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .case-images img { width:100%; border-radius:var(--radius-sm); aspect-ratio:4/3; object-fit:cover; border:1px solid var(--border); }
+    @media(max-width:500px) { .case-images { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Livlin home">
+        <img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="diseno-resiliente.html">Diseño resiliente</a></li>
+        <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+        <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="casos.html" class="nav-link-active">Casos</a></li>
+        <li><a href="sobre.html">Sobre Livlin</a></li>
+        <li><a href="contacto.html" class="nav-cta-green">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero-slim">
+    <div class="container">
+      <div style="max-width:760px;">
+        <span class="eyebrow">Portfolio</span>
+        <h1>Casos de estudio</h1>
+        <p class="lead">Cada proyecto es único. Aquí mostramos cómo aplicamos nuestro enfoque regenerativo en distintos contextos, escalas y desafíos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section style="background:var(--bg);">
+    <div class="container">
+
+      <!-- CASO 1: DEPARTAMENTO -->
+      <article class="case-study fade-in">
+        <div class="case-body">
+          <div>
+            <span class="case-label hogar">Hogar</span>
+            <h3>Departamento resiliente</h3>
+            <div class="case-detail">
+              <h5>Desafío</h5>
+              <p>Departamento urbano de 80m² en Santiago sin conexión con la naturaleza. Alto consumo de agua, acumulación de residuos orgánicos y nula producción de alimentos.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Diagnóstico</h5>
+              <p>Evaluación con la plataforma de indagación regenerativa reveló oportunidades en gestión hídrica, compostaje domiciliario y producción en espacios reducidos (balcón y ventanas).</p>
+            </div>
+            <div class="case-detail">
+              <h5>Solución</h5>
+              <p>Diseño de sistema integrado: huerto vertical en balcón, vermicompostera, riego por capilaridad y plan de biodiversidad con plantas nativas y aromáticas.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Resultado</h5>
+              <p>Reducción del 40% en residuos enviados a vertedero. Producción mensual de hierbas y hortalizas de hoja. Mejora perceptible del bienestar y conexión con ciclos naturales.</p>
+            </div>
+          </div>
+          <div class="case-images">
+            <img src="images/projects/bancales.png" alt="Huerto urbano regenerativo">
+            <img src="images/projects/riego_capilaridad.png" alt="Riego por capilaridad">
+            <img src="images/projects/lombricultura.png" alt="Vermicompostera domiciliaria">
+            <img src="images/projects/cosechas.png" alt="Cosechas del departamento">
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 2: RESTAURANTE -->
+      <article class="case-study fade-in">
+        <div class="case-body">
+          <div>
+            <span class="case-label restaurante">Restaurante</span>
+            <h3>Restaurante regenerativo</h3>
+            <div class="case-detail">
+              <h5>Desafío</h5>
+              <p>Restaurante con alta generación de residuos orgánicos y deseo de producir ingredientes frescos in situ, pero sin espacio disponible convencional ni experiencia agrícola.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Diagnóstico</h5>
+              <p>Identificación de flujos de residuos, mapeo de espacios subutilizados y análisis de la cadena de insumos. Oportunidad de ciclo cerrado: residuo → compost → producción → cocina.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Solución</h5>
+              <p>Diseño de huerta productiva con compostaje integrado, selección de variedades para uso gastronómico y sistema de monitoreo de producción con dashboard personalizado.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Resultado</h5>
+              <p>Ciclo cerrado funcional. Producción de hierbas, microverdes y hortalizas de hoja. Reducción significativa en compra de insumos y reforzamiento de la identidad sostenible del restaurante.</p>
+            </div>
+          </div>
+          <div class="case-images">
+            <img src="images/projects/hotel_lombrices.png" alt="Compostaje para restaurante">
+            <img src="images/projects/habas_invierno.png" alt="Producción de invierno">
+            <img src="images/projects/acompanamiento.png" alt="Acompañamiento técnico">
+            <img src="images/projects/diseno_antes_despues.png" alt="Diseño del espacio">
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 3: ESCUELA -->
+      <article class="case-study fade-in">
+        <div class="case-body">
+          <div>
+            <span class="case-label escuela">Escuela</span>
+            <h3>Escuela regenerativa</h3>
+            <div class="case-detail">
+              <h5>Desafío</h5>
+              <p>Establecimiento educacional que busca integrar la sostenibilidad de forma transversal en su currículo, más allá de acciones puntuales como reciclaje o huertos decorativos.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Diagnóstico</h5>
+              <p>Evaluación de los espacios exteriores, programas pedagógicos existentes y capacidades del equipo docente. Identificación de oportunidades para aprendizaje experiencial.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Solución</h5>
+              <p>Diseño de espacios verdes educativos con estaciones de aprendizaje, programa formativo para docentes y sistema MEL para monitorear el aprendizaje ambiental de los estudiantes.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Resultado</h5>
+              <p>Programa pedagógico integrado al currículo. Espacios funcionales para ciencias naturales. Sistema de indicadores que mide la evolución de competencias ambientales por curso.</p>
+            </div>
+          </div>
+          <div class="case-images">
+            <img src="images/projects/taller_aucca_charla.png" alt="Taller educativo">
+            <img src="images/projects/taller_aucca_grupo.png" alt="Grupo de trabajo">
+            <img src="images/projects/metodologias_participativas.jpg" alt="Metodologías participativas">
+            <img src="images/projects/taller_lombricera.png" alt="Taller de lombricera">
+          </div>
+        </div>
+      <!-- CASO 4: CENTRO EDUCATIVO -->
+      <article class="case-study fade-in">
+        <div class="case-body">
+          <div>
+            <span class="case-label centro">Centro educativo</span>
+            <h3>Centro educativo demostrativo</h3>
+            <div class="case-detail">
+              <h5>Desafío</h5>
+              <p>Centro de capacitación que deseaba implementar infraestructura verde demostrativa y un plan de aprendizaje vivencial para sus visitantes.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Diagnóstico</h5>
+              <p>Terreno semiurbano con erosión de suelo, escurrimiento de agua y oportunidades de captación pasiva.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Solución</h5>
+              <p>Plan maestro de regeneración paisajística y de suelo, zanjas de infiltración, bosque comestible a pequeña escala y talleres demostrativos.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Resultado</h5>
+              <p>Conservación del 90% de agua de lluvia in situ, detención de erosión, y más de 300 personas capacitadas al año en técnicas regenerativas.</p>
+            </div>
+          </div>
+          <div class="case-images">
+            <img src="images/projects/metodologias_participativas.jpg" alt="Regeneración paisajística">
+            <img src="images/projects/acompanamiento.png" alt="Acompañamiento en el centro">
+            <img src="images/projects/taller_aucca_charla.png" alt="Capacitación vivencial">
+            <img src="images/projects/taller_aucca_grupo.png" alt="Grupo de participantes">
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 5: LAVASECO -->
+      <article class="case-study fade-in">
+        <div class="case-body">
+          <div>
+            <span class="case-label lavaseco">Lavaseco</span>
+            <h3>Lavaseco ecológico</h3>
+            <div class="case-detail">
+              <h5>Desafío</h5>
+              <p>Lavaseco comercial que requería optimizar su gestión de recursos, reducir la huella hídrica y demostrar cumplimiento de estándares ESG.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Diagnóstico</h5>
+              <p>Consumo elevado de agua potable y vertido de aguas grises con potencial de filtración y reutilización ecológica.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Solución</h5>
+              <p>Diseño de sistema de filtrado de aguas grises para riego de áreas verdes nativas de la instalación y un dashboard para monitorear el consumo de agua por ciclo de lavado.</p>
+            </div>
+            <div class="case-detail">
+              <h5>Resultado</h5>
+              <p>Reutilización del 60% del agua residual en riego, reduciendo costos operativos y posicionándose como el primer lavaseco con ciclo hídrico cerrado del sector.</p>
+            </div>
+          </div>
+          <div class="case-images">
+            <img src="images/projects/riego_capilaridad.png" alt="Riego de áreas verdes nativas">
+            <img src="images/projects/diseno_antes_despues.png" alt="Diseño de instalación hídrica">
+            <img src="images/projects/hotel_lombrices.png" alt="Monitoreo y filtrado natural">
+            <img src="images/projects/bancales.png" alt="Espacios verdes alimentados con agua recuperada">
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final-banner">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green-light);">¿Tienes un proyecto?</span>
+      <h2>Transforma tu espacio en un sistema resiliente</h2>
+      <p>Conversemos sobre tu desafío y diseñemos una solución regenerativa a tu medida.</p>
+      <a href="contacto.html" class="btn btn-large" style="background:var(--green-light); color:var(--text); font-weight:700;">Solicita tu diseño resiliente →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span></div>
+          <p>Consultora boutique especializada en diseño regenerativo, soluciones basadas en la naturaleza y sistemas digitales para sostenibilidad.</p>
+          <div class="footer-social-links" style="margin-top:20px;">
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Servicios</h5><ul>
+          <li><a href="diseno-resiliente.html">Diseño resiliente</a></li>
+          <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+          <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+        </ul></div>
+        <div class="footer-col"><h5>Explorar</h5><ul>
+          <li><a href="sectores.html">Sectores</a></li>
+          <li><a href="casos.html">Casos</a></li>
+          <li><a href="sobre.html">Sobre Livlin</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h5>Contacto</h5><ul>
+          <li><a href="https://wa.me/56967971910" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+          <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Livlin · www.livlin.cl</span>
+        <span>Santiago, Chile</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
