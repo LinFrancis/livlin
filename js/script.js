@@ -308,7 +308,7 @@
 
   /* ---------- 11. Floating WhatsApp Button ---------- */
   (function injectWhatsApp() {
-    var phone = '56967971910';
+    var phone = '56971657358';
     var msg = encodeURIComponent('Hola Livlin, quiero más información sobre sus servicios.');
     var url = 'https://wa.me/' + phone + '?text=' + msg;
 
@@ -323,4 +323,64 @@
     document.body.appendChild(a);
   })();
 
+  /* ---------- 12. Splash Banner Slideshow ---------- */
+  function initSplashSlideshow() {
+    const slides = document.querySelectorAll('.splash-slide');
+    const dots = document.querySelectorAll('.splash-dot');
+    const texts = document.querySelectorAll('.rotator-text');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    let slideInterval;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+      if (texts[currentSlide]) texts[currentSlide].classList.remove('active');
+      
+      currentSlide = (index + slides.length) % slides.length;
+      
+      slides[currentSlide].classList.add('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+      if (texts[currentSlide]) texts[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function startSlideshow() {
+      if (slideInterval) clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        startSlideshow();
+      });
+    });
+
+    startSlideshow();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSplashSlideshow);
+  } else {
+    initSplashSlideshow();
+  }
+
+  /* ---------- 13. Splash Banner Dismiss ---------- */
+  const enterBtn = document.getElementById('enter-btn');
+  const splashBanner = document.getElementById('splash-banner');
+  if (enterBtn && splashBanner) {
+    enterBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      splashBanner.classList.add('splash-hidden');
+      document.documentElement.style.overflow = '';
+      sessionStorage.setItem('livlinSplashSeen', 'true');
+    });
+  }
+
 })();
+

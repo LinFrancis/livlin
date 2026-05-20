@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Livlin · Diseño regenerativo y herramientas digitales para espacios vivos</title>
-  <meta name="description" content="Consultora boutique especializada en diseño resiliente de espacios, monitoreo regenerativo y soluciones digitales para sostenibilidad.">
+  <meta name="description"
+    content="Consultora boutique especializada en diseño regenerativo de espacios, monitoreo regenerativo y soluciones digitales para sostenibilidad.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.livlin.cl/">
   <meta property="og:title" content="Livlin · Diseño regenerativo y herramientas digitales">
@@ -13,9 +15,12 @@
   <link rel="icon" type="image/png" href="images/ui/logo_livlin_no_text.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -27,63 +32,252 @@
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link-active">Inicio</a></li>
-        <li><a href="diseno-resiliente.html">Diseño resiliente</a></li>
+        <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
         <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
         <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
-        <li><a href="sectores.html">Sectores</a></li>
+
         <li><a href="sobre.html">Sobre Livlin</a></li>
         <li><a href="contacto.html" class="nav-cta-green">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content fade-in">
-          <span class="eyebrow">Inteligencia regenerativa · Diseño estratégico · Tecnología</span>
-          <h1>Diseño regenerativo y herramientas digitales para <em>transformar espacios vivos</em></h1>
-          <p>Ayudamos a personas y organizaciones a reconocer e incorporar procesos ecológicos en la toma de decisiones para enfrentar la triple crisis, reducir costos y aumentar resiliencia.</p>
-          <div class="hero-actions">
-            <a href="contacto.html" class="btn btn-primary">Solicita tu diseño resiliente</a>
-            <a href="#solucion" class="btn btn-secondary">Explorar servicios</a>
-          </div>
-          <div class="hero-trust-tags">
-            <span class="trust-tag">Diseño resiliente</span>
-            <span class="trust-tag">Monitoreo regenerativo</span>
-            <span class="trust-tag">Soluciones digitales</span>
-          </div>
-        </div>
-        <div class="hero-image-wrap fade-in">
-          <img src="images/hero/hero_manos_tierra.png" alt="Regeneración · Naturaleza y tecnología">
+  <!-- ============================================================
+       SPLASH BANNER
+       ============================================================ -->
+  <script>
+    if (sessionStorage.getItem('livlinSplashSeen')) {
+      document.write('<style>.splash-banner { display: none !important; }</style>');
+    } else {
+      document.documentElement.style.overflow = 'hidden';
+    }
+  </script>
+  <header class="splash-banner" id="splash-banner">
+    <div class="splash-container">
+
+      <div class="splash-right">
+        <div class="splash-slideshow fade-in">
+          <div class="splash-slide active"><img src="images/banner/diseño_regenerativo_ai_01.png"
+              alt="Diseño de Sistemas Regenerativos"></div>
+          <div class="splash-slide"><img src="images/banner/mel_ai_02.png"
+              alt="Monitoreo, evaluación y aprendizaje regenerativo"></div>
+          <div class="splash-slide"><img src="images/banner/soluciones_ai_03.png" alt="Tecnología con propósito"></div>
         </div>
       </div>
+
+      <div class="splash-logo-wrap fade-in">
+        <img src="images/ui/logo.png" alt="Livlin Logo" class="splash-logo">
+      </div>
+
+      <div class="splash-title-wrap fade-in">
+        <h1 class="splash-title">Transforma tu espacio<br>en parte de la solución.</h1>
+      </div>
+
+      <div class="splash-columns-wrap fade-in">
+        <!-- Columna Izquierda: Beneficios -->
+        <div class="splash-col-left">
+          <span class="splash-eyebrow">Si tú quieres:</span>
+          <div class="splash-benefits-list">
+            <div class="benefit-item"><img src="images/icons/sprout.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">cultivar alimentos</span></div>
+            <div class="benefit-item"><img src="images/icons/coin.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">reducir costos</span></div>
+            <div class="benefit-item"><img src="images/icons/zap.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">mejorar eficiencia energética</span></div>
+            <div class="benefit-item"><img src="images/icons/droplet.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">gestionar mejor el agua</span></div>
+            <div class="benefit-item"><img src="images/icons/cycle.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">regenerar suelos</span></div>
+            <div class="benefit-item"><img src="images/icons/butterfly.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">mejorar biodiversidad</span></div>
+            <div class="benefit-item"><img src="images/icons/shield.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">fortalecer resiliencia climática</span></div>
+            <div class="benefit-item"><img src="images/icons/target.svg" class="benefit-icon" alt=""><span
+                class="benefit-text">medir impacto real</span></div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Nosotros -->
+        <div class="splash-col-right">
+          <span class="splash-eyebrow">Nosotros:</span>
+          <div class="nosotros-block">
+            <div class="nosotros-icon-wrapper">
+              <img src="images/icons/leaf.svg" class="nosotros-icon" alt="">
+            </div>
+            <div class="nosotros-text-wrapper">
+              <div class="nosotros-rotator-texts">
+                <div class="rotator-text active">Diseñamos sistemas regenerativos inteligentes que convierten tus
+                  objetivos en <span class="highlight-green">impacto medible.</span></div>
+                <div class="rotator-text">Transformamos datos en decisiones inteligentes para aprender, adaptarse y
+                  <span class="highlight-green">mejorar continuamente.</span>
+                </div>
+                <div class="rotator-text">Construimos herramientas digitales para medir, comunicar y <span
+                    class="highlight-green">escalar impacto ambiental.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="splash-footer-wrap fade-in">
+        <button id="enter-btn" class="btn splash-btn">Entrar a Livlin →</button>
+        <span class="splash-subtext">Hogares · Empresas · Comunidades</span>
+        <div class="splash-dots">
+          <span class="splash-dot active" data-slide="0"></span>
+          <span class="splash-dot" data-slide="1"></span>
+          <span class="splash-dot" data-slide="2"></span>
+        </div>
+      </div>
+
     </div>
   </header>
+
+  <!-- NEW SOLUTIONS HERO (Replaces old hero) -->
+  <section id="hero-solutions" class="hero-integrated">
+    <div class="hero-integrated-bg">
+      <img src="images/hero/hero_manos_tierra.png" alt="Hero Background">
+      <div class="hero-integrated-overlay"></div>
+    </div>
+    <div class="container hero-integrated-container">
+
+      <div class="hero-integrated-content fade-in">
+        <span class="hero-integrated-eyebrow">PERMACULTURA • DISEÑO ECOLÓGICO • TECNOLOGÍA • REGENERACIÓN</span>
+        <h1 class="hero-integrated-title">Diseñamos<br>soluciones ecológicas<br>para <span
+            class="highlight-green-light">hogares, empresas<br>y comunidades.</span></h1>
+        <p class="hero-integrated-desc">Incorporamos procesos ecológicos en la toma de decisiones para crear espacios
+          más eficientes, saludables y sostenibles.</p>
+
+        <div class="hero-integrated-actions">
+          <a href="contacto.html" class="btn-integrated-primary"><img src="images/icons/leaf.svg" alt=""> Agenda una
+            asesoría</a>
+          <a href="#servicios" class="btn-integrated-link">Conoce más sobre lo que hacemos &rarr;</a>
+        </div>
+      </div>
+
+      <style>
+        .hero-integrated-bottom-3col {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+        @media (max-width: 900px) {
+          .hero-integrated-bottom-3col {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      </style>
+      <div class="hero-integrated-bottom hero-integrated-bottom-3col fade-in">
+        
+        <!-- Column 1 -->
+        <div class="hi-card" style="flex-direction: row; align-items: flex-start; gap: 20px;">
+          <div class="hi-card-icon" style="flex-shrink: 0; padding-top: 2px;">
+            <img src="images/icons/home.svg" alt="" style="width: 44px; height: 44px; filter: invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%) contrast(89%);">
+          </div>
+          <div class="hi-card-content" style="width: 100%;">
+            <h4 style="font-size: 1.15rem; color: #0f2415; margin-bottom: 12px; font-weight: 700;">Hogares</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Huertos y jardines comestibles
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Ahorro y gestión hídrica
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Compostaje y residuos
+              </li>
+              <li style="position: relative; padding-left: 16px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Diseño de espacios vivos
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="hi-card" style="flex-direction: row; align-items: flex-start; gap: 20px;">
+          <div class="hi-card-icon" style="flex-shrink: 0; padding-top: 2px;">
+            <img src="images/icons/building.svg" alt="" style="width: 44px; height: 44px; filter: invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%) contrast(89%);">
+          </div>
+          <div class="hi-card-content" style="width: 100%;">
+            <h4 style="font-size: 1.15rem; color: #0f2415; margin-bottom: 12px; font-weight: 700;">Empresas</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Estrategia ESG
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Espacios verdes y bienestar
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Regeneración de entornos
+              </li>
+              <li style="position: relative; padding-left: 16px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Eficiencia y reducción de costos
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="hi-card" style="flex-direction: row; align-items: flex-start; gap: 20px;">
+          <div class="hi-card-icon" style="flex-shrink: 0; padding-top: 2px;">
+            <img src="images/icons/users.svg" alt="" style="width: 44px; height: 44px; filter: invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%) contrast(89%);">
+          </div>
+          <div class="hi-card-content" style="width: 100%;">
+            <h4 style="font-size: 1.15rem; color: #0f2415; margin-bottom: 12px; font-weight: 700;">Comunidades</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Diseño participativo
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Educación ambiental
+              </li>
+              <li style="position: relative; padding-left: 16px; margin-bottom: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Biodiversidad urbana
+              </li>
+              <li style="position: relative; padding-left: 16px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+                <span style="position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #8cc63f; border-radius: 50%;"></span>
+                Infraestructura ecológica
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- ============================================================
        PROBLEMA QUE RESUELVE
        ============================================================ -->
-  <section id="problema" style="background:var(--bg);">
+  <section id="problema" style="background:var(--cream);">
     <style>
       @media (max-width: 768px) {
         .impact-comparison-grid {
           grid-template-columns: 1fr !important;
         }
+
         .problem-cards {
           grid-template-columns: 1fr !important;
         }
+
         .problem-card.span-2 {
           grid-column: span 1 !important;
         }
+
         .problem-card.span-2 ul {
           grid-template-columns: 1fr !important;
         }
       }
+
       @media (min-width: 769px) {
         .problem-card.span-2 {
           grid-column: span 2 !important;
@@ -91,164 +285,179 @@
       }
     </style>
     <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow">El problema</span>
-        <h2>El problema</h2>
-        <p class="lead" style="max-width:800px; margin:20px auto 0; font-size:1.15rem; color:var(--text-soft);">
-          Muchas iniciativas sostenibles fracasan no por falta de intención, sino por falta de diagnóstico sistémico, priorización estratégica y aprendizaje continuo.
-        </p>
+      <div class="section-header center fade-in" style="max-width: 800px; margin-bottom: 40px;">
+        <span class="eyebrow" style="color:var(--green-light); font-weight:700;">DESAFÍOS QUE ENFRENTAMOS</span>
+        <h2>Muchos proyectos sostenibles<br><span class="highlight-green">no logran el impacto que esperan</span></h2>
+        <p class="lead" style="margin:16px auto 0; font-size:1rem; color:#555;">Las organizaciones quieren hacer las
+          cosas bien, pero se enfrentan a los mismos obstáculos que consumen recursos, tiempo y oportunidades.</p>
       </div>
 
-      <!-- Lista de problemas (Cards) -->
-      <div class="problem-cards fade-in">
-        <!-- CARD 1 -->
-        <div class="problem-card">
-          <span class="problem-icon"><img src="images/icons/shuffle.svg" class="inline-icon" style="width:1.4em; height:1.4em; vertical-align:-0.25em;"></span>
-          <h4 style="font-size:1.15rem; margin-bottom:12px; font-weight:700;">Inversiones desconectadas</h4>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:var(--text-soft);">Recursos destinados sin diagnóstico previo ni comprensión del potencial real del espacio.</p>
-          <div style="border-top:1px solid var(--border); padding-top:12px; margin-top:12px;">
-            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); display:block; margin-bottom:8px;">Impacto:</span>
-            <ul style="list-style:none; padding-left:0; font-size:0.88rem; color:var(--text-soft);">
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> gastos innecesarios</li>
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> inversiones redundantes</li>
-              <li style="margin-bottom:0; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> baja rentabilidad</li>
+      <div class="new-problem-cards-wrapper fade-in">
+        <div class="new-problem-card">
+          <div class="card-image-wrapper">
+            <img src="images/cards/inversion_no_impacto_01.png" alt="">
+            <div class="card-icon" style="background-color: #1a3622;"><img src="images/icons/coin.svg" alt=""></div>
+          </div>
+          <div class="card-content">
+            <h4>Inversiones que<br>no generan impacto</h4>
+            <p>Se invierte en soluciones "verdes" sin entender realmente qué necesita el espacio ni qué tendrá mayor
+              efecto.</p>
+            <div class="card-divider"></div>
+            <span class="impact-label">CONSECUENCIAS:</span>
+            <ul>
+              <li>recursos desperdiciados</li>
+              <li>baja rentabilidad</li>
+              <li>frustración con los resultados</li>
             </ul>
           </div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="problem-card">
-          <span class="problem-icon"><img src="images/icons/compass.svg" class="inline-icon" style="width:1.4em; height:1.4em; vertical-align:-0.25em;"></span>
-          <h4 style="font-size:1.15rem; margin-bottom:12px; font-weight:700;">Falta de visión sistémica</h4>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:var(--text-soft);">Dificultad para comprender cómo interactúan agua, energía, residuos, biodiversidad y dinámicas humanas.</p>
-          <div style="border-top:1px solid var(--border); padding-top:12px; margin-top:12px;">
-            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); display:block; margin-bottom:8px;">Impacto:</span>
-            <ul style="list-style:none; padding-left:0; font-size:0.88rem; color:var(--text-soft);">
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> ineficiencia operativa</li>
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> oportunidades desaprovechadas</li>
-              <li style="margin-bottom:0; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> soluciones parciales</li>
+        <div class="new-problem-card">
+          <div class="card-image-wrapper">
+            <img src="images/cards/falta_claridad_decidir_02.png" alt="">
+            <div class="card-icon" style="background-color: #e6a831;"><img src="images/icons/shuffle.svg" alt=""></div>
+          </div>
+          <div class="card-content">
+            <h4>Acciones<br>desconectadas</h4>
+            <p>Iniciativas sueltas que funcionan como proyectos aislados y no como un sistema que genera cambios reales.
+            </p>
+            <div class="card-divider"></div>
+            <span class="impact-label">CONSECUENCIAS:</span>
+            <ul>
+              <li>poco impacto real</li>
+              <li>baja continuidad</li>
+              <li>desgaste de equipos</li>
             </ul>
           </div>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="problem-card">
-          <span class="problem-icon"><img src="images/icons/zap.svg" class="inline-icon" style="width:1.4em; height:1.4em; vertical-align:-0.25em;"></span>
-          <h4 style="font-size:1.15rem; margin-bottom:12px; font-weight:700;">Acciones aisladas</h4>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:var(--text-soft);">Iniciativas sostenibles implementadas sin conexión entre sí ni estrategia de largo plazo.</p>
-          <div style="border-top:1px solid var(--border); padding-top:12px; margin-top:12px;">
-            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); display:block; margin-bottom:8px;">Impacto:</span>
-            <ul style="list-style:none; padding-left:0; font-size:0.88rem; color:var(--text-soft);">
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> bajo impacto real</li>
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> poca continuidad</li>
-              <li style="margin-bottom:0; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> esfuerzos fragmentados</li>
+        <div class="new-problem-card">
+          <div class="card-image-wrapper">
+            <img src="images/cards/encrucijada_03.png" alt="">
+            <div class="card-icon" style="background-color: #79a171;"><img src="images/icons/compass.svg" alt=""></div>
+          </div>
+          <div class="card-content">
+            <h4>Falta de claridad<br>para decidir</h4>
+            <p>Muchas organizaciones quieren avanzar, pero no saben por dónde partir ni qué priorizar.</p>
+            <div class="card-divider"></div>
+            <span class="impact-label">CONSECUENCIAS:</span>
+            <ul>
+              <li>decisiones lentas</li>
+              <li>proyectos detenidos</li>
+              <li>oportunidades perdidas</li>
             </ul>
           </div>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="problem-card">
-          <span class="problem-icon"><img src="images/icons/chart.svg" class="inline-icon" style="width:1.4em; height:1.4em; vertical-align:-0.25em;"></span>
-          <h4 style="font-size:1.15rem; margin-bottom:12px; font-weight:700;">Falta de indicadores y MEL</h4>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:var(--text-soft);">Dificultad para medir el avance real, justificar decisiones y demostrar el impacto de la gestión anual.</p>
-          <div style="border-top:1px solid var(--border); padding-top:12px; margin-top:12px;">
-            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); display:block; margin-bottom:8px;">Impacto:</span>
-            <ul style="list-style:none; padding-left:0; font-size:0.88rem; color:var(--text-soft);">
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> exclusión de fondos y financiamientos</li>
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> desgaste de equipos por metas difusas</li>
-              <li style="margin-bottom:0; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> incapacidad de mostrar evidencia técnica</li>
+        <div class="new-problem-card">
+          <div class="card-image-wrapper">
+            <img src="images/cards/resultados_04.png" alt="">
+            <div class="card-icon" style="background-color: #3b8c88;"><img src="images/icons/chart.svg" alt=""></div>
+          </div>
+          <div class="card-content">
+            <h4>Dificultad para<br>demostrar resultados</h4>
+            <p>Sin indicadores claros, es difícil justificar inversiones, medir avances y mostrar resultados concretos.
+            </p>
+            <div class="card-divider"></div>
+            <span class="impact-label">CONSECUENCIAS:</span>
+            <ul>
+              <li>poca credibilidad</li>
+              <li>dificultad para acceder a fondos</li>
+              <li>iniciativas que pierden apoyo</li>
             </ul>
           </div>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="problem-card span-2">
-          <span class="problem-icon"><img src="images/icons/target.svg" class="inline-icon" style="width:1.4em; height:1.4em; vertical-align:-0.25em;"></span>
-          <h4 style="font-size:1.15rem; margin-bottom:12px; font-weight:700;">Baja resiliencia</h4>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:var(--text-soft);">Infraestructura y decisiones tomadas sin incorporar criterios regenerativos ni adaptación climática.</p>
-          <div style="border-top:1px solid var(--border); padding-top:12px; margin-top:12px;">
-            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); display:block; margin-bottom:8px;">Impacto:</span>
-            <ul style="list-style:none; padding-left:0; font-size:0.88rem; color:var(--text-soft); display:grid; grid-template-columns:1fr 1fr; gap:0 16px;">
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> mayor vulnerabilidad</li>
-              <li style="margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> mayores costos futuros</li>
-              <li style="margin-bottom:0; display:flex; align-items:center; gap:8px; grid-column:span 2;"><span style="color:var(--pink); font-size:1rem; line-height:1;">•</span> menor capacidad adaptativa</li>
+        <div class="new-problem-card">
+          <div class="card-image-wrapper">
+            <img src="images/cards/baja_resiliencia_05.png" alt="">
+            <div class="card-icon" style="background-color: #557c55;"><img src="images/icons/leaf.svg" alt=""></div>
+          </div>
+          <div class="card-content">
+            <h4>Espacios poco preparados<br>para el futuro</h4>
+            <p>Infraestructura y decisiones que no consideran adaptación climática, eficiencia ni regeneración.</p>
+            <div class="card-divider"></div>
+            <span class="impact-label">CONSECUENCIAS:</span>
+            <ul>
+              <li>mayores costos futuros</li>
+              <li>mayor vulnerabilidad</li>
+              <li>dependencia de soluciones externas</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- COMPARATIVA DE IMPACTO / TRANSICIÓN -->
-      <div class="impact-comparison-grid" style="margin-top:56px; display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:stretch;">
-        
-        <!-- CARD IZQUIERDA: RESULTADO HABITUAL -->
-        <div class="result-habitual-card fade-in" style="background:white; border:1px solid var(--border); border-radius:var(--radius-lg); padding:40px; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:var(--muted);"></div>
-          <div>
-            <span class="eyebrow" style="color:var(--muted); font-size:0.75rem;">El panorama común</span>
-            <h3 style="margin-top:8px; margin-bottom:24px; color:var(--text); font-size:1.5rem; font-weight:700;">Resultado habitual</h3>
-            <ul style="list-style:none; padding-left:0; font-size:1.05rem; color:var(--text-soft);">
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:#d9534f; font-weight:bold; font-size:1.2rem; line-height:1.2;">✕</span> 
-                <span>desperdicio de recursos y mala priorización</span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:#d9534f; font-weight:bold; font-size:1.2rem; line-height:1.2;">✕</span> 
-                <span>soluciones superficiales y decepción de inversión</span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:#d9534f; font-weight:bold; font-size:1.2rem; line-height:1.2;">✕</span> 
-                <span>baja resiliencia frente a riesgos climáticos</span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:#d9534f; font-weight:bold; font-size:1.2rem; line-height:1.2;">✕</span> 
-                <span>decisiones desconectadas del largo plazo</span>
-              </li>
-              <li style="margin-bottom:0; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:#d9534f; font-weight:bold; font-size:1.2rem; line-height:1.2;">✕</span> 
-                <span>dificultad para sostener iniciativas en el tiempo</span>
-              </li>
-            </ul>
+      <!-- Arrow divider -->
+      <div class="section-arrow-divider fade-in">
+        <div class="line-left"></div>
+        <div class="arrow-down-icon"><img src="images/icons/arrow-down.svg"
+            onerror="this.src='images/icons/chevron-down.svg'" alt=""></div>
+        <div class="line-right"></div>
+      </div>
+
+      <!-- Nuestra Solución -->
+      <div class="section-header center fade-in" style="margin-bottom: 40px;">
+        <span class="eyebrow" style="color:var(--green-light); font-weight:700;">NUESTRA SOLUCIÓN</span>
+      </div>
+
+      <div class="solution-section fade-in">
+        <div class="solution-left">
+          <img src="images/cards/soluciones_livlin_index.png" alt="" class="solution-img">
+          <div class="solution-content">
+            <h2 class="solution-title">Convertimos sostenibilidad<br><span class="highlight-green">en
+                decisiones<br>concretas<br>y medibles</span></h2>
+            <p class="solution-desc">Diseñamos estrategias ecológicas aplicadas que te ayudan a generar impacto real,
+              optimizar recursos y crear espacios más resilientes, saludables y preparados para el futuro.</p>
+            <a href="contacto.html" class="btn solution-btn"><img src="images/icons/leaf.svg" alt="" class="btn-icon">
+              Transformemos tu espacio en un ecosistema que genera valor</a>
           </div>
         </div>
-
-        <!-- CARD DERECHA: CON LIVLIN TRANSFORMAS ESTO EN -->
-        <div class="livlin-transform-card fade-in stagger-1" style="background:var(--cream); border:1px solid var(--green-light); border-radius:var(--radius-lg); padding:40px; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden; box-shadow:var(--shadow-medium);">
-          <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:var(--green-light);"></div>
-          <div>
-            <span class="eyebrow" style="color:var(--teal); font-size:0.75rem;">Nuestra propuesta</span>
-            <h3 style="margin-top:8px; margin-bottom:24px; color:var(--text); font-size:1.5rem; font-weight:700;">Con Livlin transformas esto en:</h3>
-            <ul style="list-style:none; padding-left:0; font-size:1.05rem; color:var(--text-soft);">
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>decisiones informadas y estratégicas</strong></span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>inversiones priorizadas y eficientes</strong></span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>monitoreo y aprendizaje continuo</strong></span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>reducción de riesgos y costos futuros</strong></span>
-              </li>
-              <li style="margin-bottom:16px; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>mayor resiliencia climática y organizacional</strong></span>
-              </li>
-              <li style="margin-bottom:0; display:flex; align-items:flex-start; gap:12px;">
-                <span style="color:var(--teal); font-weight:bold; font-size:1.2rem; line-height:1.2;">✓</span> 
-                <span><strong>espacios y proyectos alineados con objetivos de largo plazo</strong></span>
-              </li>
-            </ul>
+        <div class="solution-grid">
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/target.svg" alt=""></div>
+            <h4>Prioridades claras</h4>
+            <p>Definimos qué hacer, por qué y en qué orden para lograr el mayor impacto.</p>
           </div>
-          <div style="margin-top:32px; border-top:1px dashed var(--border); padding-top:20px;">
-            <p style="font-size:1.1rem; font-weight:600; color:var(--teal); line-height:1.4; margin-bottom:0;">Livlin convierte Sostenibilidad en decisiones concretas, medibles y estratégicas.</p>
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/coin.svg" alt=""></div>
+            <h4>Inversión inteligente</h4>
+            <p>Asignamos tus recursos a lo que realmente genera beneficios.</p>
+          </div>
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/shield.svg" alt=""></div>
+            <h4>Menos riesgos, más futuro</h4>
+            <p>Anticipamos riesgos climáticos y operativos para reducir costos y vulnerabilidades.</p>
+          </div>
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/chart.svg" alt=""></div>
+            <h4>Resultados que se miden</h4>
+            <p>Indicadores claros para demostrar avances y tomar mejores decisiones.</p>
+          </div>
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/home.svg" alt=""></div>
+            <h4>Espacios que mejoran vidas</h4>
+            <p>Diseñamos entornos más eficientes, saludables y en armonía con la naturaleza.</p>
+          </div>
+          <div class="solution-item">
+            <div class="sol-icon"><img src="images/icons/users.svg" alt=""></div>
+            <h4>Acompañamiento continuo</h4>
+            <p>Te guiamos, aprendemos contigo y aseguramos la evolución de tu proyecto.</p>
           </div>
         </div>
+      </div>
 
+      <!-- Footer bar -->
+      <div class="solution-bottom-bar fade-in">
+        <div class="bar-left">
+          <img src="images/icons/leaf.svg" alt="" class="bar-icon">
+          <span>Sostenibilidad que se entiende, se planifica y se transforma en valor real para tu organización y tu
+            entorno.</span>
+        </div>
+        <div class="bar-right">
+          <img src="images/icons/home.svg" alt="">
+          <img src="images/icons/building.svg" alt="">
+          <img src="images/icons/users.svg" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -256,31 +465,73 @@
   <!-- ============================================================
        SERVICIOS
        ============================================================ -->
-  <section id="servicios" style="background:var(--cream);">
+  <section id="servicios" style="background:var(--bg);">
     <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow">Nuestros servicios</span>
-        <h2>Cómo trabajamos</h2>
+      <div class="section-header center fade-in" style="max-width: 800px;">
+        <span class="eyebrow" style="color:var(--green-light); font-weight:700;">NUESTROS SERVICIOS</span>
+        <h2>Cómo te ayudamos a <br><span class="highlight-green">transformar tu espacio</span></h2>
+        <p class="lead" style="margin:16px auto 0; font-size:1rem; color:#555;">Combinamos estrategia ecológica, datos y
+          tecnología para crear soluciones que generan impacto real y duradero.</p>
       </div>
-      <div class="problem-cards" style="grid-template-columns: repeat(3, 1fr);">
-        <a href="diseno-resiliente.html" class="problem-card fade-in stagger-1" style="text-decoration:none; cursor:pointer; border-top:4px solid var(--green-light);">
-          <span class="problem-icon"><img src="images/icons/leaf.svg" class="inline-icon" style="width:1.4em; height:1.4em;"></span>
-          <h4 style="color:var(--text);">Diseño resiliente de espacios</h4>
-          <p>Acompañamos a personas, organizaciones y territorios a descubrir su potencial regenerativo y convertirlo en un plan de acción estratégico, construido colectivamente y respaldado por datos.</p>
-          <span class="servicio-link" style="margin-top:16px;">Ver más →</span>
-        </a>
-        <a href="monitoreo.html" class="problem-card fade-in stagger-2" style="text-decoration:none; cursor:pointer; border-top:4px solid var(--teal);">
-          <span class="problem-icon"><img src="images/icons/chart.svg" class="inline-icon" style="width:1.4em; height:1.4em;"></span>
-          <h4 style="color:var(--text);">Monitoreo y aprendizaje regenerativo</h4>
-          <p>Teoría de cambio, indicadores, dashboards y aprendizaje adaptativo para medir impacto y tomar decisiones basadas en evidencia.</p>
-          <span class="servicio-link" style="margin-top:16px;">Ver más →</span>
-        </a>
-        <a href="soluciones-digitales.html" class="problem-card fade-in stagger-3" style="text-decoration:none; cursor:pointer; border-top:4px solid var(--pink);">
-          <span class="problem-icon"><img src="images/icons/laptop.svg" class="inline-icon" style="width:1.4em; height:1.4em;"></span>
-          <h4 style="color:var(--text);">Soluciones digitales</h4>
-          <p>Dashboards, plataformas web, APIs, chatbots y herramientas educativas construidas para proyectos de sostenibilidad e impacto.</p>
-          <span class="servicio-link" style="margin-top:16px;">Ver más →</span>
-        </a>
+
+      <div class="new-services-grid fade-in">
+        <!-- Servicio 1 -->
+        <div class="new-svc-card">
+          <div class="svc-card-top">
+            <div class="svc-card-icon-box" style="background: #eef5ee;">
+              <div class="svc-icon-circle" style="background: #1a3622;"><img src="images/icons/leaf.svg" alt=""></div>
+            </div>
+            <div class="svc-card-img">
+              <img src="images/banner/diseño_regenerativo_ai_01.png" alt="Diseño Regenerativo">
+            </div>
+          </div>
+          <div class="svc-card-content">
+            <h4>Estrategia ecológica<br>para espacios y proyectos</h4>
+            <p>Te ayudamos a identificar oportunidades reales de mejora para transformar hogares, organizaciones y
+              territorios en sistemas más eficientes, sostenibles y resilientes.</p>
+            <a href="diseno-regenerativo.html" class="svc-card-link">Explorar estrategia <img
+                src="images/icons/arrow-right.svg" alt=""
+                style="width:16px; height:16px; filter: brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%) contrast(89%);"></a>
+          </div>
+        </div>
+        <!-- Servicio 2 -->
+        <div class="new-svc-card">
+          <div class="svc-card-top">
+            <div class="svc-card-icon-box" style="background: #e6f0f5;">
+              <div class="svc-icon-circle" style="background: #3b8c88;"><img src="images/icons/chart.svg" alt=""></div>
+            </div>
+            <div class="svc-card-img">
+              <img src="images/banner/mel_ai_02.png" alt="Monitoreo">
+            </div>
+          </div>
+          <div class="svc-card-content">
+            <h4>Monitoreo y decisiones<br>basadas en datos</h4>
+            <p>Creamos indicadores y herramientas simples para medir avances, priorizar acciones y entender qué
+              iniciativas realmente generan impacto.</p>
+            <a href="monitoreo.html" class="svc-card-link" style="color: #3b8c88;">Ver metodología <img
+                src="images/icons/arrow-right.svg" alt=""
+                style="width:16px; height:16px; filter: brightness(0) saturate(100%) invert(27%) sepia(11%) saturate(2304%) hue-rotate(130deg) brightness(94%) contrast(87%);"></a>
+          </div>
+        </div>
+        <!-- Servicio 3 -->
+        <div class="new-svc-card">
+          <div class="svc-card-top">
+            <div class="svc-card-icon-box" style="background: #fdf0f4;">
+              <div class="svc-icon-circle" style="background: #d84577;"><img src="images/icons/laptop.svg" alt=""></div>
+            </div>
+            <div class="svc-card-img">
+              <img src="images/banner/soluciones_ai_03.png" alt="Soluciones Digitales">
+            </div>
+          </div>
+          <div class="svc-card-content">
+            <h4>Herramientas digitales<br>para sostenibilidad</h4>
+            <p>Desarrollamos plataformas, dashboards y soluciones digitales que facilitan la gestión, visualización y
+              aprendizaje de proyectos ecológicos.</p>
+            <a href="soluciones-digitales.html" class="svc-card-link" style="color: #d84577;">Conocer herramientas <img
+                src="images/icons/arrow-right.svg" alt=""
+                style="width:16px; height:16px; filter: brightness(0) saturate(100%) invert(35%) sepia(80%) saturate(1210%) hue-rotate(313deg) brightness(85%) contrast(92%);"></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -288,38 +539,60 @@
   <!-- ============================================================
        METODOLOGÍA
        ============================================================ -->
-  <section id="metodologia" style="background:var(--bg);">
+  <section id="metodologia" style="background:var(--cream);">
     <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow">Nuestra metodología</span>
-        <h2>Un proceso claro, participativo y basado en evidencia</h2>
-        <p class="lead" style="margin:0 auto;">Acompañamos cada etapa del ciclo regenerativo, desde el diagnóstico inicial hasta el aprendizaje continuo que alimenta el siguiente ciclo.</p>
+      <div class="section-header center fade-in" style="margin-bottom: 40px;">
+        <span class="eyebrow" style="color:var(--green-light); font-weight:700;">NUESTRA METODOLOGÍA</span>
       </div>
-      <div class="process-timeline fade-in">
-        <div class="process-step">
-          <div class="process-num">1</div>
-          <h4>Diagnóstico</h4>
-          <p>Evaluación multidimensional del estado actual y el potencial regenerativo.</p>
+      <div class="meth-section-container fade-in">
+        <div class="meth-left">
+          <h3>Un proceso claro para transformar ideas en <span class="highlight-green">impacto real</span></h3>
+          <p>Te acompañamos desde el diagnóstico inicial hasta la implementación y mejora continua, con una metodología
+            práctica, participativa y basada en evidencia.</p>
+          <img src="images/banner/diseño_regenerativo_ai_01.png" alt="Hojas" class="meth-left-img"
+            style="width: calc(100% + 80px); object-fit: cover; mask-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0,0,0,0)); opacity: 0.8;">
         </div>
-        <div class="process-step">
-          <div class="process-num">2</div>
-          <h4>Diseño</h4>
-          <p>Co-diseño del plan de acción con metas, indicadores y hoja de ruta.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-num">3</div>
-          <h4>Implementación</h4>
-          <p>Activación con talleres prácticos y acompañamiento en terreno.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-num">4</div>
-          <h4>Monitoreo</h4>
-          <p>Registro sistemático del avance con plataformas digitales propias.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-num">5</div>
-          <h4>Aprendizaje</h4>
-          <p>Análisis de evidencia que alimenta el siguiente ciclo de mejora.</p>
+        <div class="meth-right">
+          <div class="meth-steps">
+            <div class="meth-line"></div>
+            <!-- Step 1 -->
+            <div class="meth-step">
+              <div class="meth-circle" style="background:#2a855a;"><img src="images/icons/search.svg" alt=""></div>
+              <span class="meth-num">1</span>
+              <h4 class="meth-title">Entendemos<br>tu espacio</h4>
+              <p class="meth-desc">Analizamos el contexto, las necesidades y las oportunidades reales de transformación.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="meth-step">
+              <div class="meth-circle" style="background:#3b8c88;"><img src="images/icons/edit-2.svg" alt=""></div>
+              <span class="meth-num">2</span>
+              <h4 class="meth-title">Diseñamos una<br>estrategia clara</h4>
+              <p class="meth-desc">Definimos prioridades, objetivos y acciones concretas para generar impacto.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="meth-step">
+              <div class="meth-circle" style="background:#79a171;"><img src="images/icons/leaf.svg" alt=""></div>
+              <span class="meth-num">3</span>
+              <h4 class="meth-title">Activamos<br>el proyecto</h4>
+              <p class="meth-desc">Implementamos soluciones ecológicas con acompañamiento práctico y trabajo
+                colaborativo.</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="meth-step">
+              <div class="meth-circle" style="background:#e6a831;"><img src="images/icons/bar-chart-2.svg" alt=""></div>
+              <span class="meth-num">4</span>
+              <h4 class="meth-title">Medimos<br>avances</h4>
+              <p class="meth-desc">Creamos indicadores simples para entender qué funciona y dónde mejorar.</p>
+            </div>
+            <!-- Step 5 -->
+            <div class="meth-step">
+              <div class="meth-circle" style="background:#2b6e92;"><img src="images/icons/refresh-cw.svg" alt=""></div>
+              <span class="meth-num">5</span>
+              <h4 class="meth-title">Aprendemos y<br>evolucionamos</h4>
+              <p class="meth-desc">Ajustamos el sistema continuamente para fortalecer resultados a largo plazo.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -328,35 +601,42 @@
   <!-- ============================================================
        ALINEACIÓN ESTRATÉGICA
        ============================================================ -->
-  <section style="background:var(--cream);">
+  <section style="background:var(--bg);">
     <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow">Alineación estratégica</span>
-        <h2>Alineado con desafíos de transición ecológica</h2>
-        <p class="lead" style="margin:20px auto 0; max-width:720px; font-weight:500;">
-          Livlin contribuye al avance de soluciones basadas en la naturaleza, infraestructura verde, resiliencia urbana, monitoreo y mejora continua, y fortalecimiento territorial, en coherencia con la Estrategia Nacional de Ciudades Verdes y la gestión ambiental estratégica.
-        </p>
+      <div class="section-header center fade-in" style="max-width: 720px; margin-bottom: 20px;">
+        <span class="eyebrow" style="color:var(--green-light); font-weight:700;">ALINEACIÓN ESTRATÉGICA</span>
+        <h2>Diseñamos soluciones ecológicas con <span class="highlight-green">impacto real</span></h2>
+        <p class="lead" style="margin:16px auto 0; font-size:1rem; color:#555;">Livlin contribuye al avance de
+          soluciones basadas en la naturaleza, infraestructura verde, resiliencia urbana, monitoreo y mejora continua, y
+          fortalecimiento territorial, en coherencia con la Estrategia Nacional de Ciudades Verdes y la gestión
+          ambiental estratégica.</p>
       </div>
-      <div class="outcomes-grid fade-in" style="grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));">
-        <div class="outcome-card" style="text-align:center;">
-          <h4>Soluciones basadas en la naturaleza</h4>
-          <p>Integración de procesos ecológicos como infraestructura estratégica.</p>
+
+      <div class="align-grid fade-in">
+        <div class="align-item">
+          <div class="align-icon"><img src="images/icons/leaf.svg" alt=""></div>
+          <h4>Soluciones basadas<br> en la naturaleza</h4>
+          <p>Incorporamos procesos ecológicos que mejoran el funcionamiento y equilibrio de los espacios.</p>
         </div>
-        <div class="outcome-card" style="text-align:center;">
-          <h4>Infraestructura verde</h4>
-          <p>Diseño regenerativo de espacios que proveen servicios ecosistémicos.</p>
+        <div class="align-item">
+          <div class="align-icon"><img src="images/icons/droplet.svg" alt=""></div>
+          <h4>Infraestructura<br>verde</h4>
+          <p>Diseñamos soluciones que ayudan a gestionar agua, temperatura, biodiversidad y bienestar.</p>
         </div>
-        <div class="outcome-card" style="text-align:center;">
-          <h4>Resiliencia urbana</h4>
-          <p>Sistemas adaptativos para enfrentar los desafíos del cambio climático.</p>
+        <div class="align-item">
+          <div class="align-icon"><img src="images/icons/sun.svg" alt=""></div>
+          <h4>Resiliencia<br>urbana</h4>
+          <p>Creamos sistemas más preparados frente a crisis climáticas y cambios futuros.</p>
         </div>
-        <div class="outcome-card" style="text-align:center;">
-          <h4>Monitoreo y mejora continua</h4>
-          <p>Sistemas MEL para medir y optimizar el impacto de intervenciones.</p>
+        <div class="align-item">
+          <div class="align-icon"><img src="images/icons/trending-up.svg" alt=""></div>
+          <h4>Medición y<br>mejora continua</h4>
+          <p>Monitoreamos resultados para optimizar decisiones y aumentar el impacto en el tiempo.</p>
         </div>
-        <div class="outcome-card" style="text-align:center;">
-          <h4>Fortalecimiento territorial</h4>
-          <p>Desarrollo de capacidades y empoderamiento de las comunidades locales.</p>
+        <div class="align-item">
+          <div class="align-icon"><img src="images/icons/users.svg" alt=""></div>
+          <h4>Trabajo con comunidades y organizaciones</h4>
+          <p>Facilitamos procesos participativos que fortalecen capacidades y generan continuidad.</p>
         </div>
       </div>
     </div>
@@ -365,12 +645,45 @@
   <!-- ============================================================
        CTA FINAL
        ============================================================ -->
-  <section class="cta-final-banner">
+  <section style="background:var(--cream);">
     <div class="container">
-      <span class="eyebrow" style="color:var(--green-light);">Siguiente paso</span>
-      <h2>Transforma tu espacio en un sistema resiliente y regenerativo</h2>
-      <p>Una conversación sin compromiso para entender tu contexto y explorar cómo Livlin puede acompañarte.</p>
-      <a href="contacto.html" class="btn btn-large" style="background:var(--green-light); color:var(--text); font-weight:700;">Contáctanos →</a>
+      <div class="new-cta-box fade-in">
+        <div class="new-cta-left">
+          <img src="images/cards/soluciones_livlin_index.png" alt="Soluciones Livlin" class="new-cta-img">
+        </div>
+        <div class="new-cta-content">
+          <span class="eyebrow"
+            style="color:var(--green-light); font-weight:700; display:inline-block; margin-bottom:16px;">EMPIEZA
+            HOY</span>
+          <h2 style="margin-top:0;">Transformemos tu espacio en un lugar más <span style="color:#8cc63f;">vivo,
+              eficiente y preparado</span>
+            para el futuro</h2>
+          <p>Conversemos sobre tu proyecto y descubre cómo aplicar soluciones ecológicas reales en tu hogar,
+            organización o comunidad.</p>
+          <a href="contacto.html" class="new-cta-btn">
+            <img src="images/icons/message-circle.svg" alt=""> Agenda una conversación →
+          </a>
+
+          <div class="new-cta-footer">
+            <div class="cta-footer-item">
+              <img src="images/icons/tool.svg" alt="">
+              <span>Soluciones a medida<br>para cada espacio</span>
+            </div>
+            <div class="cta-footer-item">
+              <img src="images/icons/heart.svg" alt="">
+              <span>Impacto real en personas<br>y en el entorno</span>
+            </div>
+            <div class="cta-footer-item">
+              <img src="images/icons/check-circle.svg" alt="">
+              <span>Decisiones informadas<br>y medibles</span>
+            </div>
+            <div class="cta-footer-item">
+              <img src="images/icons/refresh-cw.svg" alt="">
+              <span>Acompañamiento<br>continuo</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -379,31 +692,50 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo"><img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span></div>
-          <p>Consultora boutique especializada en diseño regenerativo, soluciones basadas en la naturaleza y sistemas digitales para sostenibilidad.</p>
-          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">«Menos desperdicio. Mejores decisiones. Mayor resiliencia.»</p>
+          <div class="footer-logo"><img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span>
+          </div>
+          <p>Consultora boutique especializada en diseño regenerativo, soluciones basadas en la naturaleza y sistemas
+            digitales para sostenibilidad.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">«Menos desperdicio. Mejores
+            decisiones. Mayor resiliencia.»</p>
           <div class="footer-social-links" style="margin-top:20px;">
-            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
-            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
-            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
-            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img
+                src="images/icons/github.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg"
+                class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
           </div>
         </div>
-        <div class="footer-col"><h5>Servicios</h5><ul>
-          <li><a href="diseno-resiliente.html">Diseño resiliente</a></li>
-          <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
-          <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
-        </ul></div>
-        <div class="footer-col"><h5>Explorar</h5><ul>
-          <li><a href="sectores.html">Sectores</a></li>
-          <li><a href="sobre.html">Sobre Livlin</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul></div>
-        <div class="footer-col"><h5>Contacto</h5><ul>
-          <li><a href="https://wa.me/56967971910" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
-          <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
-        </ul></div>
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
+            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explorar</h5>
+          <ul>
+
+            <li><a href="sobre.html">Sobre Livlin</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/56971657358" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <span>© <span data-year>2026</span> Livlin · www.livlin.cl</span>
@@ -414,4 +746,7 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
+
+
