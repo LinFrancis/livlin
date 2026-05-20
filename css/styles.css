@@ -462,22 +462,32 @@ section {
     transform: none;
     box-shadow: none;
     border: none;
-    background: rgba(35, 155, 167, 0.04);
+    background: rgba(35, 155, 167, 0.06);
     border-left: 3px solid var(--green-light);
-    padding: 4px 0 4px 16px;
+    padding: 6px 0 6px 16px;
     margin: 4px 0 8px;
     min-width: auto;
     opacity: 1;
     pointer-events: auto;
-    border-radius: 0;
+    border-radius: 0 8px 8px 0;
   }
 
   .dropdown-menu::before { display: none; }
   .nav-item-dropdown::after { display: none; }
   .nav-item-dropdown:hover .dropdown-menu { display: none; }
   .nav-item-dropdown.active .dropdown-menu { display: block; }
-  .dropdown-menu a { font-size: 0.95rem; padding: 10px 0; border-left: none; }
-  .dropdown-menu a:hover { background: transparent; }
+  .nav-item-dropdown.active > a::after {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  .dropdown-menu a {
+    font-size: 0.95rem;
+    padding: 11px 0;
+    border-left: none;
+    color: var(--text) !important;
+    font-weight: 500;
+  }
+  .dropdown-menu a:hover { background: transparent; color: var(--teal) !important; }
 }
 
 /* ---------- 6. Hero ---------- */
