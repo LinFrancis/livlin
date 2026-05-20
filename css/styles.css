@@ -474,8 +474,8 @@ section {
 
   .dropdown-menu::before { display: none; }
   .nav-item-dropdown::after { display: none; }
-  .nav-item-dropdown:hover .dropdown-menu { display: none; }
-  .nav-item-dropdown.active .dropdown-menu { display: block; }
+  .nav-item-dropdown:hover .dropdown-menu { display: none; transform: none !important; left: auto !important; }
+  .nav-item-dropdown.active .dropdown-menu { display: block; transform: none !important; left: auto !important; }
   .nav-item-dropdown.active > a::after {
     transform: rotate(180deg);
     opacity: 1;
