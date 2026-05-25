@@ -160,40 +160,30 @@ section {
 }
 
 .btn-primary {
-  background: var(--text);
-  color: var(--cream);
+  background: var(--teal);
+  color: white;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
   background: var(--teal-dark);
-  color: var(--cream);
+  color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--text);
-  border: 1.5px solid var(--text);
-}
-
-.btn-secondary:hover {
-  background: var(--text);
-  color: var(--cream);
-  transform: translateY(-2px);
-}
-
-.btn-amber {
-  background: var(--amber);
-  color: var(--text);
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
   font-weight: 600;
 }
 
-.btn-amber:hover {
-  background: var(--text);
-  color: var(--cream);
+.btn-secondary:hover {
+  background: var(--teal);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
+  border-color: var(--teal);
 }
 
 .btn-large {
@@ -388,29 +378,6 @@ section {
   display: none !important;
 }
 
-/* Nav CTA - Green Version */
-.nav-cta-green {
-  background: linear-gradient(135deg, var(--green-light), var(--green-dark));
-  color: white !important;
-  padding: 10px 26px !important;
-  border-radius: 50px;
-  font-weight: 600 !important;
-  font-size: 0.88rem !important;
-  box-shadow: 0 4px 16px rgba(122, 218, 165, 0.35);
-  letter-spacing: 0.02em;
-  transition: var(--transition);
-}
-
-.nav-cta-green:hover {
-  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
-  color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(35, 155, 167, 0.4);
-}
-
-.nav-cta-green::after {
-  display: none !important;
-}
 
 /* Mobile Nav Toggle */
 .nav-toggle {
@@ -2632,15 +2599,23 @@ footer {
    ============================================================ */
 
 /* --- Nav CTA variant --- */
+/* Nav CTA - Primary Action Button */
 .nav-cta-green {
   background: var(--teal);
   color: white !important;
-  padding: 10px 22px;
+  padding: 10px 24px;
   border-radius: var(--radius-sm);
   font-weight: 600;
+  font-size: 0.88rem;
+  box-shadow: 0 2px 8px rgba(35, 155, 167, 0.2);
   transition: var(--transition);
 }
-.nav-cta-green:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.nav-cta-green:hover {
+  background: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(35, 155, 167, 0.3);
+  color: white !important;
+}
 .nav-cta-green::after { display: none !important; }
 
 /* --- Hero dual CTA --- */
@@ -4348,21 +4323,7 @@ section {
   flex-shrink: 0;
   padding-top: clamp(4px, 1vh, 12px);
 }
-.splash-btn {
-  padding: clamp(10px, 1.4vh, 16px) clamp(24px, 3vw, 40px);
-  font-size: clamp(0.85rem, 1vw, 1.05rem);
-  background: #9ebf5f;
-  color: #1a3622;
-  border-radius: 8px;
-  font-weight: 700;
-  border: none;
-  transition: all 0.3s ease;
-}
-.splash-btn:hover {
-  background: #8eaf52;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(158, 191, 95, 0.3);
-}
+/* splash-btn now uses .btn-primary - see button consolidation above */
 .splash-subtext {
   font-size: clamp(0.65rem, 0.7vw, 0.78rem);
   color: rgba(255,255,255,0.5);
@@ -4467,14 +4428,6 @@ section {
     margin-top: auto;
     padding-top: clamp(6px, 1vh, 12px);
   }
-  .splash-btn {
-    width: 100%;
-    max-width: 300px;
-    padding: clamp(8px, 1.2vh, 14px) 20px !important;
-    font-size: clamp(0.8rem, 2.8vw, 0.95rem) !important;
-    text-align: center;
-    justify-content: center;
-  }
   .splash-subtext {
     font-size: clamp(0.6rem, 2vw, 0.72rem);
   }
@@ -4526,10 +4479,6 @@ section {
   .splash-footer-wrap {
     gap: 3px;
     padding-top: 4px;
-  }
-  .splash-btn {
-    padding: 8px 18px !important;
-    font-size: 0.8rem !important;
   }
 }
 
@@ -4742,26 +4691,7 @@ section {
   line-height: 1.5;
   margin-bottom: 24px;
 }
-.solution-btn {
-  background: #1a3622;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  align-self: flex-start;
-  transition: all 0.3s;
-  white-space: normal;
-  line-height: 1.3;
-  text-align: left;
-}
-.solution-btn:hover {
-  background: #0f2415;
-}
+/* solution-btn consolidated into .btn-primary */
 .btn-icon {
   width: 18px;
   height: 18px;
