@@ -4618,16 +4618,14 @@ section {
 /* SOLUTION SECTION - HERO WITH BACKGROUND */
 .solution-hero-bg {
   position: relative;
-  min-height: clamp(500px, 60vh, 700px);
+  min-height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: clamp(60px, 8vw, 100px);
 }
 
 .solution-hero-overlay {
@@ -4640,8 +4638,6 @@ section {
 .solution-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 720px;
-  padding: clamp(40px, 8vw, 80px);
   text-align: center;
   color: white;
 }
@@ -4675,7 +4671,10 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 32px;
-  margin-top: 48px;
+  margin-top: 56px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .solution-item {
@@ -4686,22 +4685,23 @@ section {
   width: 70px;
   height: 70px;
   margin: 0 auto 24px;
-  background: #f0f8fa;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 .solution-item .sol-icon img {
   width: 36px;
   height: 36px;
-  filter: invert(25%) sepia(40%) saturate(900%) hue-rotate(162deg) brightness(95%);
+  filter: brightness(0) invert(1);
 }
 
 .solution-item h4 {
   font-size: 1.15rem;
-  color: var(--text);
+  color: white;
   margin-bottom: 12px;
   font-weight: 700;
   line-height: 1.3;
@@ -4709,19 +4709,20 @@ section {
 
 .solution-item p {
   font-size: 0.95rem;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
 }
 
-/* Responsive solution grid */
+/* Responsive solution section */
 @media (max-width: 1024px) {
   .solution-items-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
+    margin-top: 48px;
   }
 
   .solution-hero-bg {
-    min-height: clamp(400px, 50vh, 600px);
+    padding: clamp(50px, 6vw, 80px);
   }
 }
 
@@ -4729,14 +4730,11 @@ section {
   .solution-items-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    margin-top: 40px;
   }
 
   .solution-hero-bg {
-    min-height: clamp(350px, 45vh, 500px);
-  }
-
-  .solution-hero-content {
-    padding: clamp(30px, 5vw, 40px);
+    padding: clamp(40px, 5vw, 60px);
   }
 
   .solution-hero-overlay {
@@ -4745,10 +4743,20 @@ section {
 
   .solution-title {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    margin-bottom: 16px;
   }
 
   .solution-desc {
     font-size: clamp(0.9rem, 1.8vw, 1rem);
+    margin-bottom: 24px;
+  }
+
+  .solution-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .solution-item p {
+    font-size: 0.9rem;
   }
 }
 
