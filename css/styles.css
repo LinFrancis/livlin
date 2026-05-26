@@ -4618,7 +4618,8 @@ section {
 /* SOLUTION SECTION - HERO WITH BACKGROUND */
 .solution-hero-bg {
   position: relative;
-  min-height: auto;
+  width: 100%;
+  min-height: clamp(600px, 85vh, 1000px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4626,6 +4627,9 @@ section {
   overflow: hidden;
   margin-bottom: 56px;
   padding: clamp(60px, 8vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .solution-hero-overlay {
@@ -4640,6 +4644,9 @@ section {
   z-index: 2;
   text-align: center;
   color: white;
+  width: 100%;
+  max-width: 1100px;
+  padding: clamp(40px, 5vw, 60px);
 }
 
 .solution-title {
@@ -4722,6 +4729,7 @@ section {
   }
 
   .solution-hero-bg {
+    min-height: clamp(500px, 75vh, 800px);
     padding: clamp(50px, 6vw, 80px);
   }
 }
@@ -4734,6 +4742,7 @@ section {
   }
 
   .solution-hero-bg {
+    min-height: clamp(450px, 70vh, 700px);
     padding: clamp(40px, 5vw, 60px);
   }
 
@@ -5024,6 +5033,8 @@ section {
 /* ALIGNMENT SECTION - HERO WITH BACKGROUND IMAGE */
 .align-hero-section {
   position: relative;
+  width: 100%;
+  min-height: clamp(600px, 85vh, 1000px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5031,6 +5042,9 @@ section {
   overflow: hidden;
   margin-bottom: 60px;
   padding: clamp(60px, 8vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .align-hero-overlay {
@@ -5043,6 +5057,8 @@ section {
 .align-hero-content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .align-hero-header {
@@ -5212,6 +5228,7 @@ section {
   }
 
   .align-hero-section {
+    min-height: clamp(500px, 75vh, 800px);
     padding: clamp(50px, 6vw, 80px);
   }
 
@@ -5236,6 +5253,7 @@ section {
   }
 
   .align-hero-section {
+    min-height: clamp(450px, 70vh, 700px);
     padding: clamp(40px, 5vw, 60px);
   }
 
