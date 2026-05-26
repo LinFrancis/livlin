@@ -4,8 +4,9 @@
     {
       "name": "livlin",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8001"],
-      "port": 8001
+      "runtimeArgs": ["-m", "http.server"],
+      "port": 8001,
+      "autoPort": true
     }
   ]
 }

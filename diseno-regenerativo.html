@@ -305,219 +305,6 @@
     </div>
   </section>
 
-  <!-- PROCESO EN 4 FASES -->
-  <section style="background:var(--cream);" id="proceso">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="eyebrow">Cómo trabajamos</span>
-        <h2>El proceso en 4 etapas</h2>
-        <p class="lead">
-          Cada proyecto es único, pero el proceso sigue una estructura diseñada para revelar el potencial regenerativo
-          del territorio, fortalecer la inteligencia colectiva y traducir el diagnóstico en acciones concretas y
-          medibles.
-        </p>
-      </div>
-
-      <style>
-        .phase-dark-card {
-          position: relative;
-          border-radius: 16px;
-          overflow: hidden;
-          display: flex;
-          align-items: stretch;
-          min-height: 500px;
-          background-size: cover;
-          background-position: right center;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-          background-color: #111;
-        }
-
-        .phase-dark-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          width: 75%;
-          background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
-          pointer-events: none;
-        }
-
-        .phase-dark-content {
-          position: relative;
-          z-index: 2;
-          width: 100%;
-          max-width: 650px;
-          padding: 48px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          color: white;
-        }
-
-        .phase-dark-number {
-          font-size: 4.5rem;
-          font-weight: 900;
-          line-height: 1;
-          color: white;
-          font-family: var(--font-heading);
-          margin-bottom: 16px;
-          display: flex;
-          align-items: center;
-          gap: 16px;
-        }
-
-        .phase-dark-title {
-          font-size: 1.8rem;
-          font-weight: 800;
-          color: white;
-          margin-bottom: 24px;
-          line-height: 1.2;
-          text-transform: uppercase;
-          letter-spacing: -0.5px;
-        }
-
-        .phase-dark-title span {
-          color: var(--green);
-          display: block;
-        }
-
-        .phase-dark-text {
-          color: rgba(255, 255, 255, 0.9);
-          margin-bottom: 16px;
-          font-size: 1rem;
-          line-height: 1.5;
-        }
-
-        .phase-dark-bullets {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          margin-top: 16px;
-        }
-
-        .phase-dark-bullets li {
-          position: relative;
-          padding-left: 54px;
-          margin-bottom: 20px;
-          color: white;
-          font-size: 0.95rem;
-          display: flex;
-          align-items: center;
-          min-height: 40px;
-          font-weight: 500;
-        }
-
-        .phase-dark-bullets li::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background-color: rgba(163, 230, 53, 0.1);
-          border: 1px solid rgba(163, 230, 53, 0.3);
-          background-image: url('data:image/svg+xml;utf8,<svg fill="%23a3e635" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>');
-          background-size: 20px;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-
-        @media (max-width: 768px) {
-          .phase-dark-overlay {
-            width: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0) 100%);
-          }
-
-          .phase-dark-content {
-            padding: 32px 24px 80px 24px;
-          }
-
-          .phase-dark-number {
-            font-size: 3.5rem;
-          }
-
-          .phase-dark-title {
-            font-size: 1.5rem;
-          }
-        }
-      </style>
-
-      <div class="methodology-phases-dark fade-in" style="display: flex; flex-direction: column; gap: 40px;">
-        <!-- Phase 01 -->
-        <div class="phase-dark-card" style="background-image: url('images/etapas/etapa01.png');">
-          <div class="phase-dark-overlay"></div>
-          <div class="phase-dark-content">
-            <div class="phase-dark-number">01</div>
-            <h4 class="phase-dark-title">Escucha profunda <span>y lectura del territorio</span></h4>
-            <p class="phase-dark-text">Iniciamos con una inmersión contextual para comprender la realidad ecológica,
-              social y operativa del proyecto. Buscamos reconocer las dinámicas visibles e invisibles del sistema:
-              flujos de materia, energía, relaciones humanas, desafíos y oportunidades emergentes.</p>
-            <ul class="phase-dark-bullets">
-              <li>Entrevistas con actores clave y comunidades vinculadas</li>
-              <li>Visita exploratoria y observación sistémica del territorio</li>
-              <li>Lectura ecológica: agua, suelo, biodiversidad y residuos</li>
-              <li>Identificación de patrones críticos y recursos subutilizados</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Phase 02 -->
-        <div class="phase-dark-card" style="background-image: url('images/etapas/etapa02.png');">
-          <div class="phase-dark-overlay"></div>
-          <div class="phase-dark-content">
-            <div class="phase-dark-number">02</div>
-            <h4 class="phase-dark-title">Indagación regenerativa <span>y diagnóstico participativo</span></h4>
-            <p class="phase-dark-text">Facilitamos espacios participativos donde las personas que habitan el sistema
-              analizan colectivamente sus dinámicas actuales y su potencial de transformación. El resultado es un
-              diagnóstico vivo, construido desde la experiencia.</p>
-            <ul class="phase-dark-bullets">
-              <li>Talleres participativos de análisis sistémico</li>
-              <li>Evaluación colectiva de dimensiones ecológicas y sociales</li>
-              <li>Identificación de bloqueos y oportunidades regenerativas</li>
-              <li>Priorización de desafíos estratégicos y puntos de apalancamiento</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Phase 03 -->
-        <div class="phase-dark-card" style="background-image: url('images/etapas/etapa03.png');">
-          <div class="phase-dark-overlay"></div>
-          <div class="phase-dark-content">
-            <div class="phase-dark-number">03</div>
-            <h4 class="phase-dark-title">Análisis regenerativo <span>y diseño de oportunidades</span></h4>
-            <p class="phase-dark-text">Procesamos la información levantada para transformar los hallazgos en
-              inteligencia estratégica. Se integran variables ecológicas, operacionales y humanas para detectar
-              oportunidades de alto impacto.</p>
-            <ul class="phase-dark-bullets">
-              <li>Análisis de patrones, flujos y cuellos de botella</li>
-              <li>Visualización del potencial regenerativo por dimensión</li>
-              <li>Identificación de escenarios de intervención prioritarios</li>
-              <li>Reporte técnico con mapas y visualizaciones estratégicas</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Phase 04 -->
-        <div class="phase-dark-card" style="background-image: url('images/etapas/etapa04.png');">
-          <div class="phase-dark-overlay"></div>
-          <div class="phase-dark-content">
-            <div class="phase-dark-number">04</div>
-            <h4 class="phase-dark-title">Plan maestro <span>y hoja de ruta regenerativa</span></h4>
-            <p class="phase-dark-text">Consolidamos el diagnóstico en un plan de implementación claro y accionable. El
-              objetivo es traducir la visión en acciones concretas que puedan ejecutarse y medirse en el tiempo.</p>
-            <ul class="phase-dark-bullets">
-              <li>Definición de líneas estratégicas y acciones prioritarias</li>
-              <li>Plan de implementación a corto, mediano y largo plazo</li>
-              <li>Indicadores de seguimiento y criterios de éxito</li>
-              <li>Entregables operativos para la ejecución del proyecto</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- PLATAFORMA DE INDAGACIÓN REGENERATIVA -->
   <section style="background:var(--bg);">
@@ -594,8 +381,7 @@
       <span class="eyebrow" style="color:var(--green-light);">¿Listo para comenzar?</span>
       <h2>Solicita una evaluación de tu espacio</h2>
       <p>Conversemos sobre tu proyecto y diseñemos juntos un plan regenerativo a tu medida.</p>
-      <a href="contacto.html" class="btn btn-large"
-       >Solicitar evaluación →</a>
+      <a href="contacto.html" class="btn btn-large">Solicitar evaluación →</a>
     </div>
   </section>
 
@@ -609,12 +395,20 @@
             <span>Livlin</span>
           </div>
           <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
-          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">DiseÃ±ar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">DiseÃ±ar mejor para una vida
+            regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
           <div class="footer-social-links" style="margin-top:20px;">
-            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
-            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
-            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
-            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener"
+              class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img
+                src="images/icons/github.svg" class="inline-icon"
+                style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg"
+                class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
           </div>
         </div>
         <div class="footer-col">
