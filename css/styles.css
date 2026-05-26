@@ -4618,12 +4618,12 @@ section {
 /* SOLUTION SECTION - HERO WITH BACKGROUND */
 .solution-hero-bg {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   min-height: clamp(600px, 85vh, 1000px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 16px;
   overflow: hidden;
   margin-bottom: 56px;
   padding: clamp(60px, 8vw, 100px);
@@ -5033,12 +5033,12 @@ section {
 /* ALIGNMENT SECTION - HERO WITH BACKGROUND IMAGE */
 .align-hero-section {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   min-height: clamp(600px, 85vh, 1000px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 16px;
   overflow: hidden;
   margin-bottom: 60px;
   padding: clamp(60px, 8vw, 100px);
