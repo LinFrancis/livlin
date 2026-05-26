@@ -4769,6 +4769,250 @@ section {
   }
 }
 
+/* MERGED SOLUTION & ALIGNMENT SECTION - Opción 1 */
+.merged-solution-align-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: clamp(600px, 85vh, 1000px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-bottom: 56px;
+  padding: clamp(60px, 8vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.merged-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(17, 46, 77, 0.75) 0%, rgba(35, 155, 167, 0.6) 100%);
+  z-index: 1;
+}
+
+.merged-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.merged-hero-header {
+  text-align: center;
+  color: white;
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.merged-hero-header .eyebrow {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.merged-hero-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: white;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.merged-hero-header h2 .highlight-green {
+  color: #a8e6c2;
+}
+
+.merged-hero-desc {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Two-column layout for methodology and specializations */
+.merged-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 5vw, 60px);
+  margin-top: 32px;
+}
+
+.merged-section-col {
+  color: white;
+}
+
+.merged-section-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: white;
+  font-weight: 700;
+  margin-bottom: clamp(24px, 3vw, 36px);
+  line-height: 1.3;
+}
+
+.merged-section-intro {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+/* Methodology items grid (6 items in 3 columns) */
+.merged-methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 20px;
+}
+
+/* Specialization items grid (5 items, last one full width) */
+.merged-specialization-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 20px;
+}
+
+/* Base item styles */
+.merged-item,
+.merged-spec-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.merged-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.merged-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.merged-item h4,
+.merged-spec-item h4 {
+  font-size: 1.05rem;
+  color: white;
+  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.merged-item p,
+.merged-spec-item p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 1024px) {
+  .merged-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .merged-methodology-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  .merged-specialization-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .merged-spec-item:last-child {
+    grid-column: 1;
+  }
+
+  .merged-solution-align-hero {
+    min-height: clamp(500px, 75vh, 800px);
+    padding: clamp(50px, 6vw, 80px);
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+  .merged-content-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .merged-methodology-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .merged-specialization-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .merged-solution-align-hero {
+    min-height: clamp(450px, 70vh, 700px);
+    padding: clamp(40px, 5vw, 60px);
+  }
+
+  .merged-hero-overlay {
+    background: linear-gradient(135deg, rgba(17, 46, 77, 0.8) 0%, rgba(35, 155, 167, 0.7) 100%);
+  }
+
+  .merged-hero-header h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    margin-bottom: 16px;
+  }
+
+  .merged-hero-desc {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    margin-bottom: 24px;
+  }
+
+  .merged-section-title {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 20px;
+  }
+
+  .merged-section-intro {
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+    margin-bottom: 24px;
+  }
+
+  .merged-item h4,
+  .merged-spec-item h4 {
+    font-size: 1rem;
+  }
+
+  .merged-item p,
+  .merged-spec-item p {
+    font-size: 0.85rem;
+  }
+
+  .merged-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .merged-icon img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
 /* FOOTER BAR */
 .solution-bottom-bar {
   background: #eef5ee;
