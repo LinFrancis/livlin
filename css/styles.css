@@ -4833,11 +4833,11 @@ section {
   margin-right: auto;
 }
 
-/* Two-column layout for methodology and specializations */
+/* Single-column layout: methodology on top, specializations below */
 .merged-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 5vw, 60px);
+  grid-template-columns: 1fr;
+  gap: clamp(60px, 8vw, 80px);
   margin-top: 32px;
 }
 
@@ -4867,10 +4867,10 @@ section {
   gap: 24px 20px;
 }
 
-/* Specialization items grid (5 items, last one full width) */
+/* Specialization items grid (5 items: 3 columns on desktop, wraps naturally) */
 .merged-specialization-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px 20px;
 }
 
@@ -4920,23 +4920,14 @@ section {
 
 /* Responsive: Tablet */
 @media (max-width: 1024px) {
-  .merged-content-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .merged-methodology-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 16px;
   }
 
   .merged-specialization-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .merged-spec-item:last-child {
-    grid-column: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
   }
 
   .merged-solution-align-hero {
