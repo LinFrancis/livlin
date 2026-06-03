@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -35,6 +35,9 @@
             <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
             <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
             <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
           </ul>
         </li>
         <li><a href="sobre.html">Sobre Livlin</a></li>
@@ -500,47 +503,78 @@
   </section>
 
   <!-- ============================================================
-       DOS LÍNEAS DE SERVICIO
+       DESAFÍOS → SOLUCIONES (HOGARES)
        ============================================================ -->
   <section style="background:var(--bg);">
     <div class="container">
       <div class="section-header center fade-in">
-        <span class="eyebrow">Nuestros servicios</span>
-        <h2>Dos formas de trabajar contigo</h2>
-        <p class="lead" style="margin:16px auto 0;">Elige el camino que mejor se adapte a lo que necesitas hoy.</p>
+        <span class="eyebrow">¿Cuál es tu desafío?</span>
+        <h2>Encuentra la solución <span class="highlight-green">para tu hogar</span></h2>
+        <p class="lead" style="margin:16px auto 0;">Cada hogar es distinto. Estos son los desafíos más comunes con los que trabajamos y cómo los abordamos.</p>
       </div>
 
-      <div class="split-grid fade-in" style="gap:clamp(24px, 4vw, 40px);">
-        <!-- Plan integral -->
-        <div style="background:white; border-radius:var(--radius-lg); padding:clamp(32px,5vw,48px); border:2px solid var(--teal); position:relative; overflow:hidden;">
-          <span style="position:absolute; top:20px; right:20px; background:var(--teal); color:white; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:20px; text-transform:uppercase; letter-spacing:0.1em;">Recomendado</span>
-          <span class="eyebrow" style="color:var(--teal); margin-bottom:16px; display:block;">Plan integral</span>
-          <h3 style="margin-bottom:16px; font-size:clamp(1.3rem, 2.5vw, 1.6rem);">Planificación completa de tu espacio</h3>
-          <p style="font-size:0.95rem; color:var(--muted); margin-bottom:24px; line-height:1.7;">Te ayudamos a entender tu espacio, definir prioridades y crear un plan maestro que conecte todas las mejoras en una visión de largo plazo.</p>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:32px;">
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700; flex-shrink:0;">✓</span> Evaluación completa del hogar</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700; flex-shrink:0;">✓</span> Plan maestro personalizado</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700; flex-shrink:0;">✓</span> Hoja de ruta por etapas</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700; flex-shrink:0;">✓</span> Acompañamiento en la implementación</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700; flex-shrink:0;">✓</span> Acceso a la plataforma Livlin</li>
-          </ul>
-          <button type="button" class="btn btn-primary" style="width:100%; cursor:pointer;" onclick="openContactModal()">Quiero planificar mi espacio →</button>
+      <div class="desafios-grid">
+
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#f3faea;">
+            <img src="images/icons/sprout.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
+          </div>
+          <h4>"Quiero cultivar mis propios alimentos en casa"</h4>
+          <p>Huertas en balcones, patios o terrazas. Diseñamos el sistema adecuado para tu espacio, con las especies correctas y un riego que funciona solo.</p>
+          <span class="desafio-service-tag">Huertos urbanos</span>
+          <a href="huerto-urbano.html" class="desafio-link">Saber más →</a>
         </div>
 
-        <!-- Asesorías puntuales -->
-        <div style="background:white; border-radius:var(--radius-lg); padding:clamp(32px,5vw,48px); border:1px solid var(--border);">
-          <span class="eyebrow" style="margin-bottom:16px; display:block;">Asesorías puntuales</span>
-          <h3 style="margin-bottom:16px; font-size:clamp(1.3rem, 2.5vw, 1.6rem);">Ayuda específica en lo que necesitas</h3>
-          <p style="font-size:0.95rem; color:var(--muted); margin-bottom:24px; line-height:1.7;">¿Ya sabes lo que quieres? Te asesoramos en temas concretos para que hagas las cosas bien desde el inicio.</p>
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:32px;">
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--green-light); font-weight:700; flex-shrink:0;">→</span> Diseño y montaje de huertas</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--green-light); font-weight:700; flex-shrink:0;">→</span> Compostaje y lombricultura</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--green-light); font-weight:700; flex-shrink:0;">→</span> Manejo de agua y riego</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--green-light); font-weight:700; flex-shrink:0;">→</span> Energía y ahorro</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-soft);"><span style="color:var(--green-light); font-weight:700; flex-shrink:0;">→</span> Diseño de espacios verdes</li>
-          </ul>
-          <a href="contacto.html" class="btn btn-secondary" style="width:100%;">Consultar disponibilidad →</a>
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#eef5ee;">
+            <img src="images/icons/leaf.svg" alt="" style="filter:brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%);">
+          </div>
+          <h4>"Quiero un plan integral para mejorar mi espacio"</h4>
+          <p>No sabes por dónde empezar. Evaluamos tu hogar completo y creamos una hoja de ruta con prioridades claras: qué hacer primero, qué puede esperar.</p>
+          <span class="desafio-service-tag">Diseño regenerativo</span>
+          <a href="diseno-regenerativo.html" class="desafio-link">Saber más →</a>
         </div>
+
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#e8f4f8;">
+            <img src="images/icons/droplet.svg" alt="" style="filter:brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(800%) hue-rotate(180deg) brightness(90%);">
+          </div>
+          <h4>"Necesito gestionar mejor el agua en mi hogar"</h4>
+          <p>Captación de lluvia, riego por goteo, reutilización de aguas grises. Diseñamos sistemas que reducen el consumo y aprovechan cada gota.</p>
+          <span class="desafio-service-tag">Diseño regenerativo</span>
+          <a href="diseno-regenerativo.html" class="desafio-link">Saber más →</a>
+        </div>
+
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#f3faea;">
+            <img src="images/icons/cycle.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
+          </div>
+          <h4>"Quiero hacer compostaje y reducir mis residuos"</h4>
+          <p>Compostaje domiciliario o lombricultura: tus residuos orgánicos se convierten en tierra fértil para tu huerto. Te enseñamos paso a paso.</p>
+          <span class="desafio-service-tag">Huertos urbanos</span>
+          <a href="huerto-urbano.html" class="desafio-link">Saber más →</a>
+        </div>
+
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#fdf8ee;">
+            <img src="images/icons/butterfly.svg" alt="" style="filter:brightness(0) saturate(100%) invert(50%) sepia(80%) saturate(600%) hue-rotate(10deg) brightness(90%);">
+          </div>
+          <h4>"Quiero que mi familia aprenda a vivir más ecológicamente"</h4>
+          <p>Talleres prácticos para familias, comunidades y escuelas. Aprendizaje vivencial sobre compostaje, huertos, biodiversidad y ciclos naturales.</p>
+          <span class="desafio-service-tag">Educación ambiental</span>
+          <a href="educacion-ambiental.html" class="desafio-link">Saber más →</a>
+        </div>
+
+        <div class="desafio-card fade-in">
+          <div class="desafio-icon" style="background:#e6f0f5;">
+            <img src="images/icons/chart.svg" alt="" style="filter:brightness(0) saturate(100%) invert(27%) sepia(11%) saturate(2304%) hue-rotate(130deg) brightness(94%);">
+          </div>
+          <h4>"Quiero medir el impacto de los cambios que estoy haciendo"</h4>
+          <p>Indicadores simples para el hogar: agua ahorrada, residuos reducidos, alimentos producidos. Datos que te muestran que el cambio está funcionando.</p>
+          <span class="desafio-service-tag">Monitoreo</span>
+          <a href="monitoreo.html" class="desafio-link">Saber más →</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -686,6 +720,9 @@
             <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
             <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
             <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
           </ul>
         </div>
         <div class="footer-col">

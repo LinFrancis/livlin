@@ -395,16 +395,33 @@
   }
 
   /* ---------- 13. Splash Banner Dismiss ---------- */
-  const enterBtn = document.getElementById('enter-btn');
   const splashBanner = document.getElementById('splash-banner');
-  if (enterBtn && splashBanner) {
+
+  function dismissSplash() {
+    if (!splashBanner) return;
+    splashBanner.classList.add('splash-hidden');
+    document.documentElement.style.overflow = '';
+    sessionStorage.setItem('livlinSplashSeen', 'true');
+  }
+
+  // "Explorar Livlin" → dismiss and stay on page
+  const enterBtn = document.getElementById('enter-btn');
+  if (enterBtn) {
     enterBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      splashBanner.classList.add('splash-hidden');
-      document.documentElement.style.overflow = '';
-      sessionStorage.setItem('livlinSplashSeen', 'true');
+      dismissSplash();
     });
   }
+
+  // "Para mi hogar" / "Para mi organización" → mark seen, then navigate
+  ['btn-hogares', 'btn-organizaciones'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener('click', () => {
+        sessionStorage.setItem('livlinSplashSeen', 'true');
+      });
+    }
+  });
 
 })();
 
