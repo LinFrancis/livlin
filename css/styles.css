@@ -5266,6 +5266,22 @@ section {
   gap: 30px;
   margin-top: 40px;
 }
+
+/* Navbar active state - resaltar página actual */
+.nav-links li a.active {
+  color: var(--teal);
+  font-weight: 600;
+  position: relative;
+}
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--teal);
+}
 .new-svc-card {
   background: white;
   border-radius: 16px;
