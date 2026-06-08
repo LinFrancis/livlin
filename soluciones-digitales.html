@@ -28,6 +28,16 @@
       </ul>
     </div>
   </nav>
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <a href="hogares.html">Servicios</a>
+      <span class="sep">›</span>
+      <span class="current">Soluciones digitales</span>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="service-hero-bg" style="background-image: url('images/banner/soluciones_ai_03.png');">
@@ -89,129 +99,63 @@
         <h2>Aplicaciones desarrolladas por Livlin</h2>
         <p class="lead" style="margin:0 auto;">Plataformas funcionales construidas para proyectos reales de sostenibilidad y regeneración.</p>
       </div>
-      <div class="tools-with-sidebar" style="margin-top:48px;">
-        <aside class="tools-sidebar fade-in">
-          <div class="tools-sidebar-title">Educación</div>
-          <a href="#plantae" class="tools-sidebar-link"><span class="tag-dot live"></span>Proyecto Plantae</a>
-          <a href="#mapeo-cuencas" class="tools-sidebar-link"><span class="tag-dot live"></span>Mapeo de Cuencas</a>
+      <!-- Apps grid simplificado: 4 demos públicas + 2 soluciones a medida -->
+      <div class="services-grid-3col fade-in" style="margin-top:48px;">
 
-          <div class="tools-sidebar-title" style="margin-top:16px;">Monitoreo</div>
-          <a href="#indag-reg" class="tools-sidebar-link"><span class="tag-dot live"></span>Indagación Regenerativa</a>
-          <a href="#theory-change" class="tools-sidebar-link"><span class="tag-dot live"></span>Teoría del Cambio</a>
-          <a href="#gestion-eventos" class="tools-sidebar-link"><span class="tag-dot custom"></span>Gestión de Eventos</a>
-
-          <div class="tools-sidebar-title" style="margin-top:16px;">Agricultura urbana</div>
-          <a href="#plantae" class="tools-sidebar-link"><span class="tag-dot live"></span>Proyecto Plantae</a>
-
-          <div class="tools-sidebar-title" style="margin-top:16px;">Datos</div>
-          <a href="#agentes-red" class="tools-sidebar-link"><span class="tag-dot live"></span>Agentes en Red</a>
-          <a href="#gestion-org" class="tools-sidebar-link"><span class="tag-dot custom"></span>Gestión Organizacional</a>
-
-          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
-            <div style="font-size:0.75rem;color:var(--muted);margin-bottom:8px">
-              <span style="display:inline-flex;align-items:center;gap:6px;margin-bottom:4px"><span class="tag-dot live"></span> Demo pública</span><br>
-              <span style="display:inline-flex;align-items:center;gap:6px"><span class="tag-dot custom"></span> Solución a medida</span>
-            </div>
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(122,218,165,0.15); color:var(--green-dark); margin-bottom:12px;">Demo pública</span>
+            <h4>Indagación Regenerativa</h4>
+            <p>Motor de diagnóstico multidimensional basado en la Flor de la Permacultura.</p>
+            <a href="https://livlin.streamlit.app/" target="_blank" rel="noopener" class="svc-card-link">Abrir demo →</a>
           </div>
-        </aside>
-        <div class="tools-content">
-
-          <article class="tool-section fade-in" id="indag-reg">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
-              <h3>Plataforma de Indagación Regenerativa</h3>
-              <p class="lead">Motor de análisis multidimensional basado en la Flor de la Permacultura. Diagnóstico, plan de acción y monitoreo de ecosistemas regenerativos.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png" alt="Plataforma Livlin">
-            </div>
-            <div class="tool-actions">
-              <a href="https://livlin.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
-              <a href="diseno-regenerativo.html" class="btn btn-primary" style="background:transparent; border:1.5px solid var(--border); color:var(--text);">Ver detalles</a>
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="plantae">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
-              <h3>Proyecto Plantae</h3>
-              <p class="lead">Herramienta de consulta avanzada para agroecología, regeneración y agroforestería. Base de datos inteligente de cultivos.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/plantae/01_plantae_horizontal.png" alt="Proyecto Plantae">
-            </div>
-            <div class="tool-actions">
-              <a href="https://plantae.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
-              <a href="diseno-regenerativo.html" class="btn btn-primary" style="background:transparent; border:1.5px solid var(--border); color:var(--text);">Ver detalles</a>
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="theory-change">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
-              <h3>Theory of Change</h3>
-              <p class="lead">App interactiva para explorar y construir Teorías del Cambio. Planificación estratégica para proyectos de impacto.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/teoria_cambio/01_t_cambio_intro.png" alt="Theory of Change">
-            </div>
-            <div class="tool-actions">
-              <a href="https://theoryofchange.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
-              <a href="monitoreo.html" class="btn btn-primary" style="background:transparent; border:1.5px solid var(--border); color:var(--text);">Ver detalles</a>
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="mapeo-cuencas">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
-              <h3>Mapeo de Cuencas Participativo</h3>
-              <p class="lead">Plataforma colaborativa para analizar territorios de cuenca: registra conflictos socioambientales, iniciativas locales y actores clave en un sistema georreferenciado.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/cuencas_part/01_mapeo_cuencas_intro.png" alt="Mapeo de Cuencas">
-            </div>
-            <div class="tool-actions">
-              <a href="https://mapeocuencas.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="agentes-red">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-live">Demo pública disponible</span>
-              <h3>Agentes Regenerativos en Red</h3>
-              <p class="lead">Directorio interactivo y mapa global de actores regenerativos. Visualiza conexiones y facilita alianzas estratégicas.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/reg_red/01_regenerando_red_horizontal.png" alt="Agentes en Red">
-            </div>
-            <div class="tool-actions">
-              <a href="https://puentesregenerativos.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="gestion-org">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-custom">Solución a medida</span>
-              <h3>Intranet de Gestión Organizacional</h3>
-              <p class="lead">Plataforma interna para centralizar acuerdos, roles, documentos clave y métricas financieras para organizaciones autogestionadas.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/acuerdos_org/01_acuerdos_internos.png" alt="Gestión Organizacional">
-            </div>
-          </article>
-
-          <article class="tool-section fade-in" id="gestion-eventos">
-            <div class="tool-header">
-              <span class="platform-tool-tag tag-custom">Solución a medida</span>
-              <h3>Gestión de Eventos</h3>
-              <p class="lead">Sistema para planificar, coordinar y medir el impacto de eventos organizacionales con métricas de asistencia y gastos.</p>
-            </div>
-            <div class="tool-img-grid">
-              <img class="img-wide" src="images/apps/eventos_org/01_acuerdos_internos.png" alt="Gestión de Eventos">
-            </div>
-          </article>
-
         </div>
+
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(122,218,165,0.15); color:var(--green-dark); margin-bottom:12px;">Demo pública</span>
+            <h4>Proyecto Plantae</h4>
+            <p>Base de datos inteligente de cultivos para agroecología y agroforestería.</p>
+            <a href="https://plantae.streamlit.app/" target="_blank" rel="noopener" class="svc-card-link">Abrir demo →</a>
+          </div>
+        </div>
+
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(122,218,165,0.15); color:var(--green-dark); margin-bottom:12px;">Demo pública</span>
+            <h4>Theory of Change</h4>
+            <p>App interactiva para construir teorías del cambio en proyectos de impacto.</p>
+            <a href="https://theoryofchange.streamlit.app/" target="_blank" rel="noopener" class="svc-card-link">Abrir demo →</a>
+          </div>
+        </div>
+
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(122,218,165,0.15); color:var(--green-dark); margin-bottom:12px;">Demo pública</span>
+            <h4>Mapeo de Cuencas</h4>
+            <p>Plataforma colaborativa para analizar territorios de cuenca y conflictos socioambientales.</p>
+            <a href="https://mapeocuencas.streamlit.app/" target="_blank" rel="noopener" class="svc-card-link">Abrir demo →</a>
+          </div>
+        </div>
+
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(122,218,165,0.15); color:var(--green-dark); margin-bottom:12px;">Demo pública</span>
+            <h4>Agentes en Red</h4>
+            <p>Directorio interactivo y mapa global de actores regenerativos.</p>
+            <a href="https://puentesregenerativos.streamlit.app/" target="_blank" rel="noopener" class="svc-card-link">Abrir demo →</a>
+          </div>
+        </div>
+
+        <div class="new-svc-card">
+          <div class="svc-card-content" style="padding: 28px;">
+            <span class="desafio-service-tag" style="background:rgba(35,155,167,0.15); color:var(--teal); margin-bottom:12px;">A medida</span>
+            <h4>Gestión Organizacional</h4>
+            <p>Plataformas internas para centralizar acuerdos, roles, documentos y métricas.</p>
+            <a href="contacto.html" class="svc-card-link">Solicitar →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -238,7 +182,7 @@
       <span class="eyebrow" style="color:var(--pink-soft);">¿Tienes un proyecto digital?</span>
       <h2>Desarrollemos tu solución digital</h2>
       <p>Cuéntanos tu desafío y diseñamos la herramienta que tu proyecto necesita.</p>
-      <a href="contacto.html" class="btn btn-large" class="btn-primary">Desarrollar solución digital →</a>
+      <a href="contacto.html" class="btn btn-large btn-primary">Desarrollar solución digital →</a>
     </div>
   </section>
 
@@ -252,7 +196,7 @@
             <span>Livlin</span>
           </div>
           <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
-          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">DiseÃ±ar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
           <div class="footer-social-links" style="margin-top:20px;">
             <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
             <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>

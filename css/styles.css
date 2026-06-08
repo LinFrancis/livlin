@@ -5282,6 +5282,27 @@ section {
   height: 2px;
   background: var(--teal);
 }
+
+/* Breadcrumbs */
+.breadcrumb {
+  background: var(--bg);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb .sep { color: var(--border); }
+.breadcrumb .current { color: var(--text); font-weight: 500; }
 .new-svc-card {
   background: white;
   border-radius: 16px;
