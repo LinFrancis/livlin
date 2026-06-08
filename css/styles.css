@@ -5259,6 +5259,13 @@ section {
   gap: 30px;
   margin-top: 40px;
 }
+
+.services-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
 .new-svc-card {
   background: white;
   border-radius: 16px;
@@ -5636,9 +5643,15 @@ section {
   .new-services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .services-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 600px) {
   .new-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid-3col {
     grid-template-columns: 1fr;
   }
   .meth-steps {
