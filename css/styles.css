@@ -5764,6 +5764,569 @@ html, body {
 }
 
 /* =============================================================
+   HOGARES PAGE — Componentes específicos del rediseño
+   Mobile-first | WhatsApp-primary CTAs | Sin paquetes rígidos
+   ============================================================= */
+
+/* HERO CTA stack — Vertical en mobile, horizontal desktop */
+.hero-cta-stack {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.hero-cta-stack .btn { flex: 0 1 auto; }
+@media (max-width: 600px) {
+  .hero-cta-stack { flex-direction: column; }
+  .hero-cta-stack .btn { width: 100%; }
+}
+
+/* WhatsApp button — verde whatsapp, alta prominencia */
+.btn-whatsapp {
+  background: #25D366 !important;
+  color: white !important;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp img {
+  filter: brightness(0) invert(1);
+}
+
+.btn-secondary-light {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+.btn-secondary-light:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-color: white;
+}
+
+/* 1. INTRO PILLS — Lista de tags clickeable */
+.intro-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.intro-pill {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: var(--transition);
+}
+.intro-pill:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  transform: translateY(-1px);
+}
+
+/* 2. FEATURED SERVICE — Huertos familiares destacado */
+.featured-service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  margin-bottom: 16px;
+  border: 2px solid var(--green-light);
+}
+.featured-service-img {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.featured-service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featured-service-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--green-dark);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.featured-service-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.featured-service-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 4px;
+}
+.featured-service-content p {
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+.featured-service-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.featured-service-bullets li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.featured-service-bullets li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.featured-service-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.featured-service-actions .btn { flex: 1 1 auto; min-width: 140px; }
+
+@media (max-width: 900px) {
+  .featured-service-card { grid-template-columns: 1fr; }
+  .featured-service-content { padding: 28px 24px; }
+}
+
+/* SERVICE TILES — Grid de servicios secundarios */
+.service-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.service-tile {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.service-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--green-light);
+  color: inherit;
+}
+.service-tile-img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--cream);
+}
+.service-tile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.service-tile:hover .service-tile-img img {
+  transform: scale(1.06);
+}
+.service-tile-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.service-tile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(122, 218, 165, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.service-tile-icon img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);
+}
+.service-tile h4 {
+  font-size: 1.02rem;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.3;
+}
+.service-tile p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+.service-tile-cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+  .service-tiles-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .service-tiles-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .service-tile-body { padding: 16px; }
+}
+@media (max-width: 480px) {
+  .service-tiles-grid { grid-template-columns: 1fr; }
+}
+
+/* 3. WORK STEPS — Pasos con precio */
+.work-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 900px;
+  margin: 56px auto 0;
+}
+.work-step {
+  background: white;
+  border-radius: var(--radius);
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.work-step:hover {
+  box-shadow: var(--shadow-medium);
+}
+.work-step-num {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+.work-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.work-step-price {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(35, 155, 167, 0.1);
+  color: var(--teal);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.work-step-price--free {
+  background: rgba(122, 218, 165, 0.2);
+  color: var(--green-dark);
+}
+.work-step-content h3 {
+  margin: 4px 0 0;
+}
+.work-step-tagline {
+  font-size: 1rem;
+  color: var(--text-soft);
+  font-weight: 500;
+  margin: 0;
+}
+.work-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.work-step-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.work-step-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--green-light);
+  font-weight: 700;
+}
+.work-step-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 8px 0;
+}
+.work-step-content .btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.work-step-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+.work-step-pricing-block {
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  border-left: 3px solid var(--teal);
+}
+.work-step-pricing-block .eyebrow {
+  margin-bottom: 6px;
+}
+.work-step-pricing-block strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 6px;
+  font-family: 'Merriweather', serif;
+}
+.work-step-pricing-block p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .work-step {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  .work-step-num {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+  .work-step-pricing-grid { grid-template-columns: 1fr; }
+  .work-step-content .btn { width: 100%; }
+}
+
+/* 4. DESIGN INCLUDES — Grid de qué incluye el diseño */
+.design-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.design-include {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.design-include:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+.design-include-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(35, 155, 167, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+.design-include-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);
+}
+.design-include h4 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.design-include p {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .design-includes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .design-includes-grid { grid-template-columns: 1fr; }
+}
+
+/* Design deliverables — Lo que recibes */
+.design-deliverables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 64px;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+}
+.design-deliverables-text h3 { margin: 8px 0 16px; }
+.design-deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.design-deliverables-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.97rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.design-deliverables-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--green-light);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.design-deliverables-img img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+@media (max-width: 900px) {
+  .design-deliverables {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px 24px;
+  }
+}
+
+/* 5. ACCOMPANIMENT — Grid de servicios de acompañamiento */
+.accompaniment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.accompaniment-item {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.accompaniment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--green-light);
+}
+.accompaniment-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(122, 218, 165, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accompaniment-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);
+}
+.accompaniment-item h4 { font-size: 1.02rem; margin: 0; }
+.accompaniment-item p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.5; margin: 0; }
+@media (max-width: 900px) {
+  .accompaniment-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .accompaniment-grid { grid-template-columns: 1fr; }
+}
+
+/* 6. PRICING PHILOSOPHY */
+.pricing-philosophy {
+  text-align: center;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-soft);
+}
+.pricing-philosophy h2 {
+  margin: 8px 0 24px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+.pricing-philosophy p {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .pricing-philosophy { padding: 36px 24px; }
+}
+
+/* =============================================================
    PROJECT SHOWCASE — Galería con caption contextual visible
    ============================================================= */
 .project-showcase {
