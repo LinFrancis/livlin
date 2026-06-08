@@ -22,8 +22,8 @@
       <a href="index.html" class="nav-logo" aria-label="Livlin home">
         <img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="primary-nav">
         <li><a href="hogares.html">Hogares</a></li>
         <li><a href="organizaciones.html">Organizaciones</a></li>
         <li><a href="sobre.html">Sobre</a></li>
@@ -71,7 +71,7 @@
           <ul style="list-style:none; display:flex; flex-direction:column; gap:20px;">
             <li style="display:flex; gap:16px; align-items:flex-start;">
               <div style="width:44px; height:44px; border-radius:50%; background:#eef5ee; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <img src="images/icons/leaf.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg);">
+                <img loading="lazy" src="images/icons/leaf.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg);">
               </div>
               <div>
                 <h4 style="margin-bottom:4px; color:var(--text);">Aprendizaje vivencial</h4>
@@ -80,7 +80,7 @@
             </li>
             <li style="display:flex; gap:16px; align-items:flex-start;">
               <div style="width:44px; height:44px; border-radius:50%; background:#fdf8ee; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <img src="images/icons/users.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(50%) sepia(80%) saturate(600%) hue-rotate(10deg);">
+                <img loading="lazy" src="images/icons/users.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(50%) sepia(80%) saturate(600%) hue-rotate(10deg);">
               </div>
               <div>
                 <h4 style="margin-bottom:4px; color:var(--text);">Construcción colectiva</h4>
@@ -89,7 +89,7 @@
             </li>
             <li style="display:flex; gap:16px; align-items:flex-start;">
               <div style="width:44px; height:44px; border-radius:50%; background:#eaf7f5; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <img src="images/icons/cycle.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(30%) sepia(60%) saturate(700%) hue-rotate(140deg);">
+                <img loading="lazy" src="images/icons/cycle.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(30%) sepia(60%) saturate(700%) hue-rotate(140deg);">
               </div>
               <div>
                 <h4 style="margin-bottom:4px; color:var(--text);">Conexión con el territorio</h4>
@@ -98,7 +98,7 @@
             </li>
             <li style="display:flex; gap:16px; align-items:flex-start;">
               <div style="width:44px; height:44px; border-radius:50%; background:#f3faea; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                <img src="images/icons/target.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg);">
+                <img loading="lazy" src="images/icons/target.svg" style="width:22px; height:22px; filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg);">
               </div>
               <div>
                 <h4 style="margin-bottom:4px; color:var(--text);">Impacto medible</h4>
@@ -108,7 +108,7 @@
           </ul>
         </div>
         <div>
-          <img src="images/projects/taller_aucca_grupo.png" alt="Taller de educación ambiental" style="width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; box-shadow:var(--shadow-medium);">
+          <img loading="lazy" src="images/projects/taller_aucca_grupo.png" alt="Taller de educación ambiental" style="width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; box-shadow:var(--shadow-medium);">
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
 
         <div class="org-service-block fade-in">
           <div class="org-service-visual">
-            <img src="images/projects/taller_aucca_charla.png" alt="Taller escolar">
+            <img loading="lazy" src="images/projects/taller_aucca_charla.png" alt="Taller escolar">
           </div>
           <div class="org-service-text">
             <span class="eyebrow">Para comunidades educativas</span>
@@ -146,7 +146,7 @@
 
         <div class="org-service-block reverse fade-in">
           <div class="org-service-visual">
-            <img src="images/projects/taller_aucca_grupo.png" alt="Taller comunitario">
+            <img loading="lazy" src="images/projects/taller_aucca_grupo.png" alt="Taller comunitario">
           </div>
           <div class="org-service-text">
             <span class="eyebrow">Para comunidades y organizaciones</span>
@@ -226,9 +226,9 @@
           <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
           <p style="font-style:italic; color:var(--green-light); margin-top:8px;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
           <div class="footer-social-links" style="margin-top:20px;">
-            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Instagram</a>
-            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> LinkedIn</a>
-            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Email</a>
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img loading="lazy" src="images/icons/mail.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Email</a>
           </div>
         </div>
         <div class="footer-col">

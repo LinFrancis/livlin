@@ -72,38 +72,32 @@
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
+      const isOpening = !navLinks.classList.contains('active');
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
-      // Close any open dropdowns when closing menu
-      if (!navLinks.classList.contains('active')) {
-        navLinks.querySelectorAll('.nav-item-dropdown.active').forEach(d => d.classList.remove('active'));
-      }
+      // Lock body scroll when menu is open
+      document.body.style.overflow = isOpening ? 'hidden' : '';
+      navToggle.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
     });
 
-    // Mobile dropdown toggle (tap to expand/collapse)
-    navLinks.querySelectorAll('.nav-item-dropdown > a').forEach(parentLink => {
-      parentLink.addEventListener('click', (e) => {
-        if (window.innerWidth <= 900) {
-          e.preventDefault();
-          const dropdown = parentLink.parentElement;
-          // Close other open dropdowns
-          navLinks.querySelectorAll('.nav-item-dropdown.active').forEach(d => {
-            if (d !== dropdown) d.classList.remove('active');
-          });
-          dropdown.classList.toggle('active');
-        }
-      });
-    });
-
-    // Close menu when clicking a non-dropdown link
+    // Close menu when clicking a link (all links navigate directly now)
     navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', (e) => {
-        // Don't close if it's a dropdown parent on mobile
-        if (a.parentElement.classList.contains('nav-item-dropdown') && window.innerWidth <= 900) return;
+      a.addEventListener('click', () => {
         navToggle.classList.remove('active');
         navLinks.classList.remove('active');
-        navLinks.querySelectorAll('.nav-item-dropdown.active').forEach(d => d.classList.remove('active'));
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    // Close mobile menu on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
@@ -180,39 +174,7 @@
     });
   });
 
-  /* ---------- 8. Dropdown interaction ---------- */
-  const dropdownToggles = document.querySelectorAll('.nav-item-dropdown > a');
-  
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      // Si estamos en mobile o tablet, el primer click abre el menú, no navega
-      if (window.innerWidth <= 900) {
-        const parent = toggle.parentElement;
-        const menu = toggle.nextElementSibling;
-        
-        if (!parent.classList.contains('active')) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Cerrar otros
-          document.querySelectorAll('.nav-item-dropdown').forEach(item => {
-            if (item !== parent) item.classList.remove('active');
-          });
-          
-          parent.classList.add('active');
-        }
-      }
-    });
-  });
-
-  // Cerrar menú mobile al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-item-dropdown')) {
-      document.querySelectorAll('.nav-item-dropdown').forEach(item => {
-        item.classList.remove('active');
-      });
-    }
-  });
+  /* ---------- 8. (Removed: legacy dropdown code — navbar simplified) ---------- */
 
   /* ---------- 9. Image Lightbox ---------- */
   (function initLightbox() {

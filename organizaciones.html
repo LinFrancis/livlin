@@ -24,8 +24,8 @@
       <a href="index.html" class="nav-logo" aria-label="Livlin home">
         <img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="primary-nav">
         <li><a href="hogares.html">Hogares</a></li>
         <li><a href="organizaciones.html" class="active">Organizaciones</a></li>
         <li><a href="sobre.html">Sobre</a></li>
@@ -64,7 +64,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#eef5ee;">
-            <img src="images/icons/leaf.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
+            <img loading="lazy" src="images/icons/leaf.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
           </div>
           <h4>"Necesitamos una estrategia de sostenibilidad real y creíble"</h4>
           <p>Diagnóstico regenerativo de tu organización o proyecto. Construimos una Teoría del Cambio sólida y un plan con horizontes claros de implementación.</p>
@@ -74,7 +74,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#e6f4f6;">
-            <img src="images/icons/chart.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
+            <img loading="lazy" src="images/icons/chart.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
           </div>
           <h4>"Debemos medir y reportar nuestro impacto ambiental"</h4>
           <p>Diseñamos indicadores, formularios y dashboards que convierten datos en decisiones. Sistemas MEL adaptados a tu contexto y a tus audiencias de reporte.</p>
@@ -84,7 +84,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#e6f4f6;">
-            <img src="images/icons/handshake.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
+            <img loading="lazy" src="images/icons/handshake.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
           </div>
           <h4>"Queremos facilitar un proceso de cambio cultural en nuestra organización"</h4>
           <p>Diseño y facilitación de procesos participativos para construir acuerdos, alinear equipos y liderar transformaciones con propósito colectivo.</p>
@@ -94,7 +94,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#eef5ee;">
-            <img src="images/icons/laptop.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
+            <img loading="lazy" src="images/icons/laptop.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
           </div>
           <h4>"Necesitamos herramientas digitales para gestionar nuestros proyectos"</h4>
           <p>Plataformas, aplicaciones y dashboards a medida. Desde sistemas de gestión interna hasta herramientas de seguimiento de participantes y análisis de datos de campo.</p>
@@ -104,7 +104,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#e6f4f6;">
-            <img src="images/icons/users.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
+            <img loading="lazy" src="images/icons/users.svg" alt="" style="filter:brightness(0) saturate(100%) invert(45%) sepia(40%) saturate(800%) hue-rotate(150deg) brightness(85%);">
           </div>
           <h4>"Queremos programas de educación ambiental para nuestra comunidad"</h4>
           <p>Talleres y programas vivenciales para escuelas, comunidades y organizaciones. Diseñados a medida para generar hábitos y cambio cultural duradero.</p>
@@ -114,7 +114,7 @@
 
         <div class="desafio-card fade-in">
           <div class="desafio-icon" style="background:#eef5ee;">
-            <img src="images/icons/sprout.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
+            <img loading="lazy" src="images/icons/sprout.svg" alt="" style="filter:brightness(0) saturate(100%) invert(35%) sepia(60%) saturate(800%) hue-rotate(70deg) brightness(90%);">
           </div>
           <h4>"Queremos un espacio verde productivo en nuestra institución"</h4>
           <p>Huertos institucionales, jardines comestibles y espacios verdes de bienestar. Diseñamos, implementamos y formamos al equipo para mantenerlos.</p>
@@ -226,10 +226,10 @@
           <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
           <p style="font-style:italic; color:var(--green-light); margin-top:8px;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
           <div class="footer-social-links" style="margin-top:20px;">
-            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
-            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
-            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img src="images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
-            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
+            <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="images/icons/instagram.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Instagram</a>
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="https://github.com/francismasonb" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="images/icons/github.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> GitHub</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img loading="lazy" src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email</a>
           </div>
         </div>
         <div class="footer-col">
