@@ -410,11 +410,52 @@
         <p style="font-size:1.05rem; line-height:1.7; margin-bottom: 24px;">Algunas familias solo necesitan una intervención específica —una huerta o un sistema de agua—. Otras eligen un proceso completo de transformación regenerativa que abarca todo el hogar.</p>
         <p style="font-size:1rem; color: var(--muted); font-style: italic;">El mejor primer paso es conversar. Sin compromisos, sin costos.</p>
 
+        <div style="margin-top:24px; padding:20px; background:rgba(122,218,165,0.12); border-radius:12px; border-left:4px solid var(--green-dark); text-align:left;">
+          <p style="font-size:0.95rem; color:var(--text); margin:0;"><strong>¿Tu situación económica es delicada?</strong> Aplicamos los principios éticos de la permacultura también para hogares. Si tu familia no puede pagar tarifas comerciales, conversemos.</p>
+        </div>
+
         <div style="margin-top: 32px;">
           <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conversar%20sobre%20mi%20hogar" target="_blank" rel="noopener" class="btn btn-primary btn-large btn-whatsapp">
             <img src="images/icons/mail.svg" alt="" style="width:18px; height:18px; filter:brightness(0) invert(1);">
             Hablemos por WhatsApp
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIOS HOGARES
+       ⚠️ PLACEHOLDER: Reemplazar con citas reales
+       ============================================================ -->
+  <section style="background:var(--bg);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Lo que dicen las familias</span>
+        <h2>Familias que ya transformaron <span class="highlight-green">su hogar</span></h2>
+      </div>
+
+      <div class="testimonials-grid fade-in">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Vivimos en un departamento con balcón pequeño y pensé que no se podía hacer mucho. Livlin me mostró que sí: hoy tengo hierbas frescas, cherry tomatoes y aprendí a compostar. Lo más valioso fue el acompañamiento honesto.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">C</div>
+            <div class="testimonial-author-info">
+              <span class="testimonial-author-name">Carolina Muñoz</span>
+              <span class="testimonial-author-role">Departamento con balcón · Providencia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Después del diagnóstico decidimos partir solo por la huerta y el sistema de riego. Sin presión por contratar todo. Un año después volvimos para el plan completo, ya con confianza. Esa transparencia hace la diferencia.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">R</div>
+            <div class="testimonial-author-info">
+              <span class="testimonial-author-name">Rodrigo Tapia</span>
+              <span class="testimonial-author-role">Casa con patio · Maipú</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -494,53 +535,6 @@
     </div>
   </section>
 
-  <!-- MODAL DE CONTACTO: PLAN INTEGRAL HOGARES -->
-  <div id="contact-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
-    <div style="background:white; border-radius:16px; width:90%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.2);">
-
-      <!-- Botón cerrar -->
-      <button type="button" onclick="closeContactModal()" style="position:absolute; top:16px; right:16px; background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:var(--text); z-index:10;">×</button>
-
-      <!-- Contenido Modal -->
-      <div style="padding:clamp(32px, 5vw, 48px);">
-        <div style="text-align:center; margin-bottom:32px;">
-          <h2 style="margin:0 0 8px 0; font-size:1.5rem; color:var(--teal);">Plan Integral para tu Hogar</h2>
-          <p style="color:var(--muted); margin:0; font-size:0.9rem;">Cuéntanos sobre tu espacio y te ayudamos a diseñar el plan perfecto.</p>
-        </div>
-
-        <!-- Formulario -->
-        <form id="modal-contact-form" style="display:flex; flex-direction:column; gap:16px;">
-          <div>
-            <label for="modal-name" style="display:block; font-weight:600; margin-bottom:6px; font-size:0.9rem; color:var(--text);">Nombre</label>
-            <input type="text" id="modal-name" name="name" placeholder="Tu nombre completo" required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:0.95rem;">
-          </div>
-
-          <div>
-            <label for="modal-email" style="display:block; font-weight:600; margin-bottom:6px; font-size:0.9rem; color:var(--text);">Email</label>
-            <input type="email" id="modal-email" name="email" placeholder="tu@email.com" required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:0.95rem;">
-          </div>
-
-          <div>
-            <label for="modal-address" style="display:block; font-weight:600; margin-bottom:6px; font-size:0.9rem; color:var(--text);">Dirección (ciudad o región)</label>
-            <input type="text" id="modal-address" name="address" placeholder="Ej: Santiago, RM" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:0.95rem;">
-          </div>
-
-          <div>
-            <label for="modal-message" style="display:block; font-weight:600; margin-bottom:6px; font-size:0.9rem; color:var(--text);">Cuéntanos sobre tu espacio</label>
-            <textarea id="modal-message" name="message" placeholder="Tamaño, lo que tienes ahora, lo que te gustaría lograr..." required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:0.95rem; min-height:100px; resize:vertical;"></textarea>
-          </div>
-
-          <input type="hidden" name="service" value="Plan Integral de Hogares">
-
-          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px;">Enviar por WhatsApp →</button>
-        </form>
-
-        <!-- Mensaje aclaración -->
-        <p style="font-size:0.8rem; color:var(--muted); text-align:center; margin-top:20px;">Al hacer clic, se abrirá tu cliente de WhatsApp para conectar directamente con nosotros. También puedes escribir directamente al <a href="https://wa.me/56971657358" target="_blank" style="color:var(--teal); text-decoration:underline;">+56 9 7165 7358</a></p>
-      </div>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -584,6 +578,7 @@
             <li><a href="hogares.html" class="active">Hogares</a></li>
             <li><a href="organizaciones.html">Organizaciones</a></li>
             <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="casos.html">Casos</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -603,165 +598,6 @@
   </footer>
 
   <script src="js/script.js?v=2"></script>
-
-  <script>
-    // ====================================================
-    // MODAL DE CONTACTO
-    // ====================================================
-    function openContactModal() {
-      document.getElementById('contact-modal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeContactModal() {
-      document.getElementById('contact-modal').style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    // Cerrar modal al hacer clic fuera
-    document.getElementById('contact-modal').addEventListener('click', (e) => {
-      if (e.target.id === 'contact-modal') closeContactModal();
-    });
-
-    // Cerrar con tecla ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeContactModal();
-    });
-
-    // Enviar formulario por WhatsApp
-    document.getElementById('modal-contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('modal-name').value;
-      const email = document.getElementById('modal-email').value;
-      const address = document.getElementById('modal-address').value;
-      const message = document.getElementById('modal-message').value;
-      const service = document.querySelector('input[name="service"]').value;
-
-      const whatsappMessage = `Hola 👋 Me gustaría solicitar información sobre: *${service}*%0A%0A*Nombre:* ${name}%0A*Email:* ${email}%0A*Ubicación:* ${address}%0A*Mensaje:* ${message}`;
-      const whatsappUrl = `https://wa.me/56971657358?text=${whatsappMessage}`;
-
-      // Mostrar mensaje de éxito
-      showSuccessMessage();
-
-      // Limpiar formulario
-      this.reset();
-
-      // Abrir WhatsApp después de un pequeño delay
-      setTimeout(() => {
-        window.open(whatsappUrl, '_blank');
-        closeContactModal();
-      }, 500);
-    });
-
-    function showSuccessMessage() {
-      const modal = document.getElementById('contact-modal');
-      const content = modal.querySelector('div > div');
-
-      // Crear mensaje de éxito
-      const successDiv = document.createElement('div');
-      successDiv.style.cssText = `
-        background: #f0fdf7;
-        border-left: 4px solid var(--teal);
-        padding: 16px 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        text-align: center;
-      `;
-      successDiv.innerHTML = `
-        <p style="margin: 0; color: var(--teal); font-weight: 600; font-size: 0.95rem;">
-          ✓ Perfecto, te conectaremos por WhatsApp
-        </p>
-      `;
-
-      const existingSuccess = content.querySelector('[style*="background: #f0fdf7"]');
-      if (existingSuccess) existingSuccess.remove();
-
-      content.insertBefore(successDiv, content.firstChild);
-    }
-
-    // ====================================================
-    // CAROUSEL DE DIMENSIONES
-    // ====================================================
-    const dimensionCarousel = document.querySelector('.dimensions-carousel');
-    const dimensionSlides = document.querySelectorAll('.dimension-slide');
-    const dimensionDots = document.querySelectorAll('.carousel-dot');
-    let currentDimensionSlide = 0;
-
-    function showDimensionSlide(n) {
-      dimensionSlides.forEach(slide => slide.style.display = 'none');
-      dimensionDots.forEach(dot => dot.classList.remove('active'));
-
-      dimensionSlides[n].style.display = 'block';
-      dimensionDots[n].classList.add('active');
-    }
-
-    // Botones prev/next
-    document.querySelector('.carousel-prev').addEventListener('click', () => {
-      currentDimensionSlide = (currentDimensionSlide - 1 + dimensionSlides.length) % dimensionSlides.length;
-      showDimensionSlide(currentDimensionSlide);
-    });
-
-    document.querySelector('.carousel-next').addEventListener('click', () => {
-      currentDimensionSlide = (currentDimensionSlide + 1) % dimensionSlides.length;
-      showDimensionSlide(currentDimensionSlide);
-    });
-
-    // Dots click
-    dimensionDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentDimensionSlide = index;
-        showDimensionSlide(currentDimensionSlide);
-      });
-    });
-
-    // Auto-advance cada 5 segundos
-    setInterval(() => {
-      currentDimensionSlide = (currentDimensionSlide + 1) % dimensionSlides.length;
-      showDimensionSlide(currentDimensionSlide);
-    }, 5000);
-
-    // ====================================================
-    // CAROUSEL DE PLATAFORMA
-    // ====================================================
-    const platformCarousel = document.querySelector('.platform-carousel');
-    const platformSlides = document.querySelectorAll('.platform-slide');
-    const platformDots = document.querySelectorAll('.platform-dot');
-    let currentPlatformSlide = 0;
-
-    function showPlatformSlide(n) {
-      platformSlides.forEach(slide => slide.style.display = 'none');
-      platformDots.forEach(dot => dot.classList.remove('active'));
-
-      platformSlides[n].style.display = 'block';
-      platformDots[n].classList.add('active');
-    }
-
-    // Botones prev/next
-    document.querySelector('.platform-prev').addEventListener('click', () => {
-      currentPlatformSlide = (currentPlatformSlide - 1 + platformSlides.length) % platformSlides.length;
-      showPlatformSlide(currentPlatformSlide);
-    });
-
-    document.querySelector('.platform-next').addEventListener('click', () => {
-      currentPlatformSlide = (currentPlatformSlide + 1) % platformSlides.length;
-      showPlatformSlide(currentPlatformSlide);
-    });
-
-    // Dots click
-    platformDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentPlatformSlide = index;
-        showPlatformSlide(currentPlatformSlide);
-      });
-    });
-
-    // Auto-advance cada 4 segundos
-    setInterval(() => {
-      currentPlatformSlide = (currentPlatformSlide + 1) % platformSlides.length;
-      showPlatformSlide(currentPlatformSlide);
-    }, 4000);
-  </script>
 </body>
 
 </html>
