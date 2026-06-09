@@ -4150,7 +4150,7 @@ section {
   flex-shrink: 0;
 }
 .splash-logo {
-  height: clamp(40px, 6vh, 90px);
+  height: clamp(80px, 12vh, 180px);
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -4430,10 +4430,10 @@ section {
     gap: 0;
   }
   .splash-logo {
-    height: clamp(32px, 5vh, 48px);
+    height: clamp(64px, 10vh, 100px);
   }
   .splash-logo-wrap {
-    margin-bottom: clamp(4px, 1vh, 12px);
+    margin-bottom: clamp(8px, 1.5vh, 16px);
   }
   .splash-title-wrap {
     margin-bottom: clamp(6px, 1.2vh, 16px);
@@ -4518,10 +4518,10 @@ section {
     padding: 10px 5% 8px;
   }
   .splash-logo {
-    height: clamp(28px, 5vh, 40px);
+    height: clamp(56px, 10vh, 80px);
   }
   .splash-logo-wrap {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .splash-title {
     font-size: clamp(1rem, 3vh, 1.4rem) !important;
