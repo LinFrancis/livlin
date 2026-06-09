@@ -5907,20 +5907,27 @@ html, body {
   justify-content: center;
   margin-top: 32px;
 }
+/* Chips informativos (NO interactivos) — comunican temas que abordamos */
 .intro-pill {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 10px 18px;
+  background: rgba(122, 218, 165, 0.12);
+  border: 1px solid rgba(122, 218, 165, 0.3);
+  padding: 8px 16px;
   border-radius: 50px;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text);
-  transition: var(--transition);
+  color: var(--text-soft);
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.intro-pill:hover {
-  border-color: var(--teal);
-  color: var(--teal);
-  transform: translateY(-1px);
+.intro-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  flex-shrink: 0;
 }
 
 /* 2. FEATURED SERVICE — Huertos familiares destacado */
@@ -6812,6 +6819,66 @@ html, body {
   .diagnostic-card-header { flex-direction: column; align-items: stretch; }
   .diagnostic-price { text-align: left; }
   .diagnostic-includes { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* =============================================================
+   ETHICS HOME — Versión light para landing principal
+   (sin descuento comercial, solo posicionamiento de marca)
+   ============================================================= */
+.ethics-home {
+  text-align: center;
+  padding: 16px 0;
+}
+.ethics-home h2 {
+  max-width: 760px;
+  margin: 12px auto 16px;
+}
+.ethics-home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.ethics-home-principle {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  border: 1px solid rgba(122,218,165,0.25);
+  transition: var(--transition);
+}
+.ethics-home-principle:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+.ethics-home-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.ethics-home-icon img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(1450%) hue-rotate(90deg) brightness(96%);
+}
+.ethics-home-principle h4 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.ethics-home-principle p {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .ethics-home-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ethics-home-principle { padding: 24px 20px; }
 }
 
 /* ETHICS SECTION — Economía regenerativa con 3 principios */
