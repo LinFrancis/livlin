@@ -12,6 +12,12 @@
   const dotsContainer = document.getElementById('carouselDots');
   const prevBtn = document.getElementById('carouselPrev');
   const nextBtn = document.getElementById('carouselNext');
+  const captionBar = document.getElementById('carouselCaption');
+
+  function captionFor(i) {
+    const cap = slides[i].querySelector('.carousel-slide-caption');
+    return cap ? cap.textContent.trim() : '';
+  }
 
   let current = 0;
   let autoPlayTimer = null;
@@ -32,6 +38,7 @@
     current = (index + slides.length) % slides.length;
     slides[current].classList.add('active');
     dotsContainer.children[current].classList.add('active');
+    if (captionBar) captionBar.textContent = captionFor(current);
   }
 
   function next() { goTo(current + 1); }
@@ -73,18 +80,14 @@
     }
   });
 
-  // Click para abrir modal
+  // Click para abrir el visor — grupo propio del carrusel (no mezcla proyectos)
+  const lbItems = Array.from(slides).map(s => {
+    const img = s.querySelector('img');
+    const cap = s.querySelector('.carousel-slide-caption');
+    return { src: img.src, caption: cap ? cap.textContent.trim() : (img.alt || '') };
+  });
   track.addEventListener('click', () => {
-    const slideImg = slides[current].querySelector('img');
-    const caption = slides[current].querySelector('.carousel-slide-caption');
-    if (slideImg && window.livlinModal) {
-      window.livlinModal.openSingle(
-        slideImg.src,
-        slideImg.alt,
-        caption ? caption.textContent : '',
-        'Diseño Regenerativo'
-      );
-    }
+    if (window.LivlinLightbox) window.LivlinLightbox.open(lbItems, current);
   });
 
   startAutoPlay();
