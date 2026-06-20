@@ -765,6 +765,139 @@
     }
 
     /* ============================================================
+       CASOS DESTACADOS (stories Problema→Solución→Resultado)
+    ============================================================ */
+    .casos-destacados {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0 64px;
+    }
+    .caso-dest {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 28px rgba(0,0,0,0.07);
+      border-top: 3px solid #3CA0C9;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .caso-dest-badge {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 6px;
+    }
+    .caso-dest h4 {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a3040;
+      margin: 0;
+      line-height: 1.4;
+    }
+    .caso-dest-row { display: flex; gap: 12px; align-items: flex-start; }
+    .caso-dest-icon {
+      width: 26px; height: 26px; flex-shrink: 0;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800; font-family: 'Poppins', sans-serif;
+      margin-top: 2px;
+    }
+    .icon-prob { background: #fee2e2; color: #dc2626; }
+    .icon-sol  { background: #dbeafe; color: #2563eb; }
+    .icon-res  { background: #dcfce7; color: #16a34a; }
+    .caso-dest-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #4A6874;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .caso-dest-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.86rem;
+      color: #2d4a5a;
+      line-height: 1.6;
+      margin: 0;
+    }
+    @media (max-width: 900px) { .casos-destacados { grid-template-columns: 1fr; } }
+
+    /* ============================================================
+       FRANCIS — CON QUIÉN TRABAJARÁS
+    ============================================================ */
+    .francis-section {
+      padding: 96px 0;
+      background: #f0f6fb;
+    }
+    .francis-inner {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .francis-photo-wrap { position: relative; }
+    .francis-photo {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center top;
+      aspect-ratio: 3/4;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      display: block;
+    }
+    .francis-photo-label {
+      position: absolute; bottom: 20px; left: 16px; right: 16px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .francis-photo-label strong { display: block; font-size: 0.88rem; color: #1a3040; }
+    .francis-photo-label span { font-size: 0.76rem; color: #4A6874; }
+    .francis-bio-eyebrow {
+      font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #3CA0C9; margin-bottom: 14px; display: block;
+    }
+    .francis-bio h2 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-weight: 900; color: #1a3040; margin-bottom: 18px; line-height: 1.3;
+    }
+    .francis-bio > p {
+      color: #4A6874; font-size: 0.97rem; line-height: 1.8; margin-bottom: 28px;
+    }
+    .francis-creds {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-direction: column; gap: 13px;
+    }
+    .francis-creds li { display: flex; gap: 12px; align-items: flex-start; }
+    .cred-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #3CA0C9; flex-shrink: 0; margin-top: 7px;
+    }
+    .cred-text {
+      font-family: 'Poppins', sans-serif; font-size: 0.88rem;
+      color: #2d4a5a; line-height: 1.55;
+    }
+    .cred-text strong { color: #1a3040; display: block; margin-bottom: 1px; }
+    @media (max-width: 900px) {
+      .francis-inner { grid-template-columns: 1fr; gap: 40px; }
+      .francis-photo { aspect-ratio: 4/3; }
+    }
+
+    /* ============================================================
        FLOATING WHATSAPP
     ============================================================ */
     .wa-float {
@@ -1016,6 +1149,77 @@
         <span class="eyebrow">Trabajos realizados</span>
         <h2>Mira trabajos realizados</h2>
         <p>Transformaciones reales en hogares, comercios, organizaciones y escuelas</p>
+      </div>
+
+      <!-- CASOS DESTACADOS — Problema / Solución / Resultado -->
+      <div class="casos-destacados fade-in">
+
+        <!-- Caso 1: Aucca -->
+        <div class="caso-dest" style="border-top-color:#3CA0C9;">
+          <div>
+            <span class="caso-dest-badge" style="color:#3CA0C9;background:#e8f4fa;">Organización · MEL &amp; Digital</span>
+            <h4>Aucca Centro Ecopedagógico</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">P</div>
+              <div><span class="caso-dest-label">Problema</span><p class="caso-dest-text">Sin herramientas para organizar datos de actividades ni medir el impacto de su trabajo ecopedagógico.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solución</span><p class="caso-dest-text">Sistema de monitoreo interno, dashboards de actividades y plataforma intranet personalizada.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Resultado</span><p class="caso-dest-text">Datos centralizados y métricas claras para la coordinación del equipo y la comunicación del impacto.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Depto urbano -->
+        <div class="caso-dest" style="border-top-color:#7FC93C;">
+          <div>
+            <span class="caso-dest-badge" style="color:#7FC93C;background:#f4f8f2;">Hogar · Diseño Regenerativo</span>
+            <h4>Terraza en departamento urbano</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">P</div>
+              <div><span class="caso-dest-label">Problema</span><p class="caso-dest-text">Terraza inutilizada: solo cemento, mucho sol y cero producción en pleno Santiago.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solución</span><p class="caso-dest-text">Plan maestro con bancales autorregantes, compostaje y selección de cultivos para todo el año.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Resultado</span><p class="caso-dest-text">Producción continua de hortalizas y hierbas, cero residuos orgánicos y espacio de bienestar diario.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Rende Bú -->
+        <div class="caso-dest" style="border-top-color:#C96B00;">
+          <div>
+            <span class="caso-dest-badge" style="color:#C96B00;background:#fff7ed;">Comercio · Huerto Urbano</span>
+            <h4>Rende Bú Café · Providencia</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">P</div>
+              <div><span class="caso-dest-label">Problema</span><p class="caso-dest-text">Patio y accesos del café desaprovechados, sin identidad sostenible ni producción propia.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solución</span><p class="caso-dest-text">Integración de huertas, muro verde y bancales productivos en los espacios exteriores.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Resultado</span><p class="caso-dest-text">Nueva inversión en infraestructura verde; cultivos comestibles como sello del carácter sostenible del café.</p></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="casos-filters" role="tablist" aria-label="Filtrar por tipo">
@@ -1306,6 +1510,61 @@
         <div class="descarga-visual fade-in">
           <img src="images/vision/metodologias_participativas.jpg" alt="Taller de metodologías participativas regenerativas" style="width:100%; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,0.35); object-fit:cover; aspect-ratio:4/3; display:block;">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FRANCIS — CON QUIÉN TRABAJARÁS
+  ============================================================ -->
+  <section class="francis-section" id="francis" aria-label="Sobre Francis Mason">
+    <div class="container">
+      <div class="francis-inner">
+
+        <div class="francis-photo-wrap fade-in">
+          <img class="francis-photo" src="images/people/francis_bancal_completo.jpg" alt="Francis Mason en bancal regenerativo">
+          <div class="francis-photo-label">
+            <strong>Francis Mason Bustos · 林高天</strong>
+            <span>Fundador de Livlin · Santiago, Chile</span>
+          </div>
+        </div>
+
+        <div class="francis-bio fade-in">
+          <span class="francis-bio-eyebrow">Con quién trabajarás</span>
+          <h2>Rigor técnico, experiencia de campo y visión sistémica</h2>
+          <p>Francis combina 15 años de experiencia en investigación aplicada, datos y facilitación con trabajo de campo concreto en regeneración urbana y educación ambiental. Ha apoyado a organizaciones en más de 130 países a medir y comunicar su impacto climático, y lleva años co-creando proyectos regenerativos en hogares, escuelas y comercios de Chile.</p>
+          <ul class="francis-creds">
+            <li>
+              <div class="cred-dot" style="background:#1a3040;"></div>
+              <div class="cred-text"><strong>Sociólogo · Magíster Magna Cum Laude</strong> Universidad Alberto Hurtado, Santiago</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#3CA0C9;"></div>
+              <div class="cred-text"><strong>Data Officer &amp; Metrics Lead — Race to Resilience</strong> UNFCCC Climate Champions / Universidad de Chile · Apoyo a organizaciones en 130+ países</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#3CA0C9;"></div>
+              <div class="cred-text"><strong>Facilitador de Teoría de Cambio</strong> Global Youth Coalition Training Programme · 200 líderes climáticos, traducción simultánea a 5 idiomas</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#7FC93C;"></div>
+              <div class="cred-text"><strong>Miembro permanente · AUCCA Centro Ecopedagógico</strong> Facilitador de educación para la sustentabilidad y regeneración ecosocial (2020–presente)</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#3CA0C9;"></div>
+              <div class="cred-text"><strong>Directorio · AFS Chile Programas Interculturales</strong> Organización internacional de ciudadanía global (2014–2018)</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#7FC93C;"></div>
+              <div class="cred-text"><strong>Certificado en Permacultura y Diseño Regenerativo</strong> Eco-Escuela El Manzano · Certificado ETH Zürich: Worldviews — From Sustainability to Regeneration</div>
+            </li>
+            <li>
+              <div class="cred-dot" style="background:#BC3CC9;"></div>
+              <div class="cred-text"><strong>Diploma en Estudios Chinos con Distinción Máxima</strong> Instituto de Estudios Internacionales, U. de Chile · Nombre chino: 林高天 (Lín Gāo Tiān)</div>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
