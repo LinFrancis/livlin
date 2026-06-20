@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/styles.css?v=12">
 
   <style>
     /* ============================================================
@@ -48,7 +48,7 @@
       position: relative;
       z-index: 2;
       max-width: 680px;
-      padding-top: 120px;
+      padding-top: clamp(52px, 8vw, 88px);
       padding-bottom: 80px;
     }
 
@@ -752,16 +752,10 @@
     /* ============================================================
        NAVBAR SCROLL BEHAVIOR
     ============================================================ */
-    .navbar { transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease; }
-    .navbar.is-top {
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: none;
-    }
+    .navbar { transition: background 0.35s ease, box-shadow 0.35s ease; }
     .navbar.scrolled {
-      background: #fff;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      background: rgba(250, 249, 244, 0.99);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
 
     /* ============================================================
@@ -871,25 +865,30 @@
       color: #3CA0C9; margin-bottom: 14px; display: block;
     }
     .francis-bio h2 {
-      font-family: 'Montserrat', serif;
-      font-size: clamp(1.5rem, 2.8vw, 2rem);
-      font-weight: 900; color: #1a3040; margin-bottom: 18px; line-height: 1.3;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; color: #1a3040; margin-bottom: 10px; line-height: 1.2;
     }
-    .francis-bio > p {
-      color: #4A6874; font-size: 0.97rem; line-height: 1.8; margin-bottom: 28px;
+    .francis-spec {
+      font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500;
+      color: #4A6874; line-height: 1.55; margin-bottom: 28px;
     }
-    .francis-creds {
-      list-style: none; margin: 0; padding: 0;
-      display: flex; flex-direction: column; gap: 13px;
+    .francis-expertise-block { margin-bottom: 28px; }
+    .francis-expertise-label {
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #3CA0C9; margin-bottom: 12px;
     }
-    .francis-creds li { display: flex; gap: 12px; align-items: flex-start; }
-    .cred-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: #3CA0C9; flex-shrink: 0; margin-top: 7px;
+    .francis-expertise-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
     }
-    .cred-text {
-      font-family: 'Montserrat', sans-serif; font-size: 0.88rem;
-      color: #2d4a5a; line-height: 1.55;
+    .francis-expertise-tags span {
+      font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 600;
+      padding: 6px 16px; border-radius: 100px;
+      background: #e8f4fa; color: #1a3040;
+    }
+    .francis-biog {
+      font-family: 'Montserrat', sans-serif; font-size: 0.97rem; font-weight: 400;
+      color: #4A6874; line-height: 1.8;
     }
     .cred-text strong { color: #1a3040; display: block; margin-bottom: 1px; }
     @media (max-width: 900px) {
@@ -1547,39 +1546,21 @@
         </div>
 
         <div class="francis-bio fade-in">
-          <span class="francis-bio-eyebrow">Con quién trabajarás</span>
-          <h2>Rigor técnico, experiencia de campo y visión sistémica</h2>
-          <p>Francis combina 15 años de experiencia en investigación aplicada, datos y facilitación con trabajo de campo concreto en regeneración urbana y educación ambiental. Ha apoyado a organizaciones en más de 130 países a medir y comunicar su impacto climático, y lleva años co-creando proyectos regenerativos en hogares, escuelas y comercios de Chile.</p>
-          <ul class="francis-creds">
-            <li>
-              <div class="cred-dot" style="background:#1a3040;"></div>
-              <div class="cred-text"><strong>Sociólogo · Magíster Magna Cum Laude</strong> Universidad Alberto Hurtado, Santiago</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#3CA0C9;"></div>
-              <div class="cred-text"><strong>Data Officer &amp; Metrics Lead — Race to Resilience</strong> UNFCCC Climate Champions / Universidad de Chile · Apoyo a organizaciones en 130+ países</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#3CA0C9;"></div>
-              <div class="cred-text"><strong>Facilitador de Teoría de Cambio</strong> Global Youth Coalition Training Programme · 200 líderes climáticos, traducción simultánea a 5 idiomas</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#7FC93C;"></div>
-              <div class="cred-text"><strong>Miembro permanente · AUCCA Centro Ecopedagógico</strong> Facilitador de educación para la sustentabilidad y regeneración ecosocial (2020–presente)</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#3CA0C9;"></div>
-              <div class="cred-text"><strong>Directorio · AFS Chile Programas Interculturales</strong> Organización internacional de ciudadanía global (2014–2018)</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#7FC93C;"></div>
-              <div class="cred-text"><strong>Certificado en Permacultura y Diseño Regenerativo</strong> Eco-Escuela El Manzano · Certificado ETH Zürich: Worldviews — From Sustainability to Regeneration</div>
-            </li>
-            <li>
-              <div class="cred-dot" style="background:#BC3CC9;"></div>
-              <div class="cred-text"><strong>Diploma en Estudios Chinos con Distinción Máxima</strong> Instituto de Estudios Internacionales, U. de Chile · Nombre chino: 林高天 (Lín Gāo Tiān)</div>
-            </li>
-          </ul>
+          <span class="francis-bio-eyebrow">Fundador</span>
+          <h2>Francis Mason 林高天</h2>
+          <p class="francis-spec">Sociólogo · Especialista en Regeneración, Resiliencia Climática y Sistemas de Datos</p>
+
+          <div class="francis-expertise-block">
+            <p class="francis-expertise-label">Áreas de expertise</p>
+            <div class="francis-expertise-tags">
+              <span>Diseño Regenerativo</span>
+              <span>Pensamiento Sistémico</span>
+              <span>Infraestructura de Datos</span>
+              <span>Resiliencia Climática</span>
+            </div>
+          </div>
+
+          <p class="francis-biog">Francis integra su experiencia en sociología, permacultura y diseño de sistemas para liderar Livlin. Con una visión multicultural y un enfoque aterrizado, acompaña la transición hacia sistemas de vida más saludables y regenerativos.</p>
         </div>
 
       </div>

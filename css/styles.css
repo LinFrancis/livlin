@@ -208,21 +208,20 @@ section {
 
 /* ---------- 5. Navbar ---------- */
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(250, 249, 244, 0.92);
+  background: rgba(250, 249, 244, 0.96);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid transparent;
   transition: var(--transition);
 }
 
 .navbar.scrolled {
-  background: rgba(250, 249, 244, 0.98);
-  border-bottom: 1px solid var(--border);
+  background: rgba(250, 249, 244, 0.99);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 .nav-inner {
@@ -1433,7 +1432,6 @@ footer {
 
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid rgba(246, 243, 233, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2479,9 +2477,8 @@ html.js-ready .fade-in.visible {
 .tool-section {
   padding-bottom: 72px;
   margin-bottom: 72px;
-  border-bottom: 1px solid var(--border);
 }
-.tool-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.tool-section:last-child { margin-bottom: 0; padding-bottom: 0; }
 
 .tool-header {
   margin-bottom: 28px;
@@ -3046,9 +3043,7 @@ html.js-ready .fade-in.visible {
   gap: 60px;
   align-items: center;
   padding: 72px 0;
-  border-bottom: 1px solid var(--border);
 }
-.tool-featured-section:last-child { border-bottom: none; }
 .tool-featured-section.reverse .tool-featured-visual { order: 2; }
 .tool-featured-section.reverse .tool-featured-text { order: 1; }
 @media (max-width: 768px) {
