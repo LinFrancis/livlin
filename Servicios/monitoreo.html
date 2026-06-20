@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crea Herramientas para Destrabar Potencial · MEL y Plataformas Digitales · Livlin</title>
+  <meta name="description"
+    content="Sistemas digitales que organizan tus datos y empoderan la toma de decisiones. MEL, dashboards, plataformas personalizadas y análisis de datos para organizaciones de impacto.">
+  <link rel="icon" type="image/png" href="../images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9">
+  <style>
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
+      border-radius: 50%; background: #25D366; display: flex; align-items: center;
+      justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      z-index: 1000; text-decoration: none; transition: all 0.3s ease;
+      animation: float-bounce 3s ease-in-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); animation: none; }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes float-bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
+
+    .funcionalidades-list {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;
+    }
+    .funcionalidades-list li {
+      display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px;
+      background: #fff; border-radius: 10px; border: 1px solid #e8edf0;
+      font-size: 0.92rem; color: var(--text-soft); line-height: 1.5;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .funcionalidades-list li:hover { border-color: #BC3CC9; box-shadow: 0 2px 12px rgba(188,60,201,0.1); }
+    .func-check {
+      width: 22px; height: 22px; border-radius: 50%; background: #f5e8fb;
+      color: #7e22ce; font-size: 0.8rem; font-weight: 700; display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+    }
+    .service-img-gallery {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin: 40px 0;
+    }
+    .service-img-gallery img {
+      width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 4/3;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;
+    }
+    .service-img-gallery img:hover { transform: scale(1.02); }
+    .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 40px; }
+    .btn-wa-service {
+      display: inline-flex; align-items: center; gap: 10px; background: #25D366;
+      color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 26px; border-radius: 100px; text-decoration: none;
+      transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); }
+    .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
+    .btn-back {
+      display: inline-flex; align-items: center; gap: 8px; background: #fff;
+      border: 1.5px solid #d0d8db; color: #4A6874; font-family: 'Poppins', sans-serif;
+      font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px;
+      text-decoration: none; transition: all 0.2s ease;
+    }
+    .btn-back:hover { border-color: #BC3CC9; color: #9333ea; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Livlin home">
+        <img src="../images/ui/logo_livlin_no_text.png" alt="Livlin Logo"><span>Livlin</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../index.html#dimensiones">Servicios</a></li>
+        <li><a href="../index.html#casos">Trabajos</a></li>
+        <li><a href="../index.html#descarga">Recursos</a></li>
+        <li><a href="../contacto.html" class="nav-cta-green">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Herramientas Digitales · MEL</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="service-hero-bg" style="background-image: url('../images/casos_reales/03_Aucca/01_intranet_inicio.png');">
+    <div class="container">
+      <div class="hero-content fade-in" style="max-width: 760px;">
+        <span class="eyebrow">MEL · Plataformas Digitales · Herramientas</span>
+        <h1>CREA HERRAMIENTAS PARA DESTRABAR POTENCIAL</h1>
+        <p class="lead">Sistemas digitales que organizan tus datos y empoderan la toma de decisiones basada en información confiable.</p>
+        <div class="hero-cta-stack" style="margin-top:24px;">
+          <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Herramientas%20Digitales%20y%20MEL" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="vertical-align:-3px;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            ¿Quieres conocer más?
+          </a>
+          <a href="#funcionalidades" class="btn btn-secondary btn-large">Ver funcionalidades</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPCIÓN -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="service-block fade-in" style="max-width: 800px;">
+        <span class="eyebrow">El servicio</span>
+        <h2 style="margin-top:12px;">Del dato a la decisión inteligente</h2>
+        <p>
+          Diseñamos sistemas MEL (Monitoreo, Evaluación y Aprendizaje) y plataformas digitales personalizadas que transforman datos en decisiones, permitiendo a organizaciones y proyectos medir su impacto real y aprender de forma continua.
+        </p>
+        <p style="margin-top:16px;">
+          Cada herramienta se diseña a la medida de tu organización: sus flujos reales, sus necesidades específicas y sus objetivos de impacto. Trabajamos junto a tu equipo para que la tecnología empodere, no complique.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMÁGENES DEL SERVICIO -->
+  <section style="background:var(--cream);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Plataformas en uso</span>
+        <h2>Herramientas creadas para clientes reales</h2>
+      </div>
+      <div class="service-img-gallery fade-in">
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma intranet AUCCA panel principal">
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/02_intranet_eventos.png" alt="Módulo de gestión de eventos AUCCA">
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/03_intranet_graficos.png" alt="Dashboard de gráficos AUCCA">
+        <img loading="lazy" src="../images/casos_reales/02_sociedadmedica/codificator.png" alt="Plataforma Sociedad Médica SN">
+        <img loading="lazy" src="../images/apps/indag_reg/01_plataforma_livlin_vertical.png" alt="Plataforma de Indagación Regenerativa Livlin">
+        <img loading="lazy" src="../images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png" alt="Plataforma Livlin con fotos">
+        <img loading="lazy" src="../images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png" alt="Análisis de potencial regenerativo">
+        <img loading="lazy" src="../images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png" alt="Plan de acción en plataforma">
+        <img loading="lazy" src="../images/apps/plataformas_varias/apps_overview.png" alt="Visión general de plataformas digitales">
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section style="background:var(--bg);" id="funcionalidades">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2>¿Qué incluye este servicio?</h2>
+      </div>
+      <ul class="funcionalidades-list fade-in">
+        <li><div class="func-check">✓</div> Sistemas MEL (Monitoreo, Evaluación y Aprendizaje) personalizados</li>
+        <li><div class="func-check">✓</div> Dashboards visuales de indicadores en tiempo real</li>
+        <li><div class="func-check">✓</div> Bases de datos organizadas y seguras</li>
+        <li><div class="func-check">✓</div> Reportes automáticos de avance e impacto</li>
+        <li><div class="func-check">✓</div> Integración con herramientas existentes (Google, Excel, etc.)</li>
+        <li><div class="func-check">✓</div> Capacitación en uso de plataformas para tu equipo</li>
+        <li><div class="func-check">✓</div> Soporte técnico continuo</li>
+        <li><div class="func-check">✓</div> Análisis de datos para mejora continua</li>
+        <li><div class="func-check">✓</div> Facilitación de Teoría de Cambio como base del MEL</li>
+        <li><div class="func-check">✓</div> Plataformas multi-usuario con roles diferenciados</li>
+        <li><div class="func-check">✓</div> Módulos de gestión de proyectos, finanzas y actividades</li>
+        <li><div class="func-check">✓</div> Diagnóstico del sistema de información actual (sin ataduras)</li>
+      </ul>
+
+      <div style="margin-top:32px; padding:24px; background:#f5e8fb; border-radius:14px; border-left:4px solid #BC3CC9;" class="fade-in">
+        <p style="font-size:0.92rem; color:#5c007a; font-family:'Poppins',sans-serif; margin:0;">
+          <strong>¿No sabes si necesitas un MEL completo?</strong> Comenzamos con un diagnóstico honesto de tu sistema actual. Lo que obtienes es útil aunque no continúes con Livlin.
+        </p>
+      </div>
+
+      <div class="service-cta-row fade-in">
+        <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Herramientas%20Digitales%20y%20MEL" target="_blank" rel="noopener" class="btn-wa-service" id="btn-wa-herramientas">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hablar con nosotros
+        </a>
+        <a href="../index.html" class="btn-back">← Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final-banner">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green-light);">¿Necesitas medir tu impacto?</span>
+      <h2>Diseñemos tus herramientas digitales</h2>
+      <p>Sistemas a medida para tu organización, proyecto o programa de impacto.</p>
+      <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Herramientas%20Digitales%20y%20MEL" target="_blank" rel="noopener" class="btn btn-large">¿Quieres conocer más? WhatsApp →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/ui/logo_livlin_no_text.png" alt="Livlin Logo">
+            <span>Livlin</span>
+          </div>
+          <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 20px;border-radius:100px;text-decoration:none;font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:600;transition:opacity 0.2s ease;"
+            onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @livlin.cl
+          </a>
+          <div class="footer-social-links" style="margin-top:14px;">
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="../images/icons/linkedin.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img loading="lazy" src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
+            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explorar</h5>
+          <ul>
+            <li><a href="../index.html#dimensiones">Servicios</a></li>
+            <li><a href="../index.html#casos">Trabajos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/56971657358" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Livlin &middot; www.livlin.cl</span>
+        <span>Santiago, Chile</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56971657358?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp" id="wa-float-herramientas">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/script.js?v=3"></script>
+</body>
+
+</html>

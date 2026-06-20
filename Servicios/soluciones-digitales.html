@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciones digitales para sostenibilidad · Livlin</title>
+  <meta name="description" content="Dashboards, plataformas web, APIs, chatbots y herramientas educativas construidas para proyectos de sostenibilidad, regeneración e impacto.">
+  <link rel="icon" type="image/png" href="../images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9">
+  <style>
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
+      border-radius: 50%; background: #25D366; display: flex; align-items: center;
+      justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      z-index: 1000; text-decoration: none; transition: all 0.3s ease;
+      animation: float-bounce 3s ease-in-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); animation: none; }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes float-bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
+    .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 40px; }
+    .btn-wa-service {
+      display: inline-flex; align-items: center; gap: 10px; background: #25D366;
+      color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 26px; border-radius: 100px; text-decoration: none;
+      transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); }
+    .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
+    .btn-back {
+      display: inline-flex; align-items: center; gap: 8px; background: #fff;
+      border: 1.5px solid #d0d8db; color: #4A6874; font-family: 'Poppins', sans-serif;
+      font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px;
+      text-decoration: none; transition: all 0.2s ease;
+    }
+    .btn-back:hover { border-color: #3CA0C9; color: #3CA0C9; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Livlin home">
+        <img src="../images/ui/logo_livlin_with_text.png" alt="Livlin Logo" style="height:36px;width:auto;">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../index.html#dimensiones">Servicios</a></li>
+        <li><a href="../index.html#casos">Trabajos</a></li>
+        <li><a href="../index.html#descarga">Recursos</a></li>
+        <li><a href="../contacto.html" class="nav-cta-green">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Soluciones digitales</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="service-hero-bg" style="background-image: url('../images/banner/soluciones_ai_03.png');">
+    <div class="container">
+      <div class="hero-content fade-in" style="max-width: 760px;">
+        <span class="eyebrow">Tecnología con propósito</span>
+        <h1>Tecnología para sostenibilidad y regeneración</h1>
+        <p class="lead">Construimos herramientas digitales a medida para organizaciones que necesitan medir, comunicar y escalar su impacto ambiental y social.</p>
+        <div class="hero-cta-stack" style="margin-top:24px;">
+          <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20cotizar%20una%20Soluci%C3%B3n%20Digital" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="vertical-align:-3px;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            ¿Quieres conocer más?
+          </a>
+          <a href="#catalogo" class="btn btn-secondary btn-large">Ver aplicaciones</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ CONSTRUIMOS -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Qué construimos</span>
+        <h2>Software a medida para sostenibilidad</h2>
+        <p class="lead" style="margin:16px auto 0;">Dashboards, plataformas web, APIs, bases de datos y herramientas educativas. Cada solución se diseña para tu contexto específico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE APLICACIONES -->
+  <section style="background:white;" id="catalogo">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Portfolio digital</span>
+        <h2>Aplicaciones desarrolladas</h2>
+        <p class="lead" style="margin:16px auto 0;">Plataformas funcionales construidas para proyectos reales. Demos públicas y soluciones a medida.</p>
+      </div>
+
+      <div class="app-catalog fade-in" style="margin-top: 48px;">
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png" alt="Plataforma de Indagación Regenerativa">
+            <span class="app-card-tag app-card-tag--live">Demo pública</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Indagación Regenerativa</h3>
+            <p class="app-card-tagline">Motor de diagnóstico multidimensional basado en la Flor de la Permacultura.</p>
+            <ul class="app-card-features">
+              <li>Diagnóstico de 10 dimensiones del espacio</li>
+              <li>Plan de acción priorizado por etapas</li>
+              <li>Seguimiento visual del avance</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://livlin.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/plantae/01_plantae_horizontal.png" alt="Proyecto Plantae - base de datos de cultivos">
+            <span class="app-card-tag app-card-tag--live">Demo pública</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Proyecto Plantae</h3>
+            <p class="app-card-tagline">Base de datos inteligente de cultivos para agroecología y agroforestería.</p>
+            <ul class="app-card-features">
+              <li>Búsqueda avanzada por características</li>
+              <li>Información de plantación, riego y cosecha</li>
+              <li>Compañías y rotaciones recomendadas</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://plantae.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/teoria_cambio/01_t_cambio_intro.png" alt="Theory of Change - planificación estratégica">
+            <span class="app-card-tag app-card-tag--live">Demo pública</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Theory of Change</h3>
+            <p class="app-card-tagline">App interactiva para construir teorías del cambio en proyectos de impacto.</p>
+            <ul class="app-card-features">
+              <li>Definición guiada de visión y objetivos</li>
+              <li>Mapeo de supuestos e indicadores</li>
+              <li>Exportación de documento estructurado</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://theoryofchange.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/cuencas_part/02_mapeo_cuencas_mapa.png" alt="Mapeo Participativo de Cuencas">
+            <span class="app-card-tag app-card-tag--live">Demo pública</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Mapeo Participativo de Cuencas</h3>
+            <p class="app-card-tagline">Plataforma colaborativa para analizar territorios de cuenca y conflictos socioambientales.</p>
+            <ul class="app-card-features">
+              <li>Registro georreferenciado de conflictos</li>
+              <li>Mapas de calor por subcuenca</li>
+              <li>Directorio exportable de actores</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://mapeocuencas.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/reg_red/01_regenerando_red_horizontal.png" alt="Agentes Regenerativos en Red">
+            <span class="app-card-tag app-card-tag--live">Demo pública</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Agentes Regenerativos en Red</h3>
+            <p class="app-card-tagline">Directorio interactivo y mapa global de actores regenerativos.</p>
+            <ul class="app-card-features">
+              <li>Mapa mundial de iniciativas</li>
+              <li>Análisis de redes con teoría de grafos</li>
+              <li>Perfiles y conexiones entre actores</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://puentesregenerativos.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/acuerdos_org/02_metricas_ejemplo.png" alt="Intranet de Gestión Organizacional">
+            <span class="app-card-tag app-card-tag--custom">A medida</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Intranet de Gestión Organizacional</h3>
+            <p class="app-card-tagline">Plataforma interna para centralizar acuerdos, roles, documentos y métricas financieras.</p>
+            <ul class="app-card-features">
+              <li>Panel con accesos rápidos</li>
+              <li>Registro de acuerdos y roles</li>
+              <li>Dashboard de ingresos, gastos y stock</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20la%20Intranet%20Organizacional" target="_blank" rel="noopener" class="btn btn-secondary">Solicitar demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-card-screenshot">
+            <img loading="lazy" src="../images/apps/autogestion_interna/02_intranet_graficos.png" alt="Sistema de Gestión de Eventos">
+            <span class="app-card-tag app-card-tag--custom">A medida</span>
+          </div>
+          <div class="app-card-body">
+            <h3>Gestión de Eventos Autogestionados</h3>
+            <p class="app-card-tagline">ERP simplificado para eventos comunitarios con POS y liquidaciones automáticas.</p>
+            <ul class="app-card-features">
+              <li>Punto de Venta por mesa</li>
+              <li>Control de stock en tiempo real</li>
+              <li>Liquidaciones cruzadas entre socios</li>
+            </ul>
+            <div class="app-card-actions">
+              <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20el%20sistema%20de%20Gesti%C3%B3n%20de%20Eventos" target="_blank" rel="noopener" class="btn btn-secondary">Solicitar demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section style="background:var(--cream);">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Para quién</span>
+        <h2>Organizaciones que diseñan el futuro</h2>
+        <p class="lead" style="margin:16px auto 0;">
+          Trabajamos con <strong>ONGs y fundaciones</strong> que necesitan reportar impacto, <strong>startups climate tech</strong> que requieren infraestructura digital, <strong>municipalidades</strong> con plataformas de monitoreo territorial y <strong>centros educativos</strong> con herramientas pedagógicas interactivas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS REALES -->
+  <section style="background:var(--bg);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Proyectos realizados</span>
+        <h2>Herramientas digitales <span class="highlight-green">en funcionamiento</span></h2>
+      </div>
+
+      <div class="casos-grid fade-in">
+
+        <div class="caso-card">
+          <div class="caso-card-img">
+            <img loading="lazy" src="../images/casos_reales/02_sociedadmedica/codificator.png" alt="Sociedad Médica SN – plataforma digital">
+          </div>
+          <div class="caso-card-body">
+            <div class="caso-card-meta">
+              <span class="caso-nombre">Sociedad Médica SN</span>
+              <span class="caso-tipo">Organización de salud · Providencia</span>
+            </div>
+            <p class="caso-texto">Desarrollamos una plataforma digital a medida para centralizar información crítica del equipo médico, digitalizando procesos que antes dependían de hojas de cálculo y correos. El sistema permite gestionar fichas y reportes desde un entorno seguro y accesible para todo el equipo.</p>
+            <div class="caso-servicios">
+              <span class="caso-servicio-tag">Software a medida</span>
+            </div>
+            <a href="../index.html#casos" class="caso-link">Ver más trabajos →</a>
+          </div>
+        </div>
+
+        <div class="caso-card">
+          <div class="caso-card-img">
+            <img loading="lazy" src="../images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="AUCCA Centro Ecopedagógico – intranet">
+          </div>
+          <div class="caso-card-body">
+            <div class="caso-card-meta">
+              <span class="caso-nombre">AUCCA Centro Ecopedagógico</span>
+              <span class="caso-tipo">Centro comunitario · Talagante</span>
+            </div>
+            <p class="caso-texto">Diseñamos e implementamos herramientas digitales para la gestión de un centro de agroecología y educación ambiental: seguimiento de acuerdos, objetivos, finanzas y actividades en una sola plataforma interna.</p>
+            <div class="caso-servicios">
+              <span class="caso-servicio-tag">Sistema MEL</span>
+              <span class="caso-servicio-tag">Desarrollo digital</span>
+            </div>
+            <a href="../index.html#casos" class="caso-link">Ver más trabajos →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="casos-ver-todos fade-in">
+        <a href="../index.html#casos">Ver todos los trabajos realizados →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final-banner">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--pink-soft);">¿Tienes un proyecto digital?</span>
+      <h2>Desarrollemos tu solución digital</h2>
+      <p>Cuéntanos tu desafío y diseñamos la herramienta que tu proyecto necesita.</p>
+      <div class="service-cta-row" style="justify-content:center;">
+        <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20desarrollar%20una%20soluci%C3%B3n%20digital" target="_blank" rel="noopener" class="btn-wa-service">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hablemos por WhatsApp
+        </a>
+        <a href="../index.html" class="btn-back">← Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/ui/logo_livlin_no_text.png" alt="Livlin Logo">
+            <span>Livlin</span>
+          </div>
+          <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 20px;border-radius:100px;text-decoration:none;font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:600;transition:opacity 0.2s ease;"
+            onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @livlin.cl
+          </a>
+          <div class="footer-social-links" style="margin-top:14px;">
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="../images/icons/linkedin.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img loading="lazy" src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
+            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explorar</h5>
+          <ul>
+            <li><a href="../index.html#dimensiones">Servicios</a></li>
+            <li><a href="../index.html#casos">Trabajos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/56971657358" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Livlin &middot; www.livlin.cl</span>
+        <span>Santiago, Chile</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56971657358?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/script.js?v=3"></script>
+</body>
+</html>

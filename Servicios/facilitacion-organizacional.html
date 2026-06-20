@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilitación y Liderazgo Participativo · Livlin</title>
+  <meta name="description" content="Diseñamos y facilitamos procesos participativos para organizaciones y comunidades que quieren tomar mejores decisiones juntos, construir acuerdos y actuar con propósito colectivo.">
+  <link rel="icon" type="image/png" href="../images/ui/logo_livlin_no_text.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9">
+  <style>
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
+      border-radius: 50%; background: #25D366; display: flex; align-items: center;
+      justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      z-index: 1000; text-decoration: none; transition: all 0.3s ease;
+      animation: float-bounce 3s ease-in-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); animation: none; }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes float-bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
+    .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 40px; }
+    .btn-wa-service {
+      display: inline-flex; align-items: center; gap: 10px; background: #25D366;
+      color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 26px; border-radius: 100px; text-decoration: none;
+      transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); }
+    .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
+    .btn-back {
+      display: inline-flex; align-items: center; gap: 8px; background: #fff;
+      border: 1.5px solid #d0d8db; color: #4A6874; font-family: 'Poppins', sans-serif;
+      font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px;
+      text-decoration: none; transition: all 0.2s ease;
+    }
+    .btn-back:hover { border-color: #3CA0C9; color: #3CA0C9; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Livlin home">
+        <img src="../images/ui/logo_livlin_with_text.png" alt="Livlin Logo" style="height:36px;width:auto;">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../index.html#dimensiones">Servicios</a></li>
+        <li><a href="../index.html#casos">Trabajos</a></li>
+        <li><a href="../index.html#descarga">Recursos</a></li>
+        <li><a href="../contacto.html" class="nav-cta-green">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Facilitación organizacional</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="service-hero-bg" style="background-image: url('../images/projects/taller_aucca_grupo.png');">
+    <div class="container">
+      <div class="hero-content fade-in" style="max-width: 760px;">
+        <span class="eyebrow">Facilitación · Art of Hosting · Liderazgo participativo</span>
+        <h1>Mejores conversaciones que generan mejores decisiones</h1>
+        <p class="lead">Diseñamos y facilitamos procesos participativos para organizaciones y comunidades que quieren construir acuerdos sólidos, liderar cambios con propósito colectivo y tomar decisiones que todos puedan sostener.</p>
+        <div class="hero-cta-stack" style="margin-top:24px;">
+          <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20cotizar%20una%20Facilitaci%C3%B3n%20Organizacional" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="vertical-align:-3px;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            ¿Quieres conocer más?
+          </a>
+          <a href="#metodologia" class="btn btn-secondary btn-large">Ver metodología</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUÉ SIRVE -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header fade-in" style="max-width:800px;">
+        <span class="eyebrow">Para qué sirve</span>
+        <h2>Cuando el grupo sabe más que cualquier individuo solo</h2>
+        <p class="lead" style="margin:16px 0 0;">Las organizaciones y comunidades enfrentan desafíos complejos que requieren más que una sola voz. La facilitación participativa activa la inteligencia colectiva para que emerjan soluciones que el grupo puede comprometerse a implementar.</p>
+      </div>
+
+      <div class="activations-grid" style="margin-top:40px;">
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/handshake.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Construcción de acuerdos</h4>
+          <p>Facilitamos conversaciones difíciles para que el grupo llegue a acuerdos genuinos que todos puedan sostener en el tiempo.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/compass.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Planificación estratégica</h4>
+          <p>Procesos participativos para definir visión, prioridades y hoja de ruta con la voz de todos los actores relevantes.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/users.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Gestión de conflictos</h4>
+          <p>Acompañamos procesos de resolución de tensiones internas con metodologías que restauran la confianza y el trabajo conjunto.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/target.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Theory of Change</h4>
+          <p>Facilitamos la construcción colectiva de la Teoría del Cambio: quién hace qué, para qué y cómo se mide el impacto.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/refresh-cw.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Procesos de cambio cultural</h4>
+          <p>Acompañamos organizaciones en transiciones: nuevos modelos de gestión, cultura regenerativa, autogobierno y liderazgo distribuido.</p>
+        </div>
+        <div class="activation-item fade-in">
+          <div class="act-icon"><img loading="lazy" src="../images/icons/globe.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"></div>
+          <h4>Talleres y laboratorios</h4>
+          <p>Diseñamos espacios de aprendizaje experiencial para equipos y comunidades: presenciales, híbridos o en línea, en español o inglés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section style="background:var(--cream);" id="metodologia">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Metodología</span>
+        <h2>Art of Hosting: el arte de convocar <span class="highlight-green">conversaciones que importan</span></h2>
+      </div>
+      <div class="split-grid fade-in" style="align-items:center; gap:clamp(32px,5vw,64px);">
+        <div>
+          <p style="font-size:1.05rem; color:var(--text-soft); margin-bottom:24px; line-height:1.7;">El <strong>Art of Hosting</strong> es una práctica internacional de liderazgo participativo que combina metodologías probadas —World Café, Open Space, Pro Action Café, Círculos de Diálogo— para diseñar espacios donde las personas piensan juntas con profundidad y claridad.</p>
+          <p style="font-size:1rem; color:var(--text-soft); margin-bottom:28px; line-height:1.7;">No es una reunión más. Es un proceso diseñado para que emerjan las preguntas correctas, la sabiduría del grupo salga a la superficie y las decisiones tengan un sostén colectivo real.</p>
+          <div style="background:white; border-radius:var(--radius); padding:24px; border-left:4px solid var(--teal); margin-top:8px;">
+            <p style="font-size:0.95rem; color:var(--text-soft); margin:0; font-style:italic;">"¿Qué prácticas necesitamos para co-habitar nuestras comunidades y organizaciones?" Esta es la pregunta que guía nuestro trabajo de facilitación.</p>
+          </div>
+        </div>
+        <div>
+          <img loading="lazy" src="../images/projects/acompanamiento.png" alt="Proceso participativo" style="width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; box-shadow:var(--shadow-medium);">
+        </div>
+      </div>
+
+      <div class="activations-grid" style="margin-top:56px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+        <div class="activation-item fade-in" style="text-align:center;">
+          <div class="act-icon" style="justify-content:center;"><img loading="lazy" src="../images/icons/users.svg" class="inline-icon" style="width:1.4em;height:1.4em;"></div>
+          <h4>World Café</h4>
+          <p>Conversaciones en mesas rotativas que generan conexiones entre ideas y actores.</p>
+        </div>
+        <div class="activation-item fade-in" style="text-align:center;">
+          <div class="act-icon" style="justify-content:center;"><img loading="lazy" src="../images/icons/org.svg" class="inline-icon" style="width:1.4em;height:1.4em;"></div>
+          <h4>Open Space</h4>
+          <p>El grupo define la agenda en tiempo real según lo que más importa en ese momento.</p>
+        </div>
+        <div class="activation-item fade-in" style="text-align:center;">
+          <div class="act-icon" style="justify-content:center;"><img loading="lazy" src="../images/icons/message-circle.svg" class="inline-icon" style="width:1.4em;height:1.4em;"></div>
+          <h4>Círculos de Diálogo</h4>
+          <p>Espacios de escucha profunda donde cada voz es valorada y escuchada por igual.</p>
+        </div>
+        <div class="activation-item fade-in" style="text-align:center;">
+          <div class="act-icon" style="justify-content:center;"><img loading="lazy" src="../images/icons/target.svg" class="inline-icon" style="width:1.4em;height:1.4em;"></div>
+          <h4>Pro Action Café</h4>
+          <p>Transforma preguntas e ideas en planes de acción concretos con apoyo del grupo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">¿Para quién?</span>
+        <h2>Cualquier organización que quiera pensar y actuar mejor juntos</h2>
+      </div>
+      <div class="split-grid fade-in" style="gap:clamp(24px,4vw,40px);">
+        <div style="background:white; border-radius:var(--radius-lg); padding:clamp(28px,4vw,40px); border:1px solid var(--border);">
+          <h3 style="font-size:1.1rem; margin-bottom:16px; color:var(--teal);">Organizaciones y empresas</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700;">→</span> Equipos que necesitan alinearse en torno a una visión compartida</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700;">→</span> Organizaciones en transición o reestructuración</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700;">→</span> Proyectos con múltiples actores que necesitan coordinarse</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700;">→</span> ONGs que quieren construir su Teoría del Cambio de forma participativa</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:var(--teal); font-weight:700;">→</span> Empresas que implementan estrategias de sostenibilidad o ESG</li>
+          </ul>
+        </div>
+        <div style="background:white; border-radius:var(--radius-lg); padding:clamp(28px,4vw,40px); border:1px solid var(--border);">
+          <h3 style="font-size:1.1rem; margin-bottom:16px; color:#4a7c2f;">Comunidades y territorios</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:#4a7c2f; font-weight:700;">→</span> Comunidades que buscan diseñar proyectos colectivos</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:#4a7c2f; font-weight:700;">→</span> Mesas territoriales y procesos de gobernanza local</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:#4a7c2f; font-weight:700;">→</span> Grupos de jóvenes líderes climáticos y sociales</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:#4a7c2f; font-weight:700;">→</span> Cooperativas y organizaciones autogestionadas</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--text-soft);"><span style="color:#4a7c2f; font-weight:700;">→</span> Redes internacionales que necesitan coordinarse en varios idiomas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section style="background:var(--cream);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">El proceso</span>
+        <h2>Cada proceso es único, diseñado para tu contexto</h2>
+      </div>
+      <div class="process-timeline fade-in">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <h4>Escucha y diagnóstico</h4>
+          <p>Entendemos el contexto, los actores, las tensiones y los objetivos del proceso que necesitas facilitar.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <h4>Diseño del proceso</h4>
+          <p>Diseñamos la arquitectura del proceso: preguntas, metodologías, tiempos y condiciones para que emerja lo mejor del grupo.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <h4>Facilitación</h4>
+          <p>Facilitamos el proceso presencial, híbrido o en línea, en español o inglés, con equipos de hasta 200 personas.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <h4>Síntesis y acuerdos</h4>
+          <p>Recogemos lo emergido, lo sintetizamos y lo devolvemos al grupo en forma de acuerdos, compromisos y próximos pasos.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">5</div>
+          <h4>Seguimiento</h4>
+          <p>Acompañamos la implementación de los acuerdos y la evaluación del proceso participativo.</p>
+        </div>
+      </div>
+
+      <div class="service-cta-row fade-in" style="justify-content:center; margin-top:48px;">
+        <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20cotizar%20una%20Facilitaci%C3%B3n%20Organizacional" target="_blank" rel="noopener" class="btn-wa-service">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hablemos por WhatsApp
+        </a>
+        <a href="../index.html" class="btn-back">← Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS REALES -->
+  <section style="background:var(--bg);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="section-header center fade-in">
+        <span class="eyebrow">Casos reales</span>
+        <h2>Organizaciones que ya tomaron <span class="highlight-green">mejores decisiones juntas</span></h2>
+      </div>
+
+      <div class="casos-grid fade-in">
+
+        <div class="caso-card">
+          <div class="caso-card-img">
+            <img loading="lazy" src="../images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="AUCCA Centro Ecopedagógico – coordinación organizacional">
+          </div>
+          <div class="caso-card-body">
+            <div class="caso-card-meta">
+              <span class="caso-nombre">AUCCA Centro Ecopedagógico</span>
+              <span class="caso-tipo">Centro comunitario · Talagante</span>
+            </div>
+            <p class="caso-texto">Diseñamos e implementamos herramientas para apoyar la coordinación interna de un centro comunitario: seguimiento de acuerdos, objetivos y actividades que antes dependían de la memoria individual o el correo. Hoy el equipo toma decisiones basadas en información actualizada y compartida.</p>
+            <div class="caso-servicios">
+              <span class="caso-servicio-tag">Coordinación interna</span>
+              <span class="caso-servicio-tag">Sistema MEL</span>
+            </div>
+            <a href="../index.html#casos" class="caso-link">Ver más trabajos →</a>
+          </div>
+        </div>
+
+        <div class="caso-card">
+          <div class="caso-card-img">
+            <img loading="lazy" src="../images/casos_reales/05_Escuela/01_lms.png" alt="Liceo Manuel de Salas – participación comunitaria">
+          </div>
+          <div class="caso-card-body">
+            <div class="caso-card-meta">
+              <span class="caso-nombre">Liceo Manuel de Salas</span>
+              <span class="caso-tipo">Institución educativa · Ñuñoa</span>
+            </div>
+            <p class="caso-texto">Acompañamos el diseño participativo de un proyecto de huerta escolar involucrando a docentes, estudiantes y la comunidad educativa. El proceso facilitó acuerdos sobre el uso del espacio, los criterios de diseño y la integración del proyecto en la vida del liceo.</p>
+            <div class="caso-servicios">
+              <span class="caso-servicio-tag">Diseño participativo</span>
+              <span class="caso-servicio-tag">Comunidad educativa</span>
+            </div>
+            <a href="../index.html#casos" class="caso-link">Ver más trabajos →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="casos-ver-todos fade-in">
+        <a href="../index.html#casos">Ver todos los trabajos realizados →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final-banner">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green-light);">Conversemos</span>
+      <h2>¿Tu organización necesita pensar mejor juntos?</h2>
+      <p>Cuéntanos qué desafío enfrenta tu grupo y diseñamos el proceso participativo adecuado para tu contexto.</p>
+      <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20cotizar%20una%20Facilitaci%C3%B3n%20Organizacional" target="_blank" rel="noopener" class="btn btn-large">¿Quieres conocer más? WhatsApp →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/ui/logo_livlin_no_text.png" alt="Livlin Logo">
+            <span>Livlin</span>
+          </div>
+          <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 20px;border-radius:100px;text-decoration:none;font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:600;transition:opacity 0.2s ease;"
+            onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @livlin.cl
+          </a>
+          <div class="footer-social-links" style="margin-top:14px;">
+            <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link"><img loading="lazy" src="../images/icons/linkedin.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> LinkedIn</a>
+            <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link"><img loading="lazy" src="../images/icons/mail.svg" class="inline-icon" style="width:1.2em;height:1.2em;vertical-align:-0.2em;"> Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
+            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explorar</h5>
+          <ul>
+            <li><a href="../index.html#dimensiones">Servicios</a></li>
+            <li><a href="../index.html#casos">Trabajos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/56971657358" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
+            <li><a href="https://www.livlin.cl" target="_blank">www.livlin.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Livlin &middot; www.livlin.cl</span>
+        <span>Santiago, Chile</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56971657358?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../js/script.js?v=3"></script>
+</body>
+</html>
