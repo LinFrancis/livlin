@@ -750,6 +750,21 @@
     .btn-wa-big svg { width: 24px; height: 24px; fill: #fff; }
 
     /* ============================================================
+       NAVBAR SCROLL BEHAVIOR
+    ============================================================ */
+    .navbar { transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease; }
+    .navbar.is-top {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: none;
+    }
+    .navbar.scrolled {
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    /* ============================================================
        FLOATING WHATSAPP
     ============================================================ */
     .wa-float {
@@ -802,7 +817,7 @@
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="Livlin home">
-        <img src="images/ui/logo_livlin_with_text.png" alt="Livlin Logo" style="height:36px; width:auto;">
+        <img src="images/ui/logo_livlin_with_text.png" alt="Livlin Logo" style="height:52px; width:auto;">
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -836,17 +851,18 @@
   <div class="dimensiones-section" id="dimensiones">
 
     <!-- TÍTULO PUENTE -->
-    <div style="background:#fff; padding: 64px 0 48px; text-align:center;">
+    <div style="background: linear-gradient(rgba(13,36,24,0.80),rgba(13,36,24,0.80)), url('images/hero/hero_manos_tierra.png') center/cover no-repeat; padding: 72px 0 56px; text-align:center;">
       <div class="container">
-        <h2 style="font-family:'Merriweather',serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:900; color:#1a3040; letter-spacing:-0.01em;">SEAMOS PARTE<br>DE LA SOLUCIÓN</h2>
+        <h2 style="font-family:'Merriweather',serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:900; color:#fff; letter-spacing:-0.01em;">SEAMOS PARTE<br>DE LA SOLUCIÓN</h2>
       </div>
     </div>
 
     <!-- DIMENSIÓN 1 — EDUCACIÓN / VISIÓN -->
-    <div class="dimension-block" style="background:#fff; border-top: 4px solid #3CA0C9;">
+    <div class="dimension-block" style="border-top: 4px solid #3CA0C9;">
+      <div class="dim-bg" style="background-image:url('images/talleres/taller_aucca_grupo.png');"></div>
+      <div class="dim-overlay" style="background:rgba(255,255,255,0.88);"></div>
       <div class="container">
         <div class="dim-inner">
-          <p class="dim-numero dim-numero-dark">Dimensión 01</p>
           <h2 class="dim-titulo dim-titulo-dark">ACLARA LA VISIÓN,<br>CONFÍA EN ELLA Y LÓGRALO</h2>
           <ul class="dim-bullets single-col">
             <li>
@@ -871,10 +887,11 @@
     </div>
 
     <!-- DIMENSIÓN 2 — DISEÑO REGENERATIVO -->
-    <div class="dimension-block" style="background:#f4f8f2; border-top: 4px solid #7FC93C;">
+    <div class="dimension-block" style="border-top: 4px solid #7FC93C;">
+      <div class="dim-bg" style="background-image:url('images/hero/5_bancal_tomates_grandes.jpg');"></div>
+      <div class="dim-overlay" style="background:rgba(240,248,232,0.87);"></div>
       <div class="container">
         <div class="dim-inner">
-          <p class="dim-numero dim-numero-dark">Dimensión 02</p>
           <h2 class="dim-titulo dim-titulo-dark">MEJORA BIENESTAR CON<br>UN BUEN PLAN MAESTRO</h2>
           <p class="dim-sub dim-sub-dark" style="margin-bottom:16px;">Diseño regenerativo para:</p>
           <ul class="dim-bullets">
@@ -962,10 +979,11 @@
     </div>
 
     <!-- DIMENSIÓN 3 — HERRAMIENTAS -->
-    <div class="dimension-block" style="background:#fff; border-top: 4px solid #BC3CC9;">
+    <div class="dimension-block" style="border-top: 4px solid #BC3CC9;">
+      <div class="dim-bg" style="background-image:url('images/casos_reales/03_Aucca/01_intranet_inicio.png');"></div>
+      <div class="dim-overlay" style="background:rgba(255,255,255,0.88);"></div>
       <div class="container">
         <div class="dim-inner">
-          <p class="dim-numero dim-numero-dark">Dimensión 03</p>
           <h2 class="dim-titulo dim-titulo-dark">CREA HERRAMIENTAS PARA<br>DESTRABAR POTENCIAL</h2>
           <p class="dim-sub dim-sub-dark" style="margin-bottom:16px;">Nos aseguramos de que tengan los datos organizados y confiables para hacer su trabajo:</p>
           <ul class="dim-bullets single-col">
@@ -986,17 +1004,6 @@
       </div>
     </div>
 
-    <!-- CTA INTERMEDIO -->
-    <div class="dim-cta-section">
-      <div class="container">
-        <h2>Acá estamos para co-crear<br>un mejor futuro</h2>
-        <p>¿Te animas a conversar tu idea? Hablemos</p>
-        <a href="https://wa.me/56971657358?text=Hola%20Livlin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          HABLAR POR WHATSAPP
-        </a>
-      </div>
-    </div>
 
   </div><!-- /dimensiones -->
 
@@ -1013,11 +1020,11 @@
 
       <div class="casos-filters" role="tablist" aria-label="Filtrar por tipo">
         <button class="casos-filter-btn active" data-cat="todos" role="tab" aria-selected="true">Todos</button>
-        <button class="casos-filter-btn" data-cat="hogares" role="tab" aria-selected="false">🏠 Hogares</button>
-        <button class="casos-filter-btn" data-cat="comercios" role="tab" aria-selected="false">🏪 Comercios</button>
-        <button class="casos-filter-btn" data-cat="organizaciones" role="tab" aria-selected="false">🏛 Organizaciones</button>
-        <button class="casos-filter-btn" data-cat="educacion" role="tab" aria-selected="false">📚 Educación</button>
-        <button class="casos-filter-btn" data-cat="internacional" role="tab" aria-selected="false">🌍 Internacional</button>
+        <button class="casos-filter-btn" data-cat="hogares" role="tab" aria-selected="false">Hogares</button>
+        <button class="casos-filter-btn" data-cat="comercios" role="tab" aria-selected="false">Comercios</button>
+        <button class="casos-filter-btn" data-cat="organizaciones" role="tab" aria-selected="false">Organizaciones</button>
+        <button class="casos-filter-btn" data-cat="educacion" role="tab" aria-selected="false">Educación</button>
+        <button class="casos-filter-btn" data-cat="internacional" role="tab" aria-selected="false">Internacional</button>
       </div>
 
       <div class="casos-grid" id="casosGrid">
@@ -1297,28 +1304,7 @@
           </a>
         </div>
         <div class="descarga-visual fade-in">
-          <div class="doc-mockup">
-            <div class="doc-mockup-header">
-              <div class="doc-dot" style="background:#ff5f57"></div>
-              <div class="doc-dot" style="background:#febc2e"></div>
-              <div class="doc-dot" style="background:#28c840"></div>
-            </div>
-            <div class="doc-line title"></div>
-            <div style="margin:16px 0 12px; height:1px; background:#e8edf0;"></div>
-            <div class="doc-line wide"></div>
-            <div class="doc-line medium"></div>
-            <div class="doc-line wide"></div>
-            <div class="doc-line short"></div>
-            <div style="margin:12px 0;"></div>
-            <div class="doc-line wide"></div>
-            <div class="doc-line medium"></div>
-            <div class="doc-line wide"></div>
-            <div class="doc-line short"></div>
-            <div style="margin:12px 0;"></div>
-            <div class="doc-line wide"></div>
-            <div class="doc-line medium"></div>
-            <div class="doc-badge">✓ PDF Gratuito · Descarga directa</div>
-          </div>
+          <img src="images/vision/metodologias_participativas.jpg" alt="Taller de metodologías participativas regenerativas" style="width:100%; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,0.35); object-fit:cover; aspect-ratio:4/3; display:block;">
         </div>
       </div>
     </div>
@@ -1327,11 +1313,11 @@
   <!-- ============================================================
        CTA FINAL WHATSAPP
   ============================================================ -->
-  <section class="cta-whatsapp-section" id="contacto-wa" aria-label="Contacto por WhatsApp">
+  <section class="cta-whatsapp-section" id="contacto-wa" aria-label="Contacto por WhatsApp" style="background: linear-gradient(rgba(10,30,20,0.78),rgba(10,30,20,0.78)), url('images/hero/banner_horizontal.png') center/cover no-repeat;">
     <div class="container">
-      <span class="eyebrow">Conversemos</span>
-      <h2>Acá estamos para co-crear un mejor futuro</h2>
-      <p>¿Te animas a conversar tu idea? Hablemos</p>
+      <span class="eyebrow" style="color:rgba(127,201,60,0.9);">Conversemos</span>
+      <h2 style="color:#fff;">Acá estamos para co-crear un mejor futuro</h2>
+      <p style="color:rgba(255,255,255,0.75);">¿Te animas a conversar tu idea? Hablemos</p>
       <a href="https://wa.me/56971657358?text=Hola%20Livlin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         HABLAR POR WHATSAPP
@@ -1432,6 +1418,23 @@
   <script src="js/carousel.js"></script>
 
   <script>
+    // Navbar transparent → solid on scroll
+    (function() {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      function syncNav() {
+        if (window.scrollY < 80) {
+          nav.classList.add('is-top');
+          nav.classList.remove('scrolled');
+        } else {
+          nav.classList.remove('is-top');
+          nav.classList.add('scrolled');
+        }
+      }
+      window.addEventListener('scroll', syncNav, { passive: true });
+      syncNav();
+    })();
+
     // Hero image animation
     document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => document.getElementById('heroBg').classList.add('loaded'), 100);
