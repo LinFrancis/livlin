@@ -55,8 +55,9 @@
   track.addEventListener('mouseenter', stopAutoPlay);
   track.addEventListener('mouseleave', startAutoPlay);
 
-  // Keyboard navigation
+  // Keyboard navigation (desactivado cuando el modal está abierto)
   document.addEventListener('keydown', (e) => {
+    if (document.getElementById('modalOverlay')?.classList.contains('open')) return;
     if (e.key === 'ArrowLeft') { prev(); startAutoPlay(); }
     if (e.key === 'ArrowRight') { next(); startAutoPlay(); }
   });

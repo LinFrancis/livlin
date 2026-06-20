@@ -251,7 +251,8 @@
       border-radius: 16px;
       box-shadow: 0 16px 60px rgba(0,0,0,0.5);
       aspect-ratio: 4/3;
-      cursor: pointer;
+      cursor: zoom-in;
+      background: #071f0f;
     }
 
     .carousel-slide {
@@ -259,6 +260,9 @@
       inset: 0;
       opacity: 0;
       transition: opacity 0.7s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .carousel-slide.active { opacity: 1; }
@@ -266,7 +270,7 @@
     .carousel-slide img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
 
@@ -275,13 +279,14 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.72));
-      padding: 40px 24px 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.78));
+      padding: 40px 24px 18px;
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       opacity: 0;
       transition: opacity 0.3s ease;
+      pointer-events: none;
     }
 
     .carousel-track:hover .carousel-slide-caption { opacity: 1; }
@@ -290,14 +295,14 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.15);
-      border: 1.5px solid rgba(255,255,255,0.3);
-      backdrop-filter: blur(8px);
+      background: rgba(0,0,0,0.35);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -306,9 +311,14 @@
       z-index: 10;
     }
 
-    .carousel-nav:hover { background: rgba(255,255,255,0.3); }
-    .carousel-nav.prev { left: -64px; }
-    .carousel-nav.next { right: -64px; }
+    .carousel-nav:hover { background: rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.5); }
+    .carousel-nav.prev { left: 14px; }
+    .carousel-nav.next { right: 14px; }
+
+    /* Captions siempre visibles en dispositivos touch */
+    @media (hover: none) {
+      .carousel-slide-caption { opacity: 0.9; }
+    }
 
     .carousel-dots {
       display: flex;
@@ -429,7 +439,7 @@
 
     .caso-card-img {
       width: 100%;
-      height: 220px;
+      height: 240px;
       object-fit: cover;
       display: block;
       transition: transform 0.4s ease;
@@ -544,7 +554,7 @@
 
     .modal-img {
       max-width: 100%;
-      max-height: 65vh;
+      max-height: 72vh;
       object-fit: contain;
       border-radius: 12px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
@@ -930,8 +940,6 @@
     @media (max-width: 900px) {
       .dim-bullets { columns: 1; }
       .descarga-inner { grid-template-columns: 1fr; gap: 40px; }
-      .carousel-nav.prev { left: -10px; }
-      .carousel-nav.next { right: -10px; }
       .casos-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
     }
 
@@ -1728,7 +1736,7 @@
         });
       });
 
-      // ---- MODAL ----
+      // ---- MODAL UNIFICADO (casos + carrusel) ----
       const overlay    = document.getElementById('modalOverlay');
       const modalImg   = document.getElementById('modalImg');
       const modalTitle = document.getElementById('modalTitle');
@@ -1736,18 +1744,38 @@
       const modalDesc  = document.getElementById('modalDesc');
       const modalSvc   = document.getElementById('modalService');
 
-      let currentCards = [];
-      let currentIdx   = 0;
+      let modalMode   = 'caso';   // 'caso' | 'carousel'
+      let currentList = [];
+      let currentIdx  = 0;
 
-      function openModal(card, idx, list) {
-        currentCards = list;
-        currentIdx   = idx;
-        modalImg.src         = card.dataset.img;
-        modalImg.alt         = card.dataset.title;
+      function showCasoCard(card) {
+        modalImg.src           = card.dataset.img;
+        modalImg.alt           = card.dataset.title;
         modalTitle.textContent = card.dataset.title;
         modalLoc.textContent   = card.dataset.location;
         modalDesc.textContent  = card.dataset.desc;
         modalSvc.textContent   = card.dataset.service;
+      }
+
+      function showCarouselItem(item) {
+        modalImg.src           = item.src;
+        modalImg.alt           = item.alt;
+        modalTitle.textContent = item.alt;
+        modalLoc.textContent   = 'Portafolio de Proyectos';
+        modalDesc.textContent  = item.desc;
+        modalSvc.textContent   = item.service;
+      }
+
+      function renderModalItem() {
+        if (modalMode === 'caso') showCasoCard(currentList[currentIdx]);
+        else showCarouselItem(currentList[currentIdx]);
+      }
+
+      function openModalWith(mode, list, idx) {
+        modalMode   = mode;
+        currentList = list;
+        currentIdx  = idx;
+        renderModalItem();
         overlay.classList.add('open');
         document.body.style.overflow = 'hidden';
       }
@@ -1755,44 +1783,47 @@
       function closeModal() {
         overlay.classList.remove('open');
         document.body.style.overflow = '';
+        modalImg.src = '';
       }
 
-      casoCards.forEach((card, idx) => {
+      function navigateModal(dir) {
+        currentIdx = (currentIdx + dir + currentList.length) % currentList.length;
+        renderModalItem();
+      }
+
+      // Exposición para carousel.js
+      window.livlinModal = {
+        openSingle(src, alt, desc, service) {
+          const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+          const items  = slides.map(s => {
+            const img = s.querySelector('img');
+            const cap = s.querySelector('.carousel-slide-caption');
+            return { src: img.src, alt: img.alt, desc: cap ? cap.textContent.trim() : '', service };
+          });
+          const idx = items.findIndex(it => it.src === src);
+          openModalWith('carousel', items, idx !== -1 ? idx : 0);
+        }
+      };
+
+      // Clicks en tarjetas de casos
+      casoCards.forEach(card => {
         card.addEventListener('click', () => {
           const visible = Array.from(casoCards).filter(c => c.style.display !== 'none');
-          const visIdx  = visible.indexOf(card);
-          openModal(card, visIdx, visible);
+          openModalWith('caso', visible, visible.indexOf(card));
         });
       });
 
       document.getElementById('modalClose').addEventListener('click', closeModal);
       overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-
-      document.getElementById('modalPrev').addEventListener('click', () => {
-        currentIdx = (currentIdx - 1 + currentCards.length) % currentCards.length;
-        const c = currentCards[currentIdx];
-        modalImg.src         = c.dataset.img;
-        modalTitle.textContent = c.dataset.title;
-        modalLoc.textContent   = c.dataset.location;
-        modalDesc.textContent  = c.dataset.desc;
-        modalSvc.textContent   = c.dataset.service;
-      });
-
-      document.getElementById('modalNext').addEventListener('click', () => {
-        currentIdx = (currentIdx + 1) % currentCards.length;
-        const c = currentCards[currentIdx];
-        modalImg.src         = c.dataset.img;
-        modalTitle.textContent = c.dataset.title;
-        modalLoc.textContent   = c.dataset.location;
-        modalDesc.textContent  = c.dataset.desc;
-        modalSvc.textContent   = c.dataset.service;
-      });
+      document.getElementById('modalPrev').addEventListener('click', () => navigateModal(-1));
+      document.getElementById('modalNext').addEventListener('click', () => navigateModal(+1));
 
       document.addEventListener('keydown', e => {
         if (!overlay.classList.contains('open')) return;
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowLeft')  document.getElementById('modalPrev').click();
-        if (e.key === 'ArrowRight') document.getElementById('modalNext').click();
+        e.stopImmediatePropagation();
+        if (e.key === 'Escape')      closeModal();
+        if (e.key === 'ArrowLeft')   navigateModal(-1);
+        if (e.key === 'ArrowRight')  navigateModal(+1);
       });
     });
   </script>
