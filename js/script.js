@@ -1,5 +1,5 @@
 /**
- * script.js — Livlin · funciones globales para todas las páginas
+ * script.js v4 — Livlin · funciones globales para todas las páginas
  */
 (function () {
   'use strict';
@@ -38,20 +38,47 @@
     });
   }
 
-  // --- Fade-in con IntersectionObserver ---
-  const fadeItems = document.querySelectorAll('.fade-in');
+  // --- Fade-in — progressive enhancement ---
+  // Primero marcamos como visibles los elementos YA en el viewport,
+  // LUEGO activamos el sistema de ocultamiento. Así el contenido
+  // nunca queda invisible si JS es lento o falla.
+  var fadeItems = Array.from(document.querySelectorAll('.fade-in'));
+  if (!fadeItems.length) return;
+
+  var vh = window.innerHeight || document.documentElement.clientHeight;
+
+  // Marcar visibles los que ya están en pantalla
+  fadeItems.forEach(function (el) {
+    var rect = el.getBoundingClientRect();
+    if (rect.top < vh + 80) {
+      el.classList.add('visible');
+    }
+  });
+
+  // Ahora sí activar ocultamiento para los que vienen al hacer scroll
+  document.documentElement.classList.add('js-ready');
+
+  // Observar los que aún no son visibles
+  var remaining = fadeItems.filter(function (el) {
+    return !el.classList.contains('visible');
+  });
+
+  if (!remaining.length) return;
+
   if (!('IntersectionObserver' in window)) {
-    fadeItems.forEach(el => el.classList.add('visible'));
-  } else {
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    fadeItems.forEach(el => io.observe(el));
+    remaining.forEach(function (el) { el.classList.add('visible'); });
+    return;
   }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+  remaining.forEach(function (el) { io.observe(el); });
 
 })();

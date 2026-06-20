@@ -1558,14 +1558,17 @@ footer {
   }
 }
 
-/* ---------- 16. Animaciones fade-in ---------- */
+/* ---------- 16. Animaciones fade-in (progressive enhancement) ---------- */
+/* Sin JS: todo visible por defecto */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-.fade-in.visible {
+/* Con JS activo: se oculta para animar al entrar */
+html.js-ready .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+html.js-ready .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -3638,19 +3641,20 @@ section {
   font-size: 1.1rem;
 }
 
-/* --- Smooth scroll + reveal polish --- */
+/* --- Smooth scroll + reveal polish (progressive enhancement) --- */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-.fade-in.visible {
+html.js-ready .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+}
+html.js-ready .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* --- Stagger delays (work with .fade-in.visible) --- */
+/* --- Stagger delays --- */
 .stagger-1.fade-in { transition-delay: 0.08s; }
 .stagger-2.fade-in { transition-delay: 0.16s; }
 .stagger-3.fade-in { transition-delay: 0.24s; }

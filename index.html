@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 
   <style>
     /* ============================================================
@@ -73,34 +73,48 @@
     }
 
     /* ============================================================
-       DIMENSIONES — bloques texto + imagen
+       DIMENSIONES — texto integrado sobre imagen (overlay)
     ============================================================ */
     .dimensiones-section { background: #f5f7f2; }
 
-    .dim-split-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .dim-split-img {
+    .dim-hero-block {
+      position: relative;
+      min-height: 520px;
       overflow: hidden;
-      min-height: 440px;
+      display: flex;
+      align-items: stretch;
     }
 
-    .dim-split-img img {
+    .dim-hero-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .dim-split-text {
-      padding: clamp(44px, 6vw, 76px) clamp(32px, 5vw, 64px);
+    .dim-hero-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .dim-hero-content {
+      position: relative;
+      z-index: 2;
+      width: 52%;
+      padding: clamp(52px, 6vw, 88px) clamp(40px, 6vw, 80px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: #fff;
     }
+
+    .dim-align-right .dim-hero-content { margin-left: auto; }
+
+    .dim-hero-content .dim-titulo { color: #fff; }
+    .dim-hero-content .dim-sub { color: rgba(255,255,255,0.78); }
+    .dim-hero-content .dim-icon-list li { color: rgba(255,255,255,0.92); }
+    .dim-hero-content .dim-icon { filter: brightness(0) invert(1); }
 
     .dim-accent-stripe {
       width: 52px;
@@ -124,7 +138,7 @@
     .dim-sub {
       font-family: 'Poppins', sans-serif;
       font-size: 0.9rem;
-      color: #4A6874;
+      color: rgba(255,255,255,0.78);
       margin-bottom: 2px;
     }
 
@@ -181,10 +195,17 @@
     .dim-link:hover { gap: 8px; }
 
     @media (max-width: 820px) {
-      .dim-split-block { grid-template-columns: 1fr; }
-      .dim-split-img { min-height: 240px; order: -1; }
+      .dim-hero-block { min-height: 460px; }
+      .dim-hero-content {
+        width: 100%;
+        padding: 36px 24px 52px;
+        margin-left: 0 !important;
+        justify-content: flex-end;
+      }
+      .dim-hero-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.18) 100%) !important;
+      }
       .dim-icon-list.two-col { grid-template-columns: 1fr; }
-      .dim-split-text { padding: 36px 24px; }
     }
 
     /* ============================================================
@@ -933,8 +954,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="primary-nav">
-        <li><a href="#dimensiones">Servicios</a></li>
-        <li><a href="#casos">Trabajos</a></li>
+        <li><a href="#dimensiones">Líneas de acción</a></li>
+        <li><a href="#casos">Impacto</a></li>
         <li><a href="#descarga">Recursos</a></li>
         <li><a href="contacto.html" class="nav-cta-green">Contacto</a></li>
       </ul>
@@ -968,8 +989,10 @@
     </div>
 
     <!-- DIMENSIÓN 1 — EDUCACIÓN / VISIÓN -->
-    <div class="dim-split-block" style="--dim-accent:#3CA0C9; border-top:4px solid #3CA0C9;">
-      <div class="dim-split-text">
+    <div class="dim-hero-block" style="--dim-accent:#3CA0C9;">
+      <img class="dim-hero-img" src="images/talleres/taller_aucca_grupo.png" alt="Taller grupal Aucca">
+      <div class="dim-hero-overlay" style="background: linear-gradient(to right, rgba(8,18,42,0.94) 0%, rgba(8,18,42,0.76) 48%, rgba(8,18,42,0.08) 100%);"></div>
+      <div class="dim-hero-content">
         <div class="dim-accent-stripe"></div>
         <h2 class="dim-titulo">ACLARA LA VISIÓN,<br>CONFÍA EN ELLA Y LÓGRALO</h2>
         <ul class="dim-icon-list">
@@ -987,21 +1010,17 @@
           </li>
         </ul>
         <div class="dim-cta-row">
-          <a href="Servicios/educacion-ambiental.html" class="dim-link">Ver servicio →</a>
+          <a href="Servicios/educacion-ambiental.html" class="dim-link">Ver más →</a>
           <a href="Servicios/facilitacion-organizacional.html" class="dim-link">Facilitación →</a>
         </div>
       </div>
-      <div class="dim-split-img">
-        <img src="images/talleres/taller_aucca_grupo.png" alt="Taller grupal Aucca">
-      </div>
     </div>
 
-    <!-- DIMENSIÓN 2 — DISEÑO REGENERATIVO (imagen izquierda, texto derecha) -->
-    <div class="dim-split-block" style="--dim-accent:#7FC93C; border-top:4px solid #7FC93C;">
-      <div class="dim-split-img">
-        <img src="images/hero/5_bancal_tomates_grandes.jpg" alt="Bancal con tomates — diseño regenerativo">
-      </div>
-      <div class="dim-split-text">
+    <!-- DIMENSIÓN 2 — DISEÑO REGENERATIVO (texto a la derecha) -->
+    <div class="dim-hero-block dim-align-right" style="--dim-accent:#7FC93C;">
+      <img class="dim-hero-img" src="images/hero/5_bancal_tomates_grandes.jpg" alt="Bancal con tomates — diseño regenerativo">
+      <div class="dim-hero-overlay" style="background: linear-gradient(to left, rgba(5,22,8,0.94) 0%, rgba(5,22,8,0.76) 48%, rgba(5,22,8,0.08) 100%);"></div>
+      <div class="dim-hero-content">
         <div class="dim-accent-stripe"></div>
         <h2 class="dim-titulo">MEJORA BIENESTAR CON<br>UN BUEN PLAN MAESTRO</h2>
         <p class="dim-sub">Diseño regenerativo para:</p>
@@ -1089,8 +1108,10 @@
     </div>
 
     <!-- DIMENSIÓN 3 — HERRAMIENTAS -->
-    <div class="dim-split-block" style="--dim-accent:#BC3CC9; border-top:4px solid #BC3CC9;">
-      <div class="dim-split-text">
+    <div class="dim-hero-block" style="--dim-accent:#BC3CC9;">
+      <img class="dim-hero-img" src="images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma digital Aucca">
+      <div class="dim-hero-overlay" style="background: linear-gradient(to right, rgba(18,6,22,0.94) 0%, rgba(18,6,22,0.76) 48%, rgba(18,6,22,0.08) 100%);"></div>
+      <div class="dim-hero-content">
         <div class="dim-accent-stripe"></div>
         <h2 class="dim-titulo">CREA HERRAMIENTAS PARA<br>DESTRABAR POTENCIAL</h2>
         <p class="dim-sub">Datos organizados y confiables para hacer el trabajo:</p>
@@ -1109,9 +1130,6 @@
           <a href="Servicios/soluciones-digitales.html" class="dim-link">Soluciones Digitales →</a>
         </div>
       </div>
-      <div class="dim-split-img">
-        <img src="images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma digital Aucca">
-      </div>
     </div>
 
 
@@ -1120,11 +1138,11 @@
   <!-- ============================================================
        CASOS REALES CON TESTIMONIOS
   ============================================================ -->
-  <section class="casos-section" id="casos" aria-label="Trabajos realizados">
+  <section class="casos-section" id="casos" aria-label="Impacto generado">
     <div class="container">
       <div class="casos-header fade-in">
-        <span class="eyebrow">Trabajos realizados</span>
-        <h2>Mira trabajos realizados</h2>
+        <span class="eyebrow">Impacto generado</span>
+        <h2>Aplicaciones reales</h2>
         <p>Transformaciones reales en hogares, comercios, organizaciones y escuelas</p>
       </div>
 
@@ -1132,7 +1150,10 @@
       <div class="casos-destacados fade-in">
 
         <!-- Caso 1: Aucca -->
-        <div class="caso-dest" style="border-top-color:#3CA0C9;">
+        <div class="caso-dest" style="border-top-color:#3CA0C9; padding-top:0; overflow:hidden;">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Aucca plataforma digital" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <div>
             <span class="caso-dest-badge" style="color:#3CA0C9;background:#e8f4fa;">Organización · MEL &amp; Digital</span>
             <h4>Aucca Centro Ecopedagógico</h4>
@@ -1154,7 +1175,10 @@
         </div>
 
         <!-- Caso 2: Depto urbano -->
-        <div class="caso-dest" style="border-top-color:#7FC93C;">
+        <div class="caso-dest" style="border-top-color:#7FC93C; padding-top:0; overflow:hidden;">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png" alt="Terraza bancales autorregantes" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <div>
             <span class="caso-dest-badge" style="color:#7FC93C;background:#f4f8f2;">Hogar · Diseño Regenerativo</span>
             <h4>Terraza en departamento urbano</h4>
@@ -1176,7 +1200,10 @@
         </div>
 
         <!-- Caso 3: Rende Bú -->
-        <div class="caso-dest" style="border-top-color:#C96B00;">
+        <div class="caso-dest" style="border-top-color:#C96B00; padding-top:0; overflow:hidden;">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="images/casos_reales/01_rendebu/01_antes_despues_muroverde.png" alt="Rende Bú Café muro verde" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
           <div>
             <span class="caso-dest-badge" style="color:#C96B00;background:#fff7ed;">Comercio · Huerto Urbano</span>
             <h4>Rende Bú Café · Providencia</h4>
@@ -1215,6 +1242,7 @@
           data-title="Rende Bú Café"
           data-location="Providencia, Santiago · @rendebucafe"
           data-img="images/casos_reales/01_rendebu/01_antes_despues_muroverde.png"
+          data-images='["images/casos_reales/01_rendebu/01_antes_despues_muroverde.png","images/casos_reales/01_rendebu/02_antes_despues_terraza.png"]'
           data-desc="Transformamos espacios disponibles del café en áreas productivas para el cultivo de alimentos, integrando huertas en patios, macetas y sectores exteriores. Lo que comenzó como una prueba se convirtió en una nueva etapa de inversión e infraestructura para fortalecer el carácter sostenible del proyecto. Hoy clientes y trabajadores conviven diariamente con cultivos comestibles que inspiran nuevas formas de relacionarse con la alimentación y la ciudad. Se plantaron tomates, girasoles y hortalizas de verano, y luego habas y brócoli para el otoño-invierno. El personal participó de capacitaciones generando apego al cuidado de las plantas. Los frutos plantados en la calle no fueron robados: la experiencia de cultivar alimento en el exterior fue un éxito, confirmando la hipótesis del plan maestro."
           data-service="Diseño Regenerativo · Huerto Urbano"
           aria-label="Ver caso Rende Bú Café">
@@ -1285,6 +1313,7 @@
           data-title="AUCCA Centro Ecopedagógico"
           data-location="Talagante · @aucca.ecopedagogico"
           data-img="images/casos_reales/03_Aucca/01_intranet_inicio.png"
+          data-images='["images/casos_reales/03_Aucca/01_intranet_inicio.png","images/casos_reales/03_Aucca/02_intranet_eventos.png","images/casos_reales/03_Aucca/03_intranet_graficos.png"]'
           data-desc="Diseñamos e implementamos herramientas digitales para apoyar la gestión de Aucca, un centro comunitario dedicado a la agroecología y la educación ambiental. La plataforma intranet permite dar seguimiento a acuerdos y objetivos, gestionar ingresos y gastos con claridad, y coordinar actividades. El módulo de eventos emula el funcionamiento de un restaurante: crea cuentas, registra productos, gestiona ventas y cuadra los dineros con el sistema financiero general. Cada integrante tiene su propio usuario."
           data-service="MEL · Plataforma Digital · Intranet · Página Web"
           aria-label="Ver caso AUCCA">
@@ -1333,6 +1362,7 @@
           data-title="Familia Javiera y Francis"
           data-location="Providencia, Santiago"
           data-img="images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png"
+          data-images='["images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png","images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png","images/casos_reales/08_Depto_Javiera_Francis/03_collage_02.png","images/casos_reales/08_Depto_Javiera_Francis/04_bancal_l.png"]'
           data-desc="Terraza con orientación sur poniente: mucha luz solar al atardecer que secaba todas las plantas, sin tiempo para riego frecuente. Se construyeron 3,5 m² de bancales autorregantes de madera con ruedas y sistema wicking bed: riego 2 veces al mes en verano, 1 vez en invierno. Cada bancal tiene además un hotel de lombrices en PVC donde los residuos orgánicos se convierten en humus dentro del propio bancal, nutriendo el sustrato permanentemente sin necesidad de cambiarlo. Desde 2022 se cultiva una amplia variedad de hortalizas en verano e invierno con criterio biointensivo. También se instaló sistema de paneles solares y energía eólica."
           data-service="Diseño Regenerativo · Bancales Autorregantes · Lombricultura · Energía Solar"
           aria-label="Ver caso Familia Javiera y Francis">
@@ -1403,6 +1433,7 @@
           data-title="Familia Cecilia e Isidora"
           data-location="Las Condes, Santiago"
           data-img="images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png"
+          data-images='["images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png","images/casos_reales/10_Casa_Cecilia_Isidora/personas_casa.png"]'
           data-desc="Desarrollamos un plan maestro de regeneración para el hogar pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices y ruedas (muro verde móvil). Destaca la construcción de un parrón: estructura de madera diseñada para recibir la parra en el patio trasero y aprovechar su sombra en verano, bajando la temperatura interior de la casa de forma natural y bioclimática."
           data-service="Diseño Regenerativo · Wicking Bed · Parrón Bioclimático · Vermicompostera"
           aria-label="Ver caso Familia Cecilia e Isidora">
@@ -1603,7 +1634,7 @@
         </div>
 
         <div class="footer-col">
-          <h5>Servicios</h5>
+          <h5>Líneas de acción</h5>
           <ul>
             <li><a href="Servicios/diseno-regenerativo.html">Diseño regenerativo</a></li>
             <li><a href="Servicios/huerto-urbano.html">Huerto urbano</a></li>
@@ -1616,8 +1647,8 @@
         <div class="footer-col">
           <h5>Explorar</h5>
           <ul>
-            <li><a href="#dimensiones">Servicios</a></li>
-            <li><a href="#casos">Trabajos realizados</a></li>
+            <li><a href="#dimensiones">Líneas de acción</a></li>
+            <li><a href="#casos">Impacto</a></li>
             <li><a href="#descarga">Recursos gratis</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
@@ -1659,7 +1690,7 @@
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/script.js?v=3"></script>
+  <script src="js/script.js?v=4"></script>
   <script src="js/carousel.js"></script>
 
   <script>
@@ -1701,12 +1732,31 @@
       let currentIdx  = 0;
 
       function showCasoCard(card) {
-        modalImg.src           = card.dataset.img;
+        const images = card.dataset.images ? JSON.parse(card.dataset.images) : [card.dataset.img];
+        modalImg.src           = images[0];
         modalImg.alt           = card.dataset.title;
         modalTitle.textContent = card.dataset.title;
         modalLoc.textContent   = card.dataset.location;
         modalDesc.textContent  = card.dataset.desc;
         modalSvc.textContent   = card.dataset.service;
+
+        // Remove previous extra images
+        const prev = document.getElementById('modalExtraImgs');
+        if (prev) prev.remove();
+
+        // Show additional images stacked below
+        if (images.length > 1) {
+          const wrap = document.createElement('div');
+          wrap.id = 'modalExtraImgs';
+          wrap.style.cssText = 'display:flex;flex-direction:column;gap:14px;margin-top:14px;width:100%;max-width:900px;';
+          images.slice(1).forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.style.cssText = 'width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.45);display:block;';
+            wrap.appendChild(img);
+          });
+          document.querySelector('.modal-inner').appendChild(wrap);
+        }
       }
 
       function showCarouselItem(item) {
@@ -1736,6 +1786,8 @@
         overlay.classList.remove('open');
         document.body.style.overflow = '';
         modalImg.src = '';
+        const extra = document.getElementById('modalExtraImgs');
+        if (extra) extra.remove();
       }
 
       function navigateModal(dir) {
