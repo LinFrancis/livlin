@@ -73,149 +73,118 @@
     }
 
     /* ============================================================
-       DIMENSIONES
+       DIMENSIONES — bloques texto + imagen
     ============================================================ */
-    .dimensiones-section {
-      position: relative;
-      padding: 0;
+    .dimensiones-section { background: #f5f7f2; }
+
+    .dim-split-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
 
-    .dimension-block {
-      position: relative;
-      padding: 80px 0;
+    .dim-split-img {
+      overflow: hidden;
+      min-height: 440px;
     }
 
-    .dim-bg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
+    .dim-split-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .dim-overlay {
-      position: absolute;
-      inset: 0;
+    .dim-split-text {
+      padding: clamp(44px, 6vw, 76px) clamp(32px, 5vw, 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
     }
 
-    .dim-overlay-light { background: rgba(255,255,255,0.84); }
-    .dim-overlay-dark  { background: rgba(8, 32, 20, 0.88); }
-    .dim-overlay-green { background: rgba(20, 55, 25, 0.82); }
-
-    .dim-inner {
-      position: relative;
-      z-index: 2;
+    .dim-accent-stripe {
+      width: 52px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--dim-accent, #7FC93C);
+      margin-bottom: 24px;
+      flex-shrink: 0;
     }
-
-    .dim-numero {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .dim-numero-dark  { color: #4A6874; }
-    .dim-numero-light { color: rgba(127,201,60,0.85); }
 
     .dim-titulo {
       font-family: 'Merriweather', serif;
-      font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.3rem, 2.2vw, 1.85rem);
       font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 28px;
+      color: #1a3040;
+      line-height: 1.22;
       letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
-    .dim-titulo-dark  { color: #1a3040; }
-    .dim-titulo-light { color: #ffffff; }
-
-    .dim-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      columns: 2;
-      column-gap: 40px;
-    }
-
-    .dim-bullets.single-col { columns: 1; }
-
-    .dim-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 8px 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.97rem;
-      font-weight: 400;
-      line-height: 1.4;
-      break-inside: avoid;
-    }
-
-    .dim-bullets li .b-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
-
-    .dim-bullet-dark  { color: #2C3E50; }
-    .dim-bullet-light { color: rgba(255,255,255,0.88); }
-    .dot-green  { background: #7FC93C; }
-    .dot-blue   { background: #3CA0C9; }
-    .dot-light  { background: rgba(255,255,255,0.7); }
 
     .dim-sub {
       font-family: 'Poppins', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: #4A6874;
+      margin-bottom: 2px;
     }
-    .dim-sub-dark  { color: #4A6874; }
-    .dim-sub-light { color: rgba(127,201,60,0.9); }
+
+    .dim-icon-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .dim-icon-list.two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 28px;
+    }
+
+    .dim-icon-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.92rem;
+      color: #2a3a4a;
+      line-height: 1.4;
+    }
+
+    .dim-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
 
     .dim-cta-row {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 32px;
     }
 
     .dim-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       text-decoration: none;
+      color: var(--dim-accent, #7FC93C);
       border-bottom: 2px solid currentColor;
       padding-bottom: 2px;
       transition: gap 0.2s ease;
     }
-    .dim-link:hover { gap: 10px; }
-    .dim-link-dark   { color: #3CA0C9; }
-    .dim-link-green  { color: #7FC93C; }
-    .dim-link-purple { color: #BC3CC9; }
+    .dim-link:hover { gap: 8px; }
 
-    /* Sección CTA dentro de dimensiones */
-    .dim-cta-section {
-      background: #fff;
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .dim-cta-section h2 {
-      font-family: 'Merriweather', serif;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 900;
-      color: #1a3040;
-      margin-bottom: 12px;
-    }
-
-    .dim-cta-section p {
-      font-size: 1.05rem;
-      color: #4A6874;
-      margin-bottom: 32px;
+    @media (max-width: 820px) {
+      .dim-split-block { grid-template-columns: 1fr; }
+      .dim-split-img { min-height: 240px; order: -1; }
+      .dim-icon-list.two-col { grid-template-columns: 1fr; }
+      .dim-split-text { padding: 36px 24px; }
     }
 
     /* ============================================================
@@ -958,7 +927,7 @@
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="Livlin home">
-        <img src="images/ui/logo_livlin_with_text.png" alt="Livlin Logo" style="height:52px; width:auto;">
+        <img src="images/ui/logo_livlin_with_text.png" alt="Livlin">
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -999,57 +968,57 @@
     </div>
 
     <!-- DIMENSIÓN 1 — EDUCACIÓN / VISIÓN -->
-    <div class="dimension-block" style="border-top: 4px solid #3CA0C9;">
-      <div class="dim-bg" style="background-image:url('images/talleres/taller_aucca_grupo.png');"></div>
-      <div class="dim-overlay" style="background:rgba(255,255,255,0.88);"></div>
-      <div class="container">
-        <div class="dim-inner">
-          <h2 class="dim-titulo dim-titulo-dark">ACLARA LA VISIÓN,<br>CONFÍA EN ELLA Y LÓGRALO</h2>
-          <ul class="dim-bullets single-col">
-            <li>
-              <span class="b-dot dot-blue"></span>
-              <span class="dim-bullet-dark">Talleres y educación ambiental</span>
-            </li>
-            <li>
-              <span class="b-dot dot-blue"></span>
-              <span class="dim-bullet-dark">Acompañamiento y asesorías</span>
-            </li>
-            <li>
-              <span class="b-dot dot-blue"></span>
-              <span class="dim-bullet-dark">Facilitación Teoría de Cambio</span>
-            </li>
-          </ul>
-          <div class="dim-cta-row">
-            <a href="Servicios/educacion-ambiental.html" class="dim-link dim-link-dark">Ver servicio →</a>
-            <a href="Servicios/facilitacion-organizacional.html" class="dim-link dim-link-dark">Facilitación →</a>
-          </div>
+    <div class="dim-split-block" style="--dim-accent:#3CA0C9; border-top:4px solid #3CA0C9;">
+      <div class="dim-split-text">
+        <div class="dim-accent-stripe"></div>
+        <h2 class="dim-titulo">ACLARA LA VISIÓN,<br>CONFÍA EN ELLA Y LÓGRALO</h2>
+        <ul class="dim-icon-list">
+          <li>
+            <img src="images/icons/butterfly.svg" class="dim-icon" alt="">
+            <span>Talleres y educación ambiental</span>
+          </li>
+          <li>
+            <img src="images/icons/compass.svg" class="dim-icon" alt="">
+            <span>Acompañamiento y asesorías</span>
+          </li>
+          <li>
+            <img src="images/icons/target.svg" class="dim-icon" alt="">
+            <span>Facilitación Teoría de Cambio</span>
+          </li>
+        </ul>
+        <div class="dim-cta-row">
+          <a href="Servicios/educacion-ambiental.html" class="dim-link">Ver servicio →</a>
+          <a href="Servicios/facilitacion-organizacional.html" class="dim-link">Facilitación →</a>
         </div>
+      </div>
+      <div class="dim-split-img">
+        <img src="images/talleres/taller_aucca_grupo.png" alt="Taller grupal Aucca">
       </div>
     </div>
 
-    <!-- DIMENSIÓN 2 — DISEÑO REGENERATIVO -->
-    <div class="dimension-block" style="border-top: 4px solid #7FC93C;">
-      <div class="dim-bg" style="background-image:url('images/hero/5_bancal_tomates_grandes.jpg');"></div>
-      <div class="dim-overlay" style="background:rgba(240,248,232,0.87);"></div>
-      <div class="container">
-        <div class="dim-inner">
-          <h2 class="dim-titulo dim-titulo-dark">MEJORA BIENESTAR CON<br>UN BUEN PLAN MAESTRO</h2>
-          <p class="dim-sub dim-sub-dark" style="margin-bottom:16px;">Diseño regenerativo para:</p>
-          <ul class="dim-bullets">
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Cultivar alimentos sanos</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Reducir costos</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Mejorar eficiencia energética</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Gestionar residuos</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Ahorrar agua</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Mejorar biodiversidad</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Crear espacios más saludables</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Aprovechar la energía solar</span></li>
-            <li><span class="b-dot dot-green"></span><span class="dim-bullet-dark">Sombrear y refrescar</span></li>
-          </ul>
-          <div class="dim-cta-row">
-            <a href="Servicios/diseno-regenerativo.html" class="dim-link dim-link-green">Diseño Regenerativo →</a>
-            <a href="Servicios/huerto-urbano.html" class="dim-link dim-link-green">Huerto Urbano →</a>
-          </div>
+    <!-- DIMENSIÓN 2 — DISEÑO REGENERATIVO (imagen izquierda, texto derecha) -->
+    <div class="dim-split-block" style="--dim-accent:#7FC93C; border-top:4px solid #7FC93C;">
+      <div class="dim-split-img">
+        <img src="images/hero/5_bancal_tomates_grandes.jpg" alt="Bancal con tomates — diseño regenerativo">
+      </div>
+      <div class="dim-split-text">
+        <div class="dim-accent-stripe"></div>
+        <h2 class="dim-titulo">MEJORA BIENESTAR CON<br>UN BUEN PLAN MAESTRO</h2>
+        <p class="dim-sub">Diseño regenerativo para:</p>
+        <ul class="dim-icon-list two-col">
+          <li><img src="images/icons/sprout.svg" class="dim-icon" alt=""><span>Cultivar alimentos sanos</span></li>
+          <li><img src="images/icons/coin.svg" class="dim-icon" alt=""><span>Reducir costos</span></li>
+          <li><img src="images/icons/zap.svg" class="dim-icon" alt=""><span>Eficiencia energética</span></li>
+          <li><img src="images/icons/cycle.svg" class="dim-icon" alt=""><span>Gestionar residuos</span></li>
+          <li><img src="images/icons/droplet.svg" class="dim-icon" alt=""><span>Ahorrar agua</span></li>
+          <li><img src="images/icons/butterfly.svg" class="dim-icon" alt=""><span>Mejorar biodiversidad</span></li>
+          <li><img src="images/icons/heart.svg" class="dim-icon" alt=""><span>Espacios saludables</span></li>
+          <li><img src="images/icons/sun.svg" class="dim-icon" alt=""><span>Energía solar</span></li>
+          <li><img src="images/icons/leaf.svg" class="dim-icon" alt=""><span>Sombrear y refrescar</span></li>
+        </ul>
+        <div class="dim-cta-row">
+          <a href="Servicios/diseno-regenerativo.html" class="dim-link">Diseño Regenerativo →</a>
+          <a href="Servicios/huerto-urbano.html" class="dim-link">Huerto Urbano →</a>
         </div>
       </div>
     </div>
@@ -1120,28 +1089,28 @@
     </div>
 
     <!-- DIMENSIÓN 3 — HERRAMIENTAS -->
-    <div class="dimension-block" style="border-top: 4px solid #BC3CC9;">
-      <div class="dim-bg" style="background-image:url('images/casos_reales/03_Aucca/01_intranet_inicio.png');"></div>
-      <div class="dim-overlay" style="background:rgba(255,255,255,0.88);"></div>
-      <div class="container">
-        <div class="dim-inner">
-          <h2 class="dim-titulo dim-titulo-dark">CREA HERRAMIENTAS PARA<br>DESTRABAR POTENCIAL</h2>
-          <p class="dim-sub dim-sub-dark" style="margin-bottom:16px;">Nos aseguramos de que tengan los datos organizados y confiables para hacer su trabajo:</p>
-          <ul class="dim-bullets single-col">
-            <li>
-              <span class="b-dot" style="background:#BC3CC9;"></span>
-              <span class="dim-bullet-dark">Sistemas de Monitoreo, Evaluación y Aprendizaje (MEL)</span>
-            </li>
-            <li>
-              <span class="b-dot" style="background:#BC3CC9;"></span>
-              <span class="dim-bullet-dark">Plataformas digitales personalizadas</span>
-            </li>
-          </ul>
-          <div class="dim-cta-row">
-            <a href="Servicios/monitoreo.html" class="dim-link dim-link-purple">Monitoreo y MEL →</a>
-            <a href="Servicios/soluciones-digitales.html" class="dim-link dim-link-purple">Soluciones Digitales →</a>
-          </div>
+    <div class="dim-split-block" style="--dim-accent:#BC3CC9; border-top:4px solid #BC3CC9;">
+      <div class="dim-split-text">
+        <div class="dim-accent-stripe"></div>
+        <h2 class="dim-titulo">CREA HERRAMIENTAS PARA<br>DESTRABAR POTENCIAL</h2>
+        <p class="dim-sub">Datos organizados y confiables para hacer el trabajo:</p>
+        <ul class="dim-icon-list">
+          <li>
+            <img src="images/icons/bar-chart-2.svg" class="dim-icon" alt="">
+            <span>Sistemas de Monitoreo, Evaluación y Aprendizaje (MEL)</span>
+          </li>
+          <li>
+            <img src="images/icons/laptop.svg" class="dim-icon" alt="">
+            <span>Plataformas digitales personalizadas</span>
+          </li>
+        </ul>
+        <div class="dim-cta-row">
+          <a href="Servicios/monitoreo.html" class="dim-link">Monitoreo y MEL →</a>
+          <a href="Servicios/soluciones-digitales.html" class="dim-link">Soluciones Digitales →</a>
         </div>
+      </div>
+      <div class="dim-split-img">
+        <img src="images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma digital Aucca">
       </div>
     </div>
 
@@ -1694,41 +1663,6 @@
   <script src="js/carousel.js"></script>
 
   <script>
-    // Navbar transparent → solid on scroll
-    (function() {
-      const nav = document.querySelector('.navbar');
-      if (!nav) return;
-      function syncNav() {
-        if (window.scrollY < 80) {
-          nav.classList.add('is-top');
-          nav.classList.remove('scrolled');
-        } else {
-          nav.classList.remove('is-top');
-          nav.classList.add('scrolled');
-        }
-      }
-      window.addEventListener('scroll', syncNav, { passive: true });
-      syncNav();
-    })();
-
-    // Fade-in con IntersectionObserver
-    (function() {
-      const items = document.querySelectorAll('.fade-in');
-      if (!('IntersectionObserver' in window)) {
-        items.forEach(el => el.classList.add('visible'));
-        return;
-      }
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      items.forEach(el => observer.observe(el));
-    })();
-
     // Hero image animation
     document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => document.getElementById('heroBg').classList.add('loaded'), 100);
