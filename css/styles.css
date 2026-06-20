@@ -1,8 +1,8 @@
-/* ==========================================================
+﻿/* ==========================================================
    LIVLIN · styles.css
    Diseño orgánico-naturalista - Responsive - Accesible
    Paleta: #7ADAA5, #239BA7, #E1AA36, #112E4D, #FAF9F4, #F6F3E9
-   Tipografías: Poppins (UI) + Merriweather (titulares)
+   Tipografía: Montserrat
    ========================================================== */
 
 /* ---------- 1. Variables y reset ---------- */
@@ -45,7 +45,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', -apple-system, sans-serif;
+  font-family: 'Montserrat', -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text);
@@ -79,7 +79,7 @@ button {
 
 /* ---------- 2. Tipografía ---------- */
 h1, h2, h3, h4, h5 {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Montserrat', Georgia, serif;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text);
@@ -104,12 +104,12 @@ body {
 h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
 h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); }
 h3 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); }
-h4 { font-size: 1.15rem; font-family: 'Poppins', sans-serif; font-weight: 600; }
+h4 { font-size: 1.15rem; font-family: 'Montserrat', sans-serif; font-weight: 600; }
 
 p { color: var(--text-soft); }
 
 .eyebrow {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -238,7 +238,7 @@ section {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 1.5rem;
   color: var(--text);
@@ -246,12 +246,12 @@ section {
 }
 
 .nav-logo img {
-  height: 44px;
+  height: 54px;
   width: auto;
 }
 
 .nav-logo .nav-tagline {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   color: var(--muted);
@@ -590,7 +590,7 @@ section {
 }
 
 .hero-stat .num {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 2rem;
   font-weight: 900;
   color: var(--teal);
@@ -725,7 +725,7 @@ section {
 }
 
 .servicio-num {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 4rem;
   font-weight: 900;
   color: var(--green-light);
@@ -826,7 +826,7 @@ section {
 }
 
 .spiral-step-card .num {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 0.9rem;
   font-weight: 900;
   color: var(--teal);
@@ -1089,7 +1089,7 @@ section {
 }
 
 .subsection-title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
@@ -1154,7 +1154,7 @@ details.tool-details[open] {
   margin-top: 12px;
   margin-bottom: 8px;
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -1226,7 +1226,7 @@ details.tool-details[open] {
 }
 
 .recurso-card h4 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.15rem;
   margin-bottom: 12px;
 }
@@ -1348,7 +1348,7 @@ details.tool-details[open] {
 }
 
 .francis-name {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.4rem;
   font-weight: 900;
   color: var(--cream);
@@ -1391,7 +1391,7 @@ footer {
 }
 
 .footer-brand h3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   color: var(--cream);
   font-size: 1.3rem;
   margin-bottom: 10px;
@@ -1929,7 +1929,7 @@ html.js-ready .fade-in.visible {
   align-items: center;
   justify-content: center;
   color: var(--cream);
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.4rem;
   font-weight: 900;
   text-align: center;
@@ -2048,7 +2048,7 @@ html.js-ready .fade-in.visible {
 }
 
 .dimension-number {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 0.75rem;
   font-weight: 900;
   color: var(--teal);
@@ -2089,7 +2089,7 @@ html.js-ready .fade-in.visible {
 .methodology-phase:last-child { border-bottom: none; }
 
 .phase-number {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 2.5rem;
   font-weight: 900;
   color: var(--green-light);
@@ -2569,7 +2569,7 @@ html.js-ready .fade-in.visible {
 }
 
 .anchor-section-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2690,7 +2690,7 @@ html.js-ready .fade-in.visible {
   background: white;
   border: 3px solid var(--green-light);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 1.2rem;
   color: var(--text);
@@ -3036,7 +3036,7 @@ html.js-ready .fade-in.visible {
 .mel-example-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-medium); }
 .mel-example-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .mel-example-body { padding: 16px 18px; }
-.mel-example-body h5 { font-size: 0.95rem; margin-bottom: 6px; font-family: 'Poppins', sans-serif; font-weight: 600; }
+.mel-example-body h5 { font-size: 0.95rem; margin-bottom: 6px; font-family: 'Montserrat', sans-serif; font-weight: 600; }
 .mel-example-body p { font-size: 0.82rem; color: var(--muted); }
 
 /* --- Herramientas featured section --- */
@@ -3162,7 +3162,7 @@ html.js-ready .fade-in.visible {
   padding: 12px 16px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   color: var(--text);
   background: var(--bg);
@@ -3266,7 +3266,7 @@ html.js-ready .fade-in.visible {
 .lightbox-caption {
   color: rgba(255,255,255,0.75);
   font-size: 0.85rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   max-width: 600px;
   line-height: 1.5;
@@ -3334,7 +3334,7 @@ html.js-ready .fade-in.visible {
   transform: translateX(-50%);
   color: rgba(255,255,255,0.6);
   font-size: 0.82rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   z-index: 1;
   letter-spacing: 0.05em;
 }
@@ -3736,7 +3736,7 @@ html.js-ready .fade-in.visible {
   flex-wrap: wrap;
 }
 .hero-stat .num {
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 2rem;
   font-weight: 900;
   color: var(--teal);
@@ -3779,7 +3779,7 @@ html.js-ready .fade-in.visible {
   color: white;
   font-size: 0.85rem;
   font-weight: 700;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   margin-bottom: 16px;
 }
 
@@ -3830,7 +3830,7 @@ html.js-ready .fade-in.visible {
   font-size: 1.2rem;
   letter-spacing: -0.05em;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* --- Footer GitHub link --- */
@@ -3896,7 +3896,7 @@ html.js-ready .fade-in.visible {
 }
 
 .carousel-caption h5 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
@@ -4027,7 +4027,7 @@ html.js-ready .fade-in.visible {
   transform: translateY(-50%);
   background: var(--text);
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
   padding: 8px 14px;
@@ -4124,7 +4124,7 @@ html.js-ready .fade-in.visible {
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 1.6rem;
   color: var(--bg); /* Light color for dark footer */
@@ -4242,7 +4242,7 @@ html.js-ready .fade-in.visible {
   padding: 0;
   margin-left: 0;
   font-size: clamp(1.6rem, 3vw, 3.2rem);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1.25;
   text-shadow: 0 4px 12px rgba(0,0,0,0.4);
@@ -4367,7 +4367,7 @@ html.js-ready .fade-in.visible {
 }
 .splash-value-line {
   color: rgba(255, 255, 255, 0.92);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.05rem, 1.3vw, 1.25rem);
   line-height: 1.55;
   font-weight: 400;
@@ -4404,7 +4404,7 @@ html.js-ready .fade-in.visible {
   border-radius: 8px;
   font-size: 1.05rem;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: white;
   color: #0f2415;
   text-decoration: none;
@@ -4450,7 +4450,7 @@ html.js-ready .fade-in.visible {
   font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 8px 4px;
   text-decoration: underline;
   transition: color 0.2s ease;
@@ -5306,7 +5306,7 @@ html.js-ready .fade-in.visible {
   color: var(--text);
   line-height: 1.4;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -5681,7 +5681,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 0.95rem;
   z-index: 2;
@@ -5738,7 +5738,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 1.15rem;
   z-index: 2;
@@ -6233,7 +6233,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 900;
   font-size: 1.8rem;
   flex-shrink: 0;
@@ -6319,7 +6319,7 @@ html, body {
   font-size: 1.15rem;
   color: var(--text);
   margin-bottom: 6px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
 }
 .work-step-pricing-block p {
   font-size: 0.88rem;
@@ -6580,7 +6580,7 @@ a.icon-bullet-name:hover { color: var(--teal); }
   border: 1px solid #c5e4ea;
   border-radius: 20px;
   padding: 3px 12px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .caso-link {
   display: inline-block;
@@ -6761,7 +6761,7 @@ a.icon-bullet-name:hover { color: var(--teal); }
 .pricing-tier-price {
   font-size: 1.1rem;
   color: var(--text);
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 700;
 }
 .pricing-tier-price--highlight {
@@ -6930,7 +6930,7 @@ a.icon-bullet-name:hover { color: var(--teal); }
 }
 .diagnostic-price strong {
   display: block;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   font-size: 1.35rem;
   color: var(--green-dark);
   font-weight: 900;
