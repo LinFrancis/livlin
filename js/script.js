@@ -37,8 +37,22 @@
       navLinks.classList.toggle('active', open);
       toggle.setAttribute('aria-expanded', String(open));
     });
+
+    // En móvil, el enlace padre de un dropdown despliega el submenú en vez de navegar
+    navLinks.querySelectorAll('.nav-item-dropdown > a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('active');
+        }
+      });
+    });
+
+    // Cerrar el menú móvil al hacer click en cualquier enlace
+    // (excepto el padre del dropdown, que solo despliega en móvil)
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
+        if (a.parentElement.classList.contains('nav-item-dropdown') && window.innerWidth <= 900) return;
         toggle.classList.remove('active');
         navLinks.classList.remove('active');
         toggle.setAttribute('aria-expanded', 'false');

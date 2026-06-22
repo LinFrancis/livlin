@@ -1,18 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mejora Bienestar con un Buen Plan Maestro · Diseño Regenerativo · Livlin</title>
-  <meta name="description"
-    content="Transformamos espacios mediante diseño regenerativo que integra productividad, sostenibilidad y bienestar. Planes maestros para hogares, organizaciones y territorios.">
+  <title>Monitoreo, Evaluación y Aprendizaje (MEL) · Livlin</title>
+  <meta name="description" content="Monitoreo, Evaluación y Aprendizaje (MEL): afina una teoría de cambio genuina, crea buenas herramientas de registro y visualiza avances en tu propia plataforma.">
   <link rel="icon" type="image/png" href="../images/ui/logo_livlin_no_text.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css?v=13">
   <style>
+    :root { --accent: #BC3CC9; }
     .wa-float {
       position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
       border-radius: 50%; background: #25D366; display: flex; align-items: center;
@@ -24,61 +23,63 @@
     .wa-float svg { width: 32px; height: 32px; fill: #fff; }
     @keyframes float-bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
 
-    .funcionalidades-list {
-      list-style: none; padding: 0; margin: 0;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;
+    .frases-wrap { max-width: 840px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+    .frase {
+      background: #fff; border-radius: 16px; border-left: 5px solid var(--accent);
+      padding: clamp(20px,2.6vw,28px) clamp(24px,4vw,40px);
+      box-shadow: 0 6px 26px rgba(17,46,77,0.07);
+      font-family: 'Montserrat', sans-serif; font-size: clamp(1.05rem,2vw,1.3rem);
+      font-weight: 600; line-height: 1.5; color: #1a3040;
+      display: flex; align-items: center; gap: 18px;
     }
-    .funcionalidades-list li {
-      display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px;
-      background: #fff; border-radius: 10px; border: 1px solid #e8edf0;
-      font-size: 0.92rem; color: var(--text-soft); line-height: 1.5;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    .frase .frase-num {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+      background: #f5e8fb; color: #7e22ce; font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
     }
-    .funcionalidades-list li:hover { border-color: #7FC93C; box-shadow: 0 2px 12px rgba(127,201,60,0.1); }
-    .func-check {
-      width: 22px; height: 22px; border-radius: 50%; background: #e0f7ec;
-      color: #15803d; font-size: 0.8rem; font-weight: 700; display: flex;
-      align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
-    }
+
     .service-img-gallery {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px; margin: 40px 0;
+      gap: 16px; margin-top: 32px;
     }
     .service-img-gallery img {
       width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 4/3;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: zoom-in;
     }
     .service-img-gallery img:hover { transform: scale(1.02); }
-    .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 40px; }
+
+    .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; justify-content: center; }
     .btn-wa-service {
       display: inline-flex; align-items: center; gap: 10px; background: #25D366;
       color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem;
       padding: 14px 26px; border-radius: 100px; text-decoration: none;
       transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
     }
-    .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); }
+    .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); color:#fff; }
     .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
-    .btn-back {
-      display: inline-flex; align-items: center; gap: 8px; background: #fff;
-      border: 1.5px solid #d0d8db; color: #4A6874; font-family: 'Montserrat', sans-serif;
-      font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px;
-      text-decoration: none; transition: all 0.2s ease;
-    }
-    .btn-back:hover { border-color: #7FC93C; color: #52a020; }
   </style>
 </head>
-
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
-      <a href="../index.html" class="nav-logo" aria-label="Livlin home">
+      <a href="../index.html" class="nav-logo" aria-label="Livlin inicio">
         <img src="../images/ui/logo_livlin_with_text.png" alt="Livlin">
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="primary-nav">
-        <li><a href="../index.html#dimensiones">Líneas de acción</a></li>
+        <li class="nav-item-dropdown">
+          <a href="../index.html#dimensiones">Líneas de acción</a>
+          <ul class="dropdown-menu">
+            <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
+            <li><a href="huerto-urbano.html">Huerto urbano</a></li>
+            <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
+            <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
+            <li><a href="monitoreo.html">Monitoreo, evaluación y aprendizaje (MEL)</a></li>
+            <li><a href="soluciones-digitales.html">Desarrollo de soluciones digitales</a></li>
+          </ul>
+        </li>
         <li><a href="../index.html#casos">Impacto</a></li>
         <li><a href="../index.html#descarga">Recursos</a></li>
         <li><a href="../contacto.html" class="nav-cta-green">Contacto</a></li>
@@ -91,93 +92,36 @@
     <div class="container">
       <a href="../index.html">Inicio</a>
       <span class="sep">›</span>
-      <span class="current">Diseño Regenerativo</span>
+      <span class="current">Monitoreo, Evaluación y Aprendizaje (MEL)</span>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="service-hero-bg" style="background-image: url('../images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png');">
+  <section class="service-hero-bg" style="background-image: url('../images/casos_reales/03_Aucca/03_intranet_graficos.png');">
     <div class="container">
-      <div class="hero-content fade-in" style="max-width: 760px;">
-        <span class="eyebrow">Plan Maestro · Diseño Regenerativo</span>
-        <h1>MEJORA BIENESTAR CON UN BUEN PLAN MAESTRO</h1>
-        <p class="lead">Transformamos espacios mediante diseño regenerativo que integra productividad, sostenibilidad y bienestar.</p>
+      <div class="hero-content fade-in" style="max-width: 860px;">
+        <span class="eyebrow">MEL</span>
+        <h1>MONITOREO, EVALUACIÓN Y APRENDIZAJE (MEL)</h1>
+        <p class="lead">¿Cómo avanza la implementación de la visión que moviliza a tu grupo humano?</p>
         <div class="hero-cta-stack" style="margin-top:24px;">
-          <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Dise%C3%B1o%20Regenerativo" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="btn btn-primary btn-large">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="vertical-align:-3px;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            ¿Quieres conocer más?
+            escríbenos
           </a>
-          <a href="#funcionalidades" class="btn btn-secondary btn-large">Ver funcionalidades</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DESCRIPCIÓN -->
+  <!-- FRASES -->
   <section style="background:var(--bg);">
     <div class="container">
-      <div class="service-block fade-in" style="max-width: 800px;">
-        <span class="eyebrow">El servicio</span>
-        <h2 style="margin-top:12px;">Un proceso de transformación de tu espacio</h2>
-        <p>
-          El Diseño Regenerativo es un proceso participativo que parte del potencial real de tu espacio. En lugar de imponer soluciones externas, construimos el plan junto a las personas que lo habitarán y gestionarán.
-        </p>
-        <p style="margin-top:16px;">
-          Utilizamos nuestra metodología propia de <strong>Indagación Regenerativa</strong> para analizar el sistema en sus dimensiones ecológicas, sociales y organizacionales. El resultado es un Plan Maestro co-diseñado que articula objetivos claros y acciones concretas.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMÁGENES DEL SERVICIO -->
-  <section style="background:var(--cream);">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="eyebrow">Transformaciones reales</span>
-        <h2>Espacios que han cambiado</h2>
-      </div>
-      <div class="service-img-gallery fade-in" data-gallery-solo>
-        <img loading="lazy" src="../images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png" alt="Terraza productiva Familia Javiera y Francis">
-        <img loading="lazy" src="../images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png" alt="Diseño antes y después">
-        <img loading="lazy" src="../images/casos_reales/01_rendebu/01_antes_despues_muroverde.png" alt="Muro verde Rende Bú Café antes y después">
-        <img loading="lazy" src="../images/casos_reales/01_rendebu/02_antes_despues_terraza.png" alt="Terraza productiva del café">
-        <img loading="lazy" src="../images/casos_reales/06_Andrea_Felipe/andrea_felipe_antes_despues.png" alt="Familia Andrea y Felipe terraza">
-        <img loading="lazy" src="../images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png" alt="Casa Sylvia y Ricardo jardín">
-        <img loading="lazy" src="../images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png" alt="Parrón antes y después">
-        <img loading="lazy" src="../images/casos_reales/07_Edificio_Nova/01_nova.png" alt="Edificio Nova huerta comunitaria">
-        <img loading="lazy" src="../images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png" alt="Lavaseco Florencia huerta">
-      </div>
-    </div>
-  </section>
-
-  <!-- FUNCIONALIDADES -->
-  <section style="background:var(--bg);" id="funcionalidades">
-    <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow">Funcionalidades</span>
-        <h2>¿Qué incluye este servicio?</h2>
-      </div>
-      <ul class="funcionalidades-list fade-in">
-        <li><div class="func-check">✓</div> Diagnóstico integral de terrenos y sistemas existentes</li>
-        <li><div class="func-check">✓</div> Diseño de sistemas de cultivo (huertos, forestales, silvopastoriles)</li>
-        <li><div class="func-check">✓</div> Optimización de energía (solar, captación, almacenamiento)</li>
-        <li><div class="func-check">✓</div> Gestión inteligente de agua (captación, infiltración, riego)</li>
-        <li><div class="func-check">✓</div> Manejo de residuos (compostaje, lombricultura, aprovechamiento)</li>
-        <li><div class="func-check">✓</div> Incremento de biodiversidad nativa</li>
-        <li><div class="func-check">✓</div> Creación de espacios saludables y resilientes</li>
-        <li><div class="func-check">✓</div> Modelado y visualización del proyecto</li>
-        <li><div class="func-check">✓</div> Acompañamiento durante la implementación</li>
-        <li><div class="func-check">✓</div> Plan maestro con hoja de ruta priorizada por impacto</li>
-        <li><div class="func-check">✓</div> Bancales autorregantes (wicking beds) con sistema de reservorio</li>
-        <li><div class="func-check">✓</div> Sistemas de sombreo y enfriamiento pasivo</li>
-      </ul>
-
-      <div class="service-cta-row fade-in">
-        <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Dise%C3%B1o%20Regenerativo" target="_blank" rel="noopener" class="btn-wa-service" id="btn-wa-diseno">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Hablar con nosotros
-        </a>
-        <a href="../index.html" class="btn-back">← Volver al inicio</a>
+      <div class="frases-wrap fade-in">
+        <p class="frase"><span class="frase-num">1</span> Afina una teoría de cambio genuina</p>
+        <p class="frase"><span class="frase-num">2</span> Crea buenas herramientas de registro</p>
+        <p class="frase"><span class="frase-num">3</span> Visualiza avances en tu propia plataforma</p>
+        <p class="frase"><span class="frase-num">4</span> Evalua y aprende de lo que resulta (y lo que no resulta)</p>
+        <p class="frase"><span class="frase-num">5</span> Celebra y comparte la evidencia del logro de objetivos</p>
       </div>
     </div>
   </section>
@@ -185,10 +129,33 @@
   <!-- CTA -->
   <section class="cta-final-banner">
     <div class="container">
-      <span class="eyebrow" style="color:var(--green-light);">¿Listo para comenzar?</span>
-      <h2>Diseñemos tu plan maestro regenerativo</h2>
-      <p>Conversemos sobre tu espacio y creemos juntos un plan a tu medida.</p>
-      <a href="https://wa.me/56971657358?text=Hola%20Livlin%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Dise%C3%B1o%20Regenerativo" target="_blank" rel="noopener" class="btn btn-large">¿Quieres conocer más? WhatsApp →</a>
+      <h2>Juntémonos a conversar lo que necesitas</h2>
+      <div class="service-cta-row">
+        <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="btn-wa-service">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          escríbenos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRABAJOS REALIZADOS -->
+  <section style="background:var(--cream);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <h2>Revisa experiencias de éxito</h2>
+      </div>
+      <div class="service-img-gallery fade-in" data-gallery-solo>
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma intranet Aucca — panel principal">
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/02_intranet_eventos.png" alt="Aucca — módulo de eventos">
+        <img loading="lazy" src="../images/casos_reales/03_Aucca/03_intranet_graficos.png" alt="Aucca — dashboard de gráficos">
+        <img loading="lazy" src="../images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png" alt="Análisis de potencial regenerativo">
+        <img loading="lazy" src="../images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png" alt="Plan de acción en plataforma">
+        <img loading="lazy" src="../images/apps/teoria_cambio/01_t_cambio_intro.png" alt="Teoría de cambio — plataforma">
+      </div>
+      <div class="casos-ver-todos fade-in">
+        <a href="../index.html#casos">Ver todos los trabajos realizados →</a>
+      </div>
     </div>
   </section>
 
@@ -218,11 +185,11 @@
           <h5>Líneas de acción</h5>
           <ul>
             <li><a href="diseno-regenerativo.html">Diseño regenerativo</a></li>
-            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
-            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
-            <li><a href="huerto-urbano.html">Huertos urbanos</a></li>
+            <li><a href="huerto-urbano.html">Huerto urbano</a></li>
             <li><a href="educacion-ambiental.html">Educación ambiental</a></li>
             <li><a href="facilitacion-organizacional.html">Facilitación organizacional</a></li>
+            <li><a href="monitoreo.html">Monitoreo y evaluación</a></li>
+            <li><a href="soluciones-digitales.html">Soluciones digitales</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -250,11 +217,10 @@
   </footer>
 
   <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/56971657358?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp" id="wa-float-diseno">
+  <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="../js/script.js?v=5"></script>
+  <script src="../js/script.js?v=6"></script>
 </body>
-
 </html>
