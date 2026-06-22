@@ -1,0 +1,24 @@
+# Force UTF-8 and consistent line endings for all text files
+* text=auto eol=lf
+
+# Explicit text files — always LF, always UTF-8
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.xml  text eol=lf
+*.svg  text eol=lf
+
+# Binary files — never touch line endings or encoding
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.pdf  binary
