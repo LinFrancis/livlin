@@ -101,8 +101,9 @@
 window.LivlinLightbox = (function () {
   'use strict';
 
-  var overlay, imgEl, capEl, infoEl, prevBtn, nextBtn, closeBtn, counterEl;
+  var overlay, scrollEl, imgEl, capEl, infoEl, videoEl, prevBtn, nextBtn, closeBtn, counterEl;
   var items = [], idx = 0, meta = null;
+  var savedScrollY = 0;
 
   function build() {
     if (overlay) return;
@@ -114,16 +115,21 @@ window.LivlinLightbox = (function () {
       '<button class="lb-close" aria-label="Cerrar">&#10005;</button>' +
       '<button class="lb-nav lb-prev" aria-label="Anterior">&#8249;</button>' +
       '<button class="lb-nav lb-next" aria-label="Siguiente">&#8250;</button>' +
-      '<div class="lb-stage">' +
-        '<img class="lb-img" alt="">' +
-        '<div class="lb-caption"></div>' +
-        '<div class="lb-info"></div>' +
+      '<div class="lb-scroll">' +
+        '<div class="lb-stage">' +
+          '<img class="lb-img" alt="">' +
+          '<div class="lb-caption"></div>' +
+          '<div class="lb-video"></div>' +
+          '<div class="lb-info"></div>' +
+        '</div>' +
       '</div>' +
       '<div class="lb-counter"></div>';
     document.body.appendChild(overlay);
 
+    scrollEl  = overlay.querySelector('.lb-scroll');
     imgEl     = overlay.querySelector('.lb-img');
     capEl     = overlay.querySelector('.lb-caption');
+    videoEl   = overlay.querySelector('.lb-video');
     infoEl    = overlay.querySelector('.lb-info');
     counterEl = overlay.querySelector('.lb-counter');
     closeBtn  = overlay.querySelector('.lb-close');
@@ -133,8 +139,9 @@ window.LivlinLightbox = (function () {
     closeBtn.addEventListener('click', close);
     prevBtn.addEventListener('click', function (e) { e.stopPropagation(); go(-1); });
     nextBtn.addEventListener('click', function (e) { e.stopPropagation(); go(1); });
+    // Cerrar al hacer click en el fondo (overlay o área de scroll vacía), no en el contenido
     overlay.addEventListener('click', function (e) {
-      if (e.target === overlay || e.target.classList.contains('lb-stage')) close();
+      if (e.target === overlay || e.target === scrollEl) close();
     });
     document.addEventListener('keydown', function (e) {
       if (!overlay.classList.contains('open')) return;
@@ -143,10 +150,10 @@ window.LivlinLightbox = (function () {
       else if (e.key === 'ArrowRight') go(1);
     });
 
-    // swipe en touch
+    // swipe en touch (sobre la imagen)
     var sx = 0;
-    overlay.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
-    overlay.addEventListener('touchend', function (e) {
+    imgEl.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    imgEl.addEventListener('touchend', function (e) {
       var diff = sx - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) { diff > 0 ? go(1) : go(-1); }
     }, { passive: true });
@@ -157,24 +164,22 @@ window.LivlinLightbox = (function () {
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
-  function render() {
-    var it = items[idx] || {};
-    imgEl.src = it.src;
-    imgEl.alt = it.caption || (meta && meta.title) || '';
+  // Convierte una URL de post de Instagram en su iframe embebido
+  function instagramEmbed(url) {
+    var m = String(url).match(/instagram\.com\/(p|reel|tv)\/([^/?#]+)/i);
+    if (!m) return '';
+    var src = 'https://www.instagram.com/' + m[1] + '/' + m[2] + '/embed/captioned/';
+    return '<iframe src="' + src + '" title="Video del proyecto" loading="lazy" ' +
+           'frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>';
+  }
 
+  function renderImage() {
+    var it = items[idx] || {};
+    imgEl.src = it.src || '';
+    imgEl.style.display = it.src ? 'block' : 'none';
+    imgEl.alt = it.caption || (meta && meta.title) || '';
     capEl.textContent = it.caption || '';
     capEl.style.display = it.caption ? 'block' : 'none';
-
-    if (meta) {
-      var html = '<h4>' + esc(meta.title) + '</h4>';
-      if (meta.location) html += '<span class="lb-loc">' + esc(meta.location) + '</span>';
-      if (meta.desc)     html += '<p>' + esc(meta.desc) + '</p>';
-      if (meta.tag)      html += '<span class="lb-tag">' + esc(meta.tag) + '</span>';
-      infoEl.innerHTML = html;
-      infoEl.style.display = 'block';
-    } else {
-      infoEl.style.display = 'none';
-    }
 
     var multi = items.length > 1;
     prevBtn.style.display = nextBtn.style.display = multi ? 'flex' : 'none';
@@ -182,26 +187,83 @@ window.LivlinLightbox = (function () {
     counterEl.textContent = (idx + 1) + ' / ' + items.length;
   }
 
-  function go(d) { idx = (idx + d + items.length) % items.length; render(); }
+  function renderMeta() {
+    // Video embebido (si existe)
+    var vhtml = (meta && meta.video) ? instagramEmbed(meta.video) : '';
+    videoEl.innerHTML = vhtml;
+    videoEl.style.display = vhtml ? 'block' : 'none';
+
+    if (meta && (meta.title || meta.desc)) {
+      var html = '';
+      if (meta.title)    html += '<h4>' + esc(meta.title) + '</h4>';
+      if (meta.location) html += '<span class="lb-loc">' + esc(meta.location) + '</span>';
+      if (meta.desc)     html += '<p>' + esc(meta.desc) + '</p>';
+      if (meta.tag)      html += '<span class="lb-tag">' + esc(meta.tag) + '</span>';
+      infoEl.innerHTML = html;
+      infoEl.style.display = 'block';
+    } else {
+      infoEl.innerHTML = '';
+      infoEl.style.display = 'none';
+    }
+  }
+
+  function go(d) { idx = (idx + d + items.length) % items.length; renderImage(); if (scrollEl) scrollEl.scrollTop = 0; }
 
   function open(list, start, m) {
     build();
-    items = list;
+    items = Array.isArray(list) ? list : [];
     idx = start || 0;
     meta = m || null;
-    render();
+    renderImage();
+    renderMeta();
     overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    if (scrollEl) scrollEl.scrollTop = 0;
+    // Bloqueo robusto del scroll de fondo (preserva la posición)
+    savedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.top = '-' + savedScrollY + 'px';
+    document.body.classList.add('lb-lock');
   }
 
   function close() {
     if (!overlay) return;
     overlay.classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.classList.remove('lb-lock');
+    document.body.style.top = '';
+    window.scrollTo(0, savedScrollY);
     imgEl.src = '';
+    videoEl.innerHTML = ''; // detiene la reproducción del video
   }
 
   return { open: open, close: close };
+})();
+
+
+/* ============================================================
+   2b. TARJETAS DE PROYECTO (casos) — abren la experiencia completa
+   Delegación global: cualquier .caso-card / .caso-clickable / .proj-card
+   con data-* abre el visor con todas sus imágenes, texto y video.
+============================================================ */
+(function () {
+  'use strict';
+  function openProject(el) {
+    var imgs;
+    try { imgs = el.dataset.images ? JSON.parse(el.dataset.images) : null; }
+    catch (e) { imgs = null; }
+    if (!imgs || !imgs.length) imgs = el.dataset.img ? [el.dataset.img] : [];
+    var items = imgs.filter(Boolean).map(function (src) { return { src: src }; });
+    if (!window.LivlinLightbox) return;
+    window.LivlinLightbox.open(items, 0, {
+      title:    el.dataset.title,
+      location: el.dataset.location,
+      desc:     el.dataset.desc,
+      tag:      el.dataset.service,
+      video:    el.dataset.video
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('.caso-card, .caso-clickable, .proj-card');
+    if (el && el.dataset && el.dataset.title) openProject(el);
+  });
 })();
 
 

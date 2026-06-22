@@ -8015,24 +8015,54 @@ a.icon-bullet-name:hover { color: var(--teal); }
   inset: 0;
   z-index: 10000;
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(16px, 4vw, 56px);
   background: rgba(250, 249, 244, 0.94);
   -webkit-backdrop-filter: saturate(150%) blur(16px);
   backdrop-filter: saturate(150%) blur(16px);
 }
-.lb-overlay.open { display: flex; animation: lbFade 0.25s ease; }
+.lb-overlay.open { display: block; animation: lbFade 0.25s ease; }
 @keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
 
+/* Contenedor con scroll propio: el modal posee el scroll, no la página */
+.lb-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
 .lb-stage {
+  min-height: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 18px;
   max-width: 1100px;
   width: 100%;
-  max-height: 100%;
+  margin: 0 auto;
+  padding: clamp(64px, 9vh, 100px) clamp(16px, 4vw, 56px);
+}
+
+/* Bloqueo del scroll de fondo mientras el visor está abierto */
+body.lb-lock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Video embebido dentro del visor */
+.lb-video { width: 100%; max-width: 420px; display: none; }
+.lb-video iframe {
+  width: 100%;
+  min-height: 560px;
+  border: none;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(17, 46, 77, 0.22);
 }
 
 .lb-img {
@@ -8151,3 +8181,124 @@ a.icon-bullet-name:hover { color: var(--teal); }
   .lb-prev { left: 8px; }
   .lb-next { right: 8px; }
 }
+
+/* ==========================================================
+   FRASE-BAND — frase principal sobre imagen (ref: "Seamos parte de la solución")
+   ========================================================== */
+.frase-band {
+  position: relative;
+  min-height: clamp(300px, 46vh, 460px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+.frase-band-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.frase-band-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,26,16,0.34) 0%, rgba(8,26,16,0.16) 45%, rgba(8,26,16,0.52) 100%);
+}
+.frase-band-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: clamp(40px, 7vw, 76px) clamp(20px, 5vw, 32px);
+}
+.frase-band-eyebrow {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 16px;
+}
+.frase-band-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.35rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.45);
+  margin: 0;
+}
+
+/* ==========================================================
+   PROJ-CARD — tarjetas de "Trabajos realizados" (sin borde de color)
+   Vista inicial: imagen + ubicación + título + intro.
+   Al hacer click abre la experiencia completa (visor con imágenes/texto/video).
+   ========================================================== */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.proj-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.proj-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-medium); }
+.proj-card:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.proj-card-media { position: relative; height: 220px; overflow: hidden; flex-shrink: 0; }
+.proj-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.proj-card:hover .proj-card-media img { transform: scale(1.04); }
+.proj-card-play {
+  position: absolute;
+  bottom: 12px; left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17,46,77,0.82);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.proj-card-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+.proj-card-loc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.proj-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.proj-card-intro { font-size: 0.9rem; color: var(--text-soft); line-height: 1.6; flex: 1; margin: 0; }
+.proj-card-more {
+  margin-top: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+@media (max-width: 600px) { .proj-grid { grid-template-columns: 1fr; } }

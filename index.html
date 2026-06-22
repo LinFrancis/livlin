@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=13">
+  <link rel="stylesheet" href="css/styles.css?v=15">
 
   <style>
     /* ============================================================
@@ -230,7 +230,9 @@
       border-radius: 100px;
       box-shadow: 0 6px 22px rgba(0,0,0,0.22);
       transition: transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
-      margin-bottom: 18px;
+      margin-top: clamp(26px, 4vw, 40px);
+      margin-bottom: 8px;
+      align-self: flex-start;
     }
     .dim-btn:hover { transform: translateY(-2px); gap: 12px; color:#fff; box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
 
@@ -908,7 +910,6 @@
       border-radius: 16px;
       padding: 28px;
       box-shadow: 0 4px 28px rgba(0,0,0,0.07);
-      border-top: 3px solid #3CA0C9;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -1082,13 +1083,14 @@
   <!-- NAVBAR -->
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Livlin inicio">
+      <span class="nav-logo" aria-label="Livlin">
         <img src="images/ui/logo_livlin_with_text.png" alt="Livlin">
-      </a>
+      </span>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Inicio</a></li>
         <li class="nav-item-dropdown">
           <a href="#dimensiones">Líneas de acción</a>
           <ul class="dropdown-menu">
@@ -1335,7 +1337,8 @@
           data-location="Providencia, Santiago"
           data-images='["images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png","images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png","images/casos_reales/08_Depto_Javiera_Francis/03_collage_02.png","images/casos_reales/08_Depto_Javiera_Francis/04_bancal_l.png"]'
           data-desc="Terraza con orientación surponiente: mucha luz solar al atardecer que secaba todas las plantas, sin tiempo para riego frecuente. Se construyeron 3,5 m² de bancales autorregantes de madera con ruedas y sistema wicking bed: riego 2 veces al mes en verano, 1 vez en invierno. Cada bancal tiene además un hotel de lombrices donde los residuos orgánicos se convierten en humus dentro del propio bancal. Desde 2022 se cultiva una amplia variedad de hortalizas todo el año. También se instaló sistema de paneles solares y energía eólica."
-          data-service="Diseño Regenerativo · Bancales Autorregantes · Lombricultura · Energía Solar">
+          data-service="Diseño Regenerativo · Bancales Autorregantes · Lombricultura · Energía Solar"
+          data-video="https://www.instagram.com/p/Cl1Q_f8tKkl/">
           <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
             <img src="images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png" alt="Terraza bancales autorregantes" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
@@ -1431,6 +1434,7 @@
           data-img="images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png"
           data-desc="Diseño regenerativo completo de la casa pasando por todos los pétalos de la flor de la permacultura: energía, agua, tierra, vegetación, estructura y procesos. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices, con ruedas para moverse según la luz solar de cada estación. El bancal funciona también como muro verde. Se asesoró sobre oportunidades de energía solar en el espacio."
           data-service="Diseño Regenerativo · Plan Maestro · Wicking Bed · Vermicompostera"
+          data-video="https://www.instagram.com/p/DZvBlupRJCl/"
           aria-label="Ver caso Familia Sylvia y Ricardo">
           <div class="caso-card-img-wrap">
             <img class="caso-card-img" loading="lazy" src="images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png" alt="Casa Sylvia y Ricardo — bancal móvil">
@@ -1479,6 +1483,7 @@
           data-img="images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png"
           data-desc="Convertimos un espacio exterior subutilizado —antes solo pasto descuidado— en una huerta agroecológica visible desde la calle. En verano: tomates y girasoles. En otoño-invierno: habas y coliflores morados. El personal fortaleció el suelo entre temporadas y el espacio sigue creciendo. Cada persona del lavaseco tiene su propia historia con la huerta — y los vecinos y clientes se detienen a mirar. Una demostración real de que cultivar en la vereda es posible y bienvenido."
           data-service="Huerto Agroecológico · Continuidad de temporadas"
+          data-video="https://www.instagram.com/p/DY3piY0O94e/"
           aria-label="Ver caso Lavaseco Florencia">
           <div class="caso-card-img-wrap">
             <img class="caso-card-img" loading="lazy" src="images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png" alt="Lavaseco Florencia — huerta antes y después">
@@ -1502,6 +1507,7 @@
           data-img="images/casos_reales/07_Edificio_Nova/01_nova.png"
           data-desc="Activamos espacios comunitarios del edificio para el cultivo de alimentos y el fortalecimiento de los vínculos entre vecinos. En coordinación con la comunidad se plantó brócoli morado, alcachofas y habas en el patio. El personal y algunos vecinos recibieron almácigos para plantar en sus hogares. Los árboles frutales existentes (limones) se empezaron a compartir. El horizonte: crear conciencia de las posibilidades de cultivar en espacios comunes y proyectar una temporada de primavera-verano en grande."
           data-service="Diseño Regenerativo · Huerto Comunitario"
+          data-video="https://www.instagram.com/p/DYzTwbgR7Na/"
           aria-label="Ver caso Edificio Nova">
           <div class="caso-card-img-wrap">
             <img class="caso-card-img" loading="lazy" src="images/casos_reales/07_Edificio_Nova/01_nova.png" alt="Edificio Nova — huerta comunitaria">
@@ -1573,6 +1579,7 @@
           data-img="images/casos_reales/11_Taller_China/taller_china.jpeg"
           data-desc="Taller para 16 personas en la ciudad de Chengdu, China. Se construyeron dos bancales autorregantes con material reciclado y un sistema de riego por capilaridad con botellas para cultivo urbano. La terraza del segundo piso del café, sin acceso cercano a agua, se habilitó como espacio productivo: con los sistemas de capilaridad la frecuencia de riego disminuyó significativamente. El taller fue intergeneracional, favoreciendo el intercambio entre generaciones y la ecoalfabetización. Hoy los clientes del café disfrutan sus actividades rodeados de cultivos de alimentos."
           data-service="Taller Internacional · Bancales Autorregantes · Eficiencia Hídrica"
+          data-video="https://www.instagram.com/p/DTHWRsSEe7q/"
           aria-label="Ver caso Taller China">
           <div class="caso-card-img-wrap">
             <img class="caso-card-img" loading="lazy" src="images/casos_reales/11_Taller_China/taller_china.jpeg" alt="Taller en Chengdu, China — bancales con material reciclado">
@@ -1743,7 +1750,7 @@
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/script.js?v=6"></script>
+  <script src="js/script.js?v=7"></script>
   <script src="js/carousel.js?v=2"></script>
 
   <script>
@@ -1767,21 +1774,8 @@
         });
       });
 
-      // ---- VISOR de cada proyecto (su propio grupo, nunca mezcla casos) ----
-      function openProject(el) {
-        const imgs = el.dataset.images ? JSON.parse(el.dataset.images) : [el.dataset.img];
-        const items = imgs.filter(Boolean).map(src => ({ src: src }));
-        if (!items.length || !window.LivlinLightbox) return;
-        window.LivlinLightbox.open(items, 0, {
-          title:    el.dataset.title,
-          location: el.dataset.location,
-          desc:     el.dataset.desc,
-          tag:      el.dataset.service
-        });
-      }
-      document.querySelectorAll('.caso-card, .caso-clickable').forEach(el => {
-        el.addEventListener('click', () => openProject(el));
-      });
+      // El visor de cada proyecto (imágenes + texto + video) se conecta
+      // globalmente por delegación en js/script.js (.caso-card / .caso-clickable).
     });
   </script>
 </body>

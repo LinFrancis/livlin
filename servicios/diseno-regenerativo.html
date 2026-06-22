@@ -9,9 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=13">
+  <link rel="stylesheet" href="../css/styles.css?v=15">
   <style>
-    :root { --accent: #7FC93C; }
     .wa-float {
       position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
       border-radius: 50%; background: #25D366; display: flex; align-items: center;
@@ -23,28 +22,6 @@
     .wa-float svg { width: 32px; height: 32px; fill: #fff; }
     @keyframes float-bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
 
-    /* Frases destacadas */
-    .frases-wrap { max-width: 840px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-    .frase {
-      background: #fff; border-radius: 16px; border-left: 5px solid var(--accent);
-      padding: clamp(22px,3vw,32px) clamp(24px,4vw,40px);
-      box-shadow: 0 6px 26px rgba(17,46,77,0.07);
-      font-family: 'Montserrat', sans-serif; font-size: clamp(1.05rem,2vw,1.3rem);
-      font-weight: 600; line-height: 1.5; color: #1a3040;
-    }
-
-    /* Galería de servicio */
-    .service-img-gallery {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px; margin-top: 32px;
-    }
-    .service-img-gallery img {
-      width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 4/3;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: zoom-in;
-    }
-    .service-img-gallery img:hover { transform: scale(1.02); }
-
-    /* Botones */
     .service-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; justify-content: center; }
     .btn-wa-service {
       display: inline-flex; align-items: center; gap: 10px; background: #25D366;
@@ -55,7 +32,7 @@
     .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); color:#fff; }
     .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
     .btn-demo {
-      display: inline-flex; align-items: center; gap: 8px; background: var(--accent);
+      display: inline-flex; align-items: center; gap: 8px; background: #7FC93C;
       color: #14342a; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem;
       padding: 14px 26px; border-radius: 100px; text-decoration: none; transition: all 0.2s ease;
       box-shadow: 0 4px 18px rgba(127,201,60,0.35);
@@ -89,7 +66,7 @@
     .carousel-nav.prev { left: 14px; } .carousel-nav.next { right: 14px; }
     .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
     .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(17,46,77,0.18); cursor: pointer; transition: all 0.3s ease; border: none; padding: 0; }
-    .carousel-dot.active { background: var(--accent); transform: scale(1.3); }
+    .carousel-dot.active { background: #7FC93C; transform: scale(1.3); }
     @media (max-width: 600px) { .carousel-nav { display: none; } }
   </style>
 </head>
@@ -98,11 +75,12 @@
   <!-- NAVBAR -->
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
-      <a href="../index.html" class="nav-logo" aria-label="Livlin inicio">
+      <span class="nav-logo" aria-label="Livlin">
         <img src="../images/ui/logo_livlin_with_text.png" alt="Livlin">
-      </a>
+      </span>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="primary-nav">
+        <li><a href="../index.html">Inicio</a></li>
         <li class="nav-item-dropdown">
           <a href="../index.html#dimensiones">Líneas de acción</a>
           <ul class="dropdown-menu">
@@ -147,14 +125,28 @@
     </div>
   </section>
 
-  <!-- FRASES -->
-  <section style="background:var(--bg);">
-    <div class="container">
-      <div class="frases-wrap fade-in">
-        <p class="frase">El diseño regenerativo es un proceso de indagación de oportunidades cuando conectan propósitos y la esencia del lugar</p>
-        <p class="frase">Permite diseñar las condiciones que favorecen la salud de la comunidad de la vida</p>
-        <p class="frase">Un plan maestro para avanzar con claridad de aquí al futuro</p>
-      </div>
+  <!-- FRASES (sobre imagen) -->
+  <section class="frase-band">
+    <img class="frase-band-img" src="../images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png" alt="Diseño regenerativo de un espacio">
+    <div class="frase-band-scrim"></div>
+    <div class="container frase-band-content fade-in">
+      <p>El diseño regenerativo es un proceso de indagación de oportunidades cuando conectan propósitos y la esencia del lugar</p>
+    </div>
+  </section>
+
+  <section class="frase-band">
+    <img class="frase-band-img" src="../images/hero/hero_manos_tierra.png" alt="Manos cuidando la tierra">
+    <div class="frase-band-scrim"></div>
+    <div class="container frase-band-content fade-in">
+      <p>Permite diseñar las condiciones que favorecen la salud de la comunidad de la vida</p>
+    </div>
+  </section>
+
+  <section class="frase-band">
+    <img class="frase-band-img" src="../images/diseño/Carrusel Ejemplo/01_portada.png" alt="Plan maestro regenerativo">
+    <div class="frase-band-scrim"></div>
+    <div class="container frase-band-content fade-in">
+      <p>Un plan maestro para avanzar con claridad de aquí al futuro</p>
     </div>
   </section>
 
@@ -235,24 +227,14 @@
     </div>
   </section>
 
-  <!-- TRABAJOS REALIZADOS -->
+  <!-- TRABAJOS REALIZADOS (filtrados: Diseño Regenerativo) -->
   <section style="background:var(--cream);">
     <div class="container">
       <div class="section-header center fade-in">
         <h2>Cada día somos más avanzando en esto.</h2>
       </div>
-      <div class="service-img-gallery fade-in" data-gallery-solo>
-        <img loading="lazy" src="../images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png" alt="Terraza productiva — antes y después">
-        <img loading="lazy" src="../images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png" alt="Diseño antes y después">
-        <img loading="lazy" src="../images/casos_reales/01_rendebu/01_antes_despues_muroverde.png" alt="Muro verde Rende Bú Café">
-        <img loading="lazy" src="../images/casos_reales/01_rendebu/02_antes_despues_terraza.png" alt="Terraza productiva del café">
-        <img loading="lazy" src="../images/casos_reales/06_Andrea_Felipe/andrea_felipe_antes_despues.png" alt="Familia Andrea y Felipe">
-        <img loading="lazy" src="../images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png" alt="Casa Sylvia y Ricardo">
-        <img loading="lazy" src="../images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png" alt="Parrón bioclimático antes y después">
-        <img loading="lazy" src="../images/casos_reales/07_Edificio_Nova/01_nova.png" alt="Edificio Nova huerta comunitaria">
-        <img loading="lazy" src="../images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png" alt="Lavaseco Florencia huerta">
-      </div>
-      <div class="casos-ver-todos fade-in">
+      <div class="proj-grid fade-in" data-casos="diseno" data-base="../"></div>
+      <div class="casos-ver-todos fade-in" style="margin-top:40px;">
         <a href="../index.html#casos">Ver todos los trabajos realizados →</a>
       </div>
     </div>
@@ -294,7 +276,7 @@
         <div class="footer-col">
           <h5>Explorar</h5>
           <ul>
-            <li><a href="../index.html#dimensiones">Líneas de acción</a></li>
+            <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#casos">Impacto</a></li>
             <li><a href="../contacto.html">Contacto</a></li>
           </ul>
@@ -320,7 +302,8 @@
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="../js/script.js?v=6"></script>
+  <script src="../js/script.js?v=7"></script>
+  <script src="../js/casos.js?v=1"></script>
   <script src="../js/carousel.js?v=2"></script>
 </body>
 </html>
