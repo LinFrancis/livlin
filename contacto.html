@@ -26,11 +26,13 @@
     /* Layout contacto */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr 1fr;
       gap: clamp(32px, 5vw, 64px);
       align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; max-width: 100%; } }
 
     .contact-form {
       background: #fff;
@@ -101,6 +103,11 @@
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal);
       margin-bottom: 12px; display: block;
     }
+    .founder-eyebrow-bottom {
+      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal);
+      display: block; margin-bottom: 12px; text-align: center;
+    }
     .founder-content h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 8px; line-height: 1.15; }
     .founder-role { font-size: 1rem; font-weight: 600; color: var(--text-soft); margin-bottom: 22px; }
     .founder-lead { font-size: 1.08rem; line-height: 1.7; color: var(--text); margin-bottom: 28px; }
@@ -121,17 +128,7 @@
       color: var(--text);
       line-height: 1.55;
     }
-    .founder-bullets li img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; opacity: 0.75; }
-    .founder-network {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      line-height: 1.75;
-      margin-bottom: 28px;
-      padding: 16px 20px;
-      background: rgba(255,255,255,0.55);
-      border-radius: 12px;
-      border-left: 3px solid var(--teal);
-    }
+    .founder-bullets li img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; opacity: 0.75; filter: grayscale(100%) brightness(0.6) saturate(1.2) hue-rotate(165deg); }
 
     .founder-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
     .founder-tags span {
@@ -298,16 +295,16 @@
       <div class="founder-inner">
         <div class="founder-media fade-in">
           <img class="founder-photo" src="images/people/francis_bancal_completo.jpg" alt="Francis Mason en bancal regenerativo">
+          <span class="founder-eyebrow-bottom">Aquí estamos</span>
           <div class="founder-namecard">
             <strong>Francis Mason Bustos · 林高天</strong>
             <span>Fundador de LivLin · Santiago, Chile</span>
           </div>
         </div>
         <div class="founder-content fade-in">
-          <span class="founder-eyebrow">Quiénes somos</span>
           <h2>Francis Mason 林高天</h2>
           <p class="founder-role">Sociólogo · Especialista en regeneración, resiliencia climática y sistemas de datos</p>
-          <p class="founder-lead">Cuando contactas a LivLin, conversas directamente con Francis. Él acompaña cada proyecto de principio a fin: del diagnóstico al plan maestro, y de la implementación al seguimiento.</p>
+          <p class="founder-lead">Soy Francis y junto a una red de profesionales te acompañamos cada proyecto de principio a fin.</p>
 
           <ul class="founder-bullets">
             <li>
@@ -324,7 +321,6 @@
             </li>
           </ul>
 
-          <p class="founder-network">LivLin además cuenta con una red de profesionales en permacultura, diseño regenerativo, sustentabilidad, agroecología, arquitectura del paisaje, educación ambiental y saberes para el buen vivir, que se suman según las necesidades de cada proyecto.</p>
 
           <div class="founder-tags">
             <span>Diseño Regenerativo</span>
@@ -333,7 +329,7 @@
             <span>Resiliencia Climática</span>
           </div>
 
-          <p class="founder-bio">Francis integra su experiencia en sociología, permacultura y diseño de sistemas para liderar LivLin. Con una visión multicultural y un enfoque aterrizado, acompaña la transición de hogares, organizaciones y territorios hacia sistemas de vida más saludables y regenerativos.</p>
+          <p class="founder-bio">Integramos experiencia en sociología, permacultura y diseño de sistemas de datos para liderar esta iniciativa. Con una visión multicultural y un enfoque aterrizado, acompañamos la transición de hogares, organizaciones y territorios hacia sistemas de vida más saludables y regenerativos.</p>
 
           <div class="founder-cta">
             <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="founder-linkedin">
@@ -342,7 +338,7 @@
             </a>
             <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20quiero%20conversar%20mi%20proyecto." target="_blank" rel="noopener" class="founder-wa">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Escríbele por WhatsApp
+              Escríbenos
             </a>
           </div>
         </div>
