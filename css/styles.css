@@ -1371,7 +1371,8 @@ details.tool-details[open] {
 footer {
   background: #0A1F35;
   color: rgba(246, 243, 233, 0.7);
-  padding: 64px 0 32px;
+  padding: 72px 0 32px;
+  border-top: 4px solid rgba(122, 218, 165, 0.22);
 }
 
 .footer-grid {
@@ -1640,7 +1641,7 @@ html.js-ready .fade-in.visible {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 80px; /* Offset navbar */
+  margin-top: 0;
 }
 
 .service-hero-bg::before {
@@ -1704,7 +1705,8 @@ html.js-ready .fade-in.visible {
   gap: 8px;
   font-size: 0.85rem;
   color: var(--muted);
-  margin-bottom: 16px;
+  padding: 22px 0 10px;
+  margin-bottom: 0;
 }
 
 .breadcrumb a { color: var(--muted); }
