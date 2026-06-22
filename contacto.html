@@ -105,21 +105,33 @@
     .founder-role { font-size: 1rem; font-weight: 600; color: var(--text-soft); margin-bottom: 22px; }
     .founder-lead { font-size: 1.08rem; line-height: 1.7; color: var(--text); margin-bottom: 28px; }
 
-    .founder-highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .founder-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
       gap: 14px;
+    }
+    .founder-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .founder-bullets li img { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; opacity: 0.75; }
+    .founder-network {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.75;
       margin-bottom: 28px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 12px;
+      border-left: 3px solid var(--teal);
     }
-    .founder-highlight {
-      background: #fff;
-      border-radius: 14px;
-      padding: 18px 18px;
-      box-shadow: var(--shadow-soft);
-    }
-    .founder-highlight img { width: 26px; height: 26px; margin-bottom: 10px; }
-    .founder-highlight strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--text); margin-bottom: 3px; }
-    .founder-highlight span { font-size: 0.8rem; color: var(--muted); line-height: 1.45; }
 
     .founder-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
     .founder-tags span {
@@ -292,28 +304,27 @@
           </div>
         </div>
         <div class="founder-content fade-in">
-          <span class="founder-eyebrow">Con quién trabajarás</span>
+          <span class="founder-eyebrow">Quiénes somos</span>
           <h2>Francis Mason 林高天</h2>
           <p class="founder-role">Sociólogo · Especialista en regeneración, resiliencia climática y sistemas de datos</p>
           <p class="founder-lead">Cuando contactas a LivLin, conversas directamente con Francis. Él acompaña cada proyecto de principio a fin: del diagnóstico al plan maestro, y de la implementación al seguimiento.</p>
 
-          <div class="founder-highlights">
-            <div class="founder-highlight">
+          <ul class="founder-bullets">
+            <li>
               <img loading="lazy" src="images/icons/leaf.svg" alt="">
-              <strong>Enfoque</strong>
-              <span>Diseño regenerativo y permacultura aplicada.</span>
-            </div>
-            <div class="founder-highlight">
+              <span><strong>Enfoque:</strong> Diseño regenerativo y permacultura aplicada.</span>
+            </li>
+            <li>
               <img loading="lazy" src="images/icons/refresh-cw.svg" alt="">
-              <strong>Método</strong>
-              <span>Pensamiento sistémico y datos para decidir mejor.</span>
-            </div>
-            <div class="founder-highlight">
+              <span><strong>Método:</strong> Pensamiento sistémico y datos para decidir mejor.</span>
+            </li>
+            <li>
               <img loading="lazy" src="images/icons/globe.svg" alt="">
-              <strong>Alcance</strong>
-              <span>Proyectos en Chile y experiencia internacional.</span>
-            </div>
-          </div>
+              <span><strong>Alcance:</strong> Proyectos en Chile y experiencia internacional.</span>
+            </li>
+          </ul>
+
+          <p class="founder-network">LivLin además cuenta con una red de profesionales en permacultura, diseño regenerativo, sustentabilidad, agroecología, arquitectura del paisaje, educación ambiental y saberes para el buen vivir, que se suman según las necesidades de cada proyecto.</p>
 
           <div class="founder-tags">
             <span>Diseño Regenerativo</span>

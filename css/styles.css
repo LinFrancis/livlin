@@ -8232,6 +8232,9 @@ body.lb-lock {
   text-shadow: 0 2px 20px rgba(0,0,0,0.45);
   margin: 0;
 }
+.frase-band + .frase-band {
+  border-top: 4px solid rgba(255,255,255,0.32);
+}
 
 /* ==========================================================
    PROJ-CARD — tarjetas de "Trabajos realizados" (sin borde de color)
