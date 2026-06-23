@@ -783,9 +783,20 @@
     .descarga-inner {
       position: relative;
       z-index: 1;
-      max-width: 760px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      max-width: 900px;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
+    }
+    .descarga-text { text-align: center; }
+    .descarga-image { flex-shrink: 0; }
+    .descarga-image img { height: 320px; width: auto; border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    @media (max-width: 900px) {
+      .descarga-inner { grid-template-columns: 1fr; gap: 32px; }
+      .descarga-image img { height: 240px; }
     }
 
     .descarga-text .eyebrow { color: var(--green-dark); margin-bottom: 12px; }
@@ -1617,6 +1628,9 @@
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Descargar ahora
           </a>
+        </div>
+        <div class="descarga-image fade-in">
+          <img loading="lazy" src="images/publications/publicacion_educacion_regeneracion.jpg" alt="Publicación: Introducción al enfoque de la regeneración">
         </div>
       </div>
     </div>
