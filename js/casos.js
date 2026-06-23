@@ -81,6 +81,20 @@
       video: ''
     },
     {
+      id: 'mapeo-cuencas', name: 'Mapeo Participativo de Cuencas', location: 'Demo pública',
+      cats: ['mel', 'digital'], service: 'MEL · Soluciones Digitales',
+      desc: 'Desarrollamos una plataforma colaborativa para analizar territorios de cuenca y conflictos socioambientales. Permite registrar conflictos georreferenciados, visualizar mapas de calor por subcuenca y generar un directorio exportable de actores. Una herramienta concreta para que comunidades y organizaciones territorialicen su monitoreo y aprendizaje.',
+      images: ['images/apps/cuencas_part/02_mapeo_cuencas_mapa.png', 'images/apps/cuencas_part/01_mapeo_cuencas_intro.png', 'images/apps/cuencas_part/03_mapeo_cuencas_graficos.png'],
+      video: ''
+    },
+    {
+      id: 'agentes-en-red', name: 'Agentes Regenerativos en Red', location: 'Demo pública',
+      cats: ['mel', 'digital'], service: 'MEL · Soluciones Digitales',
+      desc: 'Construimos un directorio interactivo y mapa global de actores regenerativos que permite conectar y visualizar iniciativas dispersas en un mapa y una red navegable. Incluye análisis de redes con teoría de grafos, perfiles de actores y visualización de conexiones. Una forma de hacer seguimiento a quién está haciendo qué y dónde en el ecosistema regenerativo.',
+      images: ['images/apps/reg_red/01_regenerando_red_horizontal.png', 'images/apps/reg_red/02_regenerando_red_horizontal_analisis.png', 'images/apps/reg_red/03_regenerando_perfil_usuario.png', 'images/apps/reg_red/04_regenerando_perfil_mapa.png'],
+      video: ''
+    },
+    {
       id: 'china', name: 'Chengdu Cafe', location: 'Chengdu, China',
       cats: ['educacion', 'huerto'], service: 'Educación Ambiental · Eficiencia Hídrica · Huerto Urbano',
       desc: 'Realizamos un taller para 16 personas en la ciudad de Chengdu, China. Se construyeron dos bancales autorregantes con material reciclado y un sistema de riego por capilaridad con botellas para cultivo urbano. Se habilitó la terraza del segundo piso de un café —sin acceso cercano a agua— como espacio productivo, disminuyendo significativamente la frecuencia de riego. El taller, intergeneracional, favoreció el intercambio y la ecoalfabetización.',
