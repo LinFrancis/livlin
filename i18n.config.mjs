@@ -20,6 +20,7 @@ export const languages = [
     code: 'es',
     dir: '',            // raíz del sitio
     label: 'Español',
+    shortLabel: 'ES',
     htmlLang: 'es',
     ogLocale: 'es_CL',
     hreflang: 'es',
@@ -29,6 +30,7 @@ export const languages = [
     code: 'en',
     dir: 'en',
     label: 'English',
+    shortLabel: 'EN',
     htmlLang: 'en',
     ogLocale: 'en_US',
     hreflang: 'en',
@@ -37,6 +39,7 @@ export const languages = [
     code: 'da',
     dir: 'da',
     label: 'Dansk',
+    shortLabel: 'DA',
     htmlLang: 'da',
     ogLocale: 'da_DK',
     hreflang: 'da',
@@ -44,7 +47,8 @@ export const languages = [
   {
     code: 'zh-CN',
     dir: 'zh',
-    label: '中文',
+    label: '简体中文',
+    shortLabel: '中文',
     htmlLang: 'zh-Hans',
     ogLocale: 'zh_CN',
     hreflang: 'zh-Hans',

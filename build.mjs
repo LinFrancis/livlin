@@ -253,9 +253,9 @@ function buildLangSwitch(pageRel, lang) {
   const items = languages.map(l => {
     const href = urlFor(l, pageRel);
     const active = l.code === lang.code ? ' aria-current="true"' : '';
-    return `<a href="${href}" hreflang="${l.hreflang}" lang="${l.htmlLang}"${active} data-lang="${l.code}">${l.label}</a>`;
+    return `<li><a href="${href}" hreflang="${l.hreflang}" lang="${l.htmlLang}"${active} data-lang="${l.code}">${l.shortLabel} — ${l.label}</a></li>`;
   }).join('');
-  return `<li class="nav-lang" data-lang-switch>${items}</li>`;
+  return `<li class="nav-lang" data-lang-switch>\n          <button class="nav-lang-btn" aria-haspopup="listbox" aria-expanded="false">🌐 ${lang.shortLabel}</button>\n          <ul class="nav-lang-dropdown" role="listbox">${items}</ul>\n        </li>`;
 }
 
 function injectAll(html, pageRel, lang) {

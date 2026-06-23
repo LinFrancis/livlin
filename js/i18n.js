@@ -48,12 +48,31 @@
 
   var pageRel = pageRelFromPath(window.location.pathname);
 
-  // Guardar elección manual al hacer clic en el selector
+  // Dropdown compacto: toggle y persistencia de idioma
   var sw = document.querySelector('[data-lang-switch]');
   if (sw) {
+    var btn = sw.querySelector('.nav-lang-btn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = sw.hasAttribute('open');
+        if (open) { sw.removeAttribute('open'); btn.setAttribute('aria-expanded', 'false'); }
+        else { sw.setAttribute('open', ''); btn.setAttribute('aria-expanded', 'true'); }
+      });
+    }
     sw.addEventListener('click', function (e) {
       var a = e.target.closest('a[data-lang]');
-      if (a) { try { localStorage.setItem(STORE, a.getAttribute('data-lang')); } catch (err) {} }
+      if (a) {
+        try { localStorage.setItem(STORE, a.getAttribute('data-lang')); } catch (err) {}
+        sw.removeAttribute('open');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!sw.contains(e.target)) { sw.removeAttribute('open'); if (btn) btn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { sw.removeAttribute('open'); if (btn) btn.setAttribute('aria-expanded', 'false'); }
     });
   }
 
