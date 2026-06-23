@@ -1,0 +1,14 @@
+{
+  "name": "livlin-website",
+  "version": "1.0.0",
+  "description": "Sitio web multilingüe de LivLin (ES/EN/DA/ZH) — generador estático sin dependencias.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "extract": "node build.mjs extract"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

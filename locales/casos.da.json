@@ -1,0 +1,73 @@
+{
+  "_ui": { "more": "Se hele projektet →", "video": "▶ Video", "aria": "Se projekt" },
+  "rendebu": {
+    "name": "Rende Bú Café", "location": "Providencia",
+    "service": "Regenerativt design · Bymiljøhave",
+    "desc": "Vi forvandlede caféens ledige arealer til produktive områder til dyrkning af mad og integrerede haver i gårde, krukker og udendørsarealer. Det, der startede som et forsøg, blev til en ny fase af investering og infrastruktur, der styrker projektets bæredygtige karakter. I dag lever gæster og medarbejdere dagligt side om side med spiselige afgrøder, der inspirerer til nye måder at forholde sig til mad og byen på."
+  },
+  "sociedadmedica": {
+    "name": "SN lægeselskab", "location": "Providencia",
+    "service": "Digitale løsninger · Skræddersyet software",
+    "desc": "Vi udviklede en skræddersyet digital platform til at samle kritisk information og lette adgangen til de data, der bruges i medicinske diagnoseprocesser. Løsningen samlede spredte databaser og styrkede organisationens informationshåndtering med et værktøj tilpasset dens reelle behov."
+  },
+  "aucca": {
+    "name": "Aucca økopædagogisk center", "location": "Talagante",
+    "service": "MEL · Skræddersyet software · Hjemmeside",
+    "desc": "Vi designede og byggede digitale værktøjer til at understøtte driften af et lokalt center for agroøkologi og miljøundervisning. Platformen følger op på aftaler, mål, økonomi og aktiviteter og styrker den interne koordinering og beslutninger baseret på opdateret information."
+  },
+  "lavaseco": {
+    "name": "Florencia renseri", "location": "Providencia",
+    "service": "Bymiljøhave · Agroøkologisk have",
+    "desc": "Vi forvandlede et underudnyttet udeareal til en agroøkologisk have, synlig fra gaden. Erfaringen viste, at man kan dyrke mad i travle bymiljøer, skabe trivsel for dem, der arbejder dér, og vække nysgerrighed hos naboer og kunder, der dag for dag følger haven vokse."
+  },
+  "escuela": {
+    "name": "Manuel de Salas-skolen", "location": "Ñuñoa",
+    "service": "Regenerativt design",
+    "desc": "Jeg havde brug for at kontakte Livlin for at starte et haveprojekt fra bunden for cyklus 2-fællesskabet på Manuel de Salas-forsøgsskolen. Jeg fik ikke kun grundig og detaljeret rådgivning om jord og solens placering, men også et besøg på stedet og Francis' fulde engagement i projektet: bidrag til havedesignet, en såliste efter sæson, en pædagogisk infografik og konstant støtte til, hvordan man gennemfører et projekt som dette i stor skala. Han viste os eksempler på, hvordan skoler i Chile og Kina har integreret omsorg for naturen og bydyrkning i fælles rum. Mange tak, Livlin, for din visdom og professionalisme og for at give liv til dette projekt i dets tidlige fase. Vi håber snart at kunne invitere dig til at se vores have!"
+  },
+  "andrea_felipe": {
+    "name": "Andrea og Felipes familie", "location": "San Miguel",
+    "service": "Regenerativt design · Bymiljøhave · Workshops",
+    "desc": "Vi designede og byggede løsninger til at kompostere, dyrke mad og udnytte ressourcerne i en lejlighed bedre. Gennem skræddersyede workshops og praktisk vejledning fik familien nye færdigheder til at håndtere organisk affald og selv producere en del af deres mad på små arealer."
+  },
+  "nova": {
+    "name": "Nova-bygningen", "location": "Providencia",
+    "service": "Regenerativt design · Fælleshave",
+    "desc": "Vi aktiverede bygningens fællesarealer til dyrkning af mad og til at styrke båndene mellem naboerne. Initiativet forvandlede lidt brugte arealer til produktive steder, delte planter og viden og åbnede nye samtaler om bæredygtighed og fællesskabsliv."
+  },
+  "javiera_francis": {
+    "name": "Javiera og Francis' familie", "location": "Providencia",
+    "service": "Regenerativt design · Selvvandende bede · Solenergi",
+    "desc": "Vi designede og byggede en produktiv terrasse baseret på selvvandende bede og integreret kompostering. Løsningen reducerede vandingsbehovet markant og muliggjorde løbende dyrkning af mad året rundt og viste, at sund mad kan produceres selv under udfordrende byforhold."
+  },
+  "sylvia_ricardo": {
+    "name": "Sylvia og Ricardos familie", "location": "La Reina",
+    "service": "Regenerativt design · Wicking bed · Workshops",
+    "desc": "Vi gennemførte et regenerativt design af huset og gik igennem alle permakulturblomstens kronblade. Der blev installeret en kompostbeholder til husstandens organiske affald, og der blev bygget et selvvandende kapillarbed med et ormehotel og hjul, der også fungerer som grøn væg og kan flyttes for at udnytte sollyset i årets forskellige sæsoner."
+  },
+  "cecilia_isidora": {
+    "name": "Cecilia og Isidoras familie", "location": "Las Condes",
+    "service": "Regenerativt design · Wicking bed · Bioklimatisk pergola",
+    "desc": "Vi udviklede en regenerativ masterplan for hjemmet, der omfattede kompostering, fødevareproduktion og bioklimatiske forbedringer. Blandt de gennemførte tiltag er selvvandende dyrkningssystemer og en plantestruktur designet til at give naturlig skygge og termisk komfort i de varmere måneder."
+  },
+  "indag-regenerativa": {
+    "name": "Regenerativ undersøgelse", "location": "Offentlig demo",
+    "service": "MEL · Digitale løsninger",
+    "desc": "Vi udviklede en flerdimensionel diagnosemotor baseret på Permakulturblomsten. Platformen analyserer et rums potentiale i 10 dimensioner og omsætter det til en handlingsplan prioriteret i faser med visuel opfølgning på fremskridt. Et værktøj til at forstå, hvor du er, og hvor du skal hen i din regenerative proces."
+  },
+  "mapeo-cuencas": {
+    "name": "Deltagende vandopland-kortlægning", "location": "Offentlig demo",
+    "service": "MEL · Digitale løsninger",
+    "desc": "Vi udviklede en samarbejdsplatform til at analysere vandoplandsområder og socio-miljømæssige konflikter. Den registrerer geo-refererede konflikter, visualiserer varmekort efter delopland og genererer et eksporterbart aktørkatalog. Et konkret værktøj, så fællesskaber og organisationer kan forankre deres monitorering og læring i deres område."
+  },
+  "agentes-en-red": {
+    "name": "Regenerative agenter i netværk", "location": "Offentlig demo",
+    "service": "MEL · Digitale løsninger",
+    "desc": "Vi byggede et interaktivt katalog og verdenskort over regenerative aktører, der forbinder og visualiserer spredte initiativer på et kort og et navigerbart netværk. Det omfatter netværksanalyse med grafteori, aktørprofiler og kortlægning af forbindelser. En måde at følge med i, hvem der gør hvad og hvor i det regenerative økosystem."
+  },
+  "china": {
+    "name": "Chengdu Café", "location": "Chengdu, Kina",
+    "service": "Miljøundervisning · Vandeffektivitet · Bymiljøhave",
+    "desc": "Vi afholdt en workshop for 16 personer i byen Chengdu, Kina. Der blev bygget to selvvandende bede af genbrugsmaterialer samt et flaskebaseret kapillarvandingssystem til bydyrkning. Førstesalsterrassen på en café — uden vand i nærheden — blev forvandlet til et produktivt rum, hvilket reducerede vandingsfrekvensen markant. Den tværgenerationelle workshop fremmede udveksling og økologisk dannelse."
+  }
+}

@@ -112,6 +112,27 @@
 
   window.LIVLIN_CASOS = P;
 
+  // Etiquetas de interfaz (ES por defecto; se sobreescriben por idioma)
+  var UI = {
+    more: 'Ver proyecto completo →',
+    video: '▶ Video',
+    aria: 'Ver proyecto'
+  };
+
+  // Aplica traducciones de casos cargadas desde /locales/casos.<code>.json
+  function applyTranslations(data) {
+    if (!data) return;
+    if (data._ui) { for (var k in data._ui) { if (data._ui[k]) UI[k] = data._ui[k]; } }
+    P.forEach(function (p) {
+      var t = data[p.id];
+      if (!t) return;
+      if (t.name) p.name = t.name;
+      if (t.location) p.location = t.location;
+      if (t.service) p.service = t.service;
+      if (t.desc) p.desc = t.desc;
+    });
+  }
+
   function esc(s) {
     return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
@@ -127,7 +148,7 @@
     var hasVideo = !!p.video;
     return '' +
       '<article class="proj-card caso-clickable" tabindex="0" role="button" ' +
-        'aria-label="Ver proyecto ' + esc(p.name) + '" ' +
+        'aria-label="' + esc(UI.aria) + ' ' + esc(p.name) + '" ' +
         'data-title="' + esc(p.name) + '" ' +
         'data-location="' + esc(p.location) + '" ' +
         'data-desc="' + esc(p.desc) + '" ' +
@@ -136,13 +157,13 @@
         "data-images='" + JSON.stringify(imgs) + "'>" +
         '<div class="proj-card-media">' +
           '<img loading="lazy" src="' + esc(cover) + '" alt="' + esc(p.name) + '">' +
-          (hasVideo ? '<span class="proj-card-play" aria-hidden="true">▶ Video</span>' : '') +
+          (hasVideo ? '<span class="proj-card-play" aria-hidden="true">' + esc(UI.video) + '</span>' : '') +
         '</div>' +
         '<div class="proj-card-body">' +
           '<span class="proj-card-loc">' + esc(p.location) + '</span>' +
           '<h3 class="proj-card-title">' + esc(p.name) + '</h3>' +
           '<p class="proj-card-intro">' + esc(intro) + '</p>' +
-          '<span class="proj-card-more">Ver proyecto completo →</span>' +
+          '<span class="proj-card-more">' + esc(UI.more) + '</span>' +
         '</div>' +
       '</article>';
   }
@@ -162,9 +183,22 @@
     });
   }
 
+  function boot() {
+    var lang = window.LIVLIN_LANG || 'es';
+    if (lang && lang !== 'es') {
+      fetch('/locales/casos.' + lang + '.json')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) { applyTranslations(data); })
+        .catch(function () {})
+        .then(function () { render(); });
+    } else {
+      render();
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', render);
+    document.addEventListener('DOMContentLoaded', boot);
   } else {
-    render();
+    boot();
   }
 })();

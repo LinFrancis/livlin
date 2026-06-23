@@ -1,0 +1,73 @@
+{
+  "_ui": { "more": "View full project →", "video": "▶ Video", "aria": "View project" },
+  "rendebu": {
+    "name": "Rende Bú Café", "location": "Providencia",
+    "service": "Regenerative Design · Urban Garden",
+    "desc": "We turned the café's available spaces into productive areas for growing food, integrating gardens into patios, planters and outdoor areas. What began as a trial became a new stage of investment and infrastructure to strengthen the project's sustainable character. Today customers and staff live alongside edible crops every day, inspiring new ways of relating to food and the city."
+  },
+  "sociedadmedica": {
+    "name": "SN Medical Society", "location": "Providencia",
+    "service": "Digital Solutions · Custom Software",
+    "desc": "We developed a custom digital platform to centralise critical information and ease access to the data used in medical diagnostic processes. The solution unified scattered databases and strengthened the organisation's information management with a tool adapted to its real needs."
+  },
+  "aucca": {
+    "name": "Aucca Eco-pedagogical Centre", "location": "Talagante",
+    "service": "MEL · Custom Software · Website",
+    "desc": "We designed and built digital tools to support the management of a community centre devoted to agroecology and environmental education. The platform tracks agreements, goals, finances and activities, strengthening internal coordination and decision-making based on up-to-date information."
+  },
+  "lavaseco": {
+    "name": "Florencia Dry Cleaner", "location": "Providencia",
+    "service": "Urban Garden · Agroecological Garden",
+    "desc": "We turned an underused outdoor space into an agroecological garden visible from the street. The experience showed that it's possible to grow food in busy urban settings, creating wellbeing for those who work there and sparking the curiosity of neighbours and customers who watch the garden grow day by day."
+  },
+  "escuela": {
+    "name": "Manuel de Salas School", "location": "Ñuñoa",
+    "service": "Regenerative Design",
+    "desc": "I needed to contact Livlin to start a garden project from scratch for the cycle-2 community of the Manuel de Salas Experimental School. I not only received thorough, detailed advice on soil and sun position, but also a site visit and Francis's full involvement in the project: contributing the garden design, a seasonal planting list, an educational infographic and constant support on how to implement a project like this at scale. He showed us examples of how schools in Chile and China have managed to integrate care for nature and urban planting into shared spaces. Thank you, Livlin, for your wisdom and professionalism and for bringing this project to life in its early stage. We hope to invite you soon to see our garden!"
+  },
+  "andrea_felipe": {
+    "name": "Andrea and Felipe's family", "location": "San Miguel",
+    "service": "Regenerative Design · Urban Garden · Workshops",
+    "desc": "We designed and built solutions to compost, grow food and make better use of the resources available in an apartment. Through tailored workshops and hands-on guidance, the family gained new skills to manage organic waste and produce some of their own food in small spaces."
+  },
+  "nova": {
+    "name": "Nova Building", "location": "Providencia",
+    "service": "Regenerative Design · Community Garden",
+    "desc": "We activated the building's shared spaces for growing food and strengthening ties between neighbours. The initiative turned underused areas into productive places, shared plants and knowledge, and opened up new conversations about sustainability and community life."
+  },
+  "javiera_francis": {
+    "name": "Javiera and Francis's family", "location": "Providencia",
+    "service": "Regenerative Design · Self-watering Beds · Solar Energy",
+    "desc": "We designed and built a productive terrace based on self-watering beds and integrated composting. The solution significantly reduced watering needs and enabled continuous food growing year-round, showing that healthy food can be produced even in challenging urban conditions."
+  },
+  "sylvia_ricardo": {
+    "name": "Sylvia and Ricardo's family", "location": "La Reina",
+    "service": "Regenerative Design · Wicking Bed · Workshops",
+    "desc": "We carried out a regenerative design of the home, working through every petal of the permaculture flower. A composter was installed to manage the household's organic waste, and a self-watering capillary bed was built with a worm hotel and wheels — it also works as a green wall and can be moved to make the most of sunlight across the seasons."
+  },
+  "cecilia_isidora": {
+    "name": "Cecilia and Isidora's family", "location": "Las Condes",
+    "service": "Regenerative Design · Wicking Bed · Bioclimatic Pergola",
+    "desc": "We developed a regeneration master plan for the home that included composting, food production and bioclimatic improvements. Highlights include self-watering growing systems and a plant structure designed to provide natural shade and thermal comfort during the warmer months."
+  },
+  "indag-regenerativa": {
+    "name": "Regenerative Inquiry", "location": "Public demo",
+    "service": "MEL · Digital Solutions",
+    "desc": "We developed a multidimensional assessment engine based on the Permaculture Flower. The platform analyses a space's potential across 10 dimensions and turns it into an action plan prioritised by stages, with visual progress tracking. A tool to understand where you are and where to go in your regenerative process."
+  },
+  "mapeo-cuencas": {
+    "name": "Participatory Watershed Mapping", "location": "Public demo",
+    "service": "MEL · Digital Solutions",
+    "desc": "We developed a collaborative platform to analyse watershed territories and socio-environmental conflicts. It records geo-referenced conflicts, visualises heat maps by sub-watershed and generates an exportable directory of actors. A concrete tool for communities and organisations to root their monitoring and learning in their territory."
+  },
+  "agentes-en-red": {
+    "name": "Regenerative Agents in Network", "location": "Public demo",
+    "service": "MEL · Digital Solutions",
+    "desc": "We built an interactive directory and global map of regenerative actors that connects and visualises scattered initiatives on a map and a navigable network. It includes network analysis with graph theory, actor profiles and connection mapping. A way to track who is doing what and where across the regenerative ecosystem."
+  },
+  "china": {
+    "name": "Chengdu Café", "location": "Chengdu, China",
+    "service": "Environmental Education · Water Efficiency · Urban Garden",
+    "desc": "We ran a workshop for 16 people in the city of Chengdu, China. Two self-watering beds were built from recycled materials, along with a bottle-based capillary irrigation system for urban growing. The second-floor terrace of a café — with no water nearby — was turned into a productive space, significantly reducing watering frequency. The intergenerational workshop fostered exchange and eco-literacy."
+  }
+}

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metodologías Participativas al Servicio de Propósitos Comunes · Facilitación Organizacional · Livlin</title>
-  <meta name="description" content="Metodologías participativas al servicio de propósitos comunes. Facilitamos encuentro para el entendimiento y la co-creación, y traducimos inteligencia colectiva en marcos de acción con sentido.">
+  <title>Monitorering, evaluering og læring (MEL) · Livlin</title>
+  <meta name="description" content="Monitorering, evaluering og læring (MEL): forfin en ægte forandringsteori, byg gode registreringsværktøjer og visualisér fremskridt på din egen platform.">
   <link rel="icon" type="image/png" href="/images/ui/logo_livlin_no_text.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,17 +30,25 @@
     }
     .btn-wa-service:hover { background: #1db954; transform: translateY(-2px); color:#fff; }
     .btn-wa-service svg { width: 20px; height: 20px; fill: #fff; }
+    /* Numerito sobre la banda */
+    .frase-band-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(255,255,255,0.9); color: #9333ea;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem;
+      margin-bottom: 18px;
+    }
   </style>
-  <link rel="canonical" href="https://www.livlin.cl/servicios/facilitacion-organizacional.html">
-  <link rel="alternate" hreflang="es" href="https://www.livlin.cl/servicios/facilitacion-organizacional.html">
-  <link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/servicios/facilitacion-organizacional.html">
-  <link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/servicios/facilitacion-organizacional.html">
-  <link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/servicios/facilitacion-organizacional.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/servicios/facilitacion-organizacional.html">
-  <meta property="og:url" content="https://www.livlin.cl/servicios/facilitacion-organizacional.html">
-  <meta property="og:locale" content="es_CL">
+  <link rel="canonical" href="https://www.livlin.cl/da/servicios/monitoreo.html">
+  <link rel="alternate" hreflang="es" href="https://www.livlin.cl/servicios/monitoreo.html">
+  <link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/servicios/monitoreo.html">
+  <link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/servicios/monitoreo.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/servicios/monitoreo.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/servicios/monitoreo.html">
+  <meta property="og:url" content="https://www.livlin.cl/da/servicios/monitoreo.html">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:locale:alternate" content="es_CL">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:locale:alternate" content="da_DK">
   <meta property="og:locale:alternate" content="zh_CN">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.livlin.cl/images/ui/logo_livlin_with_text.png">
@@ -53,24 +61,24 @@
       <span class="nav-logo" aria-label="Livlin">
         <img src="/images/ui/logo_livlin_with_text.png" alt="Livlin">
       </span>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Slå menu til/fra" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="primary-nav">
-        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/da/index.html">Forside</a></li>
         <li class="nav-item-dropdown">
-          <a href="/index.html#dimensiones">Líneas de acción</a>
+          <a href="/da/index.html#dimensiones">Indsatsområder</a>
           <ul class="dropdown-menu">
-            <li><a href="/servicios/diseno-regenerativo.html">Diseño regenerativo</a></li>
-            <li><a href="/servicios/huerto-urbano.html">Huerto urbano</a></li>
-            <li><a href="/servicios/educacion-ambiental.html">Educación ambiental</a></li>
-            <li><a href="/servicios/facilitacion-organizacional.html">Facilitación organizacional</a></li>
-            <li><a href="/servicios/monitoreo.html">Monitoreo, evaluación y aprendizaje (MEL)</a></li>
-            <li><a href="/servicios/soluciones-digitales.html">Desarrollo de soluciones digitales</a></li>
+            <li><a href="/da/servicios/diseno-regenerativo.html">Regenerativt design</a></li>
+            <li><a href="/da/servicios/huerto-urbano.html">Bymiljøhave</a></li>
+            <li><a href="/da/servicios/educacion-ambiental.html">Miljøundervisning</a></li>
+            <li><a href="/da/servicios/facilitacion-organizacional.html">Organisatorisk facilitering</a></li>
+            <li><a href="/da/servicios/monitoreo.html">Monitorering, evaluering og læring (MEL)</a></li>
+            <li><a href="/da/servicios/soluciones-digitales.html">Udvikling af digitale løsninger</a></li>
           </ul>
         </li>
-        <li><a href="/index.html#casos">Impacto</a></li>
-        <li><a href="/index.html#descarga">Recursos</a></li>
-        <li><a href="/contacto.html" class="nav-cta-green">Contacto</a></li>
-        <li class="nav-lang" data-lang-switch><a href="/servicios/facilitacion-organizacional.html" hreflang="es" lang="es" aria-current="true" data-lang="es">Español</a><a href="/en/servicios/facilitacion-organizacional.html" hreflang="en" lang="en" data-lang="en">English</a><a href="/da/servicios/facilitacion-organizacional.html" hreflang="da" lang="da" data-lang="da">Dansk</a><a href="/zh/servicios/facilitacion-organizacional.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-CN">中文</a></li>
+        <li><a href="/da/index.html#casos">Effekt</a></li>
+        <li><a href="/da/index.html#descarga">Ressourcer</a></li>
+        <li><a href="/da/contacto.html" class="nav-cta-green">Kontakt</a></li>
+        <li class="nav-lang" data-lang-switch><a href="/servicios/monitoreo.html" hreflang="es" lang="es" data-lang="es">Español</a><a href="/en/servicios/monitoreo.html" hreflang="en" lang="en" data-lang="en">English</a><a href="/da/servicios/monitoreo.html" hreflang="da" lang="da" aria-current="true" data-lang="da">Dansk</a><a href="/zh/servicios/monitoreo.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-CN">中文</a></li>
       </ul>
     </div>
   </nav>
@@ -78,63 +86,92 @@
   <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-      <a href="/index.html">Inicio</a>
+      <a href="/da/index.html">Forside</a>
       <span class="sep">›</span>
-      <span class="current">Facilitación Organizacional</span>
+      <span class="current">Monitorering, evaluering og læring (MEL)</span>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="service-hero-bg" style="background-image: url('/images/vision/metodologias_participativas.jpg');">
+  <section class="service-hero-bg" style="background-image: url('/images/casos_reales/03_Aucca/03_intranet_graficos.png');">
     <div class="container">
       <div class="hero-content fade-in" style="max-width: 860px;">
-        <span class="eyebrow">Facilitación Organizacional</span>
-        <h1>METODOLOGÍAS PARTICIPATIVAS AL SERVICIO DE PROPÓSITOS COMUNES</h1>
-        <p class="lead">¿Cuán clara y compartida es la visión que moviliza a tu grupo humano?</p>
+        <span class="eyebrow">MEL</span>
+        <h1>MONITORERING, EVALUERING OG LÆRING (MEL)</h1>
+        <p class="lead">Hvordan skrider arbejdet med den vision, der samler jeres fællesskab, frem?</p>
         <div class="hero-cta-stack" style="margin-top:24px;">
-          <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Facilitaci%C3%B3n%20Organizacional." target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="btn btn-primary btn-large">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="vertical-align:-3px;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-            Escríbenos
+            skriv til os
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FRASES (sobre imagen) -->
+  <!-- FRASES (sobre imagen, secuencia 1→5) -->
   <section class="frase-band">
-    <img class="frase-band-img" src="/images/vision/metodologias_participativas.jpg" alt="Encuentro participativo">
+    <img class="frase-band-img" src="/images/apps/teoria_cambio/01_t_cambio_intro.png" alt="Forandringsteori">
     <div class="frase-band-scrim"></div>
     <div class="container frase-band-content fade-in">
-      <p>Facilitamos encuentro para el entendimiento y la co-creación</p>
+      <p>Forfin en ægte forandringsteori</p>
     </div>
   </section>
 
   <section class="frase-band">
-    <img class="frase-band-img" src="/images/talleres/taller_aucca_grupo.png" alt="Conversaciones significativas">
+    <img class="frase-band-img" src="/images/casos_reales/03_Aucca/02_intranet_eventos.png" alt="Registreringsværktøjer">
     <div class="frase-band-scrim"></div>
     <div class="container frase-band-content fade-in">
-      <p>Cosechamos frutos de conversaciones significativas</p>
+      <p>Byg gode værktøjer til registrering</p>
     </div>
   </section>
 
   <section class="frase-band">
-    <img class="frase-band-img" src="/images/projects/acompanamiento.png" alt="Marcos de acción colectiva">
+    <img class="frase-band-img" src="/images/casos_reales/03_Aucca/03_intranet_graficos.png" alt="Platform til visualisering af fremskridt">
     <div class="frase-band-scrim"></div>
     <div class="container frase-band-content fade-in">
-      <p>Traducimos inteligencia colectiva en marcos de acción con sentido</p>
+      <p>Visualisér fremskridt på din egen platform</p>
+    </div>
+  </section>
+
+  <section class="frase-band">
+    <img class="frase-band-img" src="/images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png" alt="Evaluering og læring">
+    <div class="frase-band-scrim"></div>
+    <div class="container frase-band-content fade-in">
+      <p>Evaluér og lær af det, der virker (og det, der ikke gør)</p>
+    </div>
+  </section>
+
+  <section class="frase-band">
+    <img class="frase-band-img" src="/images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png" alt="Bevis for opnåede mål">
+    <div class="frase-band-scrim"></div>
+    <div class="container frase-band-content fade-in">
+      <p>Fejr og del beviset på, at målene er nået</p>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-final-banner">
     <div class="container">
-      <h2>Escríbenos, estamos a su disposición</h2>
+      <h2>Lad os mødes og tale om det, du har brug for</h2>
       <div class="service-cta-row">
-        <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Facilitaci%C3%B3n%20Organizacional." target="_blank" rel="noopener" class="btn-wa-service">
+        <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="btn-wa-service">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-          Escríbenos
+          skriv til os
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRABAJOS REALIZADOS (filtrados: MEL) -->
+  <section style="background:var(--cream);">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <h2>Sådan rykker vi fremad...</h2>
+      </div>
+      <div class="proj-grid fade-in" data-casos="mel" data-base="/"></div>
+      <div class="casos-ver-todos fade-in" style="margin-top:40px;">
+        <a href="/da/index.html#casos">Se alt udført arbejde →</a>
       </div>
     </div>
   </section>
@@ -148,8 +185,8 @@
             <img src="/images/ui/logo_livlin_no_text.png" alt="Livlin Logo">
             <span>Livlin</span>
           </div>
-          <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
-          <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
+          <p>Hos LivLin driver vi regenereringen af områder og organisationer.</p>
+          <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">At designe bedre for et regenerativt liv er at træffe bedre beslutninger for nutiden og fremtiden for hele livets fællesskab.</p>
           <a href="https://www.instagram.com/livlin.cl/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 20px;border-radius:100px;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:0.88rem;font-weight:600;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
             @livlin.cl
@@ -160,26 +197,26 @@
           </div>
         </div>
         <div class="footer-col">
-          <h5>Líneas de acción</h5>
+          <h5>Indsatsområder</h5>
           <ul>
-            <li><a href="/servicios/diseno-regenerativo.html">Diseño regenerativo</a></li>
-            <li><a href="/servicios/huerto-urbano.html">Huerto urbano</a></li>
-            <li><a href="/servicios/educacion-ambiental.html">Educación ambiental</a></li>
-            <li><a href="/servicios/facilitacion-organizacional.html">Facilitación organizacional</a></li>
-            <li><a href="/servicios/monitoreo.html">Monitoreo y evaluación</a></li>
-            <li><a href="/servicios/soluciones-digitales.html">Soluciones digitales</a></li>
+            <li><a href="/da/servicios/diseno-regenerativo.html">Regenerativt design</a></li>
+            <li><a href="/da/servicios/huerto-urbano.html">Bymiljøhave</a></li>
+            <li><a href="/da/servicios/educacion-ambiental.html">Miljøundervisning</a></li>
+            <li><a href="/da/servicios/facilitacion-organizacional.html">Organisatorisk facilitering</a></li>
+            <li><a href="/da/servicios/monitoreo.html">Monitorering og evaluering</a></li>
+            <li><a href="/da/servicios/soluciones-digitales.html">Digitale løsninger</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Explorar</h5>
+          <h5>Udforsk</h5>
           <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/index.html#casos">Impacto</a></li>
-            <li><a href="/contacto.html">Contacto</a></li>
+            <li><a href="/da/index.html">Forside</a></li>
+            <li><a href="/da/index.html#casos">Effekt</a></li>
+            <li><a href="/da/contacto.html">Kontakt</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Contacto</h5>
+          <h5>Kontakt</h5>
           <ul>
             <li><a href="https://wa.me/56971657358" target="_blank" rel="noopener">WhatsApp</a></li>
             <li><a href="mailto:contacto.livlin@gmail.com">contacto.livlin@gmail.com</a></li>
@@ -195,13 +232,13 @@
   </footer>
 
   <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Facilitaci%C3%B3n%20Organizacional." target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20me%20interesa%20apoyo%20en%20Monitoreo%2C%20Evaluaci%C3%B3n%20y%20Aprendizaje." target="_blank" rel="noopener" class="wa-float" aria-label="Kontakt via WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
   </a>
 
   <script src="/js/script.js?v=7"></script>
   <script src="/js/casos.js?v=1"></script>
-  <script>window.LIVLIN_LANG="es";window.LIVLIN_LANGS=[{"code":"es","dir":"","htmlLang":"es","label":"Español"},{"code":"en","dir":"en","htmlLang":"en","label":"English"},{"code":"da","dir":"da","htmlLang":"da","label":"Dansk"},{"code":"zh-CN","dir":"zh","htmlLang":"zh-Hans","label":"中文"}];</script>
+  <script>window.LIVLIN_LANG="da";window.LIVLIN_LANGS=[{"code":"es","dir":"","htmlLang":"es","label":"Español"},{"code":"en","dir":"en","htmlLang":"en","label":"English"},{"code":"da","dir":"da","htmlLang":"da","label":"Dansk"},{"code":"zh-CN","dir":"zh","htmlLang":"zh-Hans","label":"中文"}];</script>
   <script src="/js/i18n.js" defer></script>
 </body>
 </html>
