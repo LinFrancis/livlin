@@ -81,6 +81,13 @@
       video: ''
     },
     {
+      id: 'indag-regenerativa', name: 'Indagación Regenerativa', location: 'Demo pública',
+      cats: ['mel', 'digital'], service: 'MEL · Soluciones Digitales',
+      desc: 'Desarrollamos un motor de diagnóstico multidimensional basado en la Flor de la Permacultura. La plataforma permite analizar el potencial de un espacio en 10 dimensiones y traducirlo en un plan de acción priorizado por etapas, con seguimiento visual del avance. Una herramienta para entender dónde estás y hacia dónde ir en tu proceso regenerativo.',
+      images: ['images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png', 'images/apps/indag_reg/01_plataforma_livlin_vertical.png', 'images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png', 'images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png'],
+      video: ''
+    },
+    {
       id: 'mapeo-cuencas', name: 'Mapeo Participativo de Cuencas', location: 'Demo pública',
       cats: ['mel', 'digital'], service: 'MEL · Soluciones Digitales',
       desc: 'Desarrollamos una plataforma colaborativa para analizar territorios de cuenca y conflictos socioambientales. Permite registrar conflictos georreferenciados, visualizar mapas de calor por subcuenca y generar un directorio exportable de actores. Una herramienta concreta para que comunidades y organizaciones territorialicen su monitoreo y aprendizaje.',
