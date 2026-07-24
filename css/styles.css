@@ -8412,7 +8412,7 @@ body.lb-lock {
 }
 .servicios-grid-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: var(--shadow-medium); }
 .servicios-grid-card-img {
-  display: block; width: calc(100% + 48px); margin: 0 -24px 18px; height: 160px;
+  display: block; width: calc(100% + 48px); margin: 0 -24px 26px; height: 160px;
   object-fit: cover; transition: transform 0.4s ease;
 }
 .servicios-grid-card:hover .servicios-grid-card-img { transform: scale(1.04); }
