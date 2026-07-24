@@ -8345,6 +8345,16 @@ body.lb-lock {
   .nav-lang-dropdown { right: auto; left: 0; }
 }
 
+/* ===== Botón grande de WhatsApp (banners CTA) ===== */
+.btn-wa-big {
+  display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: #fff;
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.05rem;
+  padding: 18px 36px; border-radius: 100px; text-decoration: none;
+  transition: all 0.3s ease; box-shadow: 0 6px 30px rgba(37,211,102,0.35);
+}
+.btn-wa-big:hover { background: #1db954; color: #fff; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37,211,102,0.45); }
+.btn-wa-big svg { width: 24px; height: 24px; fill: #fff; flex-shrink: 0; }
+
 /* ===== Agendar conversación (Calendly) ===== */
 .calendly-float {
   position: fixed; bottom: 100px; right: 28px; width: 60px; height: 60px;
