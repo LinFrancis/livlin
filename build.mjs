@@ -255,7 +255,7 @@ function buildLangSwitch(pageRel, lang) {
     const active = l.code === lang.code ? ' aria-current="true"' : '';
     return `<li><a href="${href}" hreflang="${l.hreflang}" lang="${l.htmlLang}"${active} data-lang="${l.code}">${l.shortLabel} — ${l.label}</a></li>`;
   }).join('');
-  return `<li class="nav-lang" data-lang-switch>\n          <button class="nav-lang-btn" aria-haspopup="listbox" aria-expanded="false">🌐 ${lang.shortLabel}</button>\n          <ul class="nav-lang-dropdown" role="listbox">${items}</ul>\n        </li>`;
+  return `<div class="nav-lang" data-lang-switch>\n          <button class="nav-lang-btn" aria-haspopup="listbox" aria-expanded="false">🌐 ${lang.shortLabel}</button>\n          <ul class="nav-lang-dropdown" role="listbox">${items}</ul>\n        </div>`;
 }
 
 function injectAll(html, pageRel, lang) {
@@ -264,11 +264,12 @@ function injectAll(html, pageRel, lang) {
   // SEO antes de </head>
   const seo = buildSeoHead(pageRel, lang);
   html = html.replace(/<\/head>/i, `${seo}\n</head>`);
-  // selector tras el <li> del CTA de contacto
+  // selector de idioma: sale de .nav-links, se inserta como hermano del burger dentro de .nav-inner
+  // (siempre visible, no queda escondido dentro del menú colapsable en mobile)
   const sw = buildLangSwitch(pageRel, lang);
   html = html.replace(
-    /(<li>\s*<a[^>]*class="[^"]*nav-cta-green[^"]*"[\s\S]*?<\/a>\s*<\/li>)/i,
-    `$1\n        ${sw}`
+    /(<button class="nav-toggle"[^>]*>[\s\S]*?<\/button>)/i,
+    `$1\n      ${sw}`
   );
   // globales + runtime antes de </body>
   const globals =

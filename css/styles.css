@@ -417,7 +417,7 @@ section {
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 900px) {
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; margin-left: auto; }
   .nav-links {
     position: fixed;
     top: 76px; left: 0; right: 0;
@@ -451,7 +451,10 @@ section {
     opacity: 1;
     pointer-events: auto;
     border-radius: 0 8px 8px 0;
+    max-height: 260px;
+    overflow-y: auto;
   }
+  .dropdown-menu a { padding: 8px 0 !important; font-size: 0.9rem !important; }
 
   .dropdown-menu::before { display: none; }
   .nav-item-dropdown::after { display: none; }
@@ -8336,6 +8339,91 @@ body.lb-lock {
 .nav-lang-dropdown li a:hover { background: rgba(18,140,126,0.08); color: #128c7e; }
 .nav-lang-dropdown li a[aria-current="true"] { color: #128c7e; font-weight: 800; }
 @media (max-width: 980px) {
-  .nav-lang { margin-left: 0; padding-top: 8px; }
+  .nav-lang { margin-left: 10px; padding-top: 0; }
   .nav-lang-dropdown { right: auto; left: 0; }
 }
+
+/* ===== Agendar conversación (Calendly) ===== */
+.calendly-float {
+  position: fixed; bottom: 100px; right: 28px; width: 60px; height: 60px;
+  border-radius: 50%; background: var(--amber); display: flex; align-items: center;
+  justify-content: center; box-shadow: 0 4px 20px rgba(225,170,54,0.5);
+  z-index: 1000; border: none; cursor: pointer; transition: all 0.3s ease;
+  animation: float-bounce-cal 3s ease-in-out infinite; padding: 0;
+}
+.calendly-float:hover { transform: scale(1.1); animation: none; }
+.calendly-float svg { width: 28px; height: 28px; fill: #fff; }
+@keyframes float-bounce-cal { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+@media (max-width: 480px) {
+  .wa-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+  .wa-float svg { width: 26px; height: 26px; }
+  .calendly-float { width: 52px; height: 52px; bottom: 82px; right: 20px; }
+  .calendly-float svg { width: 24px; height: 24px; }
+}
+
+.cta-dual { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: center; }
+@media (max-width: 600px) {
+  .cta-dual { flex-direction: column; width: 100%; }
+  .cta-dual > * { width: 100%; justify-content: center; text-align: center; }
+}
+
+.btn-calendly-big {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--amber); color: #fff;
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; padding: 16px 32px;
+  border-radius: 100px; text-decoration: none; border: none; cursor: pointer;
+  transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(225,170,54,0.35);
+}
+.btn-calendly-big:hover { background: #c8932a; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(225,170,54,0.45); }
+.btn-calendly-big svg { width: 22px; height: 22px; fill: #fff; }
+
+.btn-calendly-service {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--amber); color: #fff;
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; padding: 14px 26px;
+  border-radius: 100px; text-decoration: none; border: none; cursor: pointer;
+  transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(225,170,54,0.3);
+}
+.btn-calendly-service:hover { background: #c8932a; transform: translateY(-2px); color: #fff; }
+.btn-calendly-service svg { width: 20px; height: 20px; fill: #fff; }
+
+.btn-calendly-hero { background: var(--amber) !important; box-shadow: 0 4px 20px rgba(225,170,54,0.35) !important; }
+.btn-calendly-hero:hover { background: #c8932a !important; }
+
+/* ===== Acceso a la plataforma (nav) ===== */
+.nav-cta-platform {
+  background: var(--teal) !important; color: #fff !important; padding: 8px 18px !important;
+  border-radius: 100px; font-weight: 700; transition: all 0.3s ease;
+}
+.nav-cta-platform:hover { background: var(--teal-dark) !important; color: #fff !important; }
+.nav-cta-platform::after { display: none !important; }
+
+/* ===== Servicios (grilla de líneas de acción) ===== */
+.servicios-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px; margin-top: 32px;
+}
+.servicios-grid-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow-soft); padding: 28px 24px; text-decoration: none; color: var(--text);
+  display: block; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.servicios-grid-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: var(--shadow-medium); }
+.servicios-grid-card .badge-gratis {
+  display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.05em; text-transform: uppercase; color: #fff; background: var(--green-dark);
+  padding: 3px 10px; border-radius: 100px; margin-bottom: 10px;
+}
+.servicios-grid-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text); }
+.servicios-grid-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+/* ===== Bloque explicación plataforma Indagación Regenerativa ===== */
+.plataforma-explain {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+}
+.plataforma-explain img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-medium); }
+.plataforma-explain ul { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.plataforma-explain ul li { padding-left: 22px; position: relative; font-size: 0.96rem; color: var(--text-soft); line-height: 1.5; }
+.plataforma-explain ul li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+@media (max-width: 900px) { .plataforma-explain { grid-template-columns: 1fr; } }
+
+.service-lead-desc { font-size: 1.02rem; color: var(--text-soft); line-height: 1.6; max-width: 680px; margin: 0 auto 8px; }
