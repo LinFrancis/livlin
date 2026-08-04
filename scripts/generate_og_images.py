@@ -171,7 +171,9 @@ def build_canvas(background):
         new_height = int(new_width / bg_ratio)
     bg = bg.resize((new_width, new_height), Image.LANCZOS)
     left = (new_width - CANVAS_SIZE[0]) // 2
-    top = (new_height - CANVAS_SIZE[1]) // 2
+    # anclar arriba: recortar el sobrante solo abajo para conservar el aire
+    # original de la foto (evita cortar la parte de arriba, ej. el pelo)
+    top = 0
     bg = bg.crop((left, top, left + CANVAS_SIZE[0], top + CANVAS_SIZE[1]))
 
     overlay = Image.new("L", CANVAS_SIZE, 0)
