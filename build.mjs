@@ -24,6 +24,18 @@ const SRC = join(__dirname, 'src');
 const OUT = __dirname;
 const mode = process.argv[2] === 'extract' ? 'extract' : 'build';
 
+// ---------- imágenes Open Graph ----------
+// slug de imagen (images/og/<lang>/og-<slug>.jpg) a partir de la ruta fuente.
+function ogSlugFor(pageRel) {
+  if (pageRel === 'index.html') return 'home';
+  return pageRel.replace(/\.html$/, '').replace(/^servicios\//, '');
+}
+function ogImageFor(pageRel, lang) {
+  const slug = ogSlugFor(pageRel);
+  const dir = lang.code === baseLang.code ? '' : `${lang.dir}/`;
+  return `${site.domain}/images/og/${dir}og-${slug}.jpg`;
+}
+
 // ---------- utilidades de archivos ----------
 function listHtml(dir, baseRel = '') {
   const out = [];
@@ -245,7 +257,9 @@ function buildSeoHead(pageRel, lang) {
     ...languages.filter(l => l.code !== lang.code).map(l =>
       `  <meta property="og:locale:alternate" content="${l.ogLocale}">`),
     `  <meta property="og:type" content="website">`,
-    `  <meta property="og:image" content="${site.domain}/images/ui/logo_livlin_with_text.png">`,
+    `  <meta property="og:image" content="${ogImageFor(pageRel, lang)}">`,
+    `  <meta property="og:image:width" content="1200">`,
+    `  <meta property="og:image:height" content="630">`,
   ].join('\n');
 }
 
