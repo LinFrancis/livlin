@@ -54,7 +54,7 @@ PAGES = {
     "diseno-regenerativo": {"title": "Nutre tu Presente y Futuro · Diseño Regenerativo · Livlin"},
     "educacion-ambiental": {"title": "La Naturaleza se Comunica a Través de Patrones · Educación Ambiental · Livlin"},
     "facilitacion-organizacional": {"title": "Metodologías Participativas al Servicio de Propósitos Comunes · Facilitación Organizacional · Livlin"},
-    "huerto-urbano": {"title": "Hagamos tu Huerta Realidad · Huerto Urbano · Livlin"},
+    "huerto-urbano": {"title": "Huerto Autosustentable · Riego por Capilaridad + Hotel de Lombrices · Livlin"},
     "monitoreo": {"title": "Monitoreo, Evaluación y Aprendizaje (MEL) · Livlin"},
     "soluciones-digitales": {"title": "Desarrollo de Soluciones Digitales · Livlin"},
     "visita-diagnostica": {"title": "Visita Diagnóstica + Habilitación Básica MEL · Livlin"},
