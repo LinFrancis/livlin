@@ -1,0 +1,16 @@
+/* Visor 3D para la web: deja solo lo que sirve a quien cuida la huerta (ver, girar, medir, separar piezas, ver las partes). */
+html.web, html.web body { background: #fff; }
+html.web body { font-size: 14px; }
+html.web #b_enfocar, html.web #b_aislar, html.web #b_ocultar, html.web #b_sol, html.web #b_pres, html.web #b_ampliar,
+html.web #b_captura, html.web #b_glb, html.web #b_video, html.web #solbar,
+html.web label.corte, html.web .sep, html.web #titulo { display: none !important; }
+html.web button, html.web select { font-size: 14px; padding: 7px 11px; border-radius: 8px; }
+html.web button.on { background: #1A7783; border-color: #1A7783; }
+html.web #barra, html.web #barra2 { gap: 6px; padding: 4px 4px 6px; }
+html.web #caja { border-radius: 12px; }
+html.web #ayuda { font-size: 12.5px; line-height: 1.5; padding: 6px 4px 0; }
+@media (max-width: 560px) {
+  html.web button, html.web select { font-size: 13px; padding: 6px 9px; }
+  html.web label.c { font-size: 12.5px; }
+  html.web input[type=range] { width: 70px; }
+}
