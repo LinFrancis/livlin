@@ -65,6 +65,11 @@
         cotas = new THREE.Group();
         var hayModelos = ((args.escena && args.escena.rotulos) || []).some(function (r) { return r.k === "modelo" && r.b; });
         if (!sinPersonas) cotasPersonas(hayModelos ? 1500 : diag);
+        ((args.escena && args.escena.rotulos) || []).forEach(function (r) {      // nombres flotantes (proyecto completo, sol y viento)
+          if (r.k !== "flotante") return;
+          var corto = r.texto.length <= 2, ancho = corto ? 90 : 60 + r.texto.length * 17;
+          cotas.add(etiqueta(r.texto, new THREE.Vector3(r.x, r.y, r.z), { ancho: ancho, k: corto ? 0.8 : 0.9, ref: 6500, color: "#2f6f4e", texto: "#1B4332" }));
+        });
         cotas.visible = true; raiz.add(cotas); cotas.userData.fijo = true;
       }
       document.body.classList.add("ilus");
@@ -72,6 +77,10 @@
       if (typeof encuadrarVisible === "function") encuadrarVisible();
       setTimeout(function () {
         cam.r *= parseFloat(q.get("zoom") || "1");
+        if ((q.get("vista") || "persp") === "frente") {                       // desde el frente, a la altura de los ojos de una persona (1,6 m)
+          var c = (1600 - cam.t.z) / cam.r;
+          cam.phi = Math.acos(Math.max(-0.5, Math.min(0.5, c)));
+        }
         giro = q.get("giro") !== "0";
         dibujar(true);
         document.documentElement.setAttribute("data-listo", "1");

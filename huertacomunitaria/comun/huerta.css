@@ -159,6 +159,7 @@
 /* hoja de infografías */
 .huerta-hero.con-banner { background: linear-gradient(rgba(14, 38, 27, .66), rgba(14, 38, 27, .42)), var(--banner) center 40% / cover no-repeat; }
 .huerta-hero.con-banner h1, .huerta-hero.con-banner .lead, .huerta-hero.con-banner .eyebrow { color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .35); }
+.grafico { background: #fff; border-radius: 16px; padding: 10px; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); margin: 12px 0; } .grafico svg { width: 100%; height: auto; display: block; } .grafico.rosa { max-width: 420px; }
 .hmapa { margin: 16px 0; } .hmapa iframe { width: 100%; height: 420px; border: 0; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
 .hinsta { margin: 18px auto; max-width: 380px; text-align: center; } .hinsta iframe { width: 100%; aspect-ratio: 9 / 14; height: auto; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
 .hobjs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 14px 0; }
