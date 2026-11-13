@@ -73,6 +73,11 @@
         cotas.visible = true; raiz.add(cotas); cotas.userData.fijo = true;
       }
       document.body.classList.add("ilus");
+      // se puede girar con el mouse o el dedo (horizontal); la rueda y el clic no hacen nada, así la página se desliza normal; al soltar, vuelve a girar solo
+      var cv = document.getElementById("c"), rean = null;
+      ["click", "dblclick", "contextmenu", "wheel"].forEach(function (ev) { window.addEventListener(ev, function (e) { e.stopImmediatePropagation(); }, true); });
+      cv.addEventListener("pointerup", function () { clearTimeout(rean); rean = setTimeout(function () { if (q.get("giro") !== "0") giro = true; }, 2500); });
+      cv.addEventListener("pointercancel", function () { clearTimeout(rean); rean = setTimeout(function () { if (q.get("giro") !== "0") giro = true; }, 2500); });
       window.vista(q.get("vista") || "persp");
       if (typeof encuadrarVisible === "function") encuadrarVisible();
       setTimeout(function () {

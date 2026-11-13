@@ -20,4 +20,4 @@ html.ilus, html.ilus body { background: transparent; margin: 0; overflow: hidden
 html.ilus body > *:not(#caja) { display: none !important; }
 html.ilus #caja { height: 100vh !important; border-radius: 0; border: 0; }
 html.ilus #capas, html.ilus #brujula, html.ilus #titulo, html.ilus #ficha, html.ilus #armado, html.ilus #tip { display: none !important; }
-html.ilus canvas { pointer-events: none; }
+html.ilus canvas { touch-action: pan-y; cursor: grab; } html.ilus canvas:active { cursor: grabbing; }
