@@ -157,6 +157,10 @@
 .info-sec .container { max-width: 1180px; }
 
 /* hoja de infografías */
+.huerta-hero.con-banner { background: linear-gradient(rgba(14, 38, 27, .66), rgba(14, 38, 27, .42)), var(--banner) center 40% / cover no-repeat; }
+.huerta-hero.con-banner h1, .huerta-hero.con-banner .lead, .huerta-hero.con-banner .eyebrow { color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .35); }
+.hmapa { margin: 16px 0; } .hmapa iframe { width: 100%; height: 420px; border: 0; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
+.hinsta { margin: 18px auto; max-width: 540px; text-align: center; } .hinsta iframe { width: 100%; height: 700px; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
 .hinfos { display: grid; gap: 22px; }
 .hinfo { display: grid; grid-template-columns: minmax(200px, 320px) 1fr; gap: 22px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; align-items: center; }
 .hinfo-img img { width: 100%; height: auto; display: block; border-radius: 12px; }
@@ -238,6 +242,7 @@
 .info td b { color: var(--v1); }
 .info .aviso { background: #FFF3D6; border: 2px dashed #E0B94E; border-radius: 14px; padding: 10px 16px; font-size: 15.5px; color: #5B3D00; line-height: 1.4; }
 .info .aviso b { color: #8A5A00; }
+.info .pie-nota.fuentes { border-top: 1px solid #CFE3D3; padding-top: 6px; }
 .info .pie-nota { font-size: 14.5px; color: var(--suave); line-height: 1.35; margin: 0; }
 .info .barra { display: grid; grid-template-columns: 150px 1fr 40px; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; margin-bottom: 6px; }
 .info .barra i { display: block; height: 20px; border-radius: 10px; background: var(--v3); } .info .barra i.t { background: var(--tierra); }
@@ -289,4 +294,24 @@
   .hoja:last-child { page-break-after: auto; break-after: auto; }
   .info .i3d iframe { display: none; }
   .hoja, .hoja * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Para imprimir: todo sobre fondo blanco (así se ahorra tinta); el color queda solo en líneas, números y textos */
+@media print {
+  .hoja-cuerpo, .hoja-cuerpo.reparte { background: #fff !important; }
+  .hoja-cab { background: #fff !important; color: var(--v1) !important; border-bottom: 5px solid var(--v2); }
+  .hoja-cab h2 { color: var(--v1) !important; } .hoja-cab .eb { color: var(--v2) !important; } .hoja-cab .sb { color: var(--suave) !important; }
+  .hoja-pie { background: #fff !important; color: var(--tinta) !important; border-top: 4px solid var(--v2); }
+  .hoja-pie .ct b { color: var(--v1) !important; } .hoja-pie .ct span, .hoja-pie .qrt, .hoja-pie .pg small { color: var(--suave) !important; } .hoja-pie .pg { color: var(--v2) !important; }
+  .hoja-pie .qr { border: 1px solid #B9C9BE; }
+  .info .tarj, .info .tarj.tierra, .info .tarj.madera, .info .caj, .info .caj.c2, .info .caj.c3, .info .paso, .info .plano, .info .i3d, .info .ciclo div { background: #fff !important; box-shadow: none !important; border: 1.5px solid #B9D3C0 !important; }
+  .info .tarj.tierra, .info .caj.c3 { border-color: #E3B7A8 !important; } .info .tarj.madera, .info .caj.c2 { border-color: #E0C892 !important; }
+  .info .cita { background: #fff !important; border: 2.5px solid var(--v2); } .info .cita p, .info .cita p:first-child { color: var(--v1) !important; }
+  .info .regla { background: #fff !important; border: 2.5px solid #E0B94E; } .info .si { background: #fff !important; border-color: #8FCBA6; } .info .no { background: #fff !important; border-color: #E0A39C; }
+  .info .aviso { background: #fff !important; }
+  .info .paso::before { background: #fff !important; color: var(--v2) !important; border: 3px solid var(--v2); }
+  .info th { background: #fff !important; color: var(--v1) !important; border-bottom: 3px solid var(--v2); }
+  .info tr:nth-child(even) td { background: #fff !important; } .info table { background: #fff !important; border: 1.5px solid #B9D3C0; }
+  .info .chip, .info .chip.t, .info .chip.m { background: #fff !important; }
+  .info .barra i { background: var(--v2) !important; }
 }
