@@ -91,6 +91,9 @@
 .hfotos figure { margin: 0; }
 .hfotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; cursor: zoom-in; }
 .hfotos figcaption, .hfoto figcaption { font-size: .85rem; color: var(--muted); padding-top: 6px; }
+.hfotos.completa { display: block; max-width: 920px; margin: 18px auto; text-align: center; }
+.hfotos.completa figure { margin: 0; } .hfotos.completa img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; background: #fff; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
+.hfotos.completa figcaption { margin-top: 8px; font-size: .9rem; color: var(--text-soft); }
 .hfoto { margin: 22px 0; } .hfoto img { width: 100%; max-height: 520px; object-fit: cover; }
 .hdesc { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
 .hdesc .btn { white-space: normal; text-align: center; }
