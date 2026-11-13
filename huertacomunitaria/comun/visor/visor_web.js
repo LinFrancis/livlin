@@ -58,7 +58,8 @@
       if (typeof objetos === "undefined" || !objetos.length) { if (intentos > 80) clearInterval(t); return; }
       clearInterval(t);
       var sinPersonas = q.get("personas") === "0";
-      objetos.forEach(function (o) { var c = o.userData && o.userData.cat; if (c === "herrajes" || c === "medidas" || (sinPersonas && c === "personas")) o.visible = false; });
+      raiz.children.forEach(function (o) { if (o.geometry && o.geometry.type === "CircleGeometry" && o.material && o.material.map) o.visible = false; });     // sin el disco gris del suelo: fondo blanco (las sombras quedan)
+      objetos.forEach(function (o) { var c = o.userData && o.userData.cat; if (c === "herrajes" || c === "medidas" || c === "suelo" || c === "aire" || (sinPersonas && c === "personas")) o.visible = false; });
       if (!q.get("medidas")) {                                   // sin medidas de la estructura; solo cada persona con su nombre y su altura
         mostrarCotas = true;
         if (cotas) raiz.remove(cotas);

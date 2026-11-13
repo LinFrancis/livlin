@@ -306,8 +306,7 @@
   .hoja, .hoja * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 
-/* Para imprimir: todo sobre fondo blanco (así se ahorra tinta); el color queda solo en líneas, números y textos */
-@media print {
+/* Todas las infografías van sobre fondo blanco (así se ahorra tinta al imprimir); el color queda solo en líneas, números y textos */
   .hoja-cuerpo, .hoja-cuerpo.reparte { background: #fff !important; }
   .hoja-cab { background: #fff !important; color: var(--v1) !important; border-bottom: 5px solid var(--v2); }
   .hoja-cab h2 { color: var(--v1) !important; } .hoja-cab .eb { color: var(--v2) !important; } .hoja-cab .sb { color: var(--suave) !important; }
@@ -324,8 +323,6 @@
   .info tr:nth-child(even) td { background: #fff !important; } .info table { background: #fff !important; border: 1.5px solid #B9D3C0; }
   .info .chip, .info .chip.t, .info .chip.m { background: #fff !important; }
   .info .barra i { background: var(--v2) !important; }
-}
-
 /* un paso con su imagen 3D */
 .paso3d { display: grid; grid-template-columns: minmax(180px, 330px) 1fr; gap: 16px; align-items: center; background: #fff; border-radius: 16px; padding: 10px; margin: 0 0 12px; box-shadow: 0 2px 10px rgba(27, 67, 50, .08); }
 .paso3d-i .i3d { aspect-ratio: 3 / 2; box-shadow: none; border: 1px solid #DDE8DF; }
@@ -334,3 +331,7 @@
 .paso3d-t p { margin: 0; font-size: 1.05rem; line-height: 1.4; }
 @media (max-width: 640px) { .paso3d { grid-template-columns: 1fr; } }
 @media print { .paso3d { box-shadow: none; border: 1.5px solid #B9D3C0; } .paso3d-n { background: #fff; color: #2D6A4F; border: 3px solid #2D6A4F; } }
+
+.hoja { background: #fff; }
+.info .qr-grande { width: 290px; height: 290px; background: #fff; border: 3px solid var(--v2); border-radius: 18px; padding: 14px; margin: 0 auto; }
+.info .qr-grande svg { width: 100%; height: 100%; display: block; }
