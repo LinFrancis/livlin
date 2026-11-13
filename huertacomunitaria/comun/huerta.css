@@ -335,3 +335,7 @@
 .hoja { background: #fff; }
 .info .qr-grande { width: 290px; height: 290px; background: #fff; border: 3px solid var(--v2); border-radius: 18px; padding: 14px; margin: 0 auto; }
 .info .qr-grande svg { width: 100%; height: 100%; display: block; }
+
+.leyenda-sol { font-size: 15px; line-height: 1.5; color: var(--suave); background: #fff; border: 1.5px solid #B9D3C0; border-radius: 12px; padding: 8px 14px; margin: 8px 0; }
+.leyenda-sol .ls { display: inline-block; margin-right: 10px; white-space: nowrap; font-weight: 600; color: var(--tinta); }
+.leyenda-sol .ls::before { content: ""; display: inline-block; width: 26px; height: 6px; background: var(--c); border-radius: 3px; margin-right: 6px; vertical-align: middle; }

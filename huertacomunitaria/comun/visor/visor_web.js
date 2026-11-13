@@ -83,6 +83,7 @@
       if (typeof encuadrarVisible === "function") encuadrarVisible();
       setTimeout(function () {
         cam.r *= parseFloat(q.get("zoom") || "1");
+        if (q.get("theta")) cam.theta = parseFloat(q.get("theta"));
         if ((q.get("vista") || "persp") === "frente") {                       // desde el frente, a la altura de los ojos de una persona (1,6 m)
           var c = (1600 - cam.t.z) / cam.r;
           cam.phi = Math.acos(Math.max(-0.5, Math.min(0.5, c)));
