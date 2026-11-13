@@ -11,6 +11,21 @@
   // Modo ilustrativo (sin botones): solo el modelo, girando solo, sin medidas ni herrajes. Parámetros: vista (persp|frente|lado|planta), zoom, giro=0 (quieto), fondo (color), medidas=1
   var ilus = q.get("modo") === "ilustrativo";
   if (ilus) document.documentElement.classList.add("ilus");
+  // rótulos sutiles (sin fondo pesado ni bordes fuertes): no tapan el modelo
+  if (ilus) window.etiqueta = function (texto, pos, o) {
+    o = o || {};
+    var ancho = o.ancho || 256, c = document.createElement("canvas"); c.width = ancho; c.height = 64;
+    var g = c.getContext("2d");
+    g.font = "600 22px sans-serif";
+    var tw = Math.min(g.measureText(texto).width + 22, ancho - 6), x0 = (ancho - tw) / 2;
+    g.fillStyle = "rgba(255,255,255,.5)"; g.strokeStyle = "rgba(125,145,133,.45)"; g.lineWidth = 1.2;
+    g.beginPath(); if (g.roundRect) g.roundRect(x0, 15, tw, 34, 9); else g.rect(x0, 15, tw, 34); g.fill(); g.stroke();
+    g.fillStyle = "#4A5F54"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(texto, ancho / 2, 33);
+    var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding;
+    var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, depthTest: false, transparent: true }));
+    var k = (o.ref || diag) * 0.075 * (o.k || 1) * 1.0;
+    sp.scale.set(k * ancho / 64, k, 1); sp.position.copy(pos); sp.renderOrder = 10; return sp;
+  };
 
   // Textos más simples (el visor original está pensado para quien diseña)
   function simplificar() {
@@ -84,10 +99,12 @@
       setTimeout(function () {
         cam.r *= parseFloat(q.get("zoom") || "1");
         if (q.get("theta")) cam.theta = parseFloat(q.get("theta"));
+        var phiFijo = q.get("phi") ? parseFloat(q.get("phi")) : null;
         if ((q.get("vista") || "persp") === "frente") {                       // desde el frente, a la altura de los ojos de una persona (1,6 m)
           var c = (1600 - cam.t.z) / cam.r;
           cam.phi = Math.acos(Math.max(-0.5, Math.min(0.5, c)));
         }
+        if (phiFijo !== null) cam.phi = phiFijo;                                  // las fotos fijas de los PDF se toman desde arriba, para que se vea todo
         giro = q.get("giro") !== "0";
         dibujar(true);
         document.documentElement.setAttribute("data-listo", "1");

@@ -64,7 +64,8 @@
 
 /* tablas */
 .htabla { overflow-x: auto; margin: 18px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--card); }
-.htabla table { border-collapse: collapse; width: 100%; min-width: 520px; }
+.htabla table { border-collapse: collapse; width: 100%; min-width: 0; }
+.huerta-sec a, .huerta-sec li { overflow-wrap: anywhere; }
 .htabla th { background: var(--cream); text-align: left; font-size: .85rem; letter-spacing: .03em; }
 .htabla th, .htabla td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: .98rem; }
 .htabla tr:last-child td { border-bottom: 0; }
@@ -151,7 +152,7 @@
 .h3d-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .h3d-pie { font-size: .9rem; color: var(--text-soft); margin: 10px 0 0; line-height: 1.5; }
 .huerta-sec .i3d, .i3d { margin: 0; position: relative; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); aspect-ratio: 3 / 2; }
-.i3d img, .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; border-radius: 0; }
+.i3d img, .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: contain; border-radius: 0; }
 .i3d iframe { background: transparent; opacity: 0; transition: opacity .35s; } .i3d iframe.listo { opacity: 1; }
 .i3d figcaption { position: absolute; left: 10px; bottom: 8px; font-size: .8rem; font-weight: 700; color: #1B4332; background: rgba(255, 255, 255, .88); padding: 3px 10px; border-radius: 8px; }
 .info-sec .container { max-width: 1180px; }
@@ -181,7 +182,7 @@
 .info *, .info *::before, .info *::after { box-sizing: border-box; }
 .info-hojas { display: flex; flex-direction: column; align-items: center; gap: 28px; }
 .info section.hoja { padding: 0; margin: 0; }
-.hoja { width: 1100px; max-width: 100%; aspect-ratio: 1100 / 1556; background: #fff; border-radius: 14px; box-shadow: 0 6px 28px rgba(27, 67, 50, .16); overflow: hidden; display: flex; flex-direction: column; position: relative; container-type: inline-size; }
+.hoja { width: 1100px; height: 1556px; position: absolute; left: 0; top: 0; transform-origin: 0 0; background: #fff; border-radius: 14px; box-shadow: 0 6px 28px rgba(27, 67, 50, .16); overflow: hidden; display: flex; flex-direction: column; }
 .hoja-cab { background: linear-gradient(135deg, var(--v1), var(--v2)); color: #fff; padding: 24px 44px 20px; position: relative; }
 .hoja-cab .logo { position: absolute; right: 44px; top: 20px; height: 62px; width: auto; background: #fff; border-radius: 12px; padding: 6px 12px; }
 .hoja-cab .eb { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--v4); font-weight: 700; }
@@ -263,13 +264,14 @@
 .info .compacto .plano .chips, .info .compacto .plano .ps { display: none; }
 
 /* bloques que ocupan el espacio que sobra en la hoja */
-.info .crece { flex: 1 1 auto; min-height: 270px; grid-auto-rows: minmax(0, 1fr); }
-.info .crece .i3d { aspect-ratio: auto; height: 100%; min-height: 170px; }
+.info .crece { flex: 0 0 auto; }
+.info .crece .i3d { aspect-ratio: 3 / 2; height: auto; }
+.info .crece .i3d.ancho { aspect-ratio: 16 / 9; }
 
 /* modelos 3D ilustrativos: sin botones; se ven girando solos (en el PDF, la foto fija) */
 .info .i3d { margin: 0; position: relative; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); aspect-ratio: 3 / 2; }
 .info .i3d.ancho { aspect-ratio: 16 / 9; } .info .i3d.alto { aspect-ratio: 4 / 3; }
-.info .i3d img, .info .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.info .i3d img, .info .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: contain; }
 .info .i3d iframe { background: transparent; opacity: 0; transition: opacity .35s; } .info .i3d iframe.listo { opacity: 1; }
 .info .i3d figcaption { position: absolute; left: 10px; bottom: 8px; right: 10px; font-size: 13.5px; font-weight: 700; color: var(--v1); background: rgba(255, 255, 255, .86); padding: 3px 10px; border-radius: 8px; width: fit-content; max-width: 100%; }
 .info .plano { background: #fff; border-radius: 18px; padding: 10px 12px 8px; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); } .info .plano svg { width: 100%; height: auto; display: block; }
@@ -277,14 +279,7 @@
 .info svg text { font-family: inherit; }
 
 /* en pantallas angostas: las hojas se acomodan al alto de su contenido */
-@container (max-width: 760px) {
-  .hoja-cab h2 { font-size: 30px; } .hoja-cab .sb { font-size: 16px; } .hoja-cuerpo, .hoja-cab, .hoja-pie { padding-left: 18px; padding-right: 18px; }
-  .info .g3, .info .g4, .info .g2, .info .g21, .info .g12 { grid-template-columns: 1fr; } .info .ciclo { grid-template-columns: 1fr 1fr; }
-  .info .flujo { grid-template-columns: 1fr; } .info .flujo .fl { transform: rotate(90deg); height: 30px; }
-  .info .lema { font-size: 23px; } .info p, .info ul, .info ol { font-size: 16px; } .info .num { font-size: 40px; }
-  .hoja-pie { flex-wrap: wrap; } .hoja-pie .pg { width: 100%; text-align: left; }
-}
-@media (max-width: 1148px) { .hoja { aspect-ratio: auto; } }
+
 
 /* acciones y modo edición (no se imprimen) */
 .info-acciones { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 0 0 22px; }
@@ -300,8 +295,9 @@
   .huerta-sec, .huerta-sec .container { padding: 0 !important; margin: 0 !important; max-width: none !important; background: none !important; }
   .info-hojas { display: block; gap: 0; }
   .info { margin: 0; padding: 0; }
-  .hoja { width: 1100px; height: 1554px; aspect-ratio: auto; border-radius: 0; box-shadow: none; page-break-after: always; break-after: page; margin: 0; }
-  .hoja:last-child { page-break-after: auto; break-after: auto; }
+  .hoja-caja { width: 1100px !important; height: 1554px !important; margin: 0 !important; page-break-after: always; break-after: page; position: relative; }
+  .hoja { transform: none !important; border-radius: 0; box-shadow: none; height: 1554px; }
+  .hoja-caja:last-child { page-break-after: auto; break-after: auto; }
   .info .i3d iframe { display: none; }
   .hoja, .hoja * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
@@ -339,3 +335,9 @@
 .leyenda-sol { font-size: 15px; line-height: 1.5; color: var(--suave); background: #fff; border: 1.5px solid #B9D3C0; border-radius: 12px; padding: 8px 14px; margin: 8px 0; }
 .leyenda-sol .ls { display: inline-block; margin-right: 10px; white-space: nowrap; font-weight: 600; color: var(--tinta); }
 .leyenda-sol .ls::before { content: ""; display: inline-block; width: 26px; height: 6px; background: var(--c); border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+
+.info .crece .i3d.pano, .info .i3d.pano { aspect-ratio: 2 / 1; } .info .crece .i3d.pano2, .info .i3d.pano2 { aspect-ratio: 5 / 2; }
+
+/* la lámina entra siempre entera en la pantalla (celular o computador): se reduce como una hoja impresa; con dos dedos se amplía */
+.hoja-caja { position: relative; width: 1100px; height: 1556px; max-width: 100%; margin: 0 auto; }
+.info-hojas { width: 100%; }

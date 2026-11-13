@@ -69,4 +69,15 @@
     }, { rootMargin: "250px 0px" });
     vivos.forEach(function (f) { obs.observe(f); });
   }
+
+  // Láminas (infografías): tamaño fijo, como una hoja impresa; se reducen para entrar en el ancho de la pantalla
+  function ajustarHojas() {
+    document.querySelectorAll(".hoja-caja").forEach(function (c) {
+      var h = c.firstElementChild, ancho = Math.min(1100, c.parentElement.clientWidth), k = ancho / 1100;
+      c.style.width = ancho + "px"; c.style.height = (1556 * k) + "px"; h.style.transform = "scale(" + k + ")";
+    });
+  }
+  ajustarHojas();
+  window.addEventListener("resize", ajustarHojas);
+  if ("ResizeObserver" in window) { var ro = new ResizeObserver(ajustarHojas); document.querySelectorAll(".info-hojas").forEach(function (e) { ro.observe(e); }); }
 })();
