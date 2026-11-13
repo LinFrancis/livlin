@@ -47,4 +47,17 @@
     var abrir = tarjeta.querySelector(".h3d-abrir");
     if (abrir) abrir.addEventListener("click", function () { encender(tarjeta, botones[0]); });
   });
+
+  // Modelos 3D ilustrativos: el visor se enciende cuando el modelo está cerca de la pantalla y se apaga cuando queda lejos (así el celular no se carga con muchos a la vez)
+  var vivos = document.querySelectorAll("iframe[data-i3d]");
+  if (vivos.length && hayWebGL() && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        var f = e.target;
+        if (e.isIntersecting) { if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-i3d")); }
+        else if (f.getAttribute("src")) { f.removeAttribute("src"); }
+      });
+    }, { rootMargin: "250px 0px" });
+    vivos.forEach(function (f) { obs.observe(f); });
+  }
 })();

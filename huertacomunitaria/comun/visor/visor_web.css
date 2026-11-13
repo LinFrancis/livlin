@@ -14,3 +14,10 @@ html.web #ayuda { font-size: 12.5px; line-height: 1.5; padding: 6px 4px 0; }
   html.web label.c { font-size: 12.5px; }
   html.web input[type=range] { width: 70px; }
 }
+
+/* Modo ilustrativo: solo el modelo, sin botones ni leyenda; no atrapa el dedo, así la página se desliza con normalidad */
+html.ilus, html.ilus body { background: transparent; margin: 0; overflow: hidden; }
+html.ilus body > *:not(#caja) { display: none !important; }
+html.ilus #caja { height: 100vh !important; border-radius: 0; border: 0; }
+html.ilus #capas, html.ilus #brujula, html.ilus #titulo, html.ilus #ficha, html.ilus #armado, html.ilus #tip { display: none !important; }
+html.ilus canvas { pointer-events: none; }
