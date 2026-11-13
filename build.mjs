@@ -276,7 +276,9 @@ function injectAll(html, pageRel, lang) {
   // <html lang>
   html = html.replace(/<html[^>]*>/i, `<html lang="${lang.htmlLang}">`);
   // SEO antes de </head>
-  const seo = buildSeoHead(pageRel, lang);
+  let seo = buildSeoHead(pageRel, lang);
+  // si la página ya trae su propia imagen para compartir (og:image), no se agrega la genérica: evita dos og:image (los buscadores usarían la equivocada)
+  if (/property="og:image"/i.test(html)) seo = seo.split(String.fromCharCode(10)).filter(l => !/og:image|og:type/.test(l)).join(String.fromCharCode(10));
   html = html.replace(/<\/head>/i, `${seo}\n</head>`);
   // selector de idioma: sale de .nav-links, se inserta como hermano del burger dentro de .nav-inner
   // (siempre visible, no queda escondido dentro del menú colapsable en mobile)
