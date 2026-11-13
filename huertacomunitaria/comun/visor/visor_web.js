@@ -57,8 +57,16 @@
       intentos++;
       if (typeof objetos === "undefined" || !objetos.length) { if (intentos > 80) clearInterval(t); return; }
       clearInterval(t);
-      objetos.forEach(function (o) { var c = o.userData && o.userData.cat; if (c === "herrajes" || c === "medidas") o.visible = false; });
-      if (!q.get("medidas")) { mostrarCotas = false; if (typeof cotas !== "undefined" && cotas) cotas.visible = false; }
+      var sinPersonas = q.get("personas") === "0";
+      objetos.forEach(function (o) { var c = o.userData && o.userData.cat; if (c === "herrajes" || c === "medidas" || (sinPersonas && c === "personas")) o.visible = false; });
+      if (!q.get("medidas")) {                                   // sin medidas de la estructura; solo cada persona con su nombre y su altura
+        mostrarCotas = true;
+        if (cotas) raiz.remove(cotas);
+        cotas = new THREE.Group();
+        var hayModelos = ((args.escena && args.escena.rotulos) || []).some(function (r) { return r.k === "modelo" && r.b; });
+        if (!sinPersonas) cotasPersonas(hayModelos ? 1500 : diag);
+        cotas.visible = true; raiz.add(cotas); cotas.userData.fijo = true;
+      }
       document.body.classList.add("ilus");
       window.vista(q.get("vista") || "persp");
       if (typeof encuadrarVisible === "function") encuadrarVisible();
