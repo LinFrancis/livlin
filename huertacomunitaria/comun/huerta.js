@@ -54,8 +54,17 @@
     var obs = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
         var f = e.target;
-        if (e.isIntersecting) { if (!f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-i3d")); }
-        else if (f.getAttribute("src")) { f.removeAttribute("src"); }
+        if (e.isIntersecting) {
+          if (!f.getAttribute("src")) {
+            f.classList.remove("listo");
+            f.setAttribute("src", f.getAttribute("data-i3d"));
+            var n = 0, t = setInterval(function () {      // el visor se muestra cuando ya está listo (así no se ven sus botones al cargar)
+              n++;
+              try { if (f.contentDocument && f.contentDocument.documentElement.getAttribute("data-listo") === "1") { f.classList.add("listo"); clearInterval(t); } } catch (err) { f.classList.add("listo"); clearInterval(t); }
+              if (n > 60) { f.classList.add("listo"); clearInterval(t); }
+            }, 150);
+          }
+        } else if (f.getAttribute("src")) { f.removeAttribute("src"); f.classList.remove("listo"); }
       });
     }, { rootMargin: "250px 0px" });
     vivos.forEach(function (f) { obs.observe(f); });

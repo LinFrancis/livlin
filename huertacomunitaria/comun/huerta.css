@@ -152,7 +152,7 @@
 .h3d-pie { font-size: .9rem; color: var(--text-soft); margin: 10px 0 0; line-height: 1.5; }
 .huerta-sec .i3d, .i3d { margin: 0; position: relative; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); aspect-ratio: 3 / 2; }
 .i3d img, .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; border-radius: 0; }
-.i3d iframe { background: transparent; pointer-events: none; }
+.i3d iframe { background: transparent; pointer-events: none; opacity: 0; transition: opacity .35s; } .i3d iframe.listo { opacity: 1; }
 .i3d figcaption { position: absolute; left: 10px; bottom: 8px; font-size: .8rem; font-weight: 700; color: #1B4332; background: rgba(255, 255, 255, .88); padding: 3px 10px; border-radius: 8px; }
 .info-sec .container { max-width: 1180px; }
 
@@ -161,6 +161,10 @@
 .huerta-hero.con-banner h1, .huerta-hero.con-banner .lead, .huerta-hero.con-banner .eyebrow { color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .35); }
 .hmapa { margin: 16px 0; } .hmapa iframe { width: 100%; height: 420px; border: 0; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
 .hinsta { margin: 18px auto; max-width: 380px; text-align: center; } .hinsta iframe { width: 100%; aspect-ratio: 9 / 14; height: auto; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
+.hobjs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 14px 0; }
+.hobj { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 10px 10px 14px; text-decoration: none !important; color: var(--text) !important; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
+.hobj:hover { border-color: var(--teal); } .hobj img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 8px; }
+.hobj strong { display: block; font-size: 1.1rem; } .hobj span { color: var(--text-soft); font-size: .95rem; }
 .hinfos { display: grid; gap: 22px; }
 .hinfo { display: grid; grid-template-columns: minmax(200px, 320px) 1fr; gap: 22px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; align-items: center; }
 .hinfo-img img { width: 100%; height: auto; display: block; border-radius: 12px; }
@@ -178,8 +182,9 @@
 .info section.hoja { padding: 0; margin: 0; }
 .hoja { width: 1100px; max-width: 100%; aspect-ratio: 1100 / 1556; background: #fff; border-radius: 14px; box-shadow: 0 6px 28px rgba(27, 67, 50, .16); overflow: hidden; display: flex; flex-direction: column; position: relative; container-type: inline-size; }
 .hoja-cab { background: linear-gradient(135deg, var(--v1), var(--v2)); color: #fff; padding: 24px 44px 20px; position: relative; }
+.hoja-cab .logo { position: absolute; right: 44px; top: 20px; height: 62px; width: auto; background: #fff; border-radius: 12px; padding: 6px 12px; }
 .hoja-cab .eb { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--v4); font-weight: 700; }
-.hoja-cab h2 { font-size: 42px; line-height: 1.06; margin: 8px 0 6px; font-weight: 800; letter-spacing: -.5px; color: #fff; }
+.hoja-cab h2 { padding-right: 200px; font-size: 42px; line-height: 1.06; margin: 8px 0 6px; font-weight: 800; letter-spacing: -.5px; color: #fff; }
 .hoja-cab .sb { font-size: 21px; color: #E3F4E8; font-weight: 500; margin: 0; }
 .hoja-cuerpo { flex: 1; padding: 20px 44px 16px; display: flex; flex-direction: column; gap: 14px; background: radial-gradient(900px 500px at 100% 0, var(--v5) 0, rgba(232, 241, 220, 0) 60%), var(--crema); min-height: 0; }
 .hoja-pie { background: var(--v1); color: #fff; padding: 16px 48px; display: flex; align-items: center; gap: 24px; font-size: 15px; line-height: 1.5; }
@@ -253,15 +258,18 @@
 .hoja-cuerpo.reparte { justify-content: space-between; }
 .info .grp { display: flex; flex-direction: column; }
 
+/* planos compactos (hojas resumen): sin leyenda ni nota */
+.info .compacto .plano .chips, .info .compacto .plano .ps { display: none; }
+
 /* bloques que ocupan el espacio que sobra en la hoja */
-.info .crece { flex: 1 1 auto; min-height: 0; grid-auto-rows: minmax(0, 1fr); }
+.info .crece { flex: 1 1 auto; min-height: 270px; grid-auto-rows: minmax(0, 1fr); }
 .info .crece .i3d { aspect-ratio: auto; height: 100%; min-height: 170px; }
 
 /* modelos 3D ilustrativos: sin botones; se ven girando solos (en el PDF, la foto fija) */
 .info .i3d { margin: 0; position: relative; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); aspect-ratio: 3 / 2; }
 .info .i3d.ancho { aspect-ratio: 16 / 9; } .info .i3d.alto { aspect-ratio: 4 / 3; }
 .info .i3d img, .info .i3d iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
-.info .i3d iframe { background: transparent; pointer-events: none; }
+.info .i3d iframe { background: transparent; pointer-events: none; opacity: 0; transition: opacity .35s; } .info .i3d iframe.listo { opacity: 1; }
 .info .i3d figcaption { position: absolute; left: 10px; bottom: 8px; right: 10px; font-size: 13.5px; font-weight: 700; color: var(--v1); background: rgba(255, 255, 255, .86); padding: 3px 10px; border-radius: 8px; width: fit-content; max-width: 100%; }
 .info .plano { background: #fff; border-radius: 18px; padding: 10px 12px 8px; box-shadow: 0 3px 14px rgba(27, 67, 50, .10); } .info .plano svg { width: 100%; height: auto; display: block; }
 .info .plano .pt { font-size: 15px; font-weight: 800; color: var(--v1); margin: 0 0 2px; } .info .plano .ps { font-size: 13px; color: var(--suave); margin: 0; line-height: 1.3; }
