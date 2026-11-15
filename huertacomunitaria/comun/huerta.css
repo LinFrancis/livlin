@@ -91,6 +91,15 @@
 .hfotos figure { margin: 0; }
 .hfotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; cursor: zoom-in; }
 .hfotos figcaption, .hfoto figcaption { font-size: .85rem; color: var(--muted); padding-top: 6px; }
+.hcomp { display: grid; grid-template-columns: 5fr 7fr; gap: 22px; align-items: start; margin: 18px 0 28px; }
+.hcomp h4 { margin: 0 0 10px; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-soft); }
+.hcomp-despues h4 { color: var(--teal-dark); }
+.hcomp-fotos { display: flex; flex-direction: column; gap: 14px; }
+.hcomp-resto { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.hcomp figure { margin: 0; } .hcomp img { width: 100%; height: auto; display: block; border-radius: 12px; cursor: zoom-in; }
+.hcomp figcaption { font-size: .85rem; color: var(--text-soft); margin-top: 5px; line-height: 1.35; }
+.hcomp-despues img { box-shadow: 0 3px 14px rgba(27, 67, 50, .14); } .hcomp-antes img { filter: saturate(.8); }
+@media (max-width: 700px) { .hcomp { grid-template-columns: 1fr; } .hcomp-despues { order: -1; } }
 .hfotos.natural { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; align-items: start; }
 .hfotos.natural img { aspect-ratio: auto; height: auto; object-fit: contain; }
 .hfotos.completa.vertical { max-width: 520px; }
