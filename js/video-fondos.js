@@ -27,3 +27,19 @@
   }, { rootMargin: '150px 0px', threshold: 0.05 });
   videos.forEach(function (v) { io.observe(v); });
 })();
+
+/* Modelo 3D de fondo (Inicio): se carga al llegar; gira solo; «tocar para girar» activa el mouse o el dedo. */
+(function () {
+  var cont = document.querySelector('.dim3d-visor');
+  if (!cont) return;
+  var fr = cont.querySelector('iframe'), btn = cont.querySelector('.dim3d-activar');
+  var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function cargar() { if (fr.getAttribute('src')) return; var u = fr.getAttribute('data-visor'); if (window.innerWidth <= 820) u = u.replace('zoom=0.85', 'zoom=1.15'); fr.src = u + (quieto ? '&giro=0' : ''); }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { cargar(); io.disconnect(); } }, { rootMargin: '300px 0px' });
+    io.observe(cont);
+  } else cargar();
+  function salir() { cont.classList.remove('activo'); btn.setAttribute('aria-pressed', 'false'); }
+  btn.addEventListener('click', function () { if (cont.classList.contains('activo')) salir(); else { cargar(); cont.classList.add('activo'); btn.setAttribute('aria-pressed', 'true'); } });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') salir(); });
+})();

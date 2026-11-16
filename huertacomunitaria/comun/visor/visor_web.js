@@ -11,6 +11,8 @@
   // Modo ilustrativo (sin botones): solo el modelo, girando solo, sin medidas ni herrajes. Parámetros: vista (persp|frente|lado|planta), zoom, giro=0 (quieto), fondo (color), medidas=1
   var ilus = q.get("modo") === "ilustrativo";
   if (ilus) document.documentElement.classList.add("ilus");
+  // fondo oscuro (p. ej. fondo=0c2038): rótulos claros sobre cristal azul
+  var OSCURO = (function () { var f = q.get("fondo"); if (!f || !/^[0-9a-fA-F]{6}$/.test(f)) return false; var r = parseInt(f.substr(0, 2), 16), g2 = parseInt(f.substr(2, 2), 16), b = parseInt(f.substr(4, 2), 16); return (0.299 * r + 0.587 * g2 + 0.114 * b) < 110; })();
   // rótulos sutiles (sin fondo pesado ni bordes fuertes): no tapan el modelo
   if (ilus) window.etiqueta = function (texto, pos, o) {
     o = o || {};
@@ -18,9 +20,9 @@
     var g = c.getContext("2d");
     g.font = "600 22px sans-serif";
     var tw = Math.min(g.measureText(texto).width + 22, ancho - 6), x0 = (ancho - tw) / 2;
-    g.fillStyle = "rgba(255,255,255,.5)"; g.strokeStyle = "rgba(125,145,133,.45)"; g.lineWidth = 1.2;
+    g.fillStyle = OSCURO ? "rgba(12,32,56,.78)" : "rgba(255,255,255,.5)"; g.strokeStyle = OSCURO ? "rgba(126,227,212,.55)" : "rgba(125,145,133,.45)"; g.lineWidth = 1.2;
     g.beginPath(); if (g.roundRect) g.roundRect(x0, 15, tw, 34, 9); else g.rect(x0, 15, tw, 34); g.fill(); g.stroke();
-    g.fillStyle = "#4A5F54"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(texto, ancho / 2, 33);
+    g.fillStyle = OSCURO ? "#F2FBF8" : "#4A5F54"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(texto, ancho / 2, 33);
     var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding;
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, depthTest: false, transparent: true }));
     var k = (o.ref || diag) * 0.075 * (o.k || 1) * 1.0;
