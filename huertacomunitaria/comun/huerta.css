@@ -182,10 +182,10 @@
 @media (max-width: 760px) { .hvideo-cifras { grid-template-columns: 1fr; } }
 .hinsta.destacado { max-width: 480px; } .hinsta.destacado iframe { box-shadow: 0 6px 28px rgba(27, 67, 50, .22); }
 .hinsta { margin: 18px auto; max-width: 380px; text-align: center; } .hinsta iframe { width: 100%; aspect-ratio: 9 / 14; height: auto; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(27, 67, 50, .12); }
-.hproposito { display: grid; grid-template-columns: 5fr 6fr; gap: 28px; align-items: center; margin: 16px 0 24px; }
-.hproposito figure { margin: 0; } .hproposito img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .14); cursor: zoom-in; }
+.hproposito { display: grid; grid-template-columns: 6fr 5fr; gap: 28px; align-items: center; margin: 16px 0 24px; }
+.hproposito figure { margin: 0; order: 2; } .hproposito img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .14); cursor: zoom-in; }
 .hproposito figcaption { font-size: .85rem; color: var(--text-soft); margin-top: 6px; } .hproposito p { margin-top: 0; } .hproposito ul { margin-bottom: 0; }
-@media (max-width: 760px) { .hproposito { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .hproposito { grid-template-columns: 1fr; } .hproposito figure { order: -1; } }
 .hobj img { aspect-ratio: 4 / 3; }
 .hpats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 14px 0; }
 .hpat { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px 16px 14px; text-decoration: none !important; color: var(--text) !important; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
