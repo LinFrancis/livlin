@@ -192,6 +192,17 @@
 .hpat:hover { border-color: var(--teal); } .hpat-ic { font-size: 1.6rem; display: block; margin-bottom: 4px; } .hpat > strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
 .hpat p { margin: 0 0 10px; font-size: .93rem; line-height: 1.45; color: var(--text-soft); } .hpat em { display: block; font-style: normal; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-dark); font-weight: 700; margin-bottom: 2px; }
 .hpat-mas { font-size: .9rem; color: var(--teal-dark); font-weight: 600; }
+.hdrs { display: grid; gap: 22px; margin: 14px 0 22px; }
+.hdr { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 14px; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
+.hdr-cab { display: block; text-decoration: none !important; color: var(--text) !important; } .hdr-cab strong { display: block; font-size: 1.15rem; margin-bottom: 4px; } .hdr-cab span { display: block; color: var(--text-soft); font-size: .95rem; } .hdr-cab em { display: inline-block; margin-top: 8px; font-style: normal; font-weight: 600; color: var(--teal-dark); font-size: .9rem; }
+a.hdr-cab:hover strong { color: var(--teal-dark); }
+.hdr-par { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } .hdr-par figure { margin: 0; position: relative; }
+.hdr-par img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 12px; } .hdr-d img { object-fit: contain; background: #fff; border: 1px dashed var(--border); }
+.hdr-et { position: absolute; left: 8px; top: 8px; z-index: 1; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,255,255,.92); color: var(--text); border-radius: 100px; padding: 3px 9px; box-shadow: 0 1px 6px rgba(0,0,0,.15); }
+.hdr-par figcaption { font-size: .8rem; color: var(--text-soft); margin-top: 4px; }
+.hdr-r .hdr-et { background: var(--teal-dark); color: #fff; }
+@media (max-width: 760px) { .hdr { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .hdr-par { grid-template-columns: 1fr; } }
 .hobjs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 14px 0; }
 .hobj { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 10px 10px 14px; text-decoration: none !important; color: var(--text) !important; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
 .hobj:hover { border-color: var(--teal); } .hobj img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 8px; }
