@@ -1,7 +1,7 @@
 /* Videos de fondo: se cargan y se reproducen solo cuando están a la vista, y se detienen al salir.
    Con «reducir movimiento» o ahorro de datos se ve solo la imagen de portada. */
 (function () {
-  var videos = Array.prototype.slice.call(document.querySelectorAll('.vfondo video[data-src], .dim3d-dron video[data-src]'));
+  var videos = Array.prototype.slice.call(document.querySelectorAll('.vfondo video[data-src], .dim3d-dron video[data-src], .dron-marco video[data-src]'));
   if (!videos.length) return;
   var quieto = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ||
                (navigator.connection && navigator.connection.saveData);

@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=18">
+  <link rel="stylesheet" href="/css/video-fondos.css?v=5">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <style>
     .wa-float {
@@ -299,6 +300,38 @@
     </div>
   </div>
 
+  <!-- VISTA DE DRON -->
+  <section class="dron" id="dron" aria-labelledby="dron-titulo">
+    <div class="container">
+      <div class="dron-head fade-in">
+        <span class="eyebrow">Vista de dron</span>
+        <h2 id="dron-titulo">Tu plan maestro,<br>visto desde arriba</h2>
+        <p>Al solicitar un plan maestro, puedes sumar un servicio de dron: una mirada aérea del terreno completo, para leer sus zonas, caminos, sombras y vegetación antes de diseñar, y para mostrar cómo cambia después.</p>
+      </div>
+      <div class="dron-fila">
+        <figure class="dron-clip">
+          <div class="dron-marco"><video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" poster="/videos/drone/aucca-agosto-2026.jpg" data-src="/videos/drone/aucca-agosto-2026.mp4"></video></div>
+          <figcaption><strong>Aucca biocasa comunitaria</strong><span>Casa, domo y huerto vistos desde arriba</span></figcaption>
+        </figure>
+        <figure class="dron-clip">
+          <div class="dron-marco"><video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" poster="/videos/drone/san-sebastian-dji0007.jpg" data-src="/videos/drone/san-sebastian-dji0007.mp4"></video></div>
+          <figcaption><strong>San Sebastián</strong><span>La costa y el borde del terreno</span></figcaption>
+        </figure>
+        <figure class="dron-clip">
+          <div class="dron-marco"><video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" poster="/videos/drone/observatorio-al-sur-bajadon.jpg" data-src="/videos/drone/observatorio-al-sur-bajadon.mp4"></video></div>
+          <figcaption><strong>Huerto Popular Observatorio al Sur</strong><span>La Pintana · del huerto completo al detalle</span></figcaption>
+        </figure>
+      </div>
+      <div class="service-cta-row dron-cta">
+        <button type="button" class="btn-calendly-service" onclick="Calendly.initPopupWidget({url:'https://calendly.com/livlin-contacto/conversar-la-idea-livlin'});return false;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" /></svg>
+          Agenda 20 min gratis
+        </button>
+        <a href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20quiero%20un%20plan%20maestro%20con%20vista%20de%20dron." target="_blank" rel="noopener" class="btn-wa-service">Pide tu plan maestro con dron</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA + DEMO -->
   <section class="cta-final-banner">
     <div class="container">
@@ -411,6 +444,7 @@
   <script src="/js/casos.js?v=1"></script>
   <script src="/js/carousel.js?v=2"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="/js/video-fondos.js?v=5"></script>
   <script>window.LIVLIN_LANG="es";window.LIVLIN_LANGS=[{"code":"es","dir":"","htmlLang":"es","label":"Español"},{"code":"en","dir":"en","htmlLang":"en","label":"English"},{"code":"da","dir":"da","htmlLang":"da","label":"Dansk"},{"code":"zh-CN","dir":"zh","htmlLang":"zh-Hans","label":"简体中文"}];</script>
   <script src="/js/i18n.js" defer></script>
 </body>
