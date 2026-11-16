@@ -34,7 +34,15 @@
   if (!cont) return;
   var fr = cont.querySelector('iframe'), btn = cont.querySelector('.dim3d-activar');
   var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function cargar() { if (fr.getAttribute('src')) return; var u = fr.getAttribute('data-visor'); if (window.innerWidth <= 820) u = u.replace('zoom=0.85', 'zoom=1.15'); fr.src = u + (quieto ? '&giro=0' : ''); }
+  function cargar() { if (fr.getAttribute('src')) return; var u = fr.getAttribute('data-visor'); if (window.innerWidth <= 820) u = u.replace('zoom=0.85', 'zoom=1.15'); fr.src = u + (quieto ? '&giro=0' : '');
+    fr.addEventListener('load', function () {            // el visor aparece sobre la imagen fija solo cuando ya dibujó el modelo
+      var t0 = Date.now();
+      (function esperar() {
+        var ok = false; try { ok = fr.contentDocument && fr.contentDocument.documentElement.getAttribute('data-listo') === '1'; } catch (e) {}
+        if (ok) { setTimeout(function () { cont.classList.add('listo'); }, 400); }
+        else if (Date.now() - t0 < 20000) setTimeout(esperar, 400);
+      })();
+    }); }
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { cargar(); io.disconnect(); } }, { rootMargin: '300px 0px' });
     io.observe(cont);
