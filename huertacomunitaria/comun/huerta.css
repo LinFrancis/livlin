@@ -189,7 +189,10 @@
 .hobj img { aspect-ratio: 4 / 3; }
 .hpats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 14px 0; }
 .hpat { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px 16px 14px; text-decoration: none !important; color: var(--text) !important; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
-.hpat:hover { border-color: var(--teal); } .hpat-ic { font-size: 1.6rem; display: block; margin-bottom: 4px; } .hpat > strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+.hpat:hover { border-color: var(--teal); } .hpat-fig { margin: 0 0 12px; position: relative; } .hpat-fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 12px; display: block; }
+.hpat-fig figcaption { font-size: .78rem; color: var(--text-soft); margin-top: 4px; }
+.hpat-tipo { position: absolute; left: 8px; top: 8px; z-index: 1; background: var(--teal-dark); color: #fff; font-size: .66rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; }
+.hpat-fig img[src*="despues_"] { object-fit: cover; } .hpat > strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
 .hpat p { margin: 0 0 10px; font-size: .93rem; line-height: 1.45; color: var(--text-soft); } .hpat em { display: block; font-style: normal; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-dark); font-weight: 700; margin-bottom: 2px; }
 .hpat-mas { font-size: .9rem; color: var(--teal-dark); font-weight: 600; }
 .hdrs { display: grid; gap: 22px; margin: 14px 0 22px; }
