@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=18">
+  <link rel="stylesheet" href="/css/cecosf-showcase.css?v=1">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <style>
@@ -1127,6 +1128,7 @@
           <ul class="dropdown-menu">
             <li><a href="/da/huertacomunitaria/cecosfvillaolimpica/index.html">Huerta comunitaria CECOSF Villa Olímpica</a></li>
             <li><a href="/da/huertacomunitaria/cecosfvillaolimpica/bitacora.html">Bitácora de la huerta</a></li>
+            <li><a href="/da/bitacoras/plan-maestro-bancales.html">Plan maestro en acción: bancales</a></li>
           </ul>
         </li>
         <li><a href="#casos">Effekt</a></li>
@@ -1233,71 +1235,54 @@
       </div>
     </div>
 
-    <!-- CARRUSEL DISEÑO REGENERATIVO -->
-    <div class="carousel-embed" id="carrusel">
+    <!-- PLAN MAESTRO EN ACCIÓN · CECOSF VILLA OLÍMPICA -->
+    <section class="cx" id="carrusel" aria-labelledby="cx-titulo">
       <div class="container">
-        <div class="carousel-embed-header fade-in">
+        <div class="cx-head fade-in">
           <span class="eyebrow">Masterplan i aktion</span>
-          <p>Sådan ser et rum ud før og efter indsatsen</p>
+          <h2 id="cx-titulo">Así se ve un plan maestro<br>cuando se hace realidad</h2>
+          <p>Huerta comunitaria <strong>CECOSF Villa Olímpica</strong>, en Ñuñoa. Diseñamos junto a la comunidad, construimos en dos talleres y hoy el lugar cultiva alimento, plantas medicinales y compost.</p>
         </div>
-        <div class="carousel-wrap">
-          <button class="carousel-nav prev" id="carouselPrev" aria-label="Forrige billede">&#8592;</button>
-          <button class="carousel-nav next" id="carouselNext" aria-label="Næste billede">&#8594;</button>
-          <div class="carousel-track" id="carouselTrack" role="region" aria-label="Masterplan-karrusel">
-            <div class="carousel-slide active" data-index="0">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/01_portada.png" alt="Masterplan - forside">
-              <div class="carousel-slide-caption">Masterplanens forside</div>
-            </div>
-            <div class="carousel-slide" data-index="1">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/02_patrones.png" alt="Analyse af stedets mønstre">
-              <div class="carousel-slide-caption">Analyse af stedets mønstre</div>
-            </div>
-            <div class="carousel-slide" data-index="2">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/03_idea.png" alt="Projektets koncept og idé">
-              <div class="carousel-slide-caption">Projektets koncept og idé</div>
-            </div>
-            <div class="carousel-slide" data-index="3">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/04_antes_bancal_fondo.png" alt="Før: udgangstilstand">
-              <div class="carousel-slide-caption">Rummets udgangstilstand</div>
-            </div>
-            <div class="carousel-slide" data-index="4">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/05_despues_bancal_fondo1.png" alt="Efter: bed installeret">
-              <div class="carousel-slide-caption">Selvvandende bed installeret</div>
-            </div>
-            <div class="carousel-slide" data-index="5">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/06_despues_bancal_fondo2.png" alt="Afgrøder i produktion">
-              <div class="carousel-slide-caption">Afgrøder i fuld produktion</div>
-            </div>
-            <div class="carousel-slide" data-index="6">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/07_despues_bancal_fondo3.png" alt="Detalje af selvvandende bed">
-              <div class="carousel-slide-caption">Detalje af det selvvandende system</div>
-            </div>
-            <div class="carousel-slide" data-index="7">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/08_antes_bancal_largo.png" alt="Langt bed - før">
-              <div class="carousel-slide-caption">Langt bed — før</div>
-            </div>
-            <div class="carousel-slide" data-index="8">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/09_despues_bancal_largo.png" alt="Langt bed - efter">
-              <div class="carousel-slide-caption">Langt bed — efter</div>
-            </div>
-            <div class="carousel-slide" data-index="9">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/10_antes_bancal_ele.png" alt="L-formet bed - før">
-              <div class="carousel-slide-caption">L-formet bed — før</div>
-            </div>
-            <div class="carousel-slide" data-index="10">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/11_despues_bancal_ele.png" alt="L-formet bed - efter">
-              <div class="carousel-slide-caption">L-formet bed — efter</div>
-            </div>
-            <div class="carousel-slide" data-index="11">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/12_cierre_presentacion_app.png" alt="Platform integreret i projektet">
-              <div class="carousel-slide-caption">Integreret digital platform</div>
-            </div>
-          </div>
-          <div class="carousel-caption-bar" id="carouselCaption">Masterplanens forside</div>
-          <div class="carousel-dots" id="carouselDots"></div>
+
+        <div class="cx-tabs" role="tablist" aria-label="Espacios del proyecto">
+          <button type="button" role="tab" id="cx-t-huerta" aria-controls="cx-p-huerta" aria-selected="true" data-cx="huerta">Huerta comunitaria</button>
+          <button type="button" role="tab" id="cx-t-jardin" aria-controls="cx-p-jardin" aria-selected="false" data-cx="jardin" tabindex="-1">Jardín medicinal</button>
+          <button type="button" role="tab" id="cx-t-compostera" aria-controls="cx-p-compostera" aria-selected="false" data-cx="compostera" tabindex="-1">Compostera</button>
         </div>
+
+        <div class="cx-panel" id="cx-p-huerta" role="tabpanel" aria-labelledby="cx-t-huerta" data-cx-panel="huerta">
+          <figure class="cx-antes"><span class="cx-tag">Antes</span><img src="/images/cecosf/huerta-antes.webp" alt="Antes: la zona donde hoy están las camas de cultivo, junto a la entrada del CECOSF" loading="lazy"></figure>
+          <div class="cx-flecha" aria-hidden="true">→</div>
+          <figure class="cx-hoy"><span class="cx-tag cx-tag-hoy">Hoy</span><img src="/images/cecosf/huerta-hoy.webp" alt="Hoy: cuatro camas de cultivo junto a la entrada del CECOSF Villa Olímpica" loading="lazy"></figure>
+          <p class="cx-pie">Cuatro camas de cultivo agroecológico, a un paso de la puerta del centro de salud.</p>
+        </div>
+        <div class="cx-panel" id="cx-p-jardin" role="tabpanel" aria-labelledby="cx-t-jardin" data-cx-panel="jardin" hidden>
+          <figure class="cx-antes"><span class="cx-tag">Antes</span><img src="/images/cecosf/jardin-antes.webp" alt="Antes: la zona del jardín medicinal, al norte del terreno" loading="lazy"></figure>
+          <div class="cx-flecha" aria-hidden="true">→</div>
+          <figure class="cx-hoy"><span class="cx-tag cx-tag-hoy">Hoy</span><img src="/images/cecosf/jardin-hoy.webp" alt="Hoy: el jardín medicinal con caléndula en flor y otras hierbas" loading="lazy"></figure>
+          <p class="cx-pie">Una farmacia viva para el barrio: plantas medicinales que además atraen polinizadores.</p>
+        </div>
+        <div class="cx-panel" id="cx-p-compostera" role="tabpanel" aria-labelledby="cx-t-compostera" data-cx-panel="compostera" hidden>
+          <figure class="cx-antes"><span class="cx-tag">Antes</span><img src="/images/cecosf/compostera-antes.webp" alt="Antes: la zona de atrás del CECOSF, donde hoy está la compostera" loading="lazy"></figure>
+          <div class="cx-flecha" aria-hidden="true">→</div>
+          <figure class="cx-hoy"><span class="cx-tag cx-tag-hoy">Hoy</span><img src="/images/cecosf/compostera-hoy.webp" alt="Hoy: la compostera de tres cubos en la zona este" loading="lazy"></figure>
+          <p class="cx-pie">Los residuos orgánicos vuelven a la tierra como abono: el ciclo se cierra en el mismo lugar.</p>
+        </div>
+
+        <ul class="cx-datos" aria-label="El proyecto en cifras">
+          <li><strong>10,2 m²</strong><span>de suelo vivo a cultivar</span></li>
+          <li><strong>3</strong><span>espacios conectados: huerta, jardín y compostera</span></li>
+          <li><strong>2</strong><span>talleres comunitarios para construirlo</span></li>
+          <li><strong>1</strong><span>sistema vivo que alimenta y cuida a su barrio</span></li>
+        </ul>
+
+        <div class="cx-cta">
+          <a class="cx-btn cx-btn-1" href="/da/huertacomunitaria/cecosfvillaolimpica/index.html">Ver la bitácora del proyecto →</a>
+          <a class="cx-btn cx-btn-2" href="/da/contacto.html">Quiero algo así para mi espacio</a>
+        </div>
+        <p class="cx-mas"><a href="/da/bitacoras/plan-maestro-bancales.html">Ver más ejemplos de planes maestros en acción</a></p>
       </div>
-    </div>
+    </section>
 
     <!-- DIMENSIÓN 3 — HERRAMIENTAS -->
     <div class="dim-hero-block" style="--dim-accent:#BC3CC9;">
@@ -1736,7 +1721,7 @@
   </button>
 
   <script src="/js/script.js?v=7"></script>
-  <script src="/js/carousel.js?v=2"></script>
+  <script src="/js/cecosf-showcase.js?v=1"></script>
   <script src="/js/flyer-popup.js?v=1"></script>
 
   <script>
