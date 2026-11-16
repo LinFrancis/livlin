@@ -209,6 +209,15 @@ a.hdr-cab:hover strong { color: var(--teal-dark); }
 .huerta-sec .hdinfo { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 8px; }
 .hdinfo li { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; justify-content: space-between; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
 .hdinfo span { color: var(--text-soft); font-size: .85rem; margin-right: auto; } .hdinfo div { font-size: .92rem; display: flex; gap: 10px; }
+.hsis { list-style: none; margin: 18px 0 8px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 34px; counter-reset: x; }
+.hsis-paso { position: relative; text-align: center; margin: 0; }
+.hsis-paso figure { margin: 0 0 10px; position: relative; }
+.hsis-paso img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 16px; box-shadow: 0 6px 20px rgba(27, 67, 50, .18); }
+.hsis-n { position: absolute; left: 10px; top: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--teal-dark); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+.hsis-paso strong { display: block; font-size: 1.02rem; line-height: 1.3; }
+.hsis-paso:not(:nth-child(3n))::after { content: ""; position: absolute; right: -27px; top: 38%; width: 20px; height: 20px; border-top: 4px solid var(--teal); border-right: 4px solid var(--teal); transform: rotate(45deg); border-radius: 2px; }
+.hsis-vuelta { text-align: center; color: var(--teal-dark); font-weight: 700; margin: 12px 0 4px; } .hsis-vuelta svg { vertical-align: -3px; }
+@media (max-width: 820px) { .hsis { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; } .hsis-paso::after { display: none !important; } }
 .hobjs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 14px 0; }
 .hobj { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 10px 10px 14px; text-decoration: none !important; color: var(--text) !important; box-shadow: 0 3px 14px rgba(27, 67, 50, .08); }
 .hobj:hover { border-color: var(--teal); } .hobj img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 8px; }
