@@ -402,3 +402,25 @@ a.hdr-cab:hover strong { color: var(--teal-dark); }
 .info .foto-i img { display: block; width: 100%; height: auto; }
 .info .foto-i figcaption { font-size: 14px; line-height: 1.3; padding: 6px 10px 8px; color: var(--suave); }
 .info .col { display: grid; gap: 12px; align-content: start; min-width: 0; }
+
+/* antes → hoy, diseño → construido, ciclo con imágenes y patrones del lugar */
+.info .ah { background: #fff; border: 1.5px solid #B9D3C0; border-radius: 16px; padding: 10px 12px 12px; min-width: 0; }
+.info .ah-t { font-size: 17px; font-weight: 800; color: var(--v1); margin: 0 0 8px; }
+.info .ah-par { display: grid; align-items: center; gap: 10px; }
+.info .ah-par figure, .info .ah-v figure { margin: 0; position: relative; }
+.info .ah-par img, .info .ah-v img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.info .ah-a img { filter: grayscale(.45); opacity: .93; }
+.info .ah-v figure + figure { margin-top: 8px; }
+.info .ah-v .ah-a img { background: #fff; border: 1px dashed #B9D3C0; }
+.info .ah-flecha { font-size: 28px; font-weight: 800; color: #2D9C6B; line-height: 1; }
+.info .ah-tag { position: absolute; left: 6px; top: 6px; z-index: 1; background: rgba(27, 67, 50, .82); color: #fff; font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; }
+.info .ah-tag.ah-hoy { background: #2D9C6B; }
+.info .sis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.info .sis-p { text-align: center; } .info .sis-p b { display: block; margin-top: 6px; font-size: 16px; line-height: 1.25; color: var(--v1); }
+.info .sis-i { position: relative; } .info .sis-i img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+.info .sis-i span { position: absolute; left: 8px; top: 8px; width: 28px; height: 28px; border-radius: 50%; background: #1B4332; color: #fff; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.info .sis-vuelta { text-align: center; font-weight: 800; color: #2D9C6B; font-size: 15px; margin-top: 6px; }
+.info .pats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.info .pat { margin: 0; } .info .pat-i { background: #fff; border: 1.5px solid #B9D3C0; border-radius: 12px; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.info .pat-i img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain; }
+.info .pat figcaption { font-size: 14px; line-height: 1.3; margin-top: 5px; color: var(--suave); } .info .pat figcaption b { color: var(--v1); }
