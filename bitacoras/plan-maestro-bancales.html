@@ -142,7 +142,16 @@
     .bp-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); margin: 10px 0 14px; }
     .bp-hero p { max-width: 680px; margin: 0 auto; color: rgba(255,255,255,.85); font-size: 1.05rem; line-height: 1.65; }
     .bp-hero .eyebrow { color: #7ee3d4; }
-    .carousel-embed-header { display: none; } .carousel-embed { padding-top: 48px; }
+    .pm-stack { background: var(--bg); padding: 40px 0 24px; }
+    .pm-stack .container { max-width: 1040px; }
+    .pm-indice { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 12px 0; margin-bottom: 8px; background: rgba(250,249,244,.94); backdrop-filter: blur(6px); border-bottom: 1px solid #e8edf0; }
+    .pm-indice a { font-weight: 700; font-size: .85rem; padding: 7px 16px; border-radius: 100px; border: 1.5px solid #cfd9dd; color: var(--text); text-decoration: none; }
+    .pm-indice a:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+    .pm-h { font-size: clamp(1.4rem, 3vw, 2rem); margin: 44px 0 16px; scroll-margin-top: 80px; }
+    .pm-fig { margin: 0 0 26px; }
+    .pm-fig img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 10px 34px rgba(17,46,77,.14); border: 1px solid #e8edf0; background: #fff; }
+    .pm-fig figcaption { margin-top: 10px; font-size: .98rem; font-weight: 600; color: #2C3E50; } .pm-fig figcaption span { display: inline-block; min-width: 1.7em; text-align: center; margin-right: 6px; background: var(--teal); color: #fff; border-radius: 100px; font-size: .78rem; padding: 2px 6px; }
+    .pm-arriba { position: fixed; left: 22px; bottom: 28px; z-index: 900; width: 46px; height: 46px; border-radius: 50%; background: #112E4D; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
     .bp-cta { text-align: center; padding: 8px 0 72px; background: var(--bg); }
     .bp-cta a { display: inline-block; margin: 6px; font-weight: 800; padding: 14px 26px; border-radius: 100px; text-decoration: none; }
     .bp-cta .a1 { background: #FF37D5; color: #fff; } .bp-cta .a2 { border: 2px solid var(--text); color: var(--text); }
@@ -220,76 +229,35 @@
     <div class="container">
       <span class="eyebrow">Bitácoras de proyectos</span>
       <h1>Plan maestro en acción</h1>
-      <p>Así se ve un espacio antes y después de la intervención: ejemplos de bancales de cultivo diseñados con Livlin.</p>
+      <p>Así se ve un espacio antes y después de la intervención: el proyecto «Bancales Autorregantes en Departamento», de arriba abajo: del plan al antes y después de cada bancal.</p>
     </div>
   </section>
 
     <!-- CARRUSEL DISEÑO REGENERATIVO -->
-    <div class="carousel-embed" id="carrusel" style="background:var(--bg);">
-      <div class="container">
-        <div class="carousel-embed-header fade-in">
-          <span class="eyebrow">Plan maestro en acción</span>
-          <p>Así se ve un espacio antes y después de la intervención</p>
-        </div>
-        <div class="carousel-wrap">
-          <button class="carousel-nav prev" id="carouselPrev" aria-label="Imagen anterior">&#8592;</button>
-          <button class="carousel-nav next" id="carouselNext" aria-label="Imagen siguiente">&#8594;</button>
-          <div class="carousel-track" id="carouselTrack" role="region" aria-label="Carrusel plan maestro">
-            <div class="carousel-slide active" data-index="0">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/01_portada.png" alt="Plan maestro - portada">
-              <div class="carousel-slide-caption">Portada del plan maestro</div>
-            </div>
-            <div class="carousel-slide" data-index="1">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/02_patrones.png" alt="Análisis de patrones del terreno">
-              <div class="carousel-slide-caption">Análisis de patrones del terreno</div>
-            </div>
-            <div class="carousel-slide" data-index="2">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/03_idea.png" alt="Concepto e idea del proyecto">
-              <div class="carousel-slide-caption">Concepto e idea del proyecto</div>
-            </div>
-            <div class="carousel-slide" data-index="3">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/04_antes_bancal_fondo.png" alt="Antes: estado inicial">
-              <div class="carousel-slide-caption">Estado inicial del espacio</div>
-            </div>
-            <div class="carousel-slide" data-index="4">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/05_despues_bancal_fondo1.png" alt="Después: bancal instalado">
-              <div class="carousel-slide-caption">Bancal autorregante instalado</div>
-            </div>
-            <div class="carousel-slide" data-index="5">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/06_despues_bancal_fondo2.png" alt="Cultivos en producción">
-              <div class="carousel-slide-caption">Cultivos en plena producción</div>
-            </div>
-            <div class="carousel-slide" data-index="6">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/07_despues_bancal_fondo3.png" alt="Detalle bancal autorregante">
-              <div class="carousel-slide-caption">Detalle del sistema autorregante</div>
-            </div>
-            <div class="carousel-slide" data-index="7">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/08_antes_bancal_largo.png" alt="Bancal largo - antes">
-              <div class="carousel-slide-caption">Bancal largo — antes</div>
-            </div>
-            <div class="carousel-slide" data-index="8">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/09_despues_bancal_largo.png" alt="Bancal largo - después">
-              <div class="carousel-slide-caption">Bancal largo — después</div>
-            </div>
-            <div class="carousel-slide" data-index="9">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/10_antes_bancal_ele.png" alt="Bancal en L - antes">
-              <div class="carousel-slide-caption">Bancal en L — antes</div>
-            </div>
-            <div class="carousel-slide" data-index="10">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/11_despues_bancal_ele.png" alt="Bancal en L - después">
-              <div class="carousel-slide-caption">Bancal en L — después</div>
-            </div>
-            <div class="carousel-slide" data-index="11">
-              <img loading="lazy" src="/images/diseño/Carrusel Ejemplo/12_cierre_presentacion_app.png" alt="Plataforma integrada al proyecto">
-              <div class="carousel-slide-caption">Plataforma digital integrada</div>
-            </div>
-          </div>
-          <div class="carousel-caption-bar" id="carouselCaption">Portada del plan maestro</div>
-          <div class="carousel-dots" id="carouselDots"></div>
-        </div>
-      </div>
+    <section class="pm-stack" id="plan-maestro">
+    <div class="container">
+      <nav class="pm-indice" aria-label="Ir a una parte del proyecto"><a href="#plan">El plan</a><a href="#fondo">Bancal de fondo</a><a href="#largo">Bancal largo</a><a href="#ele">Bancal en L</a><a href="#plataforma">La plataforma</a></nav>
+      <h2 class="pm-h" id="plan">El plan</h2>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/01_portada.webp" width="1600" height="900" alt="Portada del plan maestro" loading="lazy"><figcaption><span>1</span> Portada del plan maestro</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/02_patrones.webp" width="1600" height="900" alt="Análisis de patrones del terreno" loading="lazy"><figcaption><span>2</span> Análisis de patrones del terreno</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/03_idea.webp" width="1600" height="900" alt="Concepto e idea del proyecto" loading="lazy"><figcaption><span>3</span> Concepto e idea del proyecto</figcaption></figure>
+      <h2 class="pm-h" id="fondo">Bancal de fondo</h2>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/04_antes_bancal_fondo.webp" width="1600" height="900" alt="Antes: estado inicial del espacio" loading="lazy"><figcaption><span>4</span> Antes: estado inicial del espacio</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/05_despues_bancal_fondo1.webp" width="1600" height="900" alt="Después: bancal autorregante instalado" loading="lazy"><figcaption><span>5</span> Después: bancal autorregante instalado</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/06_despues_bancal_fondo2.webp" width="1600" height="900" alt="Cultivos en plena producción" loading="lazy"><figcaption><span>6</span> Cultivos en plena producción</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/07_despues_bancal_fondo3.webp" width="1600" height="900" alt="Detalle del sistema autorregante" loading="lazy"><figcaption><span>7</span> Detalle del sistema autorregante</figcaption></figure>
+      <h2 class="pm-h" id="largo">Bancal largo</h2>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/08_antes_bancal_largo.webp" width="1600" height="900" alt="Bancal largo: antes" loading="lazy"><figcaption><span>8</span> Bancal largo: antes</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/09_despues_bancal_largo.webp" width="1600" height="900" alt="Bancal largo: después" loading="lazy"><figcaption><span>9</span> Bancal largo: después</figcaption></figure>
+      <h2 class="pm-h" id="ele">Bancal en L</h2>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/10_antes_bancal_ele.webp" width="1600" height="900" alt="Bancal en L: antes" loading="lazy"><figcaption><span>10</span> Bancal en L: antes</figcaption></figure>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/11_despues_bancal_ele.webp" width="1600" height="900" alt="Bancal en L: después" loading="lazy"><figcaption><span>11</span> Bancal en L: después</figcaption></figure>
+      <h2 class="pm-h" id="plataforma">La plataforma</h2>
+      <figure class="pm-fig"><img src="/images/diseño/plan-maestro-bancales/12_cierre_presentacion_app.webp" width="1600" height="900" alt="Plataforma digital integrada al proyecto" loading="lazy"><figcaption><span>12</span> Plataforma digital integrada al proyecto</figcaption></figure>
     </div>
+  </section>
 
+  <a href="#" class="pm-arriba" aria-label="Volver arriba">↑</a>
 
   <div class="bp-cta">
     <a class="a1" href="/huertacomunitaria/cecosfvillaolimpica/index.html">Ver la huerta comunitaria CECOSF Villa Olímpica →</a>
@@ -365,7 +333,6 @@
   </button>
 
   <script src="/js/script.js?v=8"></script>
-  <script src="/js/carousel.js?v=2"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>window.LIVLIN_LANG="es";window.LIVLIN_LANGS=[{"code":"es","dir":"","htmlLang":"es","label":"Español"},{"code":"en","dir":"en","htmlLang":"en","label":"English"},{"code":"da","dir":"da","htmlLang":"da","label":"Dansk"},{"code":"zh-CN","dir":"zh","htmlLang":"zh-Hans","label":"简体中文"}];</script>
   <script src="/js/i18n.js" defer></script>
