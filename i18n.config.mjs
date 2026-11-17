@@ -15,7 +15,11 @@ export const site = {
 
 // El primer idioma (es) es el idioma BASE: su texto se toma tal cual del
 // HTML fuente en /src y se publica en la raíz del sitio.
-export const languages = [
+// Idiomas disponibles (los diccionarios siguen en /locales). Solo los de IDIOMAS_ACTIVOS se publican.
+// Por ahora el sitio es solo en español; para volver a publicar otro idioma, agrégalo aquí y corre `node build.mjs`.
+const IDIOMAS_ACTIVOS = ['es'];
+
+const todosLosIdiomas = [
   {
     code: 'es',
     dir: '',            // raíz del sitio
@@ -54,6 +58,8 @@ export const languages = [
     hreflang: 'zh-Hans',
   },
 ];
+
+export const languages = todosLosIdiomas.filter(l => IDIOMAS_ACTIVOS.includes(l.code));
 
 // El idioma base es el primero (es).
 languages[0].base = true;

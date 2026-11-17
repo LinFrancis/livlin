@@ -14,7 +14,7 @@
       id: 'rendebu', name: 'Rende Bú Café', location: 'Providencia',
       cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Huerta Agroecológica',
       desc: 'Transformamos espacios disponibles del café en áreas productivas para el cultivo agroecológico de alimentos, integrando huertas en patios, macetas y sectores exteriores. Lo que comenzó como una prueba se convirtió en una nueva etapa de inversión e infraestructura para fortalecer el carácter sostenible del proyecto. Hoy clientes y trabajadores conviven diariamente con cultivos comestibles que inspiran nuevas formas de relacionarse con la alimentación y la ciudad.',
-      images: ['images/casos_reales/01_rendebu/01_antes_despues_muroverde.png', 'images/casos_reales/01_rendebu/02_antes_despues_terraza.png'],
+      images: ['images/casos_reales/01_rendebu/01_antes_despues_muroverde.webp', 'images/casos_reales/01_rendebu/02_antes_despues_terraza.webp'],
       video: ''
     },
     {
@@ -28,21 +28,21 @@
       id: 'aucca', name: 'Aucca Centro Ecopedagógico', location: 'Talagante',
       cats: ['mel', 'digital'], service: 'MEL · Software a Medida · Página Web',
       desc: 'Diseñamos e implementamos herramientas digitales para apoyar la gestión de un centro comunitario dedicado a la agroecología y la educación ambiental. La plataforma permite dar seguimiento a acuerdos, objetivos, finanzas y actividades, fortaleciendo la coordinación interna y la toma de decisiones basada en información actualizada.',
-      images: ['images/casos_reales/03_Aucca/01_intranet_inicio.png', 'images/casos_reales/03_Aucca/02_intranet_eventos.png', 'images/casos_reales/03_Aucca/03_intranet_graficos.png'],
+      images: ['images/casos_reales/03_Aucca/01_intranet_inicio.webp', 'images/casos_reales/03_Aucca/02_intranet_eventos.png', 'images/casos_reales/03_Aucca/03_intranet_graficos.png'],
       video: ''
     },
     {
       id: 'lavaseco', name: 'Lavaseco Florencia', location: 'Providencia',
       cats: ['huerto'], service: 'Huerta Agroecológica',
       desc: 'Convertimos un espacio exterior subutilizado en una huerta agroecológica visible desde la calle. La experiencia demostró que es posible cultivar alimentos agroecológicos en entornos urbanos altamente transitados, generando bienestar para quienes trabajan en el lugar y despertando la curiosidad de vecinos y clientes que observan el crecimiento de la huerta día a día.',
-      images: ['images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png'],
+      images: ['images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.webp'],
       video: 'https://www.instagram.com/p/DY3piY0O94e/'
     },
     {
       id: 'escuela', name: 'Liceo Manuel de Salas', location: 'Ñuñoa',
       cats: ['diseno'], service: 'Diseño Regenerativo',
-      desc: 'Tuve la necesidad de contactar a Livlin para partir desde cero un proyecto de huerta para la comunidad del ciclo 2 del Liceo Experimental Manuel de Salas. No sólo obtuve una asesoría integral de suelo y posición del sol detallada, sino que también se logró concretar una visita al espacio y un involucramiento total de Francis con el proyecto: aportando con el diseño de la huerta, listado de siembra según estación, infografía gráfica con fines pedagógicos y apoyo constante de cómo implementar un proyecto como este a gran escala. Nos mostró ejemplos de cómo colegios en Chile y China han logrado integrar el cuidado de la naturaleza y la siembra urbana en espacios comunes. Muchas gracias Livlin por tu sabiduría y profesionalismo y por darle vida a este proyecto en su etapa inicial. ¡Esperemos que pronto te podamos invitar a conocer nuestra huerta!',
-      images: ['images/casos_reales/05_Escuela/01_lms.png'],
+      desc: 'Tuve la necesidad de contactar a LivLin para partir desde cero un proyecto de huerta para la comunidad del ciclo 2 del Liceo Experimental Manuel de Salas. No sólo obtuve una asesoría integral de suelo y posición del sol detallada, sino que también se logró concretar una visita al espacio y un involucramiento total de Francis con el proyecto: aportando con el diseño de la huerta, listado de siembra según estación, infografía gráfica con fines pedagógicos y apoyo constante de cómo implementar un proyecto como este a gran escala. Nos mostró ejemplos de cómo colegios en Chile y China han logrado integrar el cuidado de la naturaleza y la siembra urbana en espacios comunes. Muchas gracias LivLin por tu sabiduría y profesionalismo y por darle vida a este proyecto en su etapa inicial. ¡Esperemos que pronto te podamos invitar a conocer nuestra huerta!',
+      images: ['images/casos_reales/05_Escuela/01_lms.webp'],
       video: ''
     },
     {
@@ -56,35 +56,35 @@
       id: 'nova', name: 'Edificio Nova', location: 'Providencia',
       cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Huerto Comunitario',
       desc: 'Activamos espacios comunitarios del edificio para el cultivo agroecológico de alimentos y el fortalecimiento de los vínculos entre vecinos. La iniciativa permitió transformar áreas poco utilizadas en lugares productivos, compartir plantas y conocimientos, y abrir nuevas conversaciones sobre sustentabilidad y vida comunitaria.',
-      images: ['images/casos_reales/07_Edificio_Nova/01_nova.png'],
+      images: ['images/casos_reales/07_Edificio_Nova/01_nova.webp'],
       video: 'https://www.instagram.com/p/DYzTwbgR7Na/'
     },
     {
       id: 'javiera_francis', name: 'Terraza en departamento', location: 'Providencia',
       cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Bancales Autorregantes · Energía Solar',
       desc: 'Diseñamos e implementamos una terraza productiva basada en bancales autorregantes y compostaje integrado. La solución permitió reducir significativamente las necesidades de riego y facilitar el cultivo continuo de alimentos durante todo el año, demostrando que es posible producir alimentos sanos incluso en condiciones urbanas desafiantes.',
-      images: ['images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png', 'images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png', 'images/casos_reales/08_Depto_Javiera_Francis/03_collage_02.png', 'images/casos_reales/08_Depto_Javiera_Francis/04_bancal_l.png'],
+      images: ['images/casos_reales/08_Depto_Providencia/01_collage_01.webp', 'images/casos_reales/08_Depto_Providencia/02_diseno_antes_despues.png', 'images/casos_reales/08_Depto_Providencia/03_collage_02.webp', 'images/casos_reales/08_Depto_Providencia/04_bancal_l.webp'],
       video: 'https://www.instagram.com/p/Cl1Q_f8tKkl/'
     },
     {
       id: 'sylvia_ricardo', name: 'Casa en La Reina', location: 'La Reina',
       cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Wicking Bed · Talleres',
       desc: 'Realizamos el diseño regenerativo de la casa pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para el manejo de residuos orgánicos del hogar y se construyó un bancal autorregante de riego por capilaridad con hotel de lombrices y ruedas, que funciona también como muro verde y puede moverse para aprovechar la luz del sol en las diferentes estaciones del año.',
-      images: ['images/casos_reales/publico/hogar_bancal_movil.jpg'],
+      images: ['images/casos_reales/publico/hogar_bancal_movil.webp'],
       video: 'https://www.instagram.com/p/DZvBlupRJCl/'
     },
     {
       id: 'cecilia_isidora', name: 'Casa en Las Condes', location: 'Las Condes',
       cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Wicking Bed · Parrón Bioclimático',
       desc: 'Desarrollamos un plan maestro de regeneración para el hogar que incluyó compostaje, producción de alimentos y mejoras bioclimáticas. Entre las acciones implementadas destacan sistemas de cultivo autorregante y una estructura vegetal diseñada para aportar sombra natural y confort térmico durante los meses más cálidos.',
-      images: ['images/casos_reales/publico/hogar_parron.jpg'],
+      images: ['images/casos_reales/publico/hogar_parron.webp'],
       video: ''
     },
     {
       id: 'indag-regenerativa', name: 'Indagación Regenerativa', location: 'Demo pública',
       cats: ['mel', 'digital'], service: 'MEL · Soluciones Digitales',
       desc: 'Desarrollamos un motor de diagnóstico multidimensional basado en la Flor de la Permacultura. La plataforma permite analizar el potencial de un espacio en 10 dimensiones y traducirlo en un plan de acción priorizado por etapas, con seguimiento visual del avance. Una herramienta para entender dónde estás y hacia dónde ir en tu proceso regenerativo.',
-      images: ['images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png', 'images/apps/indag_reg/01_plataforma_livlin_vertical.png', 'images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png', 'images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png'],
+      images: ['images/apps/indag_reg/02_plataforma_livlin_horizontal_fotos.png', 'images/apps/indag_reg/01_plataforma_livlin_vertical.webp', 'images/apps/indag_reg/03_plataforma_livlin_horizontal_potencial_reg.png', 'images/apps/indag_reg/04_plataforma_livlin_horizontal_plan.png'],
       video: ''
     },
     {

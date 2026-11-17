@@ -31,7 +31,7 @@
   // ---- Un ejemplo por tipo de espacio
   var GRUPOS = [
     { id: 'casas', nombre: 'Casas con patio o jardín', tipos: ['Casa con patio/jardín'],
-      img: 'images/casos_reales/publico/hogar_parron.jpg', pos: 'center',
+      img: 'images/casos_reales/publico/hogar_parron.webp', pos: 'center',
       texto: 'Patios familiares que pasan del diagnóstico a la acción con huerta agroecológica: compostaje, bancales autorregantes y estructuras que dan sombra natural.' },
     { id: 'deptos', nombre: 'Departamentos con terraza', tipos: ['Departamento con terraza'],
       img: 'images/casos_reales/publico/depto_vermicompostera.jpg', pos: 'center',
@@ -40,13 +40,13 @@
       img: 'images/cecosf/huerta-hoy.webp', pos: 'center',
       texto: 'Espacios de encuentro que suman huerta agroecológica, compostera y talleres, con participación de las personas que los usan.' },
     { id: 'organizaciones', nombre: 'Organizaciones y negocios', tipos: ['Organización o institución'],
-      img: 'images/casos_reales/01_rendebu/01_antes_despues_muroverde.png', pos: 'center',
+      img: 'images/casos_reales/01_rendebu/01_antes_despues_muroverde.webp', pos: 'center',
       texto: 'Negocios y organizaciones que integran alimentos agroecológicos a su identidad y a la mirada de quienes los visitan.' },
     { id: 'escuelas', nombre: 'Escuelas', tipos: ['Escuela / jardín infantil'],
-      img: 'images/casos_reales/05_Escuela/01_lms.png', pos: 'center',
+      img: 'images/casos_reales/05_Escuela/01_lms.webp', pos: 'center',
       texto: 'Diseño de huertas pedagógicas con lectura del sol y del suelo, listado de siembra por estación y material educativo.' },
     { id: 'comunidades', nombre: 'Edificios, comunidades y terrenos', tipos: ['Comunidad / copropiedad', 'Terreno urbano en recuperación', 'Ecobarrio / terreno subdividido'],
-      img: 'images/casos_reales/07_Edificio_Nova/01_nova.png', pos: 'center',
+      img: 'images/casos_reales/07_Edificio_Nova/01_nova.webp', pos: 'center',
       texto: 'Áreas comunes y terrenos poco usados que se activan para cultivar, compartir saberes y fortalecer el vínculo entre vecinos.' }
   ];
 

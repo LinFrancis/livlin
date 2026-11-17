@@ -1,5 +1,5 @@
 /**
- * modal.js — Livlin Modal de Galería
+ * modal.js — LivLin Modal de Galería
  * Abre imágenes en pantalla completa con info
  */
 (function () {

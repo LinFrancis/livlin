@@ -244,10 +244,12 @@ function processHtml(html, ctx) {
 // ---------- inyección de SEO + selector + runtime ----------
 function buildSeoHead(pageRel, lang) {
   const canonical = absUrlFor(lang, pageRel);
-  const alts = languages.map(l =>
+  // con un solo idioma publicado no se anuncian alternativas (evita señalar páginas que no existen)
+  const multi = languages.length > 1;
+  const alts = multi ? languages.map(l =>
     `  <link rel="alternate" hreflang="${l.hreflang}" href="${absUrlFor(l, pageRel)}">`
-  ).join('\n');
-  const xdefault = `  <link rel="alternate" hreflang="x-default" href="${absUrlFor(baseLang, pageRel)}">`;
+  ).join('\n') : '';
+  const xdefault = multi ? `  <link rel="alternate" hreflang="x-default" href="${absUrlFor(baseLang, pageRel)}">` : '';
   return [
     `  <link rel="canonical" href="${canonical}">`,
     alts,
@@ -260,7 +262,7 @@ function buildSeoHead(pageRel, lang) {
     `  <meta property="og:image" content="${ogImageFor(pageRel, lang)}">`,
     `  <meta property="og:image:width" content="1200">`,
     `  <meta property="og:image:height" content="630">`,
-  ].join('\n');
+  ].filter(l => l !== '').join('\n');
 }
 
 function buildLangSwitch(pageRel, lang) {
@@ -282,16 +284,21 @@ function injectAll(html, pageRel, lang) {
   html = html.replace(/<\/head>/i, `${seo}\n</head>`);
   // selector de idioma: sale de .nav-links, se inserta como hermano del burger dentro de .nav-inner
   // (siempre visible, no queda escondido dentro del menú colapsable en mobile)
-  const sw = buildLangSwitch(pageRel, lang);
-  html = html.replace(
-    /(<button class="nav-toggle"[^>]*>[\s\S]*?<\/button>)/i,
-    `$1\n      ${sw}`
-  );
+  if (languages.length > 1) {
+    const sw = buildLangSwitch(pageRel, lang);
+    html = html.replace(
+      /(<button class="nav-toggle"[^>]*>[\s\S]*?<\/button>)/i,
+      `$1\n      ${sw}`
+    );
+  }
   // globales + runtime antes de </body>
   const globals =
     `<script>window.LIVLIN_LANG=${JSON.stringify(lang.code)};` +
     `window.LIVLIN_LANGS=${JSON.stringify(languages.map(l => ({ code: l.code, dir: l.dir, htmlLang: l.htmlLang, label: l.label })))};</script>`;
-  html = html.replace(/<\/body>/i, `  ${globals}\n  <script src="/js/i18n.js" defer></script>\n</body>`);
+  // analítica (inactiva hasta configurar el código en js/analitica.js)
+  html = html.replace(/<\/body>/i, `  <script src="/js/analitica.js" defer></script>
+</body>`);
+  if (languages.length > 1) html = html.replace(/<\/body>/i, `  ${globals}\n  <script src="/js/i18n.js" defer></script>\n</body>`);
   return html;
 }
 
@@ -337,13 +344,13 @@ for (const lang of languages) {
 }
 
 // sitemap.xml con alternates hreflang
-const urls = pages.map(pageRel => {
-  const alts = languages.map(l =>
+const urls = pages.filter(pr => pr !== '404.html').map(pageRel => {
+  const multi = languages.length > 1;
+  const alts = multi ? languages.map(l =>
     `    <xhtml:link rel="alternate" hreflang="${l.hreflang}" href="${absUrlFor(l, pageRel)}"/>`
-  ).join('\n');
-  const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="${absUrlFor(baseLang, pageRel)}"/>`;
+  ).join('\n') + `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${absUrlFor(baseLang, pageRel)}"/>\n` : '';
   return languages.map(l =>
-    `  <url>\n    <loc>${absUrlFor(l, pageRel)}</loc>\n${alts}\n${xd}\n  </url>`
+    `  <url>\n    <loc>${absUrlFor(l, pageRel)}</loc>\n${alts}  </url>`
   ).join('\n');
 }).join('\n');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;

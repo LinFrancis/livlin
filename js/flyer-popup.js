@@ -36,7 +36,7 @@
     var f = document.createElement('div');
     f.id = 'fp-fondo'; f.className = 'fp-fondo'; f.setAttribute('role', 'dialog'); f.setAttribute('aria-modal', 'true'); f.setAttribute('aria-label', 'Flyer de LivLin');
     f.innerHTML = '<div class="fp-caja"><button type="button" class="fp-x" aria-label="Cerrar">×</button>' +
-      '<img src="' + base + 'images/contacto/flyer-livlin-10x14.jpg" width="900" height="1260" alt="Flyer de LivLin: Conversemos tu idea. Conversación de orientación gratuita de 20 minutos, online. WhatsApp +56 9 7165 7358, francis@livlin.cl, www.livlin.cl, @livlin.cl"></div>';
+      '<img src="' + base + 'images/contacto/flyer-livlin-10x14.jpg" width="900" height="1260" alt="Flyer de LivLin: Conversemos tu idea. Asesoría gratuita online de 20 minutos. WhatsApp +56 9 7165 7358, francis@livlin.cl, www.livlin.cl, @livlin.cl"></div>';
     f.addEventListener('click', function (e) { if (e.target === f || e.target.className === 'fp-x') cerrar(); });
     document.body.appendChild(f);
     document.documentElement.style.overflow = 'hidden';
@@ -44,7 +44,22 @@
     requestAnimationFrame(function () { f.classList.add('fp-on'); f.querySelector('.fp-x').focus(); });
   }
 
-  var img = new Image();                                  // se muestra cuando el flyer ya cargó
-  img.onload = function () { setTimeout(abrir, 400); };
+  // Solo en pantallas grandes (en celular tapaba toda la portada) y sin interrumpir la primera lectura:
+  // aparece a los 15 segundos o cuando la persona ya recorrió casi la mitad de la página, lo que ocurra primero.
+  if (window.innerWidth <= 760) return;
+  var img = new Image();
+  var listo = false, mostrado = false;
+  function mostrar() {
+    if (mostrado || !listo) return;
+    mostrado = true;
+    window.removeEventListener('scroll', alScroll);
+    abrir();
+  }
+  function alScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h > 0 && window.scrollY / h > 0.45) mostrar();
+  }
+  img.onload = function () { listo = true; setTimeout(mostrar, 15000); alScroll(); };
+  window.addEventListener('scroll', alScroll, { passive: true });
   img.src = base + 'images/contacto/flyer-livlin-10x14.jpg';
 })();

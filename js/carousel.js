@@ -1,5 +1,5 @@
 /**
- * carousel.js — Livlin Carrusel Regenerativo
+ * carousel.js — LivLin Carrusel Regenerativo
  * Auto-play, flechas, dots, modal en click
  */
 (function () {

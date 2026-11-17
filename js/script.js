@@ -1,5 +1,5 @@
 /**
- * script.js v5 — Livlin · funciones globales para todas las páginas
+ * script.js v5 — LivLin · funciones globales para todas las páginas
  *  - Navbar scroll sync
  *  - Burger menu
  *  - Fade-in (progressive enhancement)

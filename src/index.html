@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Livlin · Ayuda a la Naturaleza Sanar</title>
+  <title>LivLin · Agroecología urbana y diseño regenerativo en Chile</title>
   <meta name="description"
-    content="Livlin es una organización ambiental que impulsa transformaciones regenerativas en hogares, organizaciones y territorios a través de diseño regenerativo, educación ambiental y herramientas digitales.">
+    content="Agroecología urbana, diseño regenerativo y educación ambiental para hogares y organizaciones en Chile. Agenda tu asesoría gratuita online con LivLin.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Livlin · Ayuda a la Naturaleza Sanar">
-  <meta property="og:description" content="Livlin es una organización ambiental que impulsa transformaciones regenerativas en hogares, organizaciones y territorios a través de diseño regenerativo, educación ambiental y herramientas digitales.">
+  <meta property="og:title" content="LivLin · Agroecología urbana y diseño regenerativo">
+  <meta property="og:description" content="Agroecología urbana, diseño regenerativo y educación ambiental para hogares y organizaciones en Chile. Agenda tu asesoría gratuita online con LivLin.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="images/ui/logo_livlin_no_text.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=18">
+  <link rel="stylesheet" href="css/styles.css?v=19">
   <link rel="stylesheet" href="css/video-fondos.css?v=5">
   <link rel="stylesheet" href="css/cecosf-showcase.css?v=1">
   <link rel="stylesheet" href="css/espacios-ejemplos.css?v=3">
@@ -36,7 +36,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/people/francis_bancal_completo.jpg');
+      background-image: url('images/people/francis_bancal_completo.webp');
       background-size: cover;
       background-position: center top;
       transform: scale(1.04);
@@ -100,6 +100,30 @@
       max-width: 460px;
       margin: 0;
     }
+
+
+    .hero-eyebrow { display: block; font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #1B6B45; margin-bottom: 10px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .hero-btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 99px; padding: 13px 22px; font: inherit; font-weight: 700; font-size: .92rem; cursor: pointer; text-decoration: none; min-height: 48px; transition: transform .2s, background .2s; }
+    .hero-btn:hover { transform: translateY(-2px); }
+    .hero-btn--main { background: #1A7783; color: #fff; border: 0; }
+    .hero-btn--main:hover { background: #112E4D; color: #fff; }
+    .hero-btn--sec { background: #fff; color: #112E4D; border: 1.5px solid #112E4D; }
+    @media (max-width: 600px) {
+      .hero-fullscreen { min-height: auto; }
+      .hero-content-main { padding-top: 28px; padding-bottom: 44px; gap: 18px; }
+      .hero-logo { display: none; }
+      .hero-content-main { padding-top: 70px; }
+      .hero-extra { display: none; }
+      .hero-h1 { margin-bottom: 10px; }
+      .hero-glass { padding: 22px 20px; }
+      .hero-btn { width: 100%; }
+    }
+
+
+    .lineas-home { background: var(--bg, #FAF9F4); }
+    .lineas-lead { max-width: 760px; margin: 12px auto 0; color: var(--text-soft); font-size: 1.02rem; }
+    .lineas-mas { text-align: center; margin-top: 28px; font-weight: 700; }
 
     /* ============================================================
        DIMENSIONES — texto integrado sobre imagen (overlay)
@@ -1077,6 +1101,7 @@
       .dim-bullets { columns: 1; }
     }
   </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.livlin.cl/#organizacion", "name": "LivLin", "url": "https://www.livlin.cl/", "logo": "https://www.livlin.cl/images/ui/logo_livlin_no_text.png", "description": "Organización que acompaña a hogares y organizaciones con agroecología urbana, diseño regenerativo, educación ambiental y herramientas digitales.", "email": "contacto.livlin@gmail.com", "telephone": "+56971657358", "sameAs": ["https://www.instagram.com/livlin.cl/", "https://www.linkedin.com/in/francismasonb/"], "areaServed": {"@type": "Country", "name": "Chile"}, "address": {"@type": "PostalAddress", "addressLocality": "Santiago", "addressCountry": "CL"}, "founder": {"@type": "Person", "name": "Francis Mason Bustos"}}, {"@type": "WebSite", "url": "https://www.livlin.cl/", "name": "LivLin", "inLanguage": "es-CL", "publisher": {"@id": "https://www.livlin.cl/#organizacion"}}]}</script>
 </head>
 
 <body>
@@ -1084,8 +1109,8 @@
   <!-- NAVBAR -->
   <nav class="navbar" role="navigation">
     <div class="nav-inner">
-      <span class="nav-logo" aria-label="Livlin">
-        <img src="images/ui/logo_livlin_with_text.png" alt="Livlin">
+      <span class="nav-logo" aria-label="LivLin">
+        <img src="images/ui/logo_livlin_with_text.webp" alt="LivLin">
       </span>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -1093,7 +1118,7 @@
       <ul class="nav-links" id="primary-nav">
         <li><a href="index.html">Inicio</a></li>
         <li class="nav-item-dropdown">
-          <a href="#dimensiones">Líneas de acción</a>
+          <a href="#lineas">Líneas de acción</a>
           <ul class="dropdown-menu">
             <li><a href="servicios/conversacion-orientacion.html">Asesoría gratuita online</a></li>
             <li><a href="servicios/visita-diagnostica.html">Visita diagnóstica</a></li>
@@ -1112,6 +1137,7 @@
           <ul class="dropdown-menu">
             <li><a href="huertacomunitaria/cecosfvillaolimpica/index.html">Huerta comunitaria CECOSF Villa Olímpica</a></li>
             <li><a href="bitacoras/plan-maestro-bancales.html">Bancales Autorregantes en Departamento</a></li>
+            <li><a href="impacto.html#casos">Todos los trabajos realizados</a></li>
           </ul>
         </li>
         <li><a href="impacto.html">Impacto</a></li>
@@ -1130,10 +1156,15 @@
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content-main fade-in">
-        <img class="hero-logo" src="images/ui/logo_livlin_with_text.png" alt="Livlin">
+        <img class="hero-logo" src="images/ui/logo_livlin_with_text.webp" alt="LivLin">
         <div class="hero-glass">
+          <span class="hero-eyebrow">Agroecología urbana · Diseño regenerativo</span>
           <h1 class="hero-h1">SANAR<br>NATURALEZA</h1>
-          <p class="hero-lead">Los desafíos climáticos, de biodiversidad y contaminación nos movilizan a vivir las transformaciones necesarias.</p>
+          <p class="hero-lead">Los desafíos climáticos, de biodiversidad y contaminación nos movilizan a vivir las transformaciones necesarias. <span class="hero-extra">En LivLin acompañamos a hogares y organizaciones a crear huertas agroecológicas y espacios que regeneran.</span></p>
+          <div class="hero-cta">
+            <button type="button" class="hero-btn hero-btn--main" onclick="Calendly.initPopupWidget({url:'https://calendly.com/livlin-contacto/conversar-la-idea-livlin'});return false;">Agenda una asesoría gratuita online</button>
+            <a class="hero-btn hero-btn--sec" href="https://wa.me/56971657358?text=Hola%20LivLin%2C%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1158,7 +1189,7 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
             Agenda una reunión
           </button>
-          <a href="https://wa.me/56971657358?text=Hola%20Livlin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
+          <a href="https://wa.me/56971657358?text=Hola%20LivLin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             o una llamada
           </a>
@@ -1180,15 +1211,72 @@
         </div>
         <div class="impacto-thumbs fade-in">
           <a href="impacto.html#evidencia"><img loading="lazy" src="images/cecosf/huerta-hoy.webp" alt="Huerta comunitaria hoy"><span>Evidencia antes y después</span></a>
-          <a href="impacto.html#territorio"><img loading="lazy" src="images/casos_reales/01_rendebu/01_antes_despues_muroverde.png" alt="Muro verde"><span>Impacto por territorio y cuenca</span></a>
-          <a href="impacto.html#casos"><img loading="lazy" src="images/casos_reales/publico/hogar_parron.jpg" alt="Parrón bioclimático"><span>Explora nuestro trabajo</span></a>
+          <a href="impacto.html#territorio"><img loading="lazy" src="images/casos_reales/01_rendebu/01_antes_despues_muroverde.webp" alt="Muro verde"><span>Impacto por territorio y cuenca</span></a>
+          <a href="impacto.html#casos"><img loading="lazy" src="images/casos_reales/publico/hogar_parron.webp" alt="Parrón bioclimático"><span>Explora nuestro trabajo</span></a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         OCHO LÍNEAS DE ACCIÓN (resumen)
+    ============================================================ -->
+    <section class="lineas-home" id="lineas" aria-label="Líneas de acción">
+      <div class="container">
+        <div class="section-header center fade-in">
+          <span class="eyebrow">Líneas de acción</span>
+          <h2>Ocho formas de acompañar tu espacio</h2>
+          <p class="lineas-lead">Desde una primera asesoría gratuita online hasta la implementación y el seguimiento de tu huerta agroecológica, tu plan maestro o tus herramientas digitales.</p>
+        </div>
+        <div class="servicios-grid fade-in">
+          <a href="servicios/conversacion-orientacion.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/people/francis_bancal_completo.webp" alt="Asesoría gratuita online" class="servicios-grid-card-img" style="object-position:center top;">
+          <span class="badge-gratis">Gratis</span>
+          <h3>Asesoría gratuita online</h3>
+          <p>Conversación inicial sin costo, online, para entender tu visión, tu contexto y ver si hay compatibilidad.</p>
+        </a>
+          <a href="servicios/visita-diagnostica.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/projects/acompanamiento.png" alt="Visita diagnóstica" class="servicios-grid-card-img">
+          <h3>Visita diagnóstica</h3>
+          <p>Visitamos tu espacio (1-2 horas) para conocer su potencial y activar la habilitación básica de tu proyecto en la plataforma de Indagación Regenerativa de LivLin.</p>
+        </a>
+          <a href="servicios/huerto-urbano.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/projects/bancales.webp" alt="Huerta agroecológica urbana" class="servicios-grid-card-img">
+          <h3>Huerta agroecológica urbana</h3>
+          <p>Asesoría e implementación de huerta agroecológica y tecnologías apropiadas para tu espacio.</p>
+        </a>
+          <a href="servicios/diseno-regenerativo.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/casos_reales/08_Depto_Providencia/01_collage_01.webp" alt="Diseño regenerativo" class="servicios-grid-card-img">
+          <h3>Diseño regenerativo</h3>
+          <p>Diseño regenerativo y plan maestro de tu espacio —adaptado a hogares, terrenos, organizaciones o empresas— apoyado en una plataforma colaborativa de monitoreo, evaluación y aprendizaje.</p>
+        </a>
+          <a href="servicios/educacion-ambiental.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/talleres/taller_aucca_charla.png" alt="Educación ambiental" class="servicios-grid-card-img">
+          <h3>Educación ambiental</h3>
+          <p>Talleres de educación ambiental para grupos familiares y público general.</p>
+        </a>
+          <a href="servicios/facilitacion-organizacional.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/vision/metodologias_participativas.jpg" alt="Facilitación organizacional" class="servicios-grid-card-img">
+          <h3>Facilitación organizacional</h3>
+          <p>Facilitación de grupos humanos para la construcción de una Teoría de Cambio.</p>
+        </a>
+          <a href="servicios/monitoreo.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/casos_reales/03_Aucca/03_intranet_graficos.png" alt="Monitoreo, evaluación y aprendizaje" class="servicios-grid-card-img">
+          <h3>Monitoreo, evaluación y aprendizaje (MEL)</h3>
+          <p>Plataforma colaborativa de monitoreo, evaluación y aprendizaje para acompañar el avance de tu proyecto.</p>
+        </a>
+          <a href="servicios/soluciones-digitales.html" class="servicios-grid-card">
+          <img loading="lazy" src="images/apps/plataformas_varias/apps_overview.png" alt="Desarrollo de soluciones digitales" class="servicios-grid-card-img">
+          <h3>Desarrollo de soluciones digitales</h3>
+          <p>Desarrollo de soluciones digitales a medida para destrabar procesos humanos.</p>
+        </a>
+        </div>
+        <p class="lineas-mas"><a href="servicios.html">Ver todos los servicios →</a></p>
       </div>
     </section>
 
     <!-- DIMENSIÓN 1 — EDUCACIÓN / VISIÓN -->
     <div class="dim-hero-block" style="--dim-accent:#3CA0C9;">
-      <img class="dim-hero-img" src="images/talleres/taller_aucca_grupo.png" alt="Taller grupal Aucca">
+      <img class="dim-hero-img" src="images/talleres/taller_aucca_grupo.webp" alt="Taller grupal Aucca">
       <div class="vfondo vfondo-der" style="--n:1" aria-hidden="true"><video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" poster="videos/fondos/comunidad-participantes.jpg" data-src="/videos/fondos/comunidad-participantes.mp4"></video></div>
       <div class="dim-hero-overlay" style="background: linear-gradient(to right, rgba(8,18,42,0.85) 0%, rgba(8,18,42,0.6) 46%, rgba(8,18,42,0) 90%);"></div>
       <div class="dim-hero-content">
@@ -1255,7 +1343,7 @@
 
     <!-- DIMENSIÓN 3 — HERRAMIENTAS -->
     <div class="dim-hero-block" style="--dim-accent:#BC3CC9;">
-      <img class="dim-hero-img" src="images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Plataforma digital Aucca">
+      <img class="dim-hero-img" src="images/casos_reales/03_Aucca/01_intranet_inicio.webp" alt="Plataforma digital Aucca">
       <div class="dim-hero-overlay" style="background: linear-gradient(to right, rgba(18,6,22,0.85) 0%, rgba(18,6,22,0.6) 46%, rgba(18,6,22,0) 90%);"></div>
       <div class="dim-hero-content">
         <h2 class="dim-titulo">CREA HERRAMIENTAS PARA<br>DESTRABAR POTENCIAL</h2>
@@ -1299,7 +1387,7 @@
           </a>
         </div>
         <div class="descarga-image fade-in">
-          <img loading="lazy" src="images/publications/publicacion_educacion_regeneracion.jpg" alt="Publicación: Introducción al enfoque de la regeneración">
+          <img loading="lazy" src="images/publications/publicacion_educacion_regeneracion.webp" alt="Publicación: Introducción al enfoque de la regeneración">
         </div>
       </div>
     </div>
@@ -1313,10 +1401,10 @@
       <div class="francis-inner">
 
         <div class="francis-photo-wrap fade-in">
-          <img class="francis-photo" src="images/people/francis_bancal_completo.jpg" alt="Francis Mason en bancal regenerativo">
+          <img class="francis-photo" src="images/people/francis_bancal_completo.webp" alt="Francis Mason en bancal regenerativo">
           <div class="francis-photo-label">
             <strong>Francis Mason Bustos · 林高天</strong>
-            <span>Fundador de Livlin · Santiago, Chile</span>
+            <span>Fundador de LivLin · Santiago, Chile</span>
           </div>
         </div>
 
@@ -1350,7 +1438,7 @@
   <!-- ============================================================
        CTA FINAL WHATSAPP
   ============================================================ -->
-  <section class="cta-whatsapp-section" id="contacto-wa" aria-label="Contacto por WhatsApp" style="background: linear-gradient(rgba(10,30,20,0.55),rgba(10,30,20,0.45)), url('images/hero/banner_horizontal.png') center/cover no-repeat;">
+  <section class="cta-whatsapp-section" id="contacto-wa" aria-label="Contacto por WhatsApp" style="background: linear-gradient(rgba(10,30,20,0.55),rgba(10,30,20,0.45)), url('images/hero/banner_horizontal.webp') center/cover no-repeat;">
     <div class="container">
       <h2 style="color:#fff; text-shadow:0 2px 16px rgba(0,0,0,0.4);">Acá estamos para co-crear un mejor futuro</h2>
       <div class="cta-dual">
@@ -1358,7 +1446,7 @@
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
           Agenda una conversación gratis (20 min) →
         </button>
-        <a href="https://wa.me/56971657358?text=Hola%20Livlin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
+        <a href="https://wa.me/56971657358?text=Hola%20LivLin%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener" class="btn-wa-big">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           O escríbenos por WhatsApp →
         </a>
@@ -1374,8 +1462,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="images/ui/logo_livlin_no_text.png" alt="Livlin Logo">
-            <span>Livlin</span>
+            <img src="images/ui/logo_livlin_no_text.png" alt="LivLin Logo">
+            <span>LivLin</span>
           </div>
           <p>En LivLin impulsamos la regeneración de territorios y organizaciones.</p>
           <p style="font-style:italic; color:var(--green-light); margin-top:8px; line-height:1.6;">Diseñar mejor para una vida regenerativa es decidir mejor para el presente y el futuro de toda la comunidad de la vida.</p>
@@ -1390,10 +1478,10 @@
 
           <div class="footer-social-links" style="margin-top:14px;">
             <a href="https://www.linkedin.com/in/francismasonb/" target="_blank" rel="noopener" class="footer-social-link">
-              <img loading="lazy" src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> LinkedIn
+              <img loading="lazy" src="images/icons/linkedin.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;" alt=""> LinkedIn
             </a>
             <a href="mailto:contacto.livlin@gmail.com" class="footer-social-link">
-              <img loading="lazy" src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;"> Email
+              <img loading="lazy" src="images/icons/mail.svg" class="inline-icon" style="width:1.2em; height:1.2em; vertical-align:-0.2em;" alt=""> Email
             </a>
           </div>
         </div>
@@ -1416,7 +1504,7 @@
         <div class="footer-col">
           <h5>Explorar</h5>
           <ul>
-            <li><a href="#dimensiones">Líneas de acción</a></li>
+            <li><a href="#lineas">Líneas de acción</a></li>
             <li><a href="impacto.html">Impacto</a></li>
             <li><a href="#descarga">Recursos gratis</a></li>
             <li><a href="contacto.html">Contacto</a></li>
@@ -1432,7 +1520,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; <span data-year>2026</span> Livlin &middot; www.livlin.cl</span>
+        <span>&copy; <span data-year>2026</span> LivLin &middot; www.livlin.cl</span>
         <span>Santiago, Chile</span>
       </div>
     </div>
@@ -1449,10 +1537,10 @@
   </button>
 
   <script src="js/script.js?v=7"></script>
-  <script src="js/impacto-datos.js?v=1"></script>
+  <script src="js/impacto-datos.js?v=3"></script>
   <script src="js/espacios-impacto.js?v=3"></script>
   <script src="js/cecosf-showcase.js?v=1"></script>
-  <script src="js/flyer-popup.js?v=1"></script>
+  <script src="js/flyer-popup.js?v=2"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

@@ -8457,3 +8457,11 @@ body.lb-lock {
 @media (max-width: 900px) { .plataforma-explain { grid-template-columns: 1fr; } }
 
 .service-lead-desc { font-size: 1.02rem; color: var(--text-soft); line-height: 1.6; max-width: 680px; margin: 0 auto 8px; }
+
+/* Botones flotantes más pequeños y pegados al borde en celular, para no tapar el contenido */
+@media (max-width: 600px) {
+  body .wa-float { width: 50px; height: 50px; bottom: 14px; right: 12px; }
+  body .wa-float svg { width: 26px; height: 26px; }
+  body .calendly-float { width: 42px; height: 42px; bottom: 72px; right: 16px; }
+  body .calendly-float svg { width: 22px; height: 22px; }
+}
