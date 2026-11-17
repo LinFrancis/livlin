@@ -572,8 +572,8 @@ window.REPORTE = {
  "petalos": [
   {
    "i": 0,
-   "nombre": "Administración de la Tierra y la Naturaleza",
-   "subtitulo": "Agroecología urbana, suelo vivo, biodiversidad y agua",
+   "nombre": "Administración de la Tierra y de la Naturaleza",
+   "subtitulo": "huertos biointensivos, bosques comestibles, conservación de semillas, agricultura biológica, agroforestería y cosecha de agua",
    "espacios_total": 19,
    "espacios_obs": 12,
    "espacios_pot": 17,
@@ -597,11 +597,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Huertos en macetas recicladas",
+     "accion": "Jardines comestibles en patios pequeños",
      "n": 9
     },
     {
-     "accion": "Jardines comestibles en patios pequeños",
+     "accion": "Huertos en macetas recicladas",
      "n": 9
     },
     {
@@ -712,8 +712,8 @@ window.REPORTE = {
   },
   {
    "i": 1,
-   "nombre": "Entorno Construido",
-   "subtitulo": "Bioconstrucción, diseño bioclimático y espacios regenerativos",
+   "nombre": "Construcción",
+   "subtitulo": "diseño solar pasivo, materiales de construcción naturales, manejo del agua y reciclaje de desechos, y construcción resiliente",
    "espacios_total": 19,
    "espacios_obs": 11,
    "espacios_pot": 16,
@@ -731,7 +731,7 @@ window.REPORTE = {
      "n": 4
     },
     {
-     "accion": "Construcción con materiales reciclados",
+     "accion": "Diseño solar pasivo",
      "n": 4
     }
    ],
@@ -755,19 +755,19 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Balcones verdes",
-     "n": 1
-    },
-    {
      "accion": "Jardines verticales comestibles",
      "n": 1
     },
     {
-     "accion": "Escaleras y senderos con materiales reutilizados",
+     "accion": "Balcones verdes",
      "n": 1
     },
     {
      "accion": "Construcción con materiales reciclados",
+     "n": 1
+    },
+    {
+     "accion": "Escaleras y senderos con materiales reutilizados",
      "n": 1
     }
    ],
@@ -813,7 +813,7 @@ window.REPORTE = {
   {
    "i": 2,
    "nombre": "Herramientas y Tecnología",
-   "subtitulo": "Energía renovable, tecnología simple y movilidad sostenible",
+   "subtitulo": "reutilización y reciclaje creativo, herramientas manuales, bicicletas, cocinas eficientes, biochar y energías renovables a pequeña escala",
    "espacios_total": 19,
    "espacios_obs": 11,
    "espacios_pot": 14,
@@ -837,11 +837,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Deshidratación solar",
+     "accion": "Paneles solares domésticos",
      "n": 10
     },
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Deshidratación solar",
      "n": 10
     },
     {
@@ -863,15 +863,15 @@ window.REPORTE = {
      "n": 1
     },
     {
+     "accion": "Reciclaje",
+     "n": 1
+    },
+    {
      "accion": "Usar ampolletas LED",
      "n": 1
     },
     {
      "accion": "Deshidratación solar",
-     "n": 1
-    },
-    {
-     "accion": "Reciclaje",
      "n": 1
     },
     {
@@ -927,7 +927,7 @@ window.REPORTE = {
   {
    "i": 3,
    "nombre": "Educación y Cultura",
-   "subtitulo": "Saberes locales, arte comunitario y redes de conocimiento",
+   "subtitulo": "educación alternativa, artes y música participativa, ecología social, investigación activa y cultura de la transición",
    "espacios_total": 19,
    "espacios_obs": 10,
    "espacios_pot": 12,
@@ -945,17 +945,17 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Intercambio de plantas",
+     "accion": "Arte con materiales reciclados",
      "n": 3
     }
    ],
    "top_pot": [
     {
-     "accion": "Talleres de huertos urbanos",
+     "accion": "Redes de huertos urbanos",
      "n": 9
     },
     {
-     "accion": "Redes de huertos urbanos",
+     "accion": "Talleres de huertos urbanos",
      "n": 9
     },
     {
@@ -977,11 +977,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Taller de cultura regenerativa",
+     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
      "n": 1
     },
     {
-     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
+     "accion": "Taller de cultura regenerativa",
      "n": 1
     },
     {
@@ -1037,7 +1037,7 @@ window.REPORTE = {
   {
    "i": 4,
    "nombre": "Salud y Bienestar Espiritual",
-   "subtitulo": "Alimentación viva, plantas medicinales y bienestar integral",
+   "subtitulo": "medicina complementaria e integral, yoga, tai chi y otras disciplinas del cuerpo, la mente y el espíritu",
    "espacios_total": 19,
    "espacios_obs": 10,
    "espacios_pot": 12,
@@ -1069,7 +1069,7 @@ window.REPORTE = {
      "n": 9
     },
     {
-     "accion": "Meditación en huertos",
+     "accion": "Cultivo de plantas medicinales",
      "n": 8
     }
    ],
@@ -1091,7 +1091,7 @@ window.REPORTE = {
   {
    "i": 5,
    "nombre": "Finanzas y Economía",
-   "subtitulo": "Mercados locales, economías solidarias y soberanía alimentaria",
+   "subtitulo": "mercados locales de agricultores, agricultura sostenida por la comunidad, comercio justo y redes de trabajo voluntario en granjas orgánicas",
    "espacios_total": 19,
    "espacios_obs": 10,
    "espacios_pot": 13,
@@ -1154,8 +1154,8 @@ window.REPORTE = {
   },
   {
    "i": 6,
-   "nombre": "Tenencia de la Tierra y Gobernanza Comunitaria",
-   "subtitulo": "Uso colectivo del territorio y participación comunitaria",
+   "nombre": "Tenencia de la Tierra y Gobernación Comunitaria",
+   "subtitulo": "cooperativas, toma de decisiones por consenso, compartir viviendas, ecoaldeas y derechos de uso tradicionales",
    "espacios_total": 19,
    "espacios_obs": 8,
    "espacios_pot": 13,
@@ -1169,11 +1169,11 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Participar en organizaciones locales",
      "n": 2
     },
     {
-     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
+     "accion": "Defensa de áreas verdes",
      "n": 2
     }
    ],
@@ -1187,7 +1187,7 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Creación de huertos comunitarios",
+     "accion": "Organizar actividades de barrio",
      "n": 6
     }
    ],

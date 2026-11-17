@@ -310,6 +310,9 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .agro-call{background:#E7F6EE;border-radius:var(--r);padding:clamp(22px,3.4vw,34px);margin-top:30px}
 .ri .agro-call h3{font-size:1.2rem;margin:4px 0 8px}
 .ri .agro-call p{max-width:860px;font-size:.95rem;color:var(--text-soft);margin:0}
+.ri .flor-ref{margin-top:16px;font-weight:600;color:var(--text)}
+.ri .flor-ref a{color:var(--teal-dark);text-decoration:underline;text-underline-offset:3px}
+.ri .flor-ref small{display:block;margin-top:4px;font-weight:400;font-size:.8rem;color:var(--muted)}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -466,7 +469,9 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <div class="reveal">
       <div class="ri-eyebrow">Flor de la Permacultura</div>
       <h2>Siete pétalos: lo encontrado, lo planificado y lo implementado</h2>
-      <p class="ri-lead">Cada espacio se lee con los siete ámbitos de la Flor de la Permacultura. Primero diagnosticamos lo que ya existe, luego diseñamos lo que podría florecer, y finalmente acompañamos lo que se implementa. Lo planificado es un mapa de posibilidades; lo implementado, la prueba de que florece.</p>
+      <p class="ri-lead">La Flor de la Permacultura, de David Holmgren, es un mapa de la vida cotidiana organizado en siete campos, o pétalos. En el centro están la ética y los principios de diseño; desde ahí el camino avanza en espiral: parte de lo personal y local, y se abre hacia lo colectivo y global.</p>
+      <p class="ri-lead" style="margin-top:12px">En LivLin leemos cada espacio pétalo por pétalo. Primero diagnosticamos lo que ya existe, luego diseñamos lo que podría florecer y finalmente acompañamos lo que se implementa. Lo planificado es un mapa de posibilidades; lo implementado, la prueba de que florece.</p>
+      <p class="flor-ref">Want to know more? <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Revisa el póster de la Flor de la Permacultura en español →</a><br><small>Póster adaptado del libro de David Holmgren, <i>Permaculture: Principles &amp; Pathways Beyond Sustainability</i>.</small></p>
     </div>
     <div class="flor reveal">
       <div class="flor-svg" id="flor-svg"></div>
@@ -876,7 +881,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
       <div><h3>Espacio con implementación</h3><p>Un espacio que pasó del diseño a la acción: tiene al menos un avance de implementación registrado.</p></div>
       <div><h3>Cultivo nuevo</h3><p>Metros cuadrados de camas de cultivo construidas por LivLin. El cultivo que ya existía antes se cuenta aparte.</p></div>
       <div><h3>Fechas</h3><p>Algunas fechas de eventos son aproximadas y así están anotadas en el registro de cada proyecto.</p></div>
-      <div><h3>Flor de la Permacultura</h3><p>Siete ámbitos de la vida: tierra y naturaleza, entorno construido, herramientas y tecnología, educación y cultura, salud y bienestar, economía local, y tenencia de la tierra y gobernanza. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora.</p></div>
+      <div><h3>Flor de la Permacultura</h3><p>Mapa de siete campos que parte de la ética y los principios de diseño (Holmgren): administración de la tierra y de la naturaleza, construcción, herramientas y tecnología, educación y cultura, salud y bienestar espiritual, finanzas y economía, y tenencia de la tierra y gobernación comunitaria. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora. <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Saber más →</a></p></div>
       <div><h3>Marco interpretativo</h3><p>Mason Bustos, F. (2025). <i>Introducción al enfoque de la regeneración. Material de apoyo para la docencia regenerativa.</i> LivLin. <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">doi.org/10.17605/OSF.IO/UCDEH</a></p></div>
       <div><h3>Privacidad</h3><p>Los hogares aparecen con ubicación aproximada y sin nombre.</p></div>
     </div>
@@ -1096,7 +1101,7 @@ $('premisas').innerHTML=[
 
 // ---- Flor de la Permacultura: radar + tarjetas por pétalo
 const PET=R.petalos, NP=PET.length;
-const CORTO=['Tierra y naturaleza','Entorno construido','Herramientas y tecnología','Educación y cultura','Salud y bienestar','Finanzas y economía','Tenencia y gobernanza'];
+const CORTO=['Tierra y naturaleza','Construcción','Herramientas y tecnología','Educación y cultura','Salud y bienestar','Finanzas y economía','Tenencia y gobernación'];
 const LECT=[
  'Aquí la regeneración se ve primero: agroecología urbana, suelo vivo, agua cuidada y más especies conviviendo.',
  'Muros, balcones y estructuras que dejan de ser superficies inertes y se vuelven parte del sistema vivo.',
@@ -1134,7 +1139,7 @@ $('petalos-cards').innerHTML=PET.map(p=>{
   const et=(c,t,esp,sub,det)=>`<div class="etapa" style="--c:${c}"><div class="tt"><span>${t}</span><b>${esp} de ${n} espacios</b></div><div class="bar2"><i style="width:${pc(esp)}%"></i></div><p>${sub}${det?': '+det:''}</p></div>`;
   const casos=p.casos.slice(0,4).map(c=>`<span>${c.espacio} · ${c.accion.length>46?c.accion.slice(0,44)+'…':c.accion}</span>`).join('');
   return `<article class="pet">
-   <div class="pet-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>${p.subtitulo}</small></div></div>
+   <div class="pet-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
    <div class="pet-lect">${LECT[p.i]}</div>
    ${et(COL.obs,'Lo encontrado',p.espacios_obs,`${p.acciones_obs} prácticas ya presentes`,lst(p.top_obs,3))}
    ${et(COL.pot,'Lo planificado',p.espacios_pot,`${p.acciones_pot} acciones proyectadas`,lst(p.top_pot,3))}
