@@ -311,6 +311,10 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .flor-ref{margin-top:16px;font-weight:600;color:var(--text)}
 .ri .flor-ref a{color:var(--teal-dark);text-decoration:underline;text-underline-offset:3px}
 .ri .flor-ref small{display:block;margin-top:4px;font-weight:400;font-size:.8rem;color:var(--muted)}
+.ri .nivel em{display:block;font-style:normal;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.ri .nivel.on2 em{color:var(--green-light)}
+.ri .nivel u{display:block;text-decoration:none;margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:.78rem;line-height:1.4;color:var(--text-soft)}
+.ri .nivel.on2 u{border-top-color:rgba(255,255,255,.25);color:#E4EEF4}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -379,6 +383,21 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   </div>
 </section>
 
+<!-- ============ LO QUE CAMBIÓ EN LA TIERRA ============ -->
+<section class="cream" id="tierra">
+  <div class="wrap reveal">
+    <div class="ri-eyebrow">Lo que cambió en la tierra</div>
+    <h2>Cultivo agroecológico, compost, agua y árboles</h2>
+    <p class="ri-lead">Cultivo agroecológico urbano en la práctica: huertas agroecológicas y alimentos agroecológicos, sin insumos sintéticos, con cierre de ciclos mediante compostaje y cuidado del agua en los espacios acompañados.</p>
+    <div class="cult">
+      <b>Superficie de cultivo agroecológico urbano en los espacios acompañados</b>
+      <div class="cbar" aria-label="Superficie de cultivo"><div id="cb-base" style="background:#4FB87E"></div><div id="cb-nuevo" style="background:#112E4D"></div></div>
+      <div class="cl" id="cb-leg"></div>
+    </div>
+    <div class="sys" id="sys"></div>
+  </div>
+</section>
+
 <!-- ============ HISTORIA ============ -->
 <section id="historia">
   <div class="wrap story reveal">
@@ -414,26 +433,22 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <div class="reveal">
       <div class="ri-eyebrow">Marco interpretativo</div>
       <h2>Cómo leemos este impacto: de mantener a regenerar</h2>
-      <p class="ri-lead">Interpretamos los resultados con el enfoque de regeneración de la publicación <i>Introducción al enfoque de la regeneración</i> (Mason Bustos, 2025, LivLin), que se apoya en el diseño regenerativo (Mang &amp; Reed, 2012), la permacultura (Holmgren, 2020) y la mirada de Wahl (2020). <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">Leer la publicación →</a></p>
+      <p class="ri-lead">Para leer estos resultados usamos el enfoque de la publicación <i>Introducción al enfoque de la regeneración</i> (Mason Bustos, 2025, LivLin), que se apoya en el diseño regenerativo (Mang &amp; Reed, 2012), la permacultura (Holmgren, 2020) y la mirada de Wahl (2020). <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">Leer la publicación →</a></p>
+      <p class="ri-lead" style="margin-top:12px">Su idea central es simple: no todas las acciones transforman un lugar de la misma manera. Algunas solo permiten que todo siga funcionando como siempre; otras evitan que empeore; otras abren posibilidades nuevas. Según la publicación, hay cuatro niveles de acción:</p>
     </div>
 
     <div class="niveles reveal">
-      <div class="nivel"><b>Operar</b><span>Que el sistema siga funcionando como siempre.</span></div>
-      <div class="nivel"><b>Mantener</b><span>Evitar que empeore, con ligeras mejoras de eficiencia.</span></div>
-      <div class="nivel on"><b>Mejorar</b><span>Abrir posibilidades nuevas y desarrollar el potencial.</span></div>
-      <div class="nivel on2"><b>Regenerar</b><span>Convertir cada lugar en un nodo de aprendizaje, biodiversidad y cuidado mutuo.</span></div>
+      <div class="nivel"><em>Nivel 1</em><b>Operar</b><span>Que todo siga funcionando como siempre.</span><u>Ejemplo: cumplir la norma ambiental mínima.</u></div>
+      <div class="nivel"><em>Nivel 2</em><b>Mantener</b><span>Evitar que la situación empeore, con ligeras mejoras de eficiencia.</span><u>Ejemplo: reciclaje básico o ahorro puntual de energía.</u></div>
+      <div class="nivel on"><em>Nivel 3</em><b>Mejorar</b><span>Abrir posibilidades nuevas para que más personas se sumen y aprendan.</span><u>Ejemplo: talleres para usar la huerta y el compostaje.</u></div>
+      <div class="nivel on2"><em>Nivel 4</em><b>Regenerar</b><span>Aumentar la vitalidad del lugar y cultivar todo su potencial.</span><u>Ejemplo: huertas comunitarias y compostaje que dan más suelo vivo, más especies y más encuentro entre personas.</u></div>
     </div>
-    <p class="honest" style="margin-top:14px">Regenerar es pasar de «hacer funcionar» algo a cultivar su potencial: no solo mantener un huerto, sino convertirlo en un nodo de aprendizaje, biodiversidad y cuidado mutuo; no solo gestionar residuos, sino transformarlos en abono y en oportunidad pedagógica.</p>
+    <p class="honest" style="margin-top:14px">Regenerar es pasar de «hacer funcionar» algo a cultivar su potencial: no solo mantener una huerta, sino convertirla en un lugar de aprendizaje, biodiversidad y cuidado mutuo; no solo gestionar residuos, sino transformarlos en abono y en una oportunidad para aprender. Por eso, en este reporte miramos hasta qué nivel llegó cada espacio y cuánto de su potencial ya empezó a florecer.</p>
 
 
     <h3 class="sub-h reveal">Cuatro premisas, y lo que vimos en el primer año</h3>
     <div class="premisas reveal" id="premisas"></div>
 
-    <h3 class="sub-h reveal">La ruta que inspira el diseño</h3>
-    <div class="ruta reveal">
-      <span>Práctica convencional</span><i>→</i><span>Sostenibilidad</span><i>→</i><span>Restauración</span><i>→</i><span>Reconciliación</span><i>→</i><span class="fin">Regeneración</span>
-    </div>
-    <p class="honest">Cada espacio recorre esa ruta a su propio ritmo: aquello que degenera es lo que disminuye la salud ecosistémica; lo que regenera participa del diseño de soluciones como naturaleza. Fuente: adaptación de Wahl (2020, 2021) en Mason Bustos (2025).</p>
   </div>
 </section>
 
@@ -577,8 +592,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   </div>
 </section>
 
-
-
 </div>
   <!-- ============================================================
        EXPLORA NUESTRO TRABAJO · gestor de trabajos realizados (js/gestor-trabajos.js)
@@ -605,20 +618,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     </div>
   </section>
 <div class="ri">
-<section>
-  <div class="wrap reveal">
-    <div class="ri-eyebrow">Lo que cambió en la tierra</div>
-    <h2>Cultivo agroecológico, compost, agua y árboles</h2>
-    <p class="ri-lead">Cultivo agroecológico urbano en la práctica: huertas agroecológicas y alimentos agroecológicos, sin insumos sintéticos, con cierre de ciclos mediante compostaje y cuidado del agua en los espacios acompañados.</p>
-    <div class="cult">
-      <b>Superficie de cultivo agroecológico urbano en los espacios acompañados</b>
-      <div class="cbar" aria-label="Superficie de cultivo"><div id="cb-base" style="background:#4FB87E"></div><div id="cb-nuevo" style="background:#112E4D"></div></div>
-      <div class="cl" id="cb-leg"></div>
-    </div>
-    <div class="sys" id="sys"></div>
-  </div>
-</section>
-
 <section class="cream" id="metodo">
   <div class="wrap reveal">
     <div class="ri-eyebrow">Método</div>
