@@ -194,7 +194,23 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .metodo h3{font-size:1rem;color:var(--teal);margin-bottom:6px}
 .ri .metodo p{font-size:.9rem;color:var(--text-soft)}
 @media(max-width:900px){.ri .geo,.ri .geo2{grid-template-columns:1fr}
-.ri .mapbox{min-height:420px}}
+.ri .mapbox{min-height:420px}
+.ri .leaflet-bar a{width:40px!important;height:40px!important;line-height:40px!important}
+.ri .maptools{padding:4px 6px 4px 14px;gap:12px}
+.ri .maptools label{padding:10px 0;display:inline-flex;align-items:center;gap:6px}
+.ri .maptools button{padding:11px 16px;font-size:.85rem}
+.ri .cuenca{padding:18px}
+.ri .tbl{table-layout:fixed}
+.ri .tbl th:nth-child(1){width:34%}
+.ri .tbl th:nth-child(2){width:32%}
+.ri .tbl th:nth-child(3),.ri .tbl th:nth-child(4){width:17%}
+.ri .tbl td{overflow-wrap:anywhere}
+.ri .tbl th,.ri .tbl td{padding:9px 6px;font-size:.78rem}
+.ri .tbl th{font-size:.64rem;letter-spacing:.02em}
+.ri .hb{grid-template-columns:105px 1fr 24px}}
+@media(max-width:600px){.ri .ri-hero .wrap{padding-bottom:110px}
+.ri .ri-hero{min-height:82vh}
+.ri .geo-kpi{grid-template-columns:repeat(2,1fr)}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -576,7 +592,7 @@ $('grid-n').innerHTML=NUM.map(([v,d,t,i])=>`<div class="n"><b data-n="${v}" data
 
 // ---- Mes a mes: 12 meses desde el inicio del período
 (function(){
-  const [y0,m0]=per.inicio.split('-').map(Number);const ms=[];
+  const d0=new Date(per.inicio+'T12:00:00');d0.setDate(d0.getDate()+1);const y0=d0.getFullYear(),m0=d0.getMonth()+1;const ms=[];
   for(let k=0;k<12;k++){const m=((m0-1+k)%12),y=y0+Math.floor((m0-1+k)/12);ms.push([`${y}-${String(m+1).padStart(2,'0')}`,MES[m]])}
   const data=ms.map(([k,n])=>[n,(R.por_mes[k]||{}).orientaciones||0,(R.por_mes[k]||{}).talleres||0]);
   const H=190,mx=Math.max(4,...data.map(d=>d[1]+d[2]));
@@ -610,7 +626,7 @@ const comunas=new Set(R.lista_espacios.map(e=>e.comuna)).size;
 $('geo-kpi').innerHTML=[[T.cuencas.length,'cuencas hidrográficas'],[T.subcuencas.length,'subcuencas'],[comunas,'comunas'],[T.regiones.length,'regiones de Chile'],[1,'taller en el extranjero (Chengdu, China)']]
  .map(([n,t])=>`<div><b>${n}</b><span>${t}</span></div>`).join('');
 
-const map=L.map('map',{scrollWheelZoom:false}).setView([-33.45,-70.9],9);
+const map=L.map('map',{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false}).setView([-33.45,-70.9],9);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri',maxZoom:16}).addTo(map);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom:16}).addTo(map);
 const polys={};
@@ -633,6 +649,7 @@ function enfocar(nombre){
   document.querySelectorAll('.cuenca').forEach(c=>c.classList.toggle('on',c.dataset.cu===nombre));
   Object.entries(polys).forEach(([n,l])=>l.setStyle({fillOpacity:n===nombre?.3:.1,weight:n===nombre?3:1.5}));
   map.fitBounds(L.featureGroup(marks.filter(m=>m.espacio.cuenca===nombre)).getBounds().pad(.4),{maxZoom:13});
+  if(innerWidth<=900)$('map').scrollIntoView({behavior:'smooth',block:'center'});
 }
 $('t-reset').onclick=()=>{document.querySelectorAll('.cuenca').forEach(c=>c.classList.remove('on'));Object.values(polys).forEach(l=>l.setStyle({fillOpacity:.14,weight:2}));todo()};
 todo();

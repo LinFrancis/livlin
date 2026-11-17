@@ -23,3 +23,9 @@
 .espacio-ej-meta { margin-top: auto; padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
 .espacio-ej-tag { align-self: flex-start; background: #E7F6EE; color: #1B6B45; font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 99px; }
 .espacio-ej-com { font-size: .78rem; color: var(--muted, #506477); }
+
+@media (max-width: 600px) {
+  .casos-metrics { grid-template-columns: repeat(2, 1fr); }
+  .casos-metric:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .espacio-ej-img { height: 170px; }
+}
