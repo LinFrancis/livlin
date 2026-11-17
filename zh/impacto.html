@@ -280,6 +280,14 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .hk span{font-size:.78rem}
 .ri .niveles{grid-template-columns:1fr}
 .ri .pet{padding:20px}}
+.ri .retos{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ri .reto{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.ri .reto em{font-style:normal;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ri .reto b{font-size:1rem;line-height:1.3}
+.ri .reto span{font-size:.85rem;color:var(--muted);line-height:1.45}
+.ri .reto .loc{margin-top:auto;border-top:1px solid var(--border);padding-top:10px;font-size:.86rem;font-weight:600;color:var(--text);line-height:1.4}
+.ri .reto .loc small{display:block;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:3px}
+.ri .glocal{margin-top:18px;font-weight:700;font-style:italic;color:var(--text-soft);max-width:760px}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -380,12 +388,10 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <img src="/images/hero/5_bancal_tomates_grandes.jpg" alt="Bancal con tomates cultivado por LivLin">
   </div>
   <div class="wrap reveal">
-    <div class="retos">
-      <div><b>La pérdida de biodiversidad</b><span>Cada espacio que recupera vida suma al conjunto.</span></div>
-      <div><b>La crisis climática</b><span>Soluciones locales a un desafío que es global.</span></div>
-      <div><b>La pérdida de los vínculos de comunidad</b><span>Frente al exceso de individualismo en ciertas culturas.</span></div>
-      <div><b>La pérdida del valor nutricional de los alimentos</b><span>Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.</span></div>
-    </div>
+    <h3 class="sub-h">Los desafíos glocales de los que partimos</h3>
+    <p class="story-p" style="margin-bottom:16px">Son desafíos globales, y la respuesta de LivLin es local: cada espacio es un lugar donde esos desafíos se enfrentan de verdad. Es el mismo marco con el que trabajamos en el Taller de Introducción a la Agricultura Urbana y Comunitaria.</p>
+    <div class="retos" id="retos"></div>
+    <p class="glocal">Ética glocal: ¿cómo nuestras acciones nos afectan a nosotros, a la comunidad y al planeta?</p>
     <p class="story-p">Estas ideas se fueron desarrollando desde el enfoque de la permacultura, el desarrollo regenerativo y el diseño regenerativo, para apoyar a la mayor cantidad de personas posible.</p>
   </div>
   <div class="wrap reveal">
@@ -1066,6 +1072,19 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
      subs.map(s=>{const es=R.lista_espacios.filter(e=>e.cuenca===c.nombre&&e.subcuenca===s.nombre);return `<tr><td></td><td>${s.nombre}</td><td>${es.length}</td><td>${es.filter(e=>e.implementa).length}</td></tr>`}).join('');
  }).join('')+'</tbody>';
 
+
+
+// ---- Desafíos glocales (marco del taller): desafío global + respuesta local con datos
+(function(){
+  const P0=(R.petalos&&R.petalos[0])||{espacios_impl:0};
+  $('retos').innerHTML=[
+   ['Cambio climático','Soluciones locales a un desafío que es global.',`${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo urbano nuevo.`],
+   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${R.espacios} espacios ya implementan acciones de tierra y naturaleza.`],
+   ['Contaminación en todo el mundo','Los residuos pueden volver a ser recursos.',`${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
+   ['Pérdida de lazos comunitarios','Frente al exceso de individualismo en ciertas culturas.',`${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
+   ['Declive nutricional de los alimentos','Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.','Alimento cultivado cerca de quien lo come, con suelo vivo y sin insumos sintéticos.']
+  ].map(([t,d,l])=>`<div class="reto"><em>Desafío global</em><b>${t}</b><span>${d}</span><div class="loc"><small>Respuesta local</small>${l}</div></div>`).join('');
+})();
 
 // ---- Premisas del marco interpretativo
 const rp=(n)=>`<b>${n}</b>`;
