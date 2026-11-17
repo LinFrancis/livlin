@@ -456,23 +456,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   </div>
 </section>
 
-<section class="cream" id="ano">
-  <div class="wrap reveal">
-    <div class="ri-eyebrow">Mes a mes</div>
-    <h2>El año, de diciembre a noviembre</h2>
-    <p class="ri-lead">Asesorías gratuitas online y talleres registrados en cada mes del período.</p>
-    <div class="months" id="months"></div>
-    <div class="labels" id="labels"></div>
-    <div class="legend"><span class="lo">Asesorías gratuitas online</span><span class="lt">Workshops</span></div>
-    <div class="hitos">
-      <div class="hito"><b>Dic 2025</b><p>Primer taller del año en Aucca (Talagante), con 35 asistentes.</p></div>
-      <div class="hito"><b>Ene 2026</b><p>Taller en Chengdu (China) con 16 asistentes: el primer cruce de fronteras.</p></div>
-      <div class="hito"><b>Jul – Ago 2026</b><p>22 asesorías gratuitas online en dos meses: se vuelven la puerta de entrada a LivLin.</p></div>
-      <div class="hito"><b>Nov 2026</b><p>Tres talleres y 44 asistentes en el mes del aniversario.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="servicios">
   <div class="wrap">
     <div class="ri-center reveal">
@@ -986,19 +969,6 @@ const NUM=[
  [R.sistemas.compost_l,0,'Litros de capacidad de compostaje',`${R.sistemas.compost_obras} obras de compostaje en distintos espacios.`],
 ];
 $('grid-n').innerHTML=NUM.map(([v,d,t,i])=>`<div class="n"><b data-n="${v}" data-d="${d}">0</b><span>${t}</span><i>${i}</i></div>`).join('');
-
-// ---- Mes a mes: 12 meses desde el inicio del período
-(function(){
-  const d0=new Date(per.inicio+'T12:00:00');d0.setDate(d0.getDate()+1);const y0=d0.getFullYear(),m0=d0.getMonth()+1;const ms=[];
-  for(let k=0;k<12;k++){const m=((m0-1+k)%12),y=y0+Math.floor((m0-1+k)/12);ms.push([`${y}-${String(m+1).padStart(2,'0')}`,MES[m]])}
-  const data=ms.map(([k,n])=>[n,(R.por_mes[k]||{}).orientaciones||0,(R.por_mes[k]||{}).talleres||0]);
-  const H=190,mx=Math.max(4,...data.map(d=>d[1]+d[2]));
-  data.forEach(([n,o,t])=>{
-    const col=document.createElement('div');col.className='m';
-    col.innerHTML=(o||t?`<em>${o+t}</em>`:'')+`<div class="bar t" style="height:${t/mx*H}px"></div><div class="bar o" style="height:${o/mx*H}px"></div>`;
-    $('months').appendChild(col);const s=document.createElement('span');s.textContent=n;$('labels').appendChild(s);
-  });
-})();
 
 // ---- Líneas de acción
 $('svc').innerHTML=R.lineas.map(l=>`<div class="card"><div class="big">${l.realizados}</div><h3>${l.nombre}</h3><p>${l.desc}</p><div class="k">${l.clave}</div></div>`).join('');
