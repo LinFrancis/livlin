@@ -289,6 +289,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/huertacomunitaria/cecosfvillaolimpica/turnos.html"/>
   </url>
   <url>
+    <loc>https://www.livlin.cl/impacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.livlin.cl/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/impacto.html"/>
+  </url>
+  <url>
+    <loc>https://www.livlin.cl/en/impacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.livlin.cl/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/impacto.html"/>
+  </url>
+  <url>
+    <loc>https://www.livlin.cl/da/impacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.livlin.cl/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/impacto.html"/>
+  </url>
+  <url>
+    <loc>https://www.livlin.cl/zh/impacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.livlin.cl/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.livlin.cl/da/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.livlin.cl/zh/impacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.livlin.cl/impacto.html"/>
+  </url>
+  <url>
     <loc>https://www.livlin.cl/index.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.livlin.cl/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.livlin.cl/en/index.html"/>

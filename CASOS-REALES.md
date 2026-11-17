@@ -13,11 +13,11 @@
 | 03_Aucca | Aucca Centro Ecopedagógico | Talagante | MEL, software a medida, web | MEL, Soluciones Digitales | — |
 | 04_Lavaseco | Lavaseco Florencia | Providencia | Huerta agroecológica | Huerto Urbano | sí |
 | 05_Escuela | Liceo Manuel de Salas | Ñuñoa | Diseño regenerativo | Diseño Regenerativo | — |
-| 06_Andrea_Felipe | Familia Andrea y Felipe | San Miguel | Diseño regenerativo, vermicompostera, huerta, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | — |
+| 06_Andrea_Felipe | Departamento en San Miguel | San Miguel | Diseño regenerativo, vermicompostera, huerta, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | — |
 | 07_Edificio_Nova | Edificio Nova | Providencia | Diseño regenerativo, huerta comunitaria | Diseño Regenerativo, Huerto Urbano | sí |
-| 08_Depto_Javiera_Francis | Familia Javiera y Francis | Providencia | Diseño regenerativo, bancales autorregantes, energía solar | Diseño Regenerativo, Huerto Urbano | sí |
-| 09_Casa_Sylvia_Ricardo | Familia Sylvia y Ricardo | La Reina | Diseño regenerativo, wicking bed, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | sí |
-| 10_Casa_Cecilia_Isidora | Familia Cecilia e Isidora | Las Condes | Diseño regenerativo, wicking bed, parrón, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | — |
+| 08_Depto_Javiera_Francis | Terraza en departamento | Providencia | Diseño regenerativo, bancales autorregantes, energía solar | Diseño Regenerativo, Huerto Urbano | sí |
+| 09_Casa_Sylvia_Ricardo | Casa en La Reina | La Reina | Diseño regenerativo, wicking bed, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | sí |
+| 10_Casa_Cecilia_Isidora | Casa en Las Condes | Las Condes | Diseño regenerativo, wicking bed, parrón, talleres | Diseño Regenerativo, Huerto Urbano, Educación Ambiental | — |
 | 11_Taller_China | Chengdu Cafe | Chengdu, China | Taller eficiencia hídrica para cultivos urbanos | Educación Ambiental, Huerto Urbano | sí |
 
 > **Facilitación Organizacional:** el material fuente no documenta casos con ese servicio explícito, por lo que esa página NO muestra un bloque de trabajos realizados (no se inventan casos ni se muestran galerías vacías).
@@ -54,7 +54,7 @@
 **Relato (web, testimonio):** Tuve la necesidad de contactar a Livlin para partir desde cero un proyecto de huerta para la comunidad del ciclo 2 del Liceo Experimental Manuel de Salas. No sólo obtuve una asesoría integral de suelo y posición del sol detallada, sino que también se logró concretar una visita al espacio y un involucramiento total de Francis con el proyecto: aportando con el diseño de la huerta, listado de siembra según estación, infografía gráfica con fines pedagógicos y apoyo constante de cómo implementar un proyecto como este a gran escala. Nos mostró ejemplos de cómo colegios en Chile y China han logrado integrar el cuidado de la naturaleza y la siembra urbana en espacios comunes. Muchas gracias Livlin por tu sabiduría y profesionalismo y por darle vida a este proyecto en su etapa inicial. ¡Esperemos que pronto te podamos invitar a conocer nuestra huerta!
 **Imágenes:** 01_lms.png
 
-## 06_Andrea_Felipe — Familia Andrea y Felipe (San Miguel)
+## 06_Andrea_Felipe — Departamento en San Miguel (San Miguel)
 **Servicios:** Diseño regenerativo · Vermicompostera · Huerta en terraza · Talleres de compostaje, lombricultura y huerta urbana
 **Relato (web):** Diseñamos e implementamos soluciones para compostar, cultivar alimentos y aprovechar mejor los recursos disponibles en un departamento. A través de talleres personalizados y acompañamiento práctico, la familia incorporó nuevas capacidades para gestionar residuos orgánicos y producir parte de sus alimentos en espacios reducidos.
 **Imágenes:** andrea_felipe_antes_despues.png
@@ -65,19 +65,19 @@
 **Relato (web):** Activamos espacios comunitarios del edificio para el cultivo de alimentos y el fortalecimiento de los vínculos entre vecinos. La iniciativa permitió transformar áreas poco utilizadas en lugares productivos, compartir plantas y conocimientos, y abrir nuevas conversaciones sobre sustentabilidad y vida comunitaria.
 **Imágenes:** 01_nova.png
 
-## 08_Depto_Javiera_Francis — Familia Javiera y Francis (Providencia)
+## 08_Depto_Javiera_Francis — Terraza en departamento (Providencia)
 **Servicios:** Diseño regenerativo · Vermicompostera · Bancales autorregantes (wicking beds) · Energía solar y eólica
 **Video:** https://www.instagram.com/p/Cl1Q_f8tKkl/
 **Relato (web):** Diseñamos e implementamos una terraza productiva basada en bancales autorregantes y compostaje integrado. La solución permitió reducir significativamente las necesidades de riego y facilitar el cultivo continuo de alimentos durante todo el año, demostrando que es posible producir alimentos sanos incluso en condiciones urbanas desafiantes.
 **Imágenes:** 01_collage_01.png, 02_diseno_antes_despues.png, 03_collage_02.png, 04_bancal_l.png
 
-## 09_Casa_Sylvia_Ricardo — Familia Sylvia y Ricardo (La Reina)
+## 09_Casa_Sylvia_Ricardo — Casa en La Reina (La Reina)
 **Servicios:** Diseño regenerativo · Vermicompostera · Bancal autorregante (wicking bed) · Asesoría solar · Talleres
 **Video:** https://www.instagram.com/p/DZvBlupRJCl/
 **Relato (de logros):** Realizamos el diseño regenerativo de la casa pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para el manejo de residuos orgánicos del hogar y se construyó un bancal autorregante de riego por capilaridad con hotel de lombrices y ruedas, que funciona también como muro verde y puede moverse para aprovechar la luz del sol en las diferentes estaciones del año.
 **Imágenes:** casa_sylvia_ella.png
 
-## 10_Casa_Cecilia_Isidora — Familia Cecilia e Isidora (Las Condes)
+## 10_Casa_Cecilia_Isidora — Casa en Las Condes (Las Condes)
 **Servicios:** Diseño regenerativo · Vermicompostera · Bancal autorregante (wicking bed) · Parrón bioclimático · Talleres
 **Relato (web):** Desarrollamos un plan maestro de regeneración para el hogar que incluyó compostaje, producción de alimentos y mejoras bioclimáticas. Entre las acciones implementadas destacan sistemas de cultivo autorregante y una estructura vegetal diseñada para aportar sombra natural y confort térmico durante los meses más cálidos.
 **Imágenes:** parron_antes_despues.png, personas_casa.png

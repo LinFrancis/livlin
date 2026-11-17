@@ -46,10 +46,10 @@
       video: ''
     },
     {
-      id: 'andrea_felipe', name: 'Familia Andrea y Felipe', location: 'San Miguel',
+      id: 'andrea_felipe', name: 'Departamento en San Miguel', location: 'San Miguel',
       cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Huerto Urbano · Talleres',
       desc: 'Diseñamos e implementamos soluciones para compostar, cultivar alimentos y aprovechar mejor los recursos disponibles en un departamento. A través de talleres personalizados y acompañamiento práctico, la familia incorporó nuevas capacidades para gestionar residuos orgánicos y producir parte de sus alimentos en espacios reducidos.',
-      images: ['images/casos_reales/06_Andrea_Felipe/andrea_felipe_antes_despues.png'],
+      images: ['images/casos_reales/publico/depto_vermicompostera.jpg'],
       video: ''
     },
     {
@@ -60,24 +60,24 @@
       video: 'https://www.instagram.com/p/DYzTwbgR7Na/'
     },
     {
-      id: 'javiera_francis', name: 'Familia Javiera y Francis', location: 'Providencia',
+      id: 'javiera_francis', name: 'Terraza en departamento', location: 'Providencia',
       cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Bancales Autorregantes · Energía Solar',
       desc: 'Diseñamos e implementamos una terraza productiva basada en bancales autorregantes y compostaje integrado. La solución permitió reducir significativamente las necesidades de riego y facilitar el cultivo continuo de alimentos durante todo el año, demostrando que es posible producir alimentos sanos incluso en condiciones urbanas desafiantes.',
       images: ['images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png', 'images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png', 'images/casos_reales/08_Depto_Javiera_Francis/03_collage_02.png', 'images/casos_reales/08_Depto_Javiera_Francis/04_bancal_l.png'],
       video: 'https://www.instagram.com/p/Cl1Q_f8tKkl/'
     },
     {
-      id: 'sylvia_ricardo', name: 'Familia Sylvia y Ricardo', location: 'La Reina',
+      id: 'sylvia_ricardo', name: 'Casa en La Reina', location: 'La Reina',
       cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Wicking Bed · Talleres',
       desc: 'Realizamos el diseño regenerativo de la casa pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para el manejo de residuos orgánicos del hogar y se construyó un bancal autorregante de riego por capilaridad con hotel de lombrices y ruedas, que funciona también como muro verde y puede moverse para aprovechar la luz del sol en las diferentes estaciones del año.',
-      images: ['images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png'],
+      images: ['images/casos_reales/publico/hogar_bancal_movil.jpg'],
       video: 'https://www.instagram.com/p/DZvBlupRJCl/'
     },
     {
-      id: 'cecilia_isidora', name: 'Familia Cecilia e Isidora', location: 'Las Condes',
+      id: 'cecilia_isidora', name: 'Casa en Las Condes', location: 'Las Condes',
       cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Wicking Bed · Parrón Bioclimático',
       desc: 'Desarrollamos un plan maestro de regeneración para el hogar que incluyó compostaje, producción de alimentos y mejoras bioclimáticas. Entre las acciones implementadas destacan sistemas de cultivo autorregante y una estructura vegetal diseñada para aportar sombra natural y confort térmico durante los meses más cálidos.',
-      images: ['images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png', 'images/casos_reales/10_Casa_Cecilia_Isidora/personas_casa.png'],
+      images: ['images/casos_reales/publico/hogar_parron.jpg'],
       video: ''
     },
     {

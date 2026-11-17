@@ -26,7 +26,7 @@
     "desc": "Jeg havde brug for at kontakte Livlin for at starte et haveprojekt fra bunden for cyklus 2-fællesskabet på Manuel de Salas-forsøgsskolen. Jeg fik ikke kun grundig og detaljeret rådgivning om jord og solens placering, men også et besøg på stedet og Francis' fulde engagement i projektet: bidrag til havedesignet, en såliste efter sæson, en pædagogisk infografik og konstant støtte til, hvordan man gennemfører et projekt som dette i stor skala. Han viste os eksempler på, hvordan skoler i Chile og Kina har integreret omsorg for naturen og bydyrkning i fælles rum. Mange tak, Livlin, for din visdom og professionalisme og for at give liv til dette projekt i dets tidlige fase. Vi håber snart at kunne invitere dig til at se vores have!"
   },
   "andrea_felipe": {
-    "name": "Andrea og Felipes familie", "location": "San Miguel",
+    "name": "Departamento en San Miguel", "location": "San Miguel",
     "service": "Regenerativt design · Bymiljøhave · Workshops",
     "desc": "Vi designede og byggede løsninger til at kompostere, dyrke mad og udnytte ressourcerne i en lejlighed bedre. Gennem skræddersyede workshops og praktisk vejledning fik familien nye færdigheder til at håndtere organisk affald og selv producere en del af deres mad på små arealer."
   },
@@ -36,17 +36,17 @@
     "desc": "Vi aktiverede bygningens fællesarealer til dyrkning af mad og til at styrke båndene mellem naboerne. Initiativet forvandlede lidt brugte arealer til produktive steder, delte planter og viden og åbnede nye samtaler om bæredygtighed og fællesskabsliv."
   },
   "javiera_francis": {
-    "name": "Javiera og Francis' familie", "location": "Providencia",
+    "name": "Terraza en departamento", "location": "Providencia",
     "service": "Regenerativt design · Selvvandende bede · Solenergi",
     "desc": "Vi designede og byggede en produktiv terrasse baseret på selvvandende bede og integreret kompostering. Løsningen reducerede vandingsbehovet markant og muliggjorde løbende dyrkning af mad året rundt og viste, at sund mad kan produceres selv under udfordrende byforhold."
   },
   "sylvia_ricardo": {
-    "name": "Sylvia og Ricardos familie", "location": "La Reina",
+    "name": "Casa en La Reina", "location": "La Reina",
     "service": "Regenerativt design · Wicking bed · Workshops",
     "desc": "Vi gennemførte et regenerativt design af huset og gik igennem alle permakulturblomstens kronblade. Der blev installeret en kompostbeholder til husstandens organiske affald, og der blev bygget et selvvandende kapillarbed med et ormehotel og hjul, der også fungerer som grøn væg og kan flyttes for at udnytte sollyset i årets forskellige sæsoner."
   },
   "cecilia_isidora": {
-    "name": "Cecilia og Isidoras familie", "location": "Las Condes",
+    "name": "Casa en Las Condes", "location": "Las Condes",
     "service": "Regenerativt design · Wicking bed · Bioklimatisk pergola",
     "desc": "Vi udviklede en regenerativ masterplan for hjemmet, der omfattede kompostering, fødevareproduktion og bioklimatiske forbedringer. Blandt de gennemførte tiltag er selvvandende dyrkningssystemer og en plantestruktur designet til at give naturlig skygge og termisk komfort i de varmere måneder."
   },

@@ -1,0 +1,25 @@
+/* ============================================================
+   «Explora nuestro trabajo» · franja de métricas y ejemplos por tipo de espacio
+   ============================================================ */
+.casos-lead { max-width: 760px; margin: 12px auto 0; text-align: center; color: var(--text-soft); font-size: 1.02rem; }
+.casos-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 32px auto 12px; max-width: 980px; }
+.casos-metric { background: var(--card, #fff); border: 1px solid var(--border, #E5E2D5); border-radius: 16px; padding: 16px 14px; text-align: center; }
+.casos-metric b { display: block; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; color: var(--teal, #239BA7); line-height: 1.1; }
+.casos-metric span { display: block; margin-top: 4px; font-size: .8rem; font-weight: 600; color: var(--muted, #506477); }
+.casos-reporte-link { display: block; width: max-content; margin: 8px auto 0; font-weight: 700; color: var(--teal-dark, #1A7783); }
+.casos-reporte-link:hover { text-decoration: underline; }
+
+.espacios-ej-head { text-align: center; margin: 56px auto 24px; max-width: 760px; }
+.espacios-ej-head h3 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin-bottom: 8px; }
+.espacios-ej-head p { color: var(--text-soft); font-size: .98rem; }
+.espacios-ej { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin-bottom: 20px; }
+.espacio-ej { background: var(--card, #fff); border: 1px solid var(--border, #E5E2D5); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(17, 46, 77, .06); }
+.espacio-ej-img { height: 190px; overflow: hidden; background: #e9efe9; }
+.espacio-ej-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.espacio-ej-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.espacio-ej-n { font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--teal, #239BA7); }
+.espacio-ej-body h3 { font-size: 1.15rem; margin: 0; }
+.espacio-ej-body p { font-size: .92rem; color: var(--text-soft); margin: 0; }
+.espacio-ej-meta { margin-top: auto; padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.espacio-ej-tag { align-self: flex-start; background: #E7F6EE; color: #1B6B45; font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 99px; }
+.espacio-ej-com { font-size: .78rem; color: var(--muted, #506477); }

@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/css/styles.css?v=18">
   <link rel="stylesheet" href="/css/video-fondos.css?v=5">
   <link rel="stylesheet" href="/css/cecosf-showcase.css?v=1">
+  <link rel="stylesheet" href="/css/espacios-ejemplos.css?v=1">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <style>
@@ -1132,6 +1133,7 @@
           </ul>
         </li>
         <li><a href="#casos">Impacto</a></li>
+        <li><a href="/impacto.html">Reporte de Impacto</a></li>
         <li><a href="#descarga">Recursos</a></li>
         <li><a href="/contacto.html" class="nav-cta-green">Contacto</a></li>
         <li><a href="https://livlin.streamlit.app/" target="_blank" rel="noopener" class="nav-cta-platform">Acceso Miembros</a></li>
@@ -1334,7 +1336,17 @@
     <div class="container">
       <div class="casos-header fade-in">
         <h2>Explora nuestro trabajo</h2>
+        <p class="casos-lead">Ejemplos reales del primer año de LivLin, en cada tipo de espacio. Por privacidad, los hogares se muestran sin nombre y solo con la comuna.</p>
+        <div class="casos-metrics" id="casosMetrics" aria-label="Resultados del primer año"></div>
+        <a class="casos-reporte-link" href="/impacto.html">Ver el Reporte de Impacto completo →</a>
       </div>
+
+      <!-- EJEMPLOS POR TIPO DE ESPACIO (datos: js/impacto-datos.js) -->
+      <div class="espacios-ej-head fade-in">
+        <h3>Un ejemplo para cada tipo de espacio</h3>
+        <p>Del patio de una casa a un centro comunitario: así acompañamos cada lugar.</p>
+      </div>
+      <div class="espacios-ej fade-in" id="espaciosEj"></div>
 
       <!-- CASOS DESTACADOS — Problema / Solución / Resultado -->
       <div class="casos-destacados fade-in">
@@ -1427,31 +1439,31 @@
       <div class="casos-grid" id="casosGrid">
 
         <!-- HOGARES -->
-        <article class="caso-card" data-cat="hogares" data-title="Familia Andrea y Felipe" data-location="San Miguel, Santiago" data-img="images/casos_reales/06_Andrea_Felipe/andrea_felipe_antes_despues.png" data-desc="Diagnóstico completo de oportunidades para sustentabilidad y regeneración en departamento: eficiencia energética e hídrica, gestión de residuos orgánicos y activación de cultivos. Se implementó un sistema de vermicompostaje con taller personalizado de lombricultura. Se instaló un germinador para semillas que luego pasan a macetas dentro del departamento. Se presentaron alternativas para reutilizar el agua de la ducha en el riego. La familia ahora gestiona sus residuos orgánicos y produce parte de sus alimentos en espacios antes no reconocidos como potenciales para la regeneración." data-service="Diseño Regenerativo · Vermicompostera · Taller Personalizado" aria-label="Ver caso Familia Andrea y Felipe">
+        <article class="caso-card" data-cat="hogares" data-title="Departamento en San Miguel" data-location="San Miguel, Santiago" data-img="images/casos_reales/publico/depto_vermicompostera.jpg" data-desc="Diagnóstico completo de oportunidades para sustentabilidad y regeneración en departamento: eficiencia energética e hídrica, gestión de residuos orgánicos y activación de cultivos. Se implementó un sistema de vermicompostaje con taller personalizado de lombricultura. Se instaló un germinador para semillas que luego pasan a macetas dentro del departamento. Se presentaron alternativas para reutilizar el agua de la ducha en el riego. La familia ahora gestiona sus residuos orgánicos y produce parte de sus alimentos en espacios antes no reconocidos como potenciales para la regeneración." data-service="Diseño Regenerativo · Vermicompostera · Taller Personalizado" aria-label="Ver caso Departamento en San Miguel">
           <div class="caso-card-img-wrap">
-            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/06_Andrea_Felipe/andrea_felipe_antes_despues.png" alt="Departamento Andrea y Felipe">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/depto_vermicompostera.jpg" alt="Vermicompostera en un departamento">
             <span class="caso-card-cat-badge badge-hogares">Hogar</span>
           </div>
           <div class="caso-card-body">
             <p class="caso-card-location">San Miguel, Santiago</p>
-            <h3 class="caso-card-title">Familia Andrea y Felipe</h3>
+            <h3 class="caso-card-title">Departamento en San Miguel</h3>
             <p class="caso-card-quote">"Diagnóstico, vermicompostera, germinador de semillas, bancal en maceta y cómo aprovechar el agua de la ducha para regar. La familia ahora gestiona sus residuos y cultiva sus propios alimentos en el departamento."</p>
             <div class="caso-card-tags">
               <span class="caso-tag">Vermicompostera</span>
-              <span class="caso-tag">Germindaor</span>
+              <span class="caso-tag">Germinador</span>
               <span class="caso-tag">Talleres</span>
             </div>
           </div>
         </article>
 
-        <article class="caso-card" data-cat="hogares" data-title="Familia Sylvia y Ricardo" data-location="La Reina, Santiago" data-img="images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png" data-desc="Diseño regenerativo completo de la casa pasando por todos los pétalos de la flor de la permacultura: energía, agua, tierra, vegetación, estructura y procesos. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices, con ruedas para moverse según la luz solar de cada estación. El bancal funciona también como muro verde. Se asesoró sobre oportunidades de energía solar en el espacio." data-service="Diseño Regenerativo · Plan Maestro · Wicking Bed · Vermicompostera" data-video="https://www.instagram.com/p/DZvBlupRJCl/" aria-label="Ver caso Familia Sylvia y Ricardo">
+        <article class="caso-card" data-cat="hogares" data-title="Casa en La Reina" data-location="La Reina, Santiago" data-img="images/casos_reales/publico/hogar_bancal_movil.jpg" data-desc="Diseño regenerativo completo de la casa pasando por todos los pétalos de la flor de la permacultura: energía, agua, tierra, vegetación, estructura y procesos. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices, con ruedas para moverse según la luz solar de cada estación. El bancal funciona también como muro verde. Se asesoró sobre oportunidades de energía solar en el espacio." data-service="Diseño Regenerativo · Plan Maestro · Wicking Bed · Vermicompostera" data-video="https://www.instagram.com/p/DZvBlupRJCl/" aria-label="Ver caso Casa en La Reina">
           <div class="caso-card-img-wrap">
-            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/09_Casa_Sylvia_Ricardo/casa_sylvia_ella.png" alt="Casa Sylvia y Ricardo — bancal móvil">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/hogar_bancal_movil.jpg" alt="Bancal autorregante móvil en una casa">
             <span class="caso-card-cat-badge badge-hogares">Hogar</span>
           </div>
           <div class="caso-card-body">
             <p class="caso-card-location">La Reina, Santiago</p>
-            <h3 class="caso-card-title">Familia Sylvia y Ricardo</h3>
+            <h3 class="caso-card-title">Casa en La Reina</h3>
             <p class="caso-card-quote">"Plan maestro completo: compostera, bancal autorregante móvil con lombrices integradas y asesoría solar. Un bancal que también es muro verde y se mueve para seguir el sol en cada estación."</p>
             <div class="caso-card-tags">
               <span class="caso-tag">Plan maestro</span>
@@ -1461,14 +1473,14 @@
           </div>
         </article>
 
-        <article class="caso-card" data-cat="hogares" data-title="Familia Cecilia e Isidora" data-location="Las Condes, Santiago" data-img="images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png" data-images='["images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png","images/casos_reales/10_Casa_Cecilia_Isidora/personas_casa.png"]' data-desc="Desarrollamos un plan maestro de regeneración para el hogar pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices y ruedas (muro verde móvil). Destaca la construcción de un parrón: estructura de madera diseñada para recibir la parra en el patio trasero y aprovechar su sombra en verano, bajando la temperatura interior de la casa de forma natural y bioclimática." data-service="Diseño Regenerativo · Wicking Bed · Parrón Bioclimático · Vermicompostera" aria-label="Ver caso Familia Cecilia e Isidora">
+        <article class="caso-card" data-cat="hogares" data-title="Casa en Las Condes" data-location="Las Condes, Santiago" data-img="images/casos_reales/publico/hogar_parron.jpg" data-images='["images/casos_reales/publico/hogar_parron.jpg"]' data-desc="Desarrollamos un plan maestro de regeneración para el hogar pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices y ruedas (muro verde móvil). Destaca la construcción de un parrón: estructura de madera diseñada para recibir la parra en el patio trasero y aprovechar su sombra en verano, bajando la temperatura interior de la casa de forma natural y bioclimática." data-service="Diseño Regenerativo · Wicking Bed · Parrón Bioclimático · Vermicompostera" aria-label="Ver caso Casa en Las Condes">
           <div class="caso-card-img-wrap">
-            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/10_Casa_Cecilia_Isidora/parron_antes_despues.png" alt="Parrón bioclimático antes y después">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/hogar_parron.jpg" alt="Parrón bioclimático antes y después">
             <span class="caso-card-cat-badge badge-hogares">Hogar</span>
           </div>
           <div class="caso-card-body">
             <p class="caso-card-location">Las Condes, Santiago</p>
-            <h3 class="caso-card-title">Familia Cecilia e Isidora</h3>
+            <h3 class="caso-card-title">Casa en Las Condes</h3>
             <p class="caso-card-quote">"Plan maestro con bancal autorregante, vermicompostera y un parrón construido para dar sombra natural en verano y bajar la temperatura de la casa. La parra como solución bioclimática."</p>
             <div class="caso-card-tags">
               <span class="caso-tag">Parrón bioclimático</span>
@@ -1705,6 +1717,7 @@
           <ul>
             <li><a href="#dimensiones">Líneas de acción</a></li>
             <li><a href="#casos">Impacto</a></li>
+            <li><a href="/impacto.html">Reporte de Impacto</a></li>
             <li><a href="#descarga">Recursos gratis</a></li>
             <li><a href="/contacto.html">Contacto</a></li>
           </ul>
@@ -1736,6 +1749,8 @@
   </button>
 
   <script src="/js/script.js?v=7"></script>
+  <script src="/js/impacto-datos.js?v=1"></script>
+  <script src="/js/espacios-impacto.js?v=1"></script>
   <script src="/js/cecosf-showcase.js?v=1"></script>
   <script src="/js/flyer-popup.js?v=1"></script>
 
