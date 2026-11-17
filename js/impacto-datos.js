@@ -574,12 +574,16 @@ window.REPORTE = {
    "i": 0,
    "nombre": "Administración de la Tierra y de la Naturaleza",
    "subtitulo": "huertos biointensivos, bosques comestibles, conservación de semillas, agricultura biológica, agroforestería y cosecha de agua",
-   "espacios_total": 19,
-   "espacios_obs": 12,
+   "ini": 3.18,
+   "act": 5.15,
+   "pot": 8.59,
+   "acc_impl": 28,
+   "espacios_total": 17,
+   "espacios_obs": 13,
    "espacios_pot": 17,
    "espacios_impl": 10,
-   "acciones_obs": 100,
-   "acciones_pot": 277,
+   "acciones_obs": 102,
+   "acciones_pot": 281,
    "acciones_impl": 28,
    "top_obs": [
     {
@@ -597,11 +601,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Huertos en macetas recicladas",
+     "accion": "Jardines comestibles en patios pequeños",
      "n": 9
     },
     {
-     "accion": "Jardines comestibles en patios pequeños",
+     "accion": "Huertos en macetas recicladas",
      "n": 9
     },
     {
@@ -1136,6 +1140,13 @@ window.REPORTE = {
      "esp": []
     },
     {
+     "a": "Mantención del patio ordenado",
+     "o": 2,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
      "a": "Creación de suelo vivo en macetas",
      "o": 1,
      "p": 2,
@@ -1151,13 +1162,6 @@ window.REPORTE = {
     },
     {
      "a": "Huertos escolares",
-     "o": 1,
-     "p": 2,
-     "i": 0,
-     "esp": []
-    },
-    {
-     "a": "Mantención del patio ordenado",
      "o": 1,
      "p": 2,
      "i": 0,
@@ -1255,6 +1259,34 @@ window.REPORTE = {
      "esp": []
     },
     {
+     "a": "{'peso': 1, 'accion': 'Hacer Infografías y Letreros', 'descripcion': 'Muestra gráficamente información clave para sostener procesos y orientar'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "{'peso': 2, 'accion': 'Compostaje sin lombrices', 'descripcion': 'Espacio para hacer tierra de hojas y poder compostar los residuos orgánicos'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "{'peso': 2, 'accion': 'Huerta', 'descripcion': 'Espacio dedicado al cultivo de alimientos'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "{'peso': 2, 'accion': 'Mejorar sistema de recolección de agua. Ponerle un filtro.', 'descripcion': 'Mejorar infraestructura actual de cosecha de agua lluvia'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
      "a": "Bolas de semillas (nendo dango)",
      "o": 1,
      "p": 0,
@@ -1263,6 +1295,13 @@ window.REPORTE = {
     },
     {
      "a": "Compostaje bokashi",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Compostaje de residuos orgánicos del liceo y de la comunidad del liceo",
      "o": 1,
      "p": 0,
      "i": 0,
@@ -1323,7 +1362,11 @@ window.REPORTE = {
    "i": 1,
    "nombre": "Construcción",
    "subtitulo": "diseño solar pasivo, materiales de construcción naturales, manejo del agua y reciclaje de desechos, y construcción resiliente",
-   "espacios_total": 19,
+   "ini": 2.35,
+   "act": 3.06,
+   "pot": 5.29,
+   "acc_impl": 6,
+   "espacios_total": 17,
    "espacios_obs": 11,
    "espacios_pot": 16,
    "espacios_impl": 4,
@@ -1364,19 +1407,19 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Balcones verdes",
-     "n": 1
-    },
-    {
      "accion": "Jardines verticales comestibles",
      "n": 1
     },
     {
-     "accion": "Escaleras y senderos con materiales reutilizados",
+     "accion": "Balcones verdes",
      "n": 1
     },
     {
      "accion": "Construcción con materiales reciclados",
+     "n": 1
+    },
+    {
+     "accion": "Escaleras y senderos con materiales reutilizados",
      "n": 1
     }
    ],
@@ -1646,11 +1689,15 @@ window.REPORTE = {
    "i": 2,
    "nombre": "Herramientas y Tecnología",
    "subtitulo": "reutilización y reciclaje creativo, herramientas manuales, bicicletas, cocinas eficientes, biochar y energías renovables a pequeña escala",
-   "espacios_total": 19,
+   "ini": 2.47,
+   "act": 2.85,
+   "pot": 6.12,
+   "acc_impl": 7,
+   "espacios_total": 17,
    "espacios_obs": 11,
    "espacios_pot": 14,
    "espacios_impl": 4,
-   "acciones_obs": 50,
+   "acciones_obs": 51,
    "acciones_pot": 89,
    "acciones_impl": 7,
    "top_obs": [
@@ -1669,11 +1716,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Deshidratación solar",
+     "accion": "Paneles solares domésticos",
      "n": 10
     },
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Deshidratación solar",
      "n": 10
     },
     {
@@ -1695,7 +1742,7 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Reciclaje",
+     "accion": "Deshidratación solar",
      "n": 1
     },
     {
@@ -1703,7 +1750,7 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Deshidratación solar",
+     "accion": "Reciclaje",
      "n": 1
     },
     {
@@ -1972,6 +2019,13 @@ window.REPORTE = {
      "p": 0,
      "i": 0,
      "esp": []
+    },
+    {
+     "a": "Uso transporte público",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
     }
    ]
   },
@@ -1979,11 +2033,15 @@ window.REPORTE = {
    "i": 3,
    "nombre": "Educación y Cultura",
    "subtitulo": "educación alternativa, artes y música participativa, ecología social, investigación activa y cultura de la transición",
-   "espacios_total": 19,
-   "espacios_obs": 10,
+   "ini": 2.35,
+   "act": 2.81,
+   "pot": 6.59,
+   "acc_impl": 7,
+   "espacios_total": 17,
+   "espacios_obs": 12,
    "espacios_pot": 12,
    "espacios_impl": 3,
-   "acciones_obs": 42,
+   "acciones_obs": 45,
    "acciones_pot": 129,
    "acciones_impl": 7,
    "top_obs": [
@@ -2024,11 +2082,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
+     "accion": "Taller de cultura regenerativa",
      "n": 1
     },
     {
-     "accion": "Taller de cultura regenerativa",
+     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
      "n": 1
     },
     {
@@ -2324,13 +2382,27 @@ window.REPORTE = {
     },
     {
      "a": "Nadar en el mar",
-     "o": 0,
+     "o": 1,
      "p": 1,
      "i": 0,
      "esp": []
     },
     {
+     "a": "Bordado, Telas, Alfombras",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
      "a": "Cine Social",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Estudios de Ayurveda",
      "o": 1,
      "p": 0,
      "i": 0,
@@ -2363,11 +2435,15 @@ window.REPORTE = {
    "i": 4,
    "nombre": "Salud y Bienestar Espiritual",
    "subtitulo": "medicina complementaria e integral, yoga, tai chi y otras disciplinas del cuerpo, la mente y el espíritu",
-   "espacios_total": 19,
+   "ini": 2.0,
+   "act": 2.03,
+   "pot": 5.29,
+   "acc_impl": 1,
+   "espacios_total": 17,
    "espacios_obs": 10,
    "espacios_pot": 12,
    "espacios_impl": 1,
-   "acciones_obs": 32,
+   "acciones_obs": 34,
    "acciones_pot": 88,
    "acciones_impl": 1,
    "top_obs": [
@@ -2380,7 +2456,7 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Preparación de infusiones",
+     "accion": "Cultivo de plantas medicinales",
      "n": 3
     }
    ],
@@ -2394,7 +2470,7 @@ window.REPORTE = {
      "n": 9
     },
     {
-     "accion": "Cultivo de plantas medicinales",
+     "accion": "Meditación en huertos",
      "n": 8
     }
    ],
@@ -2542,6 +2618,13 @@ window.REPORTE = {
      "esp": []
     },
     {
+     "a": "A veces salimos a trotar, aprox una vez a la semana",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
      "a": "Apoyo al bienestar espiritual y emocional",
      "o": 1,
      "p": 0,
@@ -2568,6 +2651,13 @@ window.REPORTE = {
      "p": 0,
      "i": 0,
      "esp": []
+    },
+    {
+     "a": "patin en el parque ohiggins",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
     }
    ]
   },
@@ -2575,7 +2665,11 @@ window.REPORTE = {
    "i": 5,
    "nombre": "Finanzas y Economía",
    "subtitulo": "mercados locales de agricultores, agricultura sostenida por la comunidad, comercio justo y redes de trabajo voluntario en granjas orgánicas",
-   "espacios_total": 19,
+   "ini": 2.35,
+   "act": 2.45,
+   "pot": 5.53,
+   "acc_impl": 3,
+   "espacios_total": 17,
    "espacios_obs": 10,
    "espacios_pot": 13,
    "espacios_impl": 2,
@@ -2588,11 +2682,11 @@ window.REPORTE = {
      "n": 7
     },
     {
-     "accion": "Reparación de objetos",
+     "accion": "Evitar plásticos de un solo uso",
      "n": 4
     },
     {
-     "accion": "Evitar plásticos de un solo uso",
+     "accion": "Reparación de objetos",
      "n": 4
     }
    ],
@@ -2834,12 +2928,16 @@ window.REPORTE = {
    "i": 6,
    "nombre": "Tenencia de la Tierra y Gobernación Comunitaria",
    "subtitulo": "cooperativas, toma de decisiones por consenso, compartir viviendas, ecoaldeas y derechos de uso tradicionales",
-   "espacios_total": 19,
+   "ini": 1.41,
+   "act": 1.56,
+   "pot": 5.06,
+   "acc_impl": 2,
+   "espacios_total": 17,
    "espacios_obs": 8,
    "espacios_pot": 13,
    "espacios_impl": 2,
    "acciones_obs": 24,
-   "acciones_pot": 70,
+   "acciones_pot": 72,
    "acciones_impl": 2,
    "top_obs": [
     {
@@ -2847,11 +2945,11 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Participar en organizaciones locales",
      "n": 2
     },
     {
-     "accion": "Participar en organizaciones locales",
+     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
      "n": 2
     }
    ],
@@ -2861,11 +2959,11 @@ window.REPORTE = {
      "n": 10
     },
     {
-     "accion": "Creación de huertos comunitarios",
+     "accion": "Organizar actividades de barrio",
      "n": 6
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Creación de huertos comunitarios",
      "n": 6
     }
    ],
@@ -3032,6 +3130,20 @@ window.REPORTE = {
      "esp": []
     },
     {
+     "a": "{'peso': 2, 'accion': 'Co-definir visión conjunta de propósito del grupo', 'descripcion': 'Organizarse entre todas las personas que componen el grupo humano para co-definir la visión común que les une respecto del espacio'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "{'peso': 3, 'accion': 'Definir programa de trabajo colectivo entre miembros del grupo humano', 'descripcion': 'Definir reuniones y encuentros para avanzar en los proyectos comunes, para coordinar visiones, definir expectativas y permitir que las visiones colectivas se fortalezcan para el bienestar general de las personas y la biodiversidad en el lugar'}",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
      "a": "Acuerdos de uso y subdivisión del terreno compartido",
      "o": 2,
      "p": 0,
@@ -3048,6 +3160,12 @@ window.REPORTE = {
    ]
   }
  ],
+ "flor": {
+  "n": 17,
+  "erp": 2.3,
+  "aimp": 2.8,
+  "hrp": 6.1
+ },
  "lista_espacios": [
   {
    "nombre": "Hogar en San Miguel",

@@ -393,6 +393,16 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .petalo.on .pet-base{filter:saturate(1.15)}
 @media(max-width:520px){.ri .petalo-nombre{font-size:16px;stroke-width:4px}
 .ri .pet-num{font-size:21px;stroke-width:4px}}
+.ri .ftab-n{font-size:1.15rem!important;font-weight:900;color:var(--text)!important;line-height:1.1}
+.ri .ftab-n small{font-size:.7rem;font-weight:600;color:var(--muted);margin-left:2px}
+.ri .flor-insight{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:20px 22px;margin-top:22px;font-weight:400}
+.ri .flor-insight .rk-t{font-size:.92rem;color:var(--text);margin:0 0 14px;font-weight:600}
+.ri .rk-g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ri .rk-g h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-dark);margin:0 0 6px}
+.ri .rk-g ol{margin:0 0 14px;padding-left:18px;font-size:.86rem}
+.ri .rk-g li{margin-bottom:3px}
+.ri .rk-g li span{float:right;font-weight:800;color:var(--text)}
+@media(max-width:800px){.ri .rk-g{grid-template-columns:1fr;gap:6px}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -556,16 +566,16 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
         <div class="flor-svg" id="flor-svg"></div>
         <p class="flor-hint"><b>Toca un pétalo</b> para ver sus acciones, una por una.</p>
         <div class="flor-leg">
-          <p class="flor-leg-t">En cada pétalo, tres barras muestran en cuántos de los <b id="flor-n">19</b> espacios hay acciones. La barra completa equivale a todos los espacios; el número es la cantidad.</p>
-          <span><i class="ln" style="background:#E1AA36"></i><b>Lo encontrado</b> <small>prácticas que el espacio ya tenía</small></span>
-          <span><i class="ln" style="background:#239BA7"></i><b>Lo planificado</b> <small>acciones diseñadas en el plan maestro</small></span>
-          <span><i class="ln" style="background:#112E4D"></i><b>Lo implementado</b> <small>acciones ya puestas en práctica</small></span>
+          <p class="flor-leg-t">En cada pétalo, tres barras muestran un puntaje de 0 a 10 (la barra completa equivale a 10), calculado con el mismo método que la plataforma de Indagación Regenerativa. Es el promedio de los <b id="flor-n">17</b> proyectos con diagnóstico.</p>
+          <span><i class="ln" style="background:#E1AA36"></i><b>Estado inicial</b> <small>la línea base: lo que ya crecía al empezar</small></span>
+          <span><i class="ln" style="background:#112E4D"></i><b>Estado actual</b> <small>el resultado acumulado de lo implementado</small></span>
+          <span><i class="ln" style="background:#239BA7"></i><b>Potencial futuro</b> <small>la capacidad máxima del lugar</small></span>
         </div>
         <div class="flor-chips" id="flor-lista" role="group" aria-label="Elegir pétalo"></div>
       </div>
       <div class="flor-x-der" id="flor-panel" aria-live="polite"></div>
     </div>
-    <p class="flor-insight" id="flor-insight"></p>
+    <div class="flor-insight" id="flor-insight"></div>
   </div>
 </section>
 
@@ -719,6 +729,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
       <div><h3>Espacio con implementación</h3><p>Un espacio que pasó del diseño a la acción: tiene al menos un avance de implementación registrado.</p></div>
       <div><h3>Cultivo nuevo</h3><p>Metros cuadrados de camas de cultivo construidas por LivLin. El cultivo que ya existía antes se cuenta aparte.</p></div>
       <div><h3>Fechas</h3><p>Algunas fechas de eventos son aproximadas y así están anotadas en el registro de cada proyecto.</p></div>
+      <div><h3>Cómo se calculan los puntajes de la flor</h3><p>Es el mismo método de la plataforma de Indagación Regenerativa. Cada pétalo se califica de 0 a 10 según la cantidad de acciones: ninguna es 0; 1 a 2 es 2; 3 a 5 es 4; 6 a 9 es 6; 10 a 14 es 8 y 15 o más es 10. El <b>estado inicial</b> cuenta las prácticas que ya existían; el <b>potencial futuro</b> suma las acciones planificadas, con más peso para las de mayor envergadura; y el <b>estado actual</b> avanza del inicial hacia el potencial según el esfuerzo ya implementado. El reporte muestra el promedio de los proyectos con diagnóstico.</p></div>
       <div><h3>Flor de la Permacultura</h3><p>Mapa de siete campos que parte de la ética y los principios de diseño (Holmgren): administración de la tierra y de la naturaleza, construcción, herramientas y tecnología, educación y cultura, salud y bienestar espiritual, finanzas y economía, y tenencia de la tierra y gobernación comunitaria. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora. <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Saber más →</a></p></div>
       <div><h3>Marco interpretativo</h3><p>Mason Bustos, F. (2025). <i>Introducción al enfoque de la regeneración. Material de apoyo para la docencia regenerativa.</i> LivLin. <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">doi.org/10.17605/OSF.IO/UCDEH</a></p></div>
       <div><h3>Privacidad</h3><p>Los hogares aparecen con ubicación aproximada y sin nombre.</p></div>
@@ -804,7 +815,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   </button>
 
     <script src="js/script.js?v=7"></script>
-  <script src="js/impacto-datos.js?v=3"></script>
+  <script src="js/impacto-datos.js?v=4"></script>
   <script src="js/casos.js"></script>
   <script src="js/gestor-trabajos.js?v=1"></script>
   <script src="js/impacto-geo.js?v=1"></script>
@@ -937,7 +948,7 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
   const P0=(R.petalos&&R.petalos[0])||{espacios_impl:0};
   $('retos').innerHTML=[
    ['Cambio climático','Soluciones locales a un desafío que es global.',`${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo agroecológico urbano nuevo.`],
-   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${R.espacios} espacios ya implementan acciones de tierra y naturaleza.`],
+   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de tierra y naturaleza.`],
    ['Contaminación en todo el mundo','Los residuos pueden volver a ser recursos.',`${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
    ['Pérdida de lazos comunitarios','Frente al exceso de individualismo en ciertas culturas.',`${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
    ['Declive nutricional de los alimentos','Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.','Alimentos agroecológicos, cultivados cerca de quien los come, con suelo vivo y sin insumos sintéticos.']
@@ -968,32 +979,36 @@ const LECT=[
 // Colores del póster original de la Flor de la Permacultura (tonos vivos, con transparencia entre pétalos)
 const COLP=['#A9D28D','#F3EE8F','#FBBA6E','#EE8189','#C28BCB','#8D8FD0','#8ED0E4'];
 const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255,m=1-f;return '#'+[r,g,b].map(v=>Math.round(v*m).toString(16).padStart(2,'0')).join('')};
-const COLS={o:'#E1AA36',p:'#239BA7',i:'#112E4D'};
+// Mismo cálculo que el «Análisis por dimensión» del dashboard de la plataforma (puntajes 0-10, promedio de los proyectos con diagnóstico)
+const COLS={o:'#E1AA36',i:'#112E4D',p:'#239BA7'};
 const colE=(i,k)=>COLS[k];
 const NOMBRE_PET=[['ADMINISTRACIÓN','DE LA TIERRA Y','DE LA NATURALEZA'],['CONSTRUCCIÓN'],['HERRAMIENTAS','Y TECNOLOGÍA'],['EDUCACIÓN','Y CULTURA'],['SALUD Y','BIENESTAR','ESPIRITUAL'],['FINANZAS','Y ECONOMÍA'],['TENENCIA DE LA','TIERRA Y','GOBERNACIÓN','COMUNITARIA']];
+const num=v=>(+v).toLocaleString('es-CL',{maximumFractionDigits:2});
+// o = Estado inicial (ERP), i = Estado actual (AIMP), p = Potencial futuro (HRP)
 const ETAPA={
- o:{t:'Lo encontrado',k:'espacios_obs',a:'acciones_obs',d:'Prácticas que el espacio ya tenía cuando hicimos el diagnóstico.'},
- p:{t:'Lo planificado',k:'espacios_pot',a:'acciones_pot',d:'Acciones que el plan maestro propone para que el espacio florezca.'},
- i:{t:'Lo implementado',k:'espacios_impl',a:'acciones_impl',d:'Acciones que ya se pusieron en práctica y quedaron registradas en la bitácora.'}
+ o:{t:'Estado inicial',sc:'ini',k:'espacios_obs',a:'acciones_obs',lista:'Prácticas que el espacio ya tenía',d:'La línea base: lo que ya crecía al iniciar el acompañamiento.'},
+ i:{t:'Estado actual',sc:'act',k:'espacios_impl',a:'acciones_impl',lista:'Acciones ya implementadas',d:'El resultado acumulado de todas las acciones implementadas.'},
+ p:{t:'Potencial futuro',sc:'pot',k:'espacios_pot',a:'acciones_pot',lista:'Acciones que propone el plan maestro',d:'La capacidad máxima del lugar: lo que el plan maestro propone que florezca.'}
 };
+const ORDEN_E=['o','i','p'];
 const FL={sel:0,etapa:'i',todas:false,q:''};
 function florSVG(){
   const cx=320,cy=320,C=148,RX=152,RY=92;let bases='',fichas='',contorno='';
   // orden del póster: «Herramientas y tecnología» a la derecha; los demás siguen en sentido horario
   const ang=i=>-5+(i-2)*360/NP;
   PET.forEach((p,i)=>{
-    const a=ang(i),n=p.espacios_total,on=i===FL.sel;
+    const a=ang(i),on=i===FL.sel;
     const tr=`translate(${cx} ${cy}) rotate(${a})`;
-    bases+=`<g class="petalo${on?' on':''}" data-p="${i}" transform="${tr}" tabindex="0" role="button" aria-pressed="${on}" aria-label="Pétalo ${i+1}: ${p.nombre}. Encontrado en ${p.espacios_obs} de ${n} espacios, planificado en ${p.espacios_pot} e implementado en ${p.espacios_impl}"><ellipse class="pet-base" cx="${C}" cy="0" rx="${RX}" ry="${RY}" fill="${COLP[i]}" style="mix-blend-mode:multiply"/></g>`;
+    bases+=`<g class="petalo${on?' on':''}" data-p="${i}" transform="${tr}" tabindex="0" role="button" aria-pressed="${on}" aria-label="Pétalo ${i+1}: ${p.nombre}. Estado inicial ${num(p.ini)} de 10, estado actual ${num(p.act)} y potencial futuro ${num(p.pot)}"><ellipse class="pet-base" cx="${C}" cy="0" rx="${RX}" ry="${RY}" fill="${COLP[i]}" style="mix-blend-mode:multiply"/></g>`;
     if(on)contorno=`<g transform="${tr}" pointer-events="none"><ellipse cx="${C}" cy="0" rx="${RX}" ry="${RY}" fill="none" stroke="#2b2b2b" stroke-width="4"/></g>`;
-    // ficha de métricas (sin rotar, para que se lea): nombre + tres barras con escala común (barra completa = todos los espacios)
-    const t=a*Math.PI/180,d=C+RX*.30,x=cx+Math.cos(t)*d,y=cy+Math.sin(t)*d;
+    // ficha de métricas (sin rotar): nombre + tres barras en escala 0 a 10 (la barra completa = 10)
+    const t=a*Math.PI/180,d=C+RX*.45,x=cx+Math.cos(t)*d,y=cy+Math.sin(t)*d;
     const L=NOMBRE_PET[i],lh=14,W=92,top=y-(L.length*lh+8+3*17)/2;
     let f=`<g class="ficha" data-p="${i}" pointer-events="none">`;
     f+=`<text class="petalo-nombre" x="${x.toFixed(1)}" y="${(top+11).toFixed(1)}" text-anchor="middle">${L.map((l,k)=>`<tspan x="${x.toFixed(1)}" dy="${k?lh:0}">${l}</tspan>`).join('')}</text>`;
-    [['o','espacios_obs','Lo encontrado'],['p','espacios_pot','Lo planificado'],['i','espacios_impl','Lo implementado']].forEach(([k,campo,t2],j)=>{
-      const v=p[campo],yy=top+L.length*lh+8+j*17,x0=x-W/2-10;
-      f+=`<g><title>${t2}: ${v} de ${n} espacios</title><rect x="${x0.toFixed(1)}" y="${yy.toFixed(1)}" width="${W}" height="11" rx="5.5" fill="#fff" fill-opacity=".72"/><rect x="${x0.toFixed(1)}" y="${yy.toFixed(1)}" width="${Math.max(v?7:0,W*v/n).toFixed(1)}" height="11" rx="5.5" fill="${COLS[k]}"/><text class="pet-num" x="${(x0+W+7).toFixed(1)}" y="${(yy+10).toFixed(1)}">${v}</text></g>`;
+    ORDEN_E.forEach((k,j)=>{
+      const v=p[ETAPA[k].sc],yy=top+L.length*lh+8+j*17,x0=x-W/2-10;
+      f+=`<g><title>${ETAPA[k].t}: ${num(v)} de 10</title><rect x="${x0.toFixed(1)}" y="${yy.toFixed(1)}" width="${W}" height="11" rx="5.5" fill="#fff" fill-opacity=".72"/><rect x="${x0.toFixed(1)}" y="${yy.toFixed(1)}" width="${Math.max(v?7:0,W*Math.min(v,10)/10).toFixed(1)}" height="11" rx="5.5" fill="${COLS[k]}"/><text class="pet-num" x="${(x0+W+7).toFixed(1)}" y="${(yy+10).toFixed(1)}">${num(v)}</text></g>`;
     });
     fichas+=f+'</g>';
   });
@@ -1004,11 +1019,11 @@ function florSVG(){
   const A=af(20,0),B=af(-6,-13),Cc=af(-6,13);
   const espiral=`<path d="M${pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L')}" fill="none" stroke="#D4144C" stroke-width="7" stroke-linecap="round" pointer-events="none"/><polygon points="${A.map(v=>v.toFixed(1)).join(',')} ${B.map(v=>v.toFixed(1)).join(',')} ${Cc.map(v=>v.toFixed(1)).join(',')}" fill="#D4144C" pointer-events="none"/>`;
   const centro=`<circle cx="${cx}" cy="${cy}" r="64" fill="#fff" stroke="#D4144C" stroke-width="7" pointer-events="none"/>`+['La Ética y','los Principios','de Diseño'].map((t,k)=>`<text x="${cx}" y="${cy-9+k*17}" text-anchor="middle" font-size="14" font-weight="700" fill="#3a3a3a" font-family="Montserrat,sans-serif" pointer-events="none">${t}</text>`).join('');
-  return `<svg viewBox="0 0 640 640" role="group" aria-label="Flor de la Permacultura: en cada pétalo, tres barras muestran en cuántos espacios hay acciones encontradas, planificadas e implementadas">${bases}${contorno}${espiral}${centro}${fichas}</svg>`;
+  return `<svg viewBox="0 0 640 640" role="group" aria-label="Flor de la Permacultura: en cada pétalo, tres barras muestran el estado inicial, el estado actual y el potencial futuro, de 0 a 10">${bases}${contorno}${espiral}${centro}${fichas}</svg>`;
 }
 function florPanel(){
   const p=PET[FL.sel],n=p.espacios_total,E=ETAPA[FL.etapa],key=FL.etapa;
-  const tabs=Object.keys(ETAPA).map(k=>{const e=ETAPA[k];return `<button type="button" class="ftab${k===FL.etapa?' on':''}" data-e="${k}" style="--c:${colE(p.i,k)}" aria-pressed="${k===FL.etapa}"><b>${e.t}</b><span>${p[e.k]} de ${n} espacios</span><i><u style="width:${Math.round(p[e.k]/n*100)}%"></u></i></button>`}).join('');
+  const tabs=ORDEN_E.map(k=>{const e=ETAPA[k];return `<button type="button" class="ftab${k===FL.etapa?' on':''}" data-e="${k}" style="--c:${COLS[k]}" aria-pressed="${k===FL.etapa}"><b>${e.t}</b><span class="ftab-n">${num(p[e.sc])}<small>/10</small></span><i><u style="width:${Math.min(100,p[e.sc]*10)}%"></u></i></button>`}).join('');
   const q=FL.q.trim().toLowerCase();
   const lista=p.acciones.filter(a=>a[key]>0&&(!q||a.a.toLowerCase().includes(q))).sort((a,b)=>b[key]-a[key]||a.a.localeCompare(b.a,'es'));
   const total=lista.length, vis=FL.todas?lista:lista.slice(0,8);
@@ -1017,7 +1032,7 @@ function florPanel(){
   return `<div class="fp-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
    <p class="fp-lect">${LECT[p.i]}</p>
    <div class="ftabs">${tabs}</div>
-   <p class="fp-desc">${E.d} <b>${p[E.a]} acciones registradas</b> (una misma acción puede repetirse en varios espacios).</p>
+   <p class="fp-desc"><b>${E.t}: ${num(p[E.sc])} de 10.</b> ${E.d} ${E.lista}: <b>${p[E.a]}</b>, en ${p[E.k]} de ${n} espacios con diagnóstico.</p>
    <input type="search" class="fp-q" id="fp-q" placeholder="Buscar una acción de este pétalo" value="${FL.q.replace(/"/g,'&quot;')}" aria-label="Buscar una acción">
    <ul class="ac-lista">${filas}</ul>${vacio}
    ${total>8?`<button type="button" class="fp-mas" id="fp-mas">${FL.todas?'Ver menos':`Ver las ${total} acciones`}</button>`:''}`;
@@ -1041,12 +1056,16 @@ florRaiz.addEventListener('input',e=>{if(e.target.id==='fp-q'){FL.q=e.target.val
 florRaiz.addEventListener('keydown',e=>{const pe=e.target.closest('.petalo');if(pe&&(e.key==='Enter'||e.key===' ')){e.preventDefault();florElegir(+pe.dataset.p)}});
 florElegir(0);
 (function(){
-  const imp=[...PET].sort((a,b)=>b.acciones_impl-a.acciones_impl)[0];
-  const tp=PET.reduce((s,p)=>s+p.acciones_pot,0),ti=PET.reduce((s,p)=>s+p.acciones_impl,0);
-  const br=[...PET].filter(p=>p.acciones_pot>0).sort((a,b)=>(a.acciones_impl/a.acciones_pot)-(b.acciones_impl/b.acciones_pot))[0];
-  $('flor-insight').innerHTML=`Se proyectaron <b>${nf(tp)}</b> acciones y ya florecen <b>${nf(ti)}</b>. Donde más se ha implementado: <b>${CORTO[imp.i]}</b> (${imp.acciones_impl} acciones). Donde más esperan por florecer: <b>${CORTO[br.i]}</b> (${br.acciones_pot} proyectadas, ${br.acciones_impl} implementada${br.acciones_impl===1?'':'s'}).`;
+  const F=R.flor||{}, ord=(f,desc=true)=>[...PET].sort((a,b)=>desc?f(b)-f(a):f(a)-f(b));
+  const li=(arr,f)=>arr.map(p=>`<li><b>${CORTO[p.i]}</b> <span>${f(p)}</span></li>`).join('');
+  const act=ord(p=>p.ini), opp=ord(p=>p.pot-p.ini), imp=ord(p=>p.acc_impl).filter(p=>p.acc_impl>0);
+  $('flor-insight').innerHTML=`<p class="rk-t">Promedio de los ${F.n} proyectos con diagnóstico: <b>estado inicial ${num(F.erp)}</b> · <b>estado actual ${num(F.aimp)}</b> · <b>potencial futuro ${num(F.hrp)}</b> (de 10).</p>
+   <div class="rk-g">
+    <div><h4>Más activado al empezar</h4><ol>${li(act.slice(0,3),p=>num(p.ini))}</ol><h4>Menos activado al empezar</h4><ol>${li(act.slice(-3),p=>num(p.ini))}</ol></div>
+    <div><h4>Mayor oportunidad (potencial − inicial)</h4><ol>${li(opp.slice(0,3),p=>'+'+num(Math.round((p.pot-p.ini)*10)/10))}</ol></div>
+    <div><h4>Más implementado (acciones ejecutadas)</h4><ol>${imp.length?li(imp.slice(0,3),p=>p.acc_impl+' acción(es)'):'<li>Aún no hay acciones implementadas.</li>'}</ol></div>
+   </div>`;
 })();
-
 
 // ---- Índice fijo: aparece al pasar la portada y marca la sección actual
 (function(){

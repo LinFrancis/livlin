@@ -31,12 +31,15 @@
     ' subcuencas y ' + Object.keys(comunas).length + ' comunas de ' + T.regiones.length + ' regiones de Chile, más un taller en Chengdu (China).</p><ul>' +
     T.cuencas.map(function (c) { return '<li><b>' + c.nombre + '</b>: ' + c.espacios + ' espacios (' + c.implementados + ' con implementación)</li>'; }).join('') + '</ul>';
 
+  // Mismo cálculo que el dashboard de la plataforma: puntajes 0-10, promedio de los proyectos con diagnóstico
+  var F = R.flor || {};
+  var sc = function (v) { return Number(v).toLocaleString('es-CL', { maximumFractionDigits: 2 }); };
   $('res-petalos').innerHTML = R.petalos.map(function (p) {
-    var n = p.espacios_total;
-    var b = function (k, col) { return '<i style="--w:' + Math.round(p['espacios_' + k] / n * 100) + '%;--c:' + col + '"></i>'; };
-    return '<tr><td><b>' + (p.i + 1) + '</b> ' + p.nombre + '</td><td>' + b('obs', '#E1AA36') + '<small>' + p.espacios_obs + '</small></td><td>' + b('pot', '#239BA7') + '<small>' + p.espacios_pot +
-      '</small></td><td>' + b('impl', '#112E4D') + '<small>' + p.espacios_impl + '</small></td><td class="num">' + p.acciones_impl + '</td></tr>';
+    var b = function (v, col) { return '<i style="--w:' + Math.min(100, v * 10) + '%;--c:' + col + '"></i><small>' + sc(v) + '</small>'; };
+    return '<tr><td><b>' + (p.i + 1) + '</b> ' + p.nombre + '</td><td>' + b(p.ini, '#E1AA36') + '</td><td>' + b(p.act, '#112E4D') + '</td><td>' + b(p.pot, '#239BA7') +
+      '</td><td class="num">' + p.acc_impl + '</td></tr>';
   }).join('');
+  if ($('res-flor-n')) $('res-flor-n').textContent = F.n + ' proyectos con diagnóstico · promedio de ' + sc(F.erp) + ' (inicial), ' + sc(F.aimp) + ' (actual) y ' + sc(F.hrp) + ' (potencial), de 10';
 
   var S = R.sistemas;
   $('res-tierra').innerHTML = [
