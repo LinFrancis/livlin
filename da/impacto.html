@@ -317,7 +317,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
         <li class="nav-item-dropdown">
           <a href="/da/index.html#dimensiones">Indsatsområder</a>
           <ul class="dropdown-menu">
-            <li><a href="/da/servicios/conversacion-orientacion.html">Vejledningssamtale (gratis)</a></li>
+            <li><a href="/da/servicios/conversacion-orientacion.html">Asesoría gratuita online</a></li>
             <li><a href="/da/servicios/visita-diagnostica.html">Diagnostisk besøg</a></li>
             <li><a href="/da/servicios/diseno-regenerativo.html">Regenerativt design</a></li>
             <li><a href="/da/servicios/huerto-urbano.html">Bymiljøhave</a></li>
@@ -363,7 +363,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <h2>Más resultados del primer año</h2>
     <p class="ri-lead" style="color:#D3E0EA">Cada cifra sale de la plataforma de Indagación Regenerativa, donde registramos cada proyecto, taller y avance.</p>
     <div class="grid-n" id="grid-n"></div>
-    <p class="note">«Personas impactadas» cuenta a quienes habitan cada espacio: a nivel de diagnóstico y diseño, todos los espacios acompañados; a nivel de implementación, solo los espacios donde ya se construyó o instaló algo. Las orientaciones y los talleres se cuentan aparte, y una misma persona puede participar en más de una actividad.</p>
+    <p class="note">«Personas impactadas» cuenta a quienes habitan cada espacio: a nivel de diagnóstico y diseño, todos los espacios acompañados; a nivel de implementación, solo los espacios donde ya se construyó o instaló algo. Las asesorías gratuitas online y los talleres se cuentan aparte, y una misma persona puede participar en más de una actividad.</p>
   </div>
 </section>
 
@@ -454,14 +454,14 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   <div class="wrap reveal">
     <div class="ri-eyebrow">Mes a mes</div>
     <h2>El año, de diciembre a noviembre</h2>
-    <p class="ri-lead">Orientaciones y talleres registrados en cada mes del período.</p>
+    <p class="ri-lead">Asesorías gratuitas online y talleres registrados en cada mes del período.</p>
     <div class="months" id="months"></div>
     <div class="labels" id="labels"></div>
-    <div class="legend"><span class="lo">Orientaciones</span><span class="lt">Workshops</span></div>
+    <div class="legend"><span class="lo">Asesorías gratuitas online</span><span class="lt">Workshops</span></div>
     <div class="hitos">
       <div class="hito"><b>Dic 2025</b><p>Primer taller del año en Aucca (Talagante), con 35 asistentes.</p></div>
       <div class="hito"><b>Ene 2026</b><p>Taller en Chengdu (China) con 16 asistentes: el primer cruce de fronteras.</p></div>
-      <div class="hito"><b>Jul – Ago 2026</b><p>22 orientaciones en dos meses. La conversación gratuita se vuelve la puerta de entrada.</p></div>
+      <div class="hito"><b>Jul – Ago 2026</b><p>22 asesorías gratuitas online en dos meses: se vuelven la puerta de entrada a LivLin.</p></div>
       <div class="hito"><b>Nov 2026</b><p>Tres talleres y 44 asistentes en el mes del aniversario.</p></div>
     </div>
   </div>
@@ -641,7 +641,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
         <div class="footer-col">
           <h5>Indsatsområder</h5>
           <ul>
-            <li><a href="/da/servicios/conversacion-orientacion.html">Vejledningssamtale (gratis)</a></li>
+            <li><a href="/da/servicios/conversacion-orientacion.html">Asesoría gratuita online</a></li>
             <li><a href="/da/servicios/visita-diagnostica.html">Diagnostisk besøg</a></li>
             <li><a href="/da/servicios/diseno-regenerativo.html">Regenerativt design</a></li>
             <li><a href="/da/servicios/huerto-urbano.html">Bymiljøhave</a></li>
@@ -722,7 +722,7 @@ $('h-kpis').innerHTML=[
 const NUM=[
  [R.espacios_impl,0,'Espacios con implementación',`Pasaron del diseño a la tierra: ${R.espacios_impl} de ${R.visitas_diag} visitas diagnósticas (${Math.round(R.espacios_impl/R.visitas_diag*100)}%).`],
  [R.acciones,0,'Acciones regenerativas implementadas','Camas de cultivo, compostaje, captación de agua, árboles, rutas y más.'],
- [R.orientaciones,0,'Conversaciones de orientación',`El primer paso, gratuito y online. El ${R.pct_mujeres_orient}% de quienes llegaron son mujeres.`],
+ [R.orientaciones,0,'Asesorías gratuitas online',`El primer paso: una conversación de unos 20 minutos para entender tu visión y tu contexto. El ${R.pct_mujeres_orient}% de quienes llegaron son mujeres.`],
  [R.talleres,0,'Talleres dictados',`${R.asistentes} asistentes en ${Object.keys(R.lugar).length} lugares.`],
  [R.plataformas_total,0,'Plataformas y sitios web',`${R.plataformas} plataformas y ${R.sitios} sitios web a medida para organizaciones.`],
  [R.sistemas.compost_l,0,'Litros de capacidad de compostaje',`${R.sistemas.compost_obras} obras de compostaje en distintos espacios.`],
@@ -820,7 +820,7 @@ const rp=(n)=>`<b>${n}</b>`;
 $('premisas').innerHTML=[
  ['1','Reconocer el rol de la humanidad','Volver a sabernos parte de la naturaleza y asumir un rol activo en la salud del territorio que habitamos.',`${rp(R.acciones)} acciones regenerativas implementadas en ${rp(R.espacios_impl)} espacios.`],
  ['2','Ver sistemas vivos, no cosas','Preguntarnos cómo se conectan el agua, el suelo, las personas, los residuos y la energía en cada lugar.',`Compostaje, cultivo y agua en los mismos espacios: ${rp(nf(R.sistemas.compost_l))} L de compostaje y ${rp(nf(R.cultivo.nuevo_m2,1))} m² de cultivo nuevo.`],
- ['3','Co-diseñar con la comunidad y con el lugar','Pasar del «experto que viene a resolver» al facilitador que diseña junto a las personas y con el lugar.',`${rp(R.talleres)} talleres con ${rp(R.asistentes)} asistentes, ${rp(R.orientaciones)} conversaciones de orientación y procesos de facilitación.`],
+ ['3','Co-diseñar con la comunidad y con el lugar','Pasar del «experto que viene a resolver» al facilitador que diseña junto a las personas y con el lugar.',`${rp(R.talleres)} talleres con ${rp(R.asistentes)} asistentes, ${rp(R.orientaciones)} asesorías gratuitas online y procesos de facilitación.`],
  ['4','Pensar en generaciones, no solo en proyectos','Dejar suelo, árboles y acuerdos para que otros puedan continuar, adaptar y mejorar.',`${rp(R.sistemas.arboles)} árboles frutales plantados y ${rp(R.espacios)} espacios con diagnóstico y seguimiento en la plataforma.`]
 ].map(([n,t,p,e])=>`<div class="prem"><em>PREMISA ${n}</em><h4>${t}</h4><p>${p}</p><div class="ev">${e}</div></div>`).join('');
 

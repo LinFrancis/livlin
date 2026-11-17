@@ -110,10 +110,10 @@ window.REPORTE = {
  "lineas": [
   {
    "key": "orientacion",
-   "nombre": "Conversación de orientación",
+   "nombre": "Asesoría gratuita online",
    "realizados": 27,
    "clave": "89% de las personas son mujeres",
-   "desc": "Conversación inicial gratuita y online para entender tu visión y tu contexto.",
+   "desc": "Conversación inicial gratuita y online (unos 20 minutos) para entender tu visión y tu contexto.",
    "url": "https://www.livlin.cl/servicios/conversacion-orientacion.html"
   },
   {
@@ -627,11 +627,11 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Compostera doméstica",
+     "accion": "Camas de cultivo autorregantes",
      "n": 2
     },
     {
-     "accion": "Camas de cultivo autorregantes",
+     "accion": "Compostera doméstica",
      "n": 2
     },
     {
@@ -651,11 +651,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Camas de cultivo biointensivo",
+     "accion": "Compostaje comunitario en el barrio",
      "n": 1
     },
     {
-     "accion": "Compostaje comunitario en el barrio",
+     "accion": "Camas de cultivo biointensivo",
      "n": 1
     }
    ],
@@ -763,11 +763,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Escaleras y senderos con materiales reutilizados",
+     "accion": "Construcción con materiales reciclados",
      "n": 1
     },
     {
-     "accion": "Construcción con materiales reciclados",
+     "accion": "Escaleras y senderos con materiales reutilizados",
      "n": 1
     }
    ],
@@ -863,15 +863,15 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Deshidratación solar",
-     "n": 1
-    },
-    {
      "accion": "Usar ampolletas LED",
      "n": 1
     },
     {
      "accion": "Reciclaje",
+     "n": 1
+    },
+    {
+     "accion": "Deshidratación solar",
      "n": 1
     },
     {
@@ -945,17 +945,17 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Intercambio de plantas",
+     "accion": "Talleres de compostaje",
      "n": 3
     }
    ],
    "top_pot": [
     {
-     "accion": "Redes de huertos urbanos",
+     "accion": "Talleres de huertos urbanos",
      "n": 9
     },
     {
-     "accion": "Talleres de huertos urbanos",
+     "accion": "Redes de huertos urbanos",
      "n": 9
     },
     {
@@ -1105,11 +1105,11 @@ window.REPORTE = {
      "n": 7
     },
     {
-     "accion": "Evitar plásticos de un solo uso",
+     "accion": "Reparación de objetos",
      "n": 4
     },
     {
-     "accion": "Reparación de objetos",
+     "accion": "Evitar plásticos de un solo uso",
      "n": 4
     }
    ],
@@ -1129,11 +1129,11 @@ window.REPORTE = {
    ],
    "impl": [
     {
-     "accion": "Producción de alimentos locales",
+     "accion": "Compras colectivas de alimentos",
      "n": 1
     },
     {
-     "accion": "Compras colectivas de alimentos",
+     "accion": "Producción de alimentos locales",
      "n": 1
     }
    ],
@@ -1169,11 +1169,11 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
      "n": 2
     },
     {
-     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
+     "accion": "Participar en organizaciones locales",
      "n": 2
     }
    ],
@@ -1183,11 +1183,11 @@ window.REPORTE = {
      "n": 10
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Creación de huertos comunitarios",
      "n": 6
     },
     {
-     "accion": "Creación de huertos comunitarios",
+     "accion": "Organizar actividades de barrio",
      "n": 6
     }
    ],
