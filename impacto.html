@@ -211,6 +211,74 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 @media(max-width:600px){.ri .ri-hero .wrap{padding-bottom:110px}
 .ri .ri-hero{min-height:82vh}
 .ri .geo-kpi{grid-template-columns:repeat(2,1fr)}}
+.ri .hero-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;max-width:1040px}
+.ri .hk{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34);border-radius:18px;padding:18px 18px 16px;backdrop-filter:blur(8px)}
+.ri .hk b{display:block;font-size:clamp(2rem,4.6vw,3.2rem);font-weight:900;line-height:1;color:var(--green-light)}
+.ri .hk span{display:block;margin-top:8px;font-size:.88rem;font-weight:700;line-height:1.3}
+.ri .hk i{display:block;margin-top:4px;font-style:normal;font-size:.74rem;color:#D3E0EA;line-height:1.4}
+.ri .pregunta{font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:800;line-height:1.3;color:var(--text);margin-bottom:.8em}
+.ri .retos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 26px}
+.ri .retos div{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px}
+.ri .retos b{display:block;font-size:.98rem;line-height:1.3}
+.ri .retos span{display:block;margin-top:6px;font-size:.85rem;color:var(--muted)}
+.ri .story-p{max-width:820px;color:var(--text-soft);margin-bottom:10px}
+.ri .celebra{background:linear-gradient(135deg,#E7F6EE,#F6F3E9);border-radius:var(--r);padding:clamp(24px,4vw,44px);margin-top:20px}
+.ri .celebra p{max-width:820px;margin-bottom:.9em;color:var(--text-soft)}
+.ri .celebra .quote{font-size:clamp(1.1rem,2vw,1.35rem)}
+.ri .niveles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}
+.ri .nivel{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px 18px;opacity:.78}
+.ri .nivel b{display:block;font-size:1.05rem;color:var(--muted)}
+.ri .nivel span{display:block;margin-top:4px;font-size:.82rem;color:var(--muted);line-height:1.45}
+.ri .nivel.on{opacity:1;border-color:var(--green-dark)}
+.ri .nivel.on b{color:var(--green-dark)}
+.ri .nivel.on2{opacity:1;background:var(--text);border-color:var(--text)}
+.ri .nivel.on2 b{color:var(--green-light)}
+.ri .nivel.on2 span{color:#D3E0EA}
+.ri .sub-h{margin:40px 0 14px;font-size:1.25rem}
+.ri .premisas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.ri .prem{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+.ri .prem em{font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--teal)}
+.ri .prem h4{font-size:1.02rem;line-height:1.3;margin:6px 0 8px}
+.ri .prem p{font-size:.86rem;color:var(--muted);margin-bottom:10px}
+.ri .prem .ev{border-top:1px solid var(--border);padding-top:10px;font-size:.88rem;font-weight:600;color:var(--text)}
+.ri .prem .ev b{color:var(--teal)}
+.ri .ruta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.88rem;font-weight:700}
+.ri .ruta span{background:var(--card);border:1px solid var(--border);border-radius:99px;padding:8px 16px}
+.ri .ruta i{font-style:normal;color:var(--muted)}
+.ri .ruta .fin{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.ri .flor{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:30px 0 10px}
+.ri .flor-svg svg{width:100%;height:auto;max-width:520px;display:block;margin:0 auto}
+.ri .flor-leg{display:flex;flex-direction:column;gap:6px;font-size:.9rem;font-weight:700;margin-bottom:14px}
+.ri .flor-leg i{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.ri .flor-leg small{font-weight:500;color:var(--muted);margin-left:6px}
+.ri .flor-lista{list-style:none;counter-reset:p;display:grid;gap:4px;margin-bottom:14px}
+.ri .flor-lista li{counter-increment:p;font-size:.88rem;font-weight:600;display:flex;gap:10px;align-items:center}
+.ri .flor-lista li:before{content:counter(p);flex:none;width:24px;height:24px;border-radius:50%;background:var(--text);color:#fff;font-size:.74rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.ri .flor-insight{background:#E7F6EE;border-radius:14px;padding:14px 16px;font-size:.9rem;font-weight:600;color:var(--text)}
+.ri .petalos{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px;margin-top:30px}
+.ri .pet{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px}
+.ri .pet-h{display:flex;gap:12px;align-items:flex-start}
+.ri .pet-h .pnum{flex:none;width:34px;height:34px;border-radius:50%;background:var(--text);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ri .pet-h h3{font-size:1.08rem;line-height:1.25}
+.ri .pet-h small{display:block;font-size:.78rem;color:var(--muted);font-weight:500;margin-top:2px}
+.ri .pet-lect{font-size:.9rem;font-style:italic;color:var(--text-soft);border-left:3px solid var(--green-light);padding-left:12px}
+.ri .etapa{font-size:.84rem;line-height:1.45}
+.ri .etapa .tt{display:flex;justify-content:space-between;gap:8px;font-weight:800;font-size:.8rem}
+.ri .etapa .tt b{color:var(--c)}
+.ri .etapa .bar2{height:8px;border-radius:99px;background:#ece8d8;margin:5px 0 6px;overflow:hidden}
+.ri .etapa .bar2 i{display:block;height:100%;background:var(--c);border-radius:99px}
+.ri .etapa p{color:var(--muted);font-size:.82rem}
+.ri .pet-casos{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.ri .pet-casos span{background:#E7F6EE;color:#1B6B45;border-radius:99px;padding:4px 11px;font-size:.74rem;font-weight:700}
+@media(max-width:900px){.ri .hero-kpis{grid-template-columns:repeat(2,1fr)}
+.ri .niveles{grid-template-columns:1fr 1fr}
+.ri .flor{grid-template-columns:1fr}
+.ri .petalos{grid-template-columns:1fr}}
+@media(max-width:600px){.ri .hk{padding:14px}
+.ri .hk i{display:none}
+.ri .hk span{font-size:.78rem}
+.ri .niveles{grid-template-columns:1fr}
+.ri .pet{padding:20px}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -284,7 +352,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <h1>Reporte de <em>Impacto</em></h1>
     <p class="sub1"><b id="h-periodo"></b></p>
     <p>Un año ayudando a la naturaleza a sanar: lo que hicimos, con quién, dónde y qué cambió en cada espacio.</p>
-    <div class="chips" id="h-chips"></div>
+    <div class="hero-kpis" id="h-kpis"></div>
     <div class="corte">Datos actualizados al <b id="h-corte"></b></div>
   </div>
 </header>
@@ -292,29 +360,95 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 <section class="numbers" id="numeros">
   <div class="wrap">
     <div class="ri-eyebrow">Resultados</div>
-    <h2>El primer año en números</h2>
+    <h2>Más resultados del primer año</h2>
     <p class="ri-lead" style="color:#D3E0EA">Cada cifra sale de la plataforma de Indagación Regenerativa, donde registramos cada proyecto, taller y avance.</p>
     <div class="grid-n" id="grid-n"></div>
-    <p class="note">«Personas alcanzadas» suma las personas de los espacios acompañados, las orientaciones y los asistentes a talleres. Una misma persona puede estar contada en más de una actividad.</p>
+    <p class="note">«Personas impactadas» cuenta a quienes habitan cada espacio: a nivel de diagnóstico y diseño, todos los espacios acompañados; a nivel de implementación, solo los espacios donde ya se construyó o instaló algo. Las orientaciones y los talleres se cuentan aparte, y una misma persona puede participar en más de una actividad.</p>
   </div>
 </section>
 
-<!-- ============ 3. HISTORIA ============ -->
+<!-- ============ HISTORIA ============ -->
 <section id="historia">
   <div class="wrap story reveal">
     <div>
-      <div class="ri-eyebrow">Cómo empezó</div>
-      <h2>Empezamos con una pregunta: ¿cómo cuidar la tierra donde ya vivimos?</h2>
-      <p>LivLin nació el 30 de noviembre de 2025 con una idea sencilla: que un patio, una terraza, una escuela o un centro de salud puedan convertirse en lugares donde la naturaleza se recupera y las personas aprenden a cuidarla.</p>
-      <p>Durante este primer año recorrimos casas, edificios, escuelas y organizaciones. En cada una hicimos lo mismo: mirar el espacio con las personas que lo habitan, entender qué ya funciona y diseñar, paso a paso, lo que viene.</p>
-      <div class="quote">«Primero escuchamos el lugar y a quienes lo habitan. Después diseñamos. Y solo entonces ponemos las manos en la tierra.»</div>
-      <p>Este informe cuenta ese primer año: los números, pero sobre todo los lugares y las personas detrás de ellos.</p>
+      <div class="ri-eyebrow">La historia de LivLin</div>
+      <h2>Empezamos con una pregunta</h2>
+      <p class="pregunta">¿Cómo podemos aportar a avanzar en soluciones a la crisis climática?</p>
+      <p>Soluciones basadas en la naturaleza, principalmente. Y desde ahí, diseñar una estructura que favorezca avanzar hacia la visión de un presente sostenible y regenerativo. Lo mismo respecto al futuro.</p>
+      <p>LivLin nace con la intención de conectar a las personas que estamos intentando hacer esto en distintos territorios del mundo, partiendo desde soluciones locales a desafíos globales.</p>
     </div>
     <img src="/images/hero/5_bancal_tomates_grandes.jpg" alt="Bancal con tomates cultivado por LivLin">
   </div>
+  <div class="wrap reveal">
+    <div class="retos">
+      <div><b>La pérdida de biodiversidad</b><span>Cada espacio que recupera vida suma al conjunto.</span></div>
+      <div><b>La crisis climática</b><span>Soluciones locales a un desafío que es global.</span></div>
+      <div><b>La pérdida de los vínculos de comunidad</b><span>Frente al exceso de individualismo en ciertas culturas.</span></div>
+      <div><b>La pérdida del valor nutricional de los alimentos</b><span>Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.</span></div>
+    </div>
+    <p class="story-p">Estas ideas se fueron desarrollando desde el enfoque de la permacultura, el desarrollo regenerativo y el diseño regenerativo, para apoyar a la mayor cantidad de personas posible.</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="celebra">
+      <div class="ri-eyebrow">Este primer año</div>
+      <p>Durante este año, todos los proyectos contribuyeron a fortalecer las herramientas de trabajo de LivLin: crearlas para cada situación, probarlas y mejorarlas. Cada vez el proceso fue más fluido, más rápido y también más ambicioso, abierto a más posibilidades.</p>
+      <p>Se realizaron acciones en todos los ejes de trabajo de LivLin. <b>Y eso hay que celebrarlo.</b></p>
+      <div class="quote">Se está viviendo el sueño. Hay impacto, hay evidencia de impacto, evidencia de avance del sueño. A la vez, se abren nuevas oportunidades para seguir mejorando y aumentar aún más el impacto.</div>
+    </div>
+  </div>
 </section>
 
+<!-- ============ MARCO INTERPRETATIVO ============ -->
+<section class="cream" id="marco">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="ri-eyebrow">Marco interpretativo</div>
+      <h2>Cómo leemos este impacto: de mantener a regenerar</h2>
+      <p class="ri-lead">Interpretamos los resultados con el enfoque de regeneración de la publicación <i>Introducción al enfoque de la regeneración</i> (Mason Bustos, 2025, LivLin), que se apoya en el diseño regenerativo (Mang &amp; Reed, 2012), la permacultura (Holmgren, 2020) y la mirada de Wahl (2020). <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">Leer la publicación →</a></p>
+    </div>
 
+    <div class="niveles reveal">
+      <div class="nivel"><b>Operar</b><span>Que el sistema siga funcionando como siempre.</span></div>
+      <div class="nivel"><b>Mantener</b><span>Evitar que empeore, con ligeras mejoras de eficiencia.</span></div>
+      <div class="nivel on"><b>Mejorar</b><span>Abrir posibilidades nuevas y desarrollar el potencial.</span></div>
+      <div class="nivel on2"><b>Regenerar</b><span>Convertir cada lugar en un nodo de aprendizaje, biodiversidad y cuidado mutuo.</span></div>
+    </div>
+    <p class="honest" style="margin-top:14px">Regenerar es pasar de «hacer funcionar» algo a cultivar su potencial: no solo mantener un huerto, sino convertirlo en un nodo de aprendizaje, biodiversidad y cuidado mutuo; no solo gestionar residuos, sino transformarlos en abono y en oportunidad pedagógica.</p>
+
+    <h3 class="sub-h reveal">Cuatro premisas, y lo que vimos en el primer año</h3>
+    <div class="premisas reveal" id="premisas"></div>
+
+    <h3 class="sub-h reveal">La ruta que inspira el diseño</h3>
+    <div class="ruta reveal">
+      <span>Práctica convencional</span><i>→</i><span>Sostenibilidad</span><i>→</i><span>Restauración</span><i>→</i><span>Reconciliación</span><i>→</i><span class="fin">Regeneración</span>
+    </div>
+    <p class="honest">Cada espacio recorre esa ruta a su propio ritmo: aquello que degenera es lo que disminuye la salud ecosistémica; lo que regenera participa del diseño de soluciones como naturaleza. Fuente: adaptación de Wahl (2020, 2021) en Mason Bustos (2025).</p>
+  </div>
+</section>
+
+<!-- ============ FLOR DE LA PERMACULTURA ============ -->
+<section id="petalos">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="ri-eyebrow">Flor de la Permacultura</div>
+      <h2>Siete pétalos: lo encontrado, lo planificado y lo implementado</h2>
+      <p class="ri-lead">Cada espacio se lee con los siete ámbitos de la Flor de la Permacultura. Primero diagnosticamos lo que ya existe, luego diseñamos lo que podría florecer, y finalmente acompañamos lo que se implementa. Lo planificado es un mapa de posibilidades; lo implementado, la prueba de que florece.</p>
+    </div>
+    <div class="flor reveal">
+      <div class="flor-svg" id="flor-svg"></div>
+      <div class="flor-side">
+        <div class="flor-leg">
+          <span><i style="background:#E1AA36"></i>Lo encontrado <small>espacios que ya practicaban algo</small></span>
+          <span><i style="background:#239BA7"></i>Lo planificado <small>espacios con acciones diseñadas</small></span>
+          <span><i style="background:#112E4D"></i>Lo implementado <small>espacios donde ya se hizo</small></span>
+        </div>
+        <ol class="flor-lista" id="flor-lista"></ol>
+        <p class="flor-insight" id="flor-insight"></p>
+      </div>
+    </div>
+    <div class="petalos reveal" id="petalos-cards"></div>
+  </div>
+</section>
 
 <section class="cream" id="ano">
   <div class="wrap reveal">
@@ -472,6 +606,8 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
       <div><h3>Espacio con implementación</h3><p>Un espacio que pasó del diseño a la acción: tiene al menos un avance de implementación registrado.</p></div>
       <div><h3>Cultivo nuevo</h3><p>Metros cuadrados de camas de cultivo construidas por LivLin. El cultivo que ya existía antes se cuenta aparte.</p></div>
       <div><h3>Fechas</h3><p>Algunas fechas de eventos son aproximadas y así están anotadas en el registro de cada proyecto.</p></div>
+      <div><h3>Flor de la Permacultura</h3><p>Siete ámbitos de la vida: tierra y naturaleza, entorno construido, herramientas y tecnología, educación y cultura, salud y bienestar, economía local, y tenencia de la tierra y gobernanza. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora.</p></div>
+      <div><h3>Marco interpretativo</h3><p>Mason Bustos, F. (2025). <i>Introducción al enfoque de la regeneración. Material de apoyo para la docencia regenerativa.</i> LivLin. <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">doi.org/10.17605/OSF.IO/UCDEH</a></p></div>
       <div><h3>Privacidad</h3><p>Los hogares aparecen con ubicación aproximada y sin nombre.</p></div>
     </div>
   </div>
@@ -575,18 +711,21 @@ const per=R.periodo;
 $('h-periodo').textContent=`${per.nombre} · ${fechaL(per.inicio)} al ${fechaL(per.aniversario)}`;
 $('h-corte').textContent=fechaL(per.corte);
 
-$('h-chips').innerHTML=[`${R.espacios} espacios acompañados`,`${nf(R.personas)} personas alcanzadas`,`${R.talleres} talleres · ${R.orientaciones} orientaciones`].map(t=>`<span class="chip">${t}</span>`).join('');
+$('h-kpis').innerHTML=[
+ [R.espacios,0,'Proyectos acompañados',`${R.hogares} hogares y ${R.organizaciones} organizaciones`],
+ [R.personas_espacios,0,'Personas impactadas · diagnóstico y diseño','Quienes habitan los espacios que diagnosticamos y diseñamos'],
+ [R.personas_impl,0,'Personas impactadas · implementación',`Quienes ya viven espacios implementados (${R.pct_mujeres_impl}% mujeres)`],
+ [R.cultivo.nuevo_m2,1,'m² de cultivo urbano implementados','Camas de cultivo construidas por LivLin']
+].map(([v,d,t,i])=>`<div class="hk"><b data-n="${v}" data-d="${d}">0</b><span>${t}</span><i>${i}</i></div>`).join('');
 
 // ---- Números
 const NUM=[
- [R.personas,0,'Personas alcanzadas',`${nf(R.personas_espacios)} en espacios acompañados, ${R.orientaciones} en orientaciones y ${R.asistentes} en talleres.`],
- [R.espacios,0,'Espacios acompañados',`${R.hogares} hogares y ${R.organizaciones} organizaciones, con un diagnóstico propio cada uno.`],
  [R.espacios_impl,0,'Espacios con implementación',`Pasaron del diseño a la tierra: ${R.espacios_impl} de ${R.visitas_diag} visitas diagnósticas (${Math.round(R.espacios_impl/R.visitas_diag*100)}%).`],
  [R.acciones,0,'Acciones regenerativas implementadas','Camas de cultivo, compostaje, captación de agua, árboles, rutas y más.'],
  [R.orientaciones,0,'Conversaciones de orientación',`El primer paso, gratuito y online. El ${R.pct_mujeres_orient}% de quienes llegaron son mujeres.`],
  [R.talleres,0,'Talleres dictados',`${R.asistentes} asistentes en ${Object.keys(R.lugar).length} lugares.`],
  [R.plataformas_total,0,'Plataformas y sitios web',`${R.plataformas} plataformas y ${R.sitios} sitios web a medida para organizaciones.`],
- [R.cultivo.nuevo_m2,1,'m² de cultivo nuevos','Camas de cultivo implementadas por LivLin.'],
+ [R.sistemas.compost_l,0,'Litros de capacidad de compostaje',`${R.sistemas.compost_obras} obras de compostaje en distintos espacios.`],
 ];
 $('grid-n').innerHTML=NUM.map(([v,d,t,i])=>`<div class="n"><b data-n="${v}" data-d="${d}">0</b><span>${t}</span><i>${i}</i></div>`).join('');
 
@@ -674,6 +813,64 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
    return `<tr class="tc" style="--c:${col[c.nombre]}"><td><i></i>${c.nombre}</td><td></td><td>${c.espacios}</td><td>${c.implementados}</td></tr>`+
      subs.map(s=>{const es=R.lista_espacios.filter(e=>e.cuenca===c.nombre&&e.subcuenca===s.nombre);return `<tr><td></td><td>${s.nombre}</td><td>${es.length}</td><td>${es.filter(e=>e.implementa).length}</td></tr>`}).join('');
  }).join('')+'</tbody>';
+
+
+// ---- Premisas del marco interpretativo
+const rp=(n)=>`<b>${n}</b>`;
+$('premisas').innerHTML=[
+ ['1','Reconocer el rol de la humanidad','Volver a sabernos parte de la naturaleza y asumir un rol activo en la salud del territorio que habitamos.',`${rp(R.acciones)} acciones regenerativas implementadas en ${rp(R.espacios_impl)} espacios.`],
+ ['2','Ver sistemas vivos, no cosas','Preguntarnos cómo se conectan el agua, el suelo, las personas, los residuos y la energía en cada lugar.',`Compostaje, cultivo y agua en los mismos espacios: ${rp(nf(R.sistemas.compost_l))} L de compostaje y ${rp(nf(R.cultivo.nuevo_m2,1))} m² de cultivo nuevo.`],
+ ['3','Co-diseñar con la comunidad y con el lugar','Pasar del «experto que viene a resolver» al facilitador que diseña junto a las personas y con el lugar.',`${rp(R.talleres)} talleres con ${rp(R.asistentes)} asistentes, ${rp(R.orientaciones)} conversaciones de orientación y procesos de facilitación.`],
+ ['4','Pensar en generaciones, no solo en proyectos','Dejar suelo, árboles y acuerdos para que otros puedan continuar, adaptar y mejorar.',`${rp(R.sistemas.arboles)} árboles frutales plantados y ${rp(R.espacios)} espacios con diagnóstico y seguimiento en la plataforma.`]
+].map(([n,t,p,e])=>`<div class="prem"><em>PREMISA ${n}</em><h4>${t}</h4><p>${p}</p><div class="ev">${e}</div></div>`).join('');
+
+// ---- Flor de la Permacultura: radar + tarjetas por pétalo
+const PET=R.petalos, NP=PET.length;
+const CORTO=['Tierra y naturaleza','Entorno construido','Herramientas y tecnología','Educación y cultura','Salud y bienestar','Finanzas y economía','Tenencia y gobernanza'];
+const LECT=[
+ 'Aquí la regeneración se ve primero: suelo vivo, agua cuidada y más especies conviviendo.',
+ 'Muros, balcones y estructuras que dejan de ser superficies inertes y se vuelven parte del sistema vivo.',
+ 'Tecnología simple y apropiada que reduce la dependencia de lo fósil y devuelve autonomía a quienes habitan el lugar.',
+ 'Cada huerta es una sala de clases: aprender haciendo es lo que hace que el cambio perdure.',
+ 'Alimento vivo, plantas medicinales y espacios de contemplación: cuidar el territorio también es cuidarnos.',
+ 'Economías de cercanía: producir, compartir y consumir con sentido, sin depender de más de lo necesario.',
+ 'Los espacios se sostienen cuando las personas se organizan: vecinos que se conectan y acuerdan cómo cuidar lo común.'
+];
+const COL={obs:'#E1AA36',pot:'#239BA7',imp:'#112E4D'};
+(function(){
+  const cx=230,cy=225,rad=150,pt=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/NP;return [cx+Math.cos(a)*rad*v,cy+Math.sin(a)*rad*v]};
+  const poly=(k,f)=>PET.map((p,i)=>pt(i,Math.max(.04,p['espacios_'+k]/p.espacios_total)).map(n=>n.toFixed(1)).join(',')).join(' ');
+  let g='';
+  [.25,.5,.75,1].forEach(v=>{g+=`<polygon points="${PET.map((_,i)=>pt(i,v).map(n=>n.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d9d5c4" stroke-width="1"/>`});
+  PET.forEach((_,i)=>{const [x,y]=pt(i,1);g+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d9d5c4"/>`});
+  g+=`<polygon points="${poly('pot')}" fill="${COL.pot}" fill-opacity=".22" stroke="${COL.pot}" stroke-width="2.5"/>`;
+  g+=`<polygon points="${poly('obs')}" fill="${COL.obs}" fill-opacity=".28" stroke="${COL.obs}" stroke-width="2.5"/>`;
+  g+=`<polygon points="${poly('impl')}" fill="${COL.imp}" fill-opacity=".55" stroke="${COL.imp}" stroke-width="2.5"/>`;
+  PET.forEach((p,i)=>{const [x,y]=pt(i,1.2);g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="14" fill="#112E4D"/><text x="${x.toFixed(1)}" y="${(y+5).toFixed(1)}" text-anchor="middle" font-size="14" font-weight="800" fill="#fff" font-family="Montserrat,sans-serif">${i+1}</text>`});
+  g+=`<text x="${cx}" y="${cy-rad-1}" font-size="0"></text>`;
+  $('flor-svg').innerHTML=`<svg viewBox="0 0 460 450" role="img" aria-label="Flor de la Permacultura: lo encontrado, lo planificado y lo implementado por pétalo">${g}</svg>`;
+})();
+$('flor-lista').innerHTML=CORTO.map(n=>`<li>${n}</li>`).join('');
+(function(){
+  const imp=[...PET].sort((a,b)=>b.acciones_impl-a.acciones_impl)[0];
+  const tp=PET.reduce((s,p)=>s+p.acciones_pot,0),ti=PET.reduce((s,p)=>s+p.acciones_impl,0);
+  const br=[...PET].filter(p=>p.acciones_pot>0).sort((a,b)=>(a.acciones_impl/a.acciones_pot)-(b.acciones_impl/b.acciones_pot))[0];
+  $('flor-insight').innerHTML=`Se proyectaron <b>${nf(tp)}</b> acciones y ya florecen <b>${nf(ti)}</b>. Donde más se ha implementado: <b>${CORTO[imp.i]}</b> (${imp.acciones_impl} acciones). Donde más esperan por florecer: <b>${CORTO[br.i]}</b> (${br.acciones_pot} proyectadas, ${br.acciones_impl} implementada${br.acciones_impl===1?'':'s'}).`;
+})();
+const lst=(a,k)=>a.slice(0,k).map(x=>x.accion).join(', ');
+const nombreCaso=c=>c.publico?c.espacio:c.espacio;
+$('petalos-cards').innerHTML=PET.map(p=>{
+  const n=p.espacios_total,pc=v=>Math.round(v/n*100);
+  const et=(c,t,esp,sub,det)=>`<div class="etapa" style="--c:${c}"><div class="tt"><span>${t}</span><b>${esp} de ${n} espacios</b></div><div class="bar2"><i style="width:${pc(esp)}%"></i></div><p>${sub}${det?': '+det:''}</p></div>`;
+  const casos=p.casos.slice(0,4).map(c=>`<span>${c.espacio} · ${c.accion.length>46?c.accion.slice(0,44)+'…':c.accion}</span>`).join('');
+  return `<article class="pet">
+   <div class="pet-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>${p.subtitulo}</small></div></div>
+   <div class="pet-lect">${LECT[p.i]}</div>
+   ${et(COL.obs,'Lo encontrado',p.espacios_obs,`${p.acciones_obs} prácticas ya presentes`,lst(p.top_obs,3))}
+   ${et(COL.pot,'Lo planificado',p.espacios_pot,`${p.acciones_pot} acciones proyectadas`,lst(p.top_pot,3))}
+   ${et(COL.imp,'Lo implementado',p.espacios_impl,p.acciones_impl?`${p.acciones_impl} acciones en práctica`:'Aún sin implementar; es una oportunidad abierta',lst(p.impl,4))}
+   ${casos?`<div class="pet-casos">${casos}</div>`:''}
+  </article>`}).join('');
 
 // ---- Contadores y reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{

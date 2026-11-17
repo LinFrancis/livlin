@@ -564,6 +564,659 @@ window.REPORTE = {
    }
   ]
  },
+ "personas_impl": 69,
+ "mujeres_impl": 42,
+ "pct_mujeres_impl": 61,
+ "pct_mujeres_diag": 42,
+ "mujeres_diag": 217,
+ "petalos": [
+  {
+   "i": 0,
+   "nombre": "Administración de la Tierra y la Naturaleza",
+   "subtitulo": "Agricultura urbana, suelo vivo, biodiversidad y agua",
+   "espacios_total": 19,
+   "espacios_obs": 12,
+   "espacios_pot": 17,
+   "espacios_impl": 10,
+   "acciones_obs": 100,
+   "acciones_pot": 277,
+   "acciones_impl": 28,
+   "top_obs": [
+    {
+     "accion": "Cerrar la llave al lavar platos",
+     "n": 6
+    },
+    {
+     "accion": "Duchas cortas",
+     "n": 5
+    },
+    {
+     "accion": "Guardar semillas en casa",
+     "n": 4
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Jardines comestibles en patios pequeños",
+     "n": 9
+    },
+    {
+     "accion": "Huertos en macetas recicladas",
+     "n": 9
+    },
+    {
+     "accion": "Huertos verticales en muros o cercos",
+     "n": 8
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Vermicompostaje doméstico",
+     "n": 3
+    },
+    {
+     "accion": "Guerrilla gardening",
+     "n": 3
+    },
+    {
+     "accion": "Plantación de árboles frutales urbanos",
+     "n": 3
+    },
+    {
+     "accion": "Jardines medicinales urbanos",
+     "n": 2
+    },
+    {
+     "accion": "Compostera doméstica",
+     "n": 2
+    },
+    {
+     "accion": "Camas de cultivo autorregantes",
+     "n": 2
+    },
+    {
+     "accion": "Huertos en balcones y terrazas",
+     "n": 1
+    },
+    {
+     "accion": "Huertos en patios comunitarios",
+     "n": 1
+    },
+    {
+     "accion": "Huertos en macetas recicladas",
+     "n": 1
+    },
+    {
+     "accion": "Huertos en espacios públicos recuperados",
+     "n": 1
+    },
+    {
+     "accion": "Camas de cultivo biointensivo",
+     "n": 1
+    },
+    {
+     "accion": "Compostaje comunitario en el barrio",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Huertos en balcones y terrazas",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Vermicompostaje doméstico",
+     "publico": false
+    },
+    {
+     "espacio": "Edificio Nova",
+     "comuna": "Providencia",
+     "accion": "Guerrilla gardening",
+     "publico": true
+    },
+    {
+     "espacio": "Edificio Nova",
+     "comuna": "Providencia",
+     "accion": "Huertos en patios comunitarios",
+     "publico": true
+    },
+    {
+     "espacio": "Rende Bú Café",
+     "comuna": "Providencia",
+     "accion": "Guerrilla gardening",
+     "publico": true
+    },
+    {
+     "espacio": "Rende Bú Café",
+     "comuna": "Providencia",
+     "accion": "Huertos en macetas recicladas",
+     "publico": true
+    },
+    {
+     "espacio": "Lavaseco Florencia",
+     "comuna": "Providencia",
+     "accion": "Guerrilla gardening",
+     "publico": true
+    },
+    {
+     "espacio": "Lavaseco Florencia",
+     "comuna": "Providencia",
+     "accion": "Huertos en espacios públicos recuperados",
+     "publico": true
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "nombre": "Entorno Construido",
+   "subtitulo": "Bioconstrucción, diseño bioclimático y espacios regenerativos",
+   "espacios_total": 19,
+   "espacios_obs": 11,
+   "espacios_pot": 16,
+   "espacios_impl": 4,
+   "acciones_obs": 44,
+   "acciones_pot": 65,
+   "acciones_impl": 6,
+   "top_obs": [
+    {
+     "accion": "Reutilización de contenedores",
+     "n": 5
+    },
+    {
+     "accion": "Patios interiores con vegetación",
+     "n": 4
+    },
+    {
+     "accion": "Construcción con materiales reciclados",
+     "n": 4
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Sombreamiento natural con plantas",
+     "n": 8
+    },
+    {
+     "accion": "Uso de pallets para jardinería",
+     "n": 6
+    },
+    {
+     "accion": "Muros verdes",
+     "n": 5
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Muros verdes",
+     "n": 2
+    },
+    {
+     "accion": "Balcones verdes",
+     "n": 1
+    },
+    {
+     "accion": "Jardines verticales comestibles",
+     "n": 1
+    },
+    {
+     "accion": "Escaleras y senderos con materiales reutilizados",
+     "n": 1
+    },
+    {
+     "accion": "Construcción con materiales reciclados",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Balcones verdes",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Jardines verticales comestibles",
+     "publico": false
+    },
+    {
+     "espacio": "Rende Bú Café",
+     "comuna": "Providencia",
+     "accion": "Muros verdes",
+     "publico": true
+    },
+    {
+     "espacio": "Hogar en Providencia",
+     "comuna": "Providencia",
+     "accion": "Muros verdes",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en Algarrobo",
+     "comuna": "Algarrobo",
+     "accion": "Construcción con materiales reciclados",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en Algarrobo",
+     "comuna": "Algarrobo",
+     "accion": "Escaleras y senderos con materiales reutilizados",
+     "publico": false
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "nombre": "Herramientas y Tecnología",
+   "subtitulo": "Energía renovable, tecnología simple y movilidad sostenible",
+   "espacios_total": 19,
+   "espacios_obs": 11,
+   "espacios_pot": 14,
+   "espacios_impl": 4,
+   "acciones_obs": 50,
+   "acciones_pot": 89,
+   "acciones_impl": 7,
+   "top_obs": [
+    {
+     "accion": "Apagar luces cuando no se usan",
+     "n": 8
+    },
+    {
+     "accion": "Reciclaje",
+     "n": 8
+    },
+    {
+     "accion": "Usar ampolletas LED",
+     "n": 5
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Paneles solares domésticos",
+     "n": 10
+    },
+    {
+     "accion": "Deshidratación solar",
+     "n": 10
+    },
+    {
+     "accion": "Sistemas de almacenamiento de agua",
+     "n": 9
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Página web del espacio",
+     "n": 1
+    },
+    {
+     "accion": "Paneles solares domésticos",
+     "n": 1
+    },
+    {
+     "accion": "Aerogenerador eólico doméstico",
+     "n": 1
+    },
+    {
+     "accion": "Deshidratación solar",
+     "n": 1
+    },
+    {
+     "accion": "Usar ampolletas LED",
+     "n": 1
+    },
+    {
+     "accion": "Reciclaje",
+     "n": 1
+    },
+    {
+     "accion": "Sistemas de riego automatizado de bajo consumo",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Aucca",
+     "comuna": "Talagante",
+     "accion": "Página web del espacio",
+     "publico": true
+    },
+    {
+     "espacio": "Hogar en Providencia",
+     "comuna": "Providencia",
+     "accion": "Aerogenerador eólico doméstico",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en Providencia",
+     "comuna": "Providencia",
+     "accion": "Paneles solares domésticos",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en La Reina",
+     "comuna": "La Reina",
+     "accion": "Deshidratación solar",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en La Reina",
+     "comuna": "La Reina",
+     "accion": "Reciclaje",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en La Reina",
+     "comuna": "La Reina",
+     "accion": "Usar ampolletas LED",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en Algarrobo",
+     "comuna": "Algarrobo",
+     "accion": "Sistemas de riego automatizado de bajo consumo",
+     "publico": false
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "nombre": "Educación y Cultura",
+   "subtitulo": "Saberes locales, arte comunitario y redes de conocimiento",
+   "espacios_total": 19,
+   "espacios_obs": 10,
+   "espacios_pot": 12,
+   "espacios_impl": 3,
+   "acciones_obs": 42,
+   "acciones_pot": 129,
+   "acciones_impl": 7,
+   "top_obs": [
+    {
+     "accion": "Aprendizaje basado en huertos",
+     "n": 4
+    },
+    {
+     "accion": "Talleres de huertos urbanos",
+     "n": 3
+    },
+    {
+     "accion": "Intercambio de plantas",
+     "n": 3
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Redes de huertos urbanos",
+     "n": 9
+    },
+    {
+     "accion": "Talleres de huertos urbanos",
+     "n": 9
+    },
+    {
+     "accion": "Redes de semillas",
+     "n": 8
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Talleres de huertos urbanos",
+     "n": 2
+    },
+    {
+     "accion": "Aprendizaje basado en huertos",
+     "n": 1
+    },
+    {
+     "accion": "Taller de cultura regenerativa",
+     "n": 1
+    },
+    {
+     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
+     "n": 1
+    },
+    {
+     "accion": "Material educativo e infografías",
+     "n": 1
+    },
+    {
+     "accion": "germinar semillas para su cultivo",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Aprendizaje basado en huertos",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Talleres de huertos urbanos",
+     "publico": false
+    },
+    {
+     "espacio": "CECOSF Villa Olimpica",
+     "comuna": "Ñuñoa",
+     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
+     "publico": true
+    },
+    {
+     "espacio": "CECOSF Villa Olimpica",
+     "comuna": "Ñuñoa",
+     "accion": "Material educativo e infografías",
+     "publico": true
+    },
+    {
+     "espacio": "CECOSF Villa Olimpica",
+     "comuna": "Ñuñoa",
+     "accion": "Taller de cultura regenerativa",
+     "publico": true
+    },
+    {
+     "espacio": "CECOSF Villa Olimpica",
+     "comuna": "Ñuñoa",
+     "accion": "Talleres de huertos urbanos",
+     "publico": true
+    },
+    {
+     "espacio": "Hogar en Algarrobo",
+     "comuna": "Algarrobo",
+     "accion": "germinar semillas para su cultivo",
+     "publico": false
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "nombre": "Salud y Bienestar Espiritual",
+   "subtitulo": "Alimentación viva, plantas medicinales y bienestar integral",
+   "espacios_total": 19,
+   "espacios_obs": 10,
+   "espacios_pot": 12,
+   "espacios_impl": 1,
+   "acciones_obs": 32,
+   "acciones_pot": 88,
+   "acciones_impl": 1,
+   "top_obs": [
+    {
+     "accion": "Grupos de apoyo comunitario",
+     "n": 3
+    },
+    {
+     "accion": "Alimentación basada en plantas",
+     "n": 3
+    },
+    {
+     "accion": "Cultivo de plantas medicinales",
+     "n": 3
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Dietas agroecológicas",
+     "n": 10
+    },
+    {
+     "accion": "Espacios de contemplación",
+     "n": 9
+    },
+    {
+     "accion": "Cultivo de plantas medicinales",
+     "n": 8
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Jardinería terapéutica",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en Las Condes",
+     "comuna": "Las Condes",
+     "accion": "Jardinería terapéutica",
+     "publico": false
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "nombre": "Finanzas y Economía",
+   "subtitulo": "Mercados locales, economías solidarias y soberanía alimentaria",
+   "espacios_total": 19,
+   "espacios_obs": 10,
+   "espacios_pot": 13,
+   "espacios_impl": 2,
+   "acciones_obs": 41,
+   "acciones_pot": 86,
+   "acciones_impl": 3,
+   "top_obs": [
+    {
+     "accion": "Evitar envases innecesarios",
+     "n": 7
+    },
+    {
+     "accion": "Evitar plásticos de un solo uso",
+     "n": 4
+    },
+    {
+     "accion": "Reparación de objetos",
+     "n": 4
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Producción de alimentos locales",
+     "n": 7
+    },
+    {
+     "accion": "Compras colectivas de alimentos",
+     "n": 7
+    },
+    {
+     "accion": "Comprar a granel",
+     "n": 6
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Producción de alimentos locales",
+     "n": 1
+    },
+    {
+     "accion": "Compras colectivas de alimentos",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Compras colectivas de alimentos",
+     "publico": false
+    },
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Producción de alimentos locales",
+     "publico": false
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "nombre": "Tenencia de la Tierra y Gobernanza Comunitaria",
+   "subtitulo": "Uso colectivo del territorio y participación comunitaria",
+   "espacios_total": 19,
+   "espacios_obs": 8,
+   "espacios_pot": 13,
+   "espacios_impl": 2,
+   "acciones_obs": 24,
+   "acciones_pot": 70,
+   "acciones_impl": 2,
+   "top_obs": [
+    {
+     "accion": "Conectar con vecinos",
+     "n": 6
+    },
+    {
+     "accion": "Defensa de áreas verdes",
+     "n": 2
+    },
+    {
+     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
+     "n": 2
+    }
+   ],
+   "top_pot": [
+    {
+     "accion": "Redes de agroecología urbana",
+     "n": 10
+    },
+    {
+     "accion": "Defensa de áreas verdes",
+     "n": 6
+    },
+    {
+     "accion": "Creación de huertos comunitarios",
+     "n": 6
+    }
+   ],
+   "impl": [
+    {
+     "accion": "Redes de agroecología urbana",
+     "n": 1
+    },
+    {
+     "accion": "Sistema de monitoreo, evaluación y aprendizaje (MEL)",
+     "n": 1
+    }
+   ],
+   "casos": [
+    {
+     "espacio": "Hogar en San Miguel",
+     "comuna": "San Miguel",
+     "accion": "Redes de agroecología urbana",
+     "publico": false
+    },
+    {
+     "espacio": "Aucca",
+     "comuna": "Talagante",
+     "accion": "Sistema de monitoreo, evaluación y aprendizaje (MEL)",
+     "publico": true
+    }
+   ]
+  }
+ ],
  "lista_espacios": [
   {
    "nombre": "Hogar en San Miguel",
