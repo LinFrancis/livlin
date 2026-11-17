@@ -1,0 +1,380 @@
+/* Estilos de «Explora nuestro trabajo» (casos destacados, grilla con filtros y visor).
+   Extraídos del Inicio al mover la sección al Reporte de Impacto. */
+/* ============================================================
+   CASOS REALES CON TESTIMONIOS
+============================================================ */
+.casos-section {
+  padding: 96px 0;
+  background: #f8faf5;
+}
+
+.casos-header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 48px;
+}
+
+.casos-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 12px;
+}
+
+.casos-header p {
+  font-size: 1rem;
+  color: #4A6874;
+}
+
+.casos-filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.casos-filter-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 100px;
+  border: 1.5px solid #d0d8db;
+  background: #fff;
+  color: #4A6874;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.casos-filter-btn:hover,
+.casos-filter-btn.active {
+  background: #3CA0C9;
+  color: #fff;
+  border-color: #3CA0C9;
+}
+
+.casos-filter-btn[data-cat="hogares"]:hover,
+.casos-filter-btn[data-cat="hogares"].active {
+  background: #7FC93C; border-color: #7FC93C;
+}
+
+.casos-filter-btn[data-cat="comercios"]:hover,
+.casos-filter-btn[data-cat="comercios"].active {
+  background: #3CA0C9; border-color: #3CA0C9;
+}
+
+.casos-filter-btn[data-cat="organizaciones"]:hover,
+.casos-filter-btn[data-cat="organizaciones"].active {
+  background: #BC3CC9; border-color: #BC3CC9;
+}
+
+.casos-filter-btn[data-cat="educacion"]:hover,
+.casos-filter-btn[data-cat="educacion"].active {
+  background: #C96B00; border-color: #C96B00;
+}
+
+.casos-filter-btn[data-cat="internacional"]:hover,
+.casos-filter-btn[data-cat="internacional"].active {
+  background: #4A6874; border-color: #4A6874;
+}
+
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.caso-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e8edf0;
+  display: flex;
+  flex-direction: column;
+}
+
+.caso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.caso-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.caso-card:hover .caso-card-img { transform: scale(1.04); }
+
+.caso-card-img-wrap {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.caso-card-cat-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  color: #fff;
+}
+
+.badge-hogares       { background: #7FC93C; }
+.badge-comercios     { background: #3CA0C9; }
+.badge-organizaciones{ background: #BC3CC9; }
+.badge-educacion     { background: #C96B00; }
+.badge-internacional { background: #4A6874; }
+
+.caso-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.caso-card-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4A6874;
+  margin-bottom: 6px;
+}
+
+.caso-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.caso-card-quote {
+  font-size: 0.88rem;
+  color: #4A6874;
+  line-height: 1.65;
+  flex: 1;
+  font-style: italic;
+}
+
+.caso-card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.caso-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid #e8edf0;
+  color: #4A6874;
+  background: #f4f7f8;
+}
+
+/* ============================================================
+   MODAL (casos)
+============================================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal-inner {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: fixed;
+  top: 20px; right: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10001;
+}
+
+.modal-close:hover { background: rgba(255,255,255,0.3); }
+
+.modal-info {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  max-width: 680px;
+  padding: 0 16px;
+}
+
+.modal-info h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.modal-info .modal-location {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(127,201,60,0.9);
+  margin-bottom: 12px;
+}
+
+.modal-info p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+
+.modal-info .modal-tag {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(127,201,60,0.2);
+  border: 1px solid rgba(127,201,60,0.4);
+  color: #7FC93C;
+  margin-top: 12px;
+}
+
+.modal-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10001;
+}
+
+.modal-nav-btn:hover { background: rgba(255,255,255,0.25); }
+.modal-nav-btn.modal-prev { left: 16px; }
+.modal-nav-btn.modal-next { right: 16px; }
+
+/* ============================================================
+   CASOS DESTACADOS (stories Problema→Solución→Resultado)
+============================================================ */
+.casos-destacados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0 64px;
+}
+.caso-dest {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.caso-dest-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+.caso-dest h4 {
+  font-family: 'Montserrat', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a3040;
+  margin: 0;
+  line-height: 1.4;
+}
+.caso-dest-row { display: flex; gap: 12px; align-items: flex-start; }
+.caso-dest-icon {
+  width: 26px; height: 26px; flex-shrink: 0;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 800; font-family: 'Montserrat', sans-serif;
+  margin-top: 2px;
+}
+.icon-prob { background: #fee2e2; color: #dc2626; }
+.icon-sol  { background: #dbeafe; color: #2563eb; }
+.icon-res  { background: #dcfce7; color: #16a34a; }
+.caso-dest-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #4A6874;
+  display: block;
+  margin-bottom: 3px;
+}
+.caso-dest-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.86rem;
+  color: #2d4a5a;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 900px) { .casos-destacados { grid-template-columns: 1fr; } }
+
+@media (max-width: 900px) {
+  .casos-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+@media (max-width: 600px) {
+  .casos-grid { grid-template-columns: 1fr; }
+}
