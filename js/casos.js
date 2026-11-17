@@ -12,8 +12,8 @@
   var P = [
     {
       id: 'rendebu', name: 'Rende Bú Café', location: 'Providencia',
-      cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Agroecología Urbana',
-      desc: 'Transformamos espacios disponibles del café en áreas productivas para el cultivo de alimentos, integrando huertas en patios, macetas y sectores exteriores. Lo que comenzó como una prueba se convirtió en una nueva etapa de inversión e infraestructura para fortalecer el carácter sostenible del proyecto. Hoy clientes y trabajadores conviven diariamente con cultivos comestibles que inspiran nuevas formas de relacionarse con la alimentación y la ciudad.',
+      cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Huerta Agroecológica',
+      desc: 'Transformamos espacios disponibles del café en áreas productivas para el cultivo agroecológico de alimentos, integrando huertas en patios, macetas y sectores exteriores. Lo que comenzó como una prueba se convirtió en una nueva etapa de inversión e infraestructura para fortalecer el carácter sostenible del proyecto. Hoy clientes y trabajadores conviven diariamente con cultivos comestibles que inspiran nuevas formas de relacionarse con la alimentación y la ciudad.',
       images: ['images/casos_reales/01_rendebu/01_antes_despues_muroverde.png', 'images/casos_reales/01_rendebu/02_antes_despues_terraza.png'],
       video: ''
     },
@@ -33,8 +33,8 @@
     },
     {
       id: 'lavaseco', name: 'Lavaseco Florencia', location: 'Providencia',
-      cats: ['huerto'], service: 'Agroecología Urbana · Huerta Agroecológica',
-      desc: 'Convertimos un espacio exterior subutilizado en una huerta agroecológica visible desde la calle. La experiencia demostró que es posible cultivar alimentos en entornos urbanos altamente transitados, generando bienestar para quienes trabajan en el lugar y despertando la curiosidad de vecinos y clientes que observan el crecimiento de la huerta día a día.',
+      cats: ['huerto'], service: 'Huerta Agroecológica',
+      desc: 'Convertimos un espacio exterior subutilizado en una huerta agroecológica visible desde la calle. La experiencia demostró que es posible cultivar alimentos agroecológicos en entornos urbanos altamente transitados, generando bienestar para quienes trabajan en el lugar y despertando la curiosidad de vecinos y clientes que observan el crecimiento de la huerta día a día.',
       images: ['images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png'],
       video: 'https://www.instagram.com/p/DY3piY0O94e/'
     },
@@ -47,15 +47,15 @@
     },
     {
       id: 'andrea_felipe', name: 'Departamento en San Miguel', location: 'San Miguel',
-      cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Agroecología Urbana · Talleres',
-      desc: 'Diseñamos e implementamos soluciones para compostar, cultivar alimentos y aprovechar mejor los recursos disponibles en un departamento. A través de talleres personalizados y acompañamiento práctico, la familia incorporó nuevas capacidades para gestionar residuos orgánicos y producir parte de sus alimentos en espacios reducidos.',
+      cats: ['diseno', 'huerto', 'educacion'], service: 'Diseño Regenerativo · Huerta Agroecológica · Talleres',
+      desc: 'Diseñamos e implementamos soluciones para compostar, cultivar alimentos agroecológicos y aprovechar mejor los recursos disponibles en un departamento. A través de talleres personalizados y acompañamiento práctico, la familia incorporó nuevas capacidades para gestionar residuos orgánicos y producir parte de sus alimentos en espacios reducidos.',
       images: ['images/casos_reales/publico/depto_vermicompostera.jpg'],
       video: ''
     },
     {
       id: 'nova', name: 'Edificio Nova', location: 'Providencia',
       cats: ['diseno', 'huerto'], service: 'Diseño Regenerativo · Huerto Comunitario',
-      desc: 'Activamos espacios comunitarios del edificio para el cultivo de alimentos y el fortalecimiento de los vínculos entre vecinos. La iniciativa permitió transformar áreas poco utilizadas en lugares productivos, compartir plantas y conocimientos, y abrir nuevas conversaciones sobre sustentabilidad y vida comunitaria.',
+      desc: 'Activamos espacios comunitarios del edificio para el cultivo agroecológico de alimentos y el fortalecimiento de los vínculos entre vecinos. La iniciativa permitió transformar áreas poco utilizadas en lugares productivos, compartir plantas y conocimientos, y abrir nuevas conversaciones sobre sustentabilidad y vida comunitaria.',
       images: ['images/casos_reales/07_Edificio_Nova/01_nova.png'],
       video: 'https://www.instagram.com/p/DYzTwbgR7Na/'
     },
@@ -103,7 +103,7 @@
     },
     {
       id: 'china', name: 'Chengdu Cafe', location: 'Chengdu, China',
-      cats: ['educacion', 'huerto'], service: 'Educación Ambiental · Eficiencia Hídrica · Agroecología Urbana',
+      cats: ['educacion', 'huerto'], service: 'Educación Ambiental · Eficiencia Hídrica · Huerta Agroecológica',
       desc: 'Realizamos un taller para 16 personas en la ciudad de Chengdu, China. Se construyeron dos bancales autorregantes con material reciclado y un sistema de riego por capilaridad con botellas para cultivo urbano. Se habilitó la terraza del segundo piso de un café —sin acceso cercano a agua— como espacio productivo, disminuyendo significativamente la frecuencia de riego. El taller, intergeneracional, favoreció el intercambio y la ecoalfabetización.',
       images: ['images/casos_reales/11_Taller_China/taller_china.jpeg'],
       video: 'https://www.instagram.com/p/DTHWRsSEe7q/'

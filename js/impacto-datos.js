@@ -134,10 +134,10 @@ window.REPORTE = {
   },
   {
    "key": "huerto",
-   "nombre": "Huerto urbano agroecológico",
+   "nombre": "Huerta agroecológica urbana",
    "realizados": 10,
-   "clave": "26,2 m² de cultivo · 6 árboles frutales",
-   "desc": "Agroecología urbana: asesoría e implementación de huertas y tecnologías apropiadas para tu espacio.",
+   "clave": "26,2 m² de cultivo agroecológico urbano · 6 árboles frutales",
+   "desc": "Asesoría e implementación de huerta agroecológica y tecnologías apropiadas para tu espacio.",
    "url": "https://www.livlin.cl/servicios/huerto-urbano.html"
   },
   {
@@ -597,11 +597,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Jardines comestibles en patios pequeños",
+     "accion": "Huertos en macetas recicladas",
      "n": 9
     },
     {
-     "accion": "Huertos en macetas recicladas",
+     "accion": "Jardines comestibles en patios pequeños",
      "n": 9
     },
     {
@@ -651,11 +651,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Camas de cultivo biointensivo",
+     "accion": "Compostaje comunitario en el barrio",
      "n": 1
     },
     {
-     "accion": "Compostaje comunitario en el barrio",
+     "accion": "Camas de cultivo biointensivo",
      "n": 1
     }
    ],
@@ -731,7 +731,7 @@ window.REPORTE = {
      "n": 4
     },
     {
-     "accion": "Diseño solar pasivo",
+     "accion": "Construcción con materiales reciclados",
      "n": 4
     }
    ],
@@ -755,11 +755,11 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Jardines verticales comestibles",
+     "accion": "Balcones verdes",
      "n": 1
     },
     {
-     "accion": "Balcones verdes",
+     "accion": "Jardines verticales comestibles",
      "n": 1
     },
     {
@@ -837,11 +837,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Deshidratación solar",
      "n": 10
     },
     {
-     "accion": "Deshidratación solar",
+     "accion": "Paneles solares domésticos",
      "n": 10
     },
     {
@@ -863,7 +863,7 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Reciclaje",
+     "accion": "Usar ampolletas LED",
      "n": 1
     },
     {
@@ -871,7 +871,7 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Usar ampolletas LED",
+     "accion": "Reciclaje",
      "n": 1
     },
     {
@@ -945,7 +945,7 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Arte con materiales reciclados",
+     "accion": "Intercambio de plantas",
      "n": 3
     }
    ],
@@ -973,15 +973,15 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
-     "n": 1
-    },
-    {
      "accion": "Material educativo e infografías",
      "n": 1
     },
     {
      "accion": "Taller de cultura regenerativa",
+     "n": 1
+    },
+    {
+     "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
      "n": 1
     },
     {
@@ -1055,7 +1055,7 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Consumo de alimentos locales",
+     "accion": "Preparación de infusiones",
      "n": 3
     }
    ],
@@ -1105,11 +1105,11 @@ window.REPORTE = {
      "n": 7
     },
     {
-     "accion": "Reparación de objetos",
+     "accion": "Evitar plásticos de un solo uso",
      "n": 4
     },
     {
-     "accion": "Evitar plásticos de un solo uso",
+     "accion": "Reparación de objetos",
      "n": 4
     }
    ],
@@ -1187,7 +1187,7 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Organizar actividades de barrio",
+     "accion": "Creación de huertos comunitarios",
      "n": 6
     }
    ],
