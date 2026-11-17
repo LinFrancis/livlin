@@ -18,11 +18,10 @@
   var m = document.getElementById('casosMetrics');
   if (m) {
     var items = [
-      [nf(R.personas), 'personas alcanzadas'],
-      [R.espacios, 'espacios acompañados'],
-      [R.espacios_impl, 'con implementación'],
-      [nf1(R.cultivo.nuevo_m2) + ' m²', 'de cultivo nuevo'],
-      [R.talleres, 'talleres dictados']
+      [R.espacios, 'proyectos acompañados'],
+      [nf(R.personas_espacios), 'personas impactadas · diagnóstico y diseño'],
+      [nf(R.personas_impl), 'personas impactadas · implementación'],
+      [nf1(R.cultivo.nuevo_m2) + ' m²', 'de cultivo urbano implementado']
     ];
     m.innerHTML = items.map(function (i) {
       return '<div class="casos-metric"><b>' + esc(i[0]) + '</b><span>' + esc(i[1]) + '</span></div>';
@@ -50,6 +49,18 @@
       img: 'images/casos_reales/07_Edificio_Nova/01_nova.png', pos: 'center',
       texto: 'Áreas comunes y terrenos poco usados que se activan para cultivar, compartir saberes y fortalecer el vínculo entre vecinos.' }
   ];
+
+  // ---- Filtro de casos (Hogares / Organizaciones / Educación / Internacional)
+  var filterBtns = document.querySelectorAll('.casos-filter-btn');
+  var casoCards = document.querySelectorAll('.caso-card');
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-selected', 'true');
+      var cat = btn.dataset.cat;
+      casoCards.forEach(function (card) { card.style.display = (cat === 'todos' || card.dataset.cat === cat) ? 'flex' : 'none'; });
+    });
+  });
 
   var cont = document.getElementById('espaciosEj');
   if (!cont) return;

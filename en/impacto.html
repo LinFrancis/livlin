@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=18">
+  <link rel="stylesheet" href="/css/espacios-ejemplos.css?v=3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <style>
@@ -336,8 +337,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
             <li><a href="/en/bitacoras/plan-maestro-bancales.html">Bancales Autorregantes en Departamento</a></li>
           </ul>
         </li>
-        <li><a href="/en/index.html#casos">Impact</a></li>
-        <li><a href="/en/impacto.html">Reporte de Impacto</a></li>
+        <li><a href="/en/impacto.html">Impact</a></li>
         <li><a href="/en/index.html#descarga">Resources</a></li>
         <li><a href="/en/contacto.html" class="nav-cta-green">Contact</a></li>
         <li><a href="https://livlin.streamlit.app/" target="_blank" rel="noopener" class="nav-cta-platform">Member Access</a></li>
@@ -582,6 +582,258 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 
 
 
+</div>
+  <!-- ============================================================
+       EXPLORA NUESTRO TRABAJO (movido desde el Inicio al Reporte de Impacto)
+  ============================================================ -->
+  <section class="casos-section" id="casos" aria-label="Explore our work">
+    <div class="container">
+      <div class="casos-header fade-in">
+        <h2>Explore our work</h2>
+        <p class="casos-lead">Ejemplos reales del primer año de LivLin, en cada tipo de espacio. Por privacidad, los hogares se muestran sin nombre y solo con la comuna.</p>
+      </div>
+
+      <!-- EJEMPLOS POR TIPO DE ESPACIO (datos: js/impacto-datos.js) -->
+      <div class="espacios-ej-head fade-in">
+        <h3>Un ejemplo para cada tipo de espacio</h3>
+        <p>Del patio de una casa a un centro comunitario: así acompañamos cada lugar.</p>
+      </div>
+      <div class="espacios-ej fade-in" id="espaciosEj"></div>
+
+      <!-- CASOS DESTACADOS — Problema / Solución / Resultado -->
+      <div class="casos-destacados fade-in">
+
+        <!-- Caso 1: Aucca -->
+        <div class="caso-dest caso-clickable" style="border-top-color:#3CA0C9; padding-top:0; overflow:hidden; cursor:pointer;" data-title="AUCCA Centro Ecopedagógico" data-location="Talagante · @aucca.ecopedagogico" data-images='["images/casos_reales/03_Aucca/01_intranet_inicio.png","images/casos_reales/03_Aucca/02_intranet_eventos.png","images/casos_reales/03_Aucca/03_intranet_graficos.png"]' data-desc="Diseñamos e implementamos herramientas digitales para apoyar la gestión de Aucca, un centro comunitario dedicado a la agroecología y la educación ambiental. La plataforma intranet permite dar seguimiento a acuerdos y objetivos, gestionar ingresos y gastos con claridad, y coordinar actividades. El módulo de eventos emula el funcionamiento de un restaurante: crea cuentas, registra productos, gestiona ventas y cuadra los dineros con el sistema financiero general." data-service="MEL · Plataforma Digital · Intranet · Página Web">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="/images/casos_reales/03_Aucca/01_intranet_inicio.png" alt="Aucca digital platform" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div>
+            <span class="caso-dest-badge" style="color:#3CA0C9;background:#e8f4fa;">Organisation · MEL &amp; Digital</span>
+            <h4>Aucca Eco-pedagogical Centre</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">D</div>
+              <div><span class="caso-dest-label">Challenge</span><p class="caso-dest-text">A need to organise internal management, track agreements and finances.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solution</span><p class="caso-dest-text">Internal monitoring system, activity dashboards and a custom intranet platform.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Result</span><p class="caso-dest-text">Organised data and clear metrics for group coordination, to build a better everyday.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Depto urbano -->
+        <div class="caso-dest caso-clickable" style="border-top-color:#7FC93C; padding-top:0; overflow:hidden; cursor:pointer;" data-title="Terraza en departamento" data-location="Providencia, Santiago" data-images='["images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png","images/casos_reales/08_Depto_Javiera_Francis/02_diseno_antes_despues.png","images/casos_reales/08_Depto_Javiera_Francis/03_collage_02.png","images/casos_reales/08_Depto_Javiera_Francis/04_bancal_l.png"]' data-desc="Terraza con orientación surponiente: mucha luz solar al atardecer que secaba todas las plantas, sin tiempo para riego frecuente. Se construyeron 3,5 m² de bancales autorregantes de madera con ruedas y sistema wicking bed: riego 2 veces al mes en verano, 1 vez en invierno. Cada bancal tiene además un hotel de lombrices donde los residuos orgánicos se convierten en humus dentro del propio bancal. Desde 2022 se cultiva una amplia variedad de hortalizas todo el año. También se instaló sistema de paneles solares y energía eólica." data-service="Diseño Regenerativo · Bancales Autorregantes · Lombricultura · Energía Solar" data-video="https://www.instagram.com/p/Cl1Q_f8tKkl/">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="/images/casos_reales/08_Depto_Javiera_Francis/01_collage_01.png" alt="Terrace with self-watering beds" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div>
+            <span class="caso-dest-badge" style="color:#7FC93C;background:#f4f8f2;">Home · Regenerative Design</span>
+            <h4>Apartment terrace</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">D</div>
+              <div><span class="caso-dest-label">Challenge</span><p class="caso-dest-text">All the plants were dying from the afternoon sun, hard to water and frustrating in so much heat.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solution</span><p class="caso-dest-text">Master plan with self-watering beds, composting and a year-round crop selection.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Result</span><p class="caso-dest-text">Continuous production of vegetables and herbs, zero organic waste and a space for daily wellbeing.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Rende Bú -->
+        <div class="caso-dest caso-clickable" style="border-top-color:#C96B00; padding-top:0; overflow:hidden; cursor:pointer;" data-title="Rende Bú Café" data-location="Providencia, Santiago · @rendebucafe" data-images='["images/casos_reales/01_rendebu/01_antes_despues_muroverde.png","images/casos_reales/01_rendebu/02_antes_despues_terraza.png"]' data-desc="Transformamos espacios disponibles del café en áreas productivas para el cultivo de alimentos, integrando huertas en patios, macetas y sectores exteriores. Lo que comenzó como una prueba se convirtió en una nueva etapa de inversión e infraestructura para fortalecer el carácter sostenible del proyecto. Se plantaron tomates, girasoles y hortalizas de verano, y luego habas y brócoli para el otoño-invierno. El personal participó de capacitaciones generando apego al cuidado de las plantas." data-service="Diseño Regenerativo · Huerto Urbano">
+          <div style="height:170px; overflow:hidden; margin:-28px -28px 20px; border-radius:14px 14px 0 0;">
+            <img src="/images/casos_reales/01_rendebu/01_antes_despues_muroverde.png" alt="Rende Bú Café green wall" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div>
+            <span class="caso-dest-badge" style="color:#C96B00;background:#fff7ed;">Organisation · Urban Garden</span>
+            <h4>Rende Bú Café · Providencia</h4>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-prob">D</div>
+              <div><span class="caso-dest-label">Challenge</span><p class="caso-dest-text">The café's patio and entrances with plants that added little to the place's sustainable identity.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-sol">S</div>
+              <div><span class="caso-dest-label">Solution</span><p class="caso-dest-text">Integration of gardens, a green wall and productive beds in the outdoor spaces.</p></div>
+            </div>
+            <div class="caso-dest-row">
+              <div class="caso-dest-icon icon-res">R</div>
+              <div><span class="caso-dest-label">Result</span><p class="caso-dest-text">New investment in green infrastructure; edible crops as a hallmark of the café's sustainable character.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="casos-filters" role="tablist" aria-label="Filter by type">
+        <button class="casos-filter-btn active" data-cat="todos" role="tab" aria-selected="true">All</button>
+        <button class="casos-filter-btn" data-cat="hogares" role="tab" aria-selected="false">Homes</button>
+        <button class="casos-filter-btn" data-cat="organizaciones" role="tab" aria-selected="false">Organisations</button>
+        <button class="casos-filter-btn" data-cat="educacion" role="tab" aria-selected="false">Education</button>
+        <button class="casos-filter-btn" data-cat="internacional" role="tab" aria-selected="false">International</button>
+      </div>
+
+      <div class="casos-grid" id="casosGrid">
+
+        <!-- HOGARES -->
+        <article class="caso-card" data-cat="hogares" data-title="Departamento en San Miguel" data-location="San Miguel, Santiago" data-img="images/casos_reales/publico/depto_vermicompostera.jpg" data-desc="Diagnóstico completo de oportunidades para sustentabilidad y regeneración en departamento: eficiencia energética e hídrica, gestión de residuos orgánicos y activación de cultivos. Se implementó un sistema de vermicompostaje con taller personalizado de lombricultura. Se instaló un germinador para semillas que luego pasan a macetas dentro del departamento. Se presentaron alternativas para reutilizar el agua de la ducha en el riego. La familia ahora gestiona sus residuos orgánicos y produce parte de sus alimentos en espacios antes no reconocidos como potenciales para la regeneración." data-service="Diseño Regenerativo · Vermicompostera · Taller Personalizado" aria-label="Ver caso Departamento en San Miguel">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/depto_vermicompostera.jpg" alt="Vermicompostera en un departamento">
+            <span class="caso-card-cat-badge badge-hogares">Home</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">San Miguel, Santiago</p>
+            <h3 class="caso-card-title">Departamento en San Miguel</h3>
+            <p class="caso-card-quote">"Assessment, worm composter, seed germinator, container bed and how to reuse shower water for irrigation. The family now manages its waste and grows its own food in the apartment."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Worm composter</span>
+              <span class="caso-tag">Germinador</span>
+              <span class="caso-tag">Workshops</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="caso-card" data-cat="hogares" data-title="Casa en La Reina" data-location="La Reina, Santiago" data-img="images/casos_reales/publico/hogar_bancal_movil.jpg" data-desc="Diseño regenerativo completo de la casa pasando por todos los pétalos de la flor de la permacultura: energía, agua, tierra, vegetación, estructura y procesos. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices, con ruedas para moverse según la luz solar de cada estación. El bancal funciona también como muro verde. Se asesoró sobre oportunidades de energía solar en el espacio." data-service="Diseño Regenerativo · Plan Maestro · Wicking Bed · Vermicompostera" data-video="https://www.instagram.com/p/DZvBlupRJCl/" aria-label="Ver caso Casa en La Reina">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/hogar_bancal_movil.jpg" alt="Bancal autorregante móvil en una casa">
+            <span class="caso-card-cat-badge badge-hogares">Home</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">La Reina, Santiago</p>
+            <h3 class="caso-card-title">Casa en La Reina</h3>
+            <p class="caso-card-quote">"A complete master plan: composter, mobile self-watering bed with integrated worms, and solar advice. A bed that doubles as a green wall and moves to follow the sun each season."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Master plan</span>
+              <span class="caso-tag">Mobile wicking bed</span>
+              <span class="caso-tag">Green wall</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="caso-card" data-cat="hogares" data-title="Casa en Las Condes" data-location="Las Condes, Santiago" data-img="images/casos_reales/publico/hogar_parron.jpg" data-images='["images/casos_reales/publico/hogar_parron.jpg"]' data-desc="Desarrollamos un plan maestro de regeneración para el hogar pasando por todos los pétalos de la flor de la permacultura. Se instaló una compostera para residuos orgánicos. Se construyó un bancal autorregante wicking bed con hotel de lombrices y ruedas (muro verde móvil). Destaca la construcción de un parrón: estructura de madera diseñada para recibir la parra en el patio trasero y aprovechar su sombra en verano, bajando la temperatura interior de la casa de forma natural y bioclimática." data-service="Diseño Regenerativo · Wicking Bed · Parrón Bioclimático · Vermicompostera" aria-label="Ver caso Casa en Las Condes">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/publico/hogar_parron.jpg" alt="Bioclimatic vine pergola before and after">
+            <span class="caso-card-cat-badge badge-hogares">Home</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Las Condes, Santiago</p>
+            <h3 class="caso-card-title">Casa en Las Condes</h3>
+            <p class="caso-card-quote">"A master plan with a self-watering bed, worm composter and a vine pergola built to give natural shade in summer and cool the house. The vine as a bioclimatic solution."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Bioclimatic vine pergola</span>
+              <span class="caso-tag">Wicking bed</span>
+              <span class="caso-tag">Worm composter</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ORGANIZACIONES -->
+        <article class="caso-card" data-cat="organizaciones" data-title="Lavaseco Florencia" data-location="Providencia, Santiago · @lavasecoflorencia" data-img="images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png" data-desc="Convertimos un espacio exterior subutilizado —antes solo pasto descuidado— en una huerta agroecológica visible desde la calle. En verano: tomates y girasoles. En otoño-invierno: habas y coliflores morados. El personal fortaleció el suelo entre temporadas y el espacio sigue creciendo. Cada persona del lavaseco tiene su propia historia con la huerta — y los vecinos y clientes se detienen a mirar. Una demostración real de que cultivar en la vereda es posible y bienvenido." data-service="Huerto Agroecológico · Continuidad de temporadas" data-video="https://www.instagram.com/p/DY3piY0O94e/" aria-label="View Florencia Dry Cleaner case">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/04_Lavaseco/01_lavaseco_antes_despues.png" alt="Florencia Dry Cleaner — garden before and after">
+            <span class="caso-card-cat-badge badge-organizaciones">Organisation</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Providencia, Santiago</p>
+            <h3 class="caso-card-title">Florencia Dry Cleaner</h3>
+            <p class="caso-card-quote">"Neglected lawn turned into a street garden: tomatoes and sunflowers in summer, broad beans and cauliflower in autumn. The dry cleaner's staff have their own green space — and neighbours stop to look."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Street garden</span>
+              <span class="caso-tag">Two seasons</span>
+              <span class="caso-tag">Agroecological</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="caso-card" data-cat="organizaciones" data-title="Edificio Nova Providencia" data-location="Providencia, Santiago" data-img="images/casos_reales/07_Edificio_Nova/01_nova.png" data-desc="Activamos espacios comunitarios del edificio para el cultivo de alimentos y el fortalecimiento de los vínculos entre vecinos. En coordinación con la comunidad se plantó brócoli morado, alcachofas y habas en el patio. El personal y algunos vecinos recibieron almácigos para plantar en sus hogares. Los árboles frutales existentes (limones) se empezaron a compartir. El horizonte: crear conciencia de las posibilidades de cultivar en espacios comunes y proyectar una temporada de primavera-verano en grande." data-service="Diseño Regenerativo · Huerto Comunitario" data-video="https://www.instagram.com/p/DYzTwbgR7Na/" aria-label="View Nova Building case">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/07_Edificio_Nova/01_nova.png" alt="Nova Building — community garden">
+            <span class="caso-card-cat-badge badge-organizaciones">Community</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Providencia, Santiago</p>
+            <h3 class="caso-card-title">Nova Building</h3>
+            <p class="caso-card-quote">"Purple broccoli, artichokes and broad beans in the building's courtyard. Staff took seedlings home. The courtyard lemons began to be shared. A first harvest that opens up conversations."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Community garden</span>
+              <span class="caso-tag">Neighbourly ties</span>
+              <span class="caso-tag">Regenerative design</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="caso-card" data-cat="organizaciones" data-title="Sociedad Médica SN" data-location="Providencia, Santiago" data-img="images/casos_reales/02_sociedadmedica/codificator.png" data-desc="Desarrollamos una plataforma digital a medida para centralizar información crítica y facilitar el acceso a datos utilizados en procesos de diagnóstico médico. La solución permitió unificar bases de datos dispersas y fortalecer la gestión de información de la organización mediante una herramienta multipropósito adaptada a sus necesidades reales." data-service="Desarrollo de Software a Medida · Plataforma Médica" aria-label="View SN Medical Society case">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/02_sociedadmedica/codificator.png" alt="SN Medical Society platform">
+            <span class="caso-card-cat-badge badge-organizaciones">Organisation</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Providencia, Santiago</p>
+            <h3 class="caso-card-title">SN Medical Society</h3>
+            <p class="caso-card-quote">"Scattered databases unified into a single platform for quick access during diagnosis. A multipurpose tool adapted exactly to how the team works."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Custom software</span>
+              <span class="caso-tag">Database</span>
+              <span class="caso-tag">Medical platform</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- EDUCACIÓN -->
+        <article class="caso-card" data-cat="educacion" data-title="Liceo Manuel de Salas" data-location="Ñuñoa, Santiago" data-img="images/casos_reales/05_Escuela/01_lms.png" data-desc="Tuve la necesidad de contactar a Livlin para partir desde cero un proyecto de huerta para la comunidad del ciclo 2 del Liceo Experimental Manuel de Salas. No sólo obtuve una asesoría integral de suelo y posición del sol detallada, sino que también se logró concretar una visita al espacio y un involucramiento total de Francis con el proyecto: diseño de la huerta, listado de siembra según estación, infografía gráfica con fines pedagógicos y apoyo constante para implementar este proyecto a gran escala. Nos mostró ejemplos de colegios en Chile y China que han integrado el cuidado de la naturaleza en espacios comunes. Muchas gracias Livlin por tu sabiduría y profesionalismo y por darle vida a este proyecto en su etapa inicial. ¡Esperamos pronto invitarte a conocer nuestra huerta! — Apoderada ciclo básico" data-service="Diseño Regenerativo · Educación Ambiental · Plan Maestro Escolar" aria-label="View Manuel de Salas School case">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/05_Escuela/01_lms.png" alt="Manuel de Salas School — garden master plan">
+            <span class="caso-card-cat-badge badge-educacion">Education</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Ñuñoa, Santiago</p>
+            <h3 class="caso-card-title">Manuel de Salas School</h3>
+            <p class="caso-card-quote">"Not just soil advice: a site visit, design, seasonal planting list, educational infographic and constant support. We hope to soon invite him to see our garden." — Primary-level parent</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">School garden design</span>
+              <span class="caso-tag">Environmental education</span>
+              <span class="caso-tag">Master plan</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- INTERNACIONAL -->
+        <article class="caso-card" data-cat="internacional" data-title="Chengdu Cafe · Taller de Cultivo Urbano" data-location="Chengdu, China" data-img="images/casos_reales/11_Taller_China/taller_china.jpeg" data-desc="Taller para 16 personas en la ciudad de Chengdu, China. Se construyeron dos bancales autorregantes con material reciclado y un sistema de riego por capilaridad con botellas para cultivo urbano. La terraza del segundo piso del café, sin acceso cercano a agua, se habilitó como espacio productivo: con los sistemas de capilaridad la frecuencia de riego disminuyó significativamente. El taller fue intergeneracional, favoreciendo el intercambio entre generaciones y la ecoalfabetización. Hoy los clientes del café disfrutan sus actividades rodeados de cultivos de alimentos." data-service="Taller Internacional · Bancales Autorregantes · Eficiencia Hídrica" data-video="https://www.instagram.com/p/DTHWRsSEe7q/" aria-label="View China Workshop case">
+          <div class="caso-card-img-wrap">
+            <img class="caso-card-img" loading="lazy" src="/images/casos_reales/11_Taller_China/taller_china.jpeg" alt="Workshop in Chengdu, China — beds from recycled materials">
+            <span class="caso-card-cat-badge badge-internacional">International</span>
+          </div>
+          <div class="caso-card-body">
+            <p class="caso-card-location">Chengdu, China</p>
+            <h3 class="caso-card-title">Chengdu Cafe</h3>
+            <p class="caso-card-quote">"16 people, 2 beds from recycled materials, a café terrace with no water nearby. With the capillary system: watering every few weeks. The café's second floor is now an intergenerational garden."</p>
+            <div class="caso-card-tags">
+              <span class="caso-tag">Hands-on workshop</span>
+              <span class="caso-tag">Capillary irrigation</span>
+              <span class="caso-tag">Recycled material</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+<div class="ri">
 <section>
   <div class="wrap reveal">
     <div class="ri-eyebrow">Lo que cambió en la tierra</div>
@@ -657,8 +909,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
           <h5>Explore</h5>
           <ul>
             <li><a href="/en/index.html#dimensiones">Areas of work</a></li>
-            <li><a href="/en/index.html#casos">Impact</a></li>
-            <li><a href="/en/impacto.html">Reporte de Impacto</a></li>
+            <li><a href="/en/impacto.html">Impact</a></li>
             <li><a href="/en/index.html#descarga">Free resources</a></li>
             <li><a href="/en/contacto.html">Contact</a></li>
           </ul>
@@ -692,6 +943,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
   <script src="/js/script.js?v=7"></script>
   <script src="/js/impacto-datos.js?v=1"></script>
+  <script src="/js/espacios-impacto.js?v=2"></script>
   <script src="/js/impacto-geo.js?v=1"></script>
   <script>
 const R=window.REPORTE, G=window.GEO;
