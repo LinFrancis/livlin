@@ -21,7 +21,7 @@
       [R.espacios, 'proyectos acompañados'],
       [nf(R.personas_espacios), 'personas impactadas · diagnóstico y diseño'],
       [nf(R.personas_impl), 'personas impactadas · implementación'],
-      [nf1(R.cultivo.nuevo_m2) + ' m²', 'de cultivo urbano implementado']
+      [nf1(R.cultivo.nuevo_m2) + ' m²', 'de cultivo agroecológico urbano implementado']
     ];
     m.innerHTML = items.map(function (i) {
       return '<div class="casos-metric"><b>' + esc(i[0]) + '</b><span>' + esc(i[1]) + '</span></div>';
@@ -32,16 +32,16 @@
   var GRUPOS = [
     { id: 'casas', nombre: 'Casas con patio o jardín', tipos: ['Casa con patio/jardín'],
       img: 'images/casos_reales/publico/hogar_parron.jpg', pos: 'center',
-      texto: 'Patios familiares que pasan del diagnóstico a la acción: compostaje, bancales autorregantes y estructuras que dan sombra natural.' },
+      texto: 'Patios familiares que pasan del diagnóstico a la acción con agroecología urbana: compostaje, bancales autorregantes y estructuras que dan sombra natural.' },
     { id: 'deptos', nombre: 'Departamentos con terraza', tipos: ['Departamento con terraza'],
       img: 'images/casos_reales/publico/depto_vermicompostera.jpg', pos: 'center',
-      texto: 'Terrazas y balcones donde se compostan los residuos y se cultiva en espacios reducidos, con riego eficiente.' },
+      texto: 'Terrazas y balcones donde se compostan los residuos y se cultiva con agroecología urbana en espacios reducidos, con riego eficiente.' },
     { id: 'comunitarios', nombre: 'Centros y huertos comunitarios', tipos: ['Centro comunitario', 'Huerto comunitario'],
       img: 'images/cecosf/huerta-hoy.webp', pos: 'center',
-      texto: 'Espacios de encuentro que suman huerta, compostera y talleres, con participación de las personas que los usan.' },
+      texto: 'Espacios de encuentro que suman huerta agroecológica, compostera y talleres, con participación de las personas que los usan.' },
     { id: 'organizaciones', nombre: 'Organizaciones y negocios', tipos: ['Organización o institución'],
       img: 'images/casos_reales/01_rendebu/01_antes_despues_muroverde.png', pos: 'center',
-      texto: 'Negocios y organizaciones que integran cultivos comestibles a su identidad y a la mirada de quienes los visitan.' },
+      texto: 'Negocios y organizaciones que integran cultivos agroecológicos comestibles a su identidad y a la mirada de quienes los visitan.' },
     { id: 'escuelas', nombre: 'Escuelas', tipos: ['Escuela / jardín infantil'],
       img: 'images/casos_reales/05_Escuela/01_lms.png', pos: 'center',
       texto: 'Diseño de huertas pedagógicas con lectura del sol y del suelo, listado de siembra por estación y material educativo.' },

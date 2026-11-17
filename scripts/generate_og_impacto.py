@@ -53,7 +53,7 @@ def cargar_datos():
         (nf(d["espacios"]), "proyectos\nacompañados"),
         (nf(d["personas_espacios"]), "personas · diagnóstico\ny diseño"),
         (nf(d["personas_impl"]), "personas ·\nimplementación"),
-        (f"{d['cultivo']['nuevo_m2']:.1f}".replace(".", ",") + " m²", "de cultivo urbano\nimplementado"),
+        (f"{d['cultivo']['nuevo_m2']:.1f}".replace(".", ",") + " m²", "de cultivo agroecológico\nurbano implementado"),
     ]
 
 

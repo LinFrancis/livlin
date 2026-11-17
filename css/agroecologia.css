@@ -1,0 +1,8 @@
+/* Agroecología urbana: explicación breve (página de Huerto urbano agroecológico) */
+.agro-section { background: #f3f8ef; }
+.agro-lead { max-width: 820px; margin: 14px auto 0; color: var(--text-soft); font-size: 1.05rem; }
+.agro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 36px; }
+.agro-card { background: #fff; border: 1px solid var(--border, #E5E2D5); border-radius: 18px; padding: 22px 22px 24px; box-shadow: 0 4px 20px rgba(17, 46, 77, .05); }
+.agro-card b::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--green-dark, #4FB87E); margin-right: 9px; }
+.agro-card b { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: 6px; }
+.agro-card p { margin: 0; font-size: .92rem; color: var(--text-soft); line-height: 1.55; }
