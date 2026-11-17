@@ -315,6 +315,53 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .nivel.on2 em{color:var(--green-light)}
 .ri .nivel u{display:block;text-decoration:none;margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:.78rem;line-height:1.4;color:var(--text-soft)}
 .ri .nivel.on2 u{border-top-color:rgba(255,255,255,.25);color:#E4EEF4}
+.ri .flor-x{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px;align-items:start;margin:30px 0 10px}
+.ri .flor-x-izq{position:sticky;top:90px}
+.ri .flor-svg svg{width:100%;height:auto;max-width:540px;display:block;margin:0 auto}
+.ri .flor-hint{text-align:center;margin:4px 0 14px;font-size:.92rem;color:var(--text-soft)}
+.ri .petalo{cursor:pointer;transition:opacity .2s}
+.ri .petalo:not(.on){opacity:.78}
+.ri .petalo:hover{opacity:1}
+.ri .petalo:focus{outline:none}
+.ri .petalo:focus-visible ellipse:first-child{stroke:#4FB87E;stroke-width:3}
+.ri .flor-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
+.ri .fchip{border:1px solid var(--border);background:var(--card);border-radius:99px;padding:8px 14px 8px 8px;font:inherit;font-size:.8rem;font-weight:600;color:var(--text);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.ri .fchip b{width:24px;height:24px;border-radius:50%;background:var(--text);color:#fff;font-size:.74rem;display:inline-flex;align-items:center;justify-content:center}
+.ri .fchip.on{background:var(--text);color:#fff;border-color:var(--text)}
+.ri .fchip.on b{background:var(--green-dark)}
+.ri .flor-x-der{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:clamp(20px,3vw,30px);box-shadow:var(--shadow);min-height:420px}
+.ri .fp-h{display:flex;gap:12px;align-items:flex-start}
+.ri .fp-h h3{font-size:1.15rem;line-height:1.25}
+.ri .fp-h small{display:block;font-size:.76rem;color:var(--muted);font-weight:500;margin-top:3px;line-height:1.45}
+.ri .fp-h .pnum{flex:none;width:36px;height:36px;border-radius:50%;background:var(--text);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.ri .fp-lect{font-size:.92rem;font-style:italic;color:var(--text-soft);border-left:3px solid var(--green-light);padding-left:12px;margin:14px 0}
+.ri .ftabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ri .ftab{border:1px solid var(--border);background:#faf9f4;border-radius:14px;padding:10px 12px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:.2s}
+.ri .ftab b{font-size:.78rem;color:var(--text)}
+.ri .ftab span{font-size:.72rem;color:var(--muted);font-weight:600}
+.ri .ftab i{display:block;height:6px;border-radius:99px;background:#e6e2d2;margin-top:6px;overflow:hidden}
+.ri .ftab i u{display:block;height:100%;background:var(--c);text-decoration:none;border-radius:99px}
+.ri .ftab.on{background:#fff;border-color:var(--c);box-shadow:0 0 0 2px var(--c) inset}
+.ri .fp-desc{font-size:.84rem;color:var(--muted);margin:12px 0 10px;line-height:1.5}
+.ri .fp-desc b{color:var(--text)}
+.ri .fp-q{width:100%;height:42px;border:1px solid var(--border);border-radius:99px;padding:0 16px;font:inherit;font-size:.88rem;margin-bottom:10px;background:#fff}
+.ri .fp-q:focus{outline:2px solid var(--teal);outline-offset:1px}
+.ri .ac-lista{list-style:none;display:grid;gap:8px}
+.ri .ac-lista li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;background:#faf9f4;border-radius:12px}
+.ri .ac-n{flex:none;min-width:30px;height:30px;border-radius:99px;color:#fff;font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center;padding:0 8px}
+.ri .ac-lista b{display:block;font-size:.9rem;line-height:1.35}
+.ri .ac-lista small{display:block;font-size:.74rem;color:var(--muted);margin-top:1px}
+.ri .ac-esp{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.ri .ac-esp em{font-style:normal;background:#E7F6EE;color:#1B6B45;border-radius:99px;padding:3px 10px;font-size:.72rem;font-weight:700}
+.ri .ac-vacio{font-size:.9rem;color:var(--muted);padding:14px 4px}
+.ri .fp-mas{margin-top:12px;border:0;background:var(--teal-dark);color:#fff;border-radius:99px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer}
+.ri .fp-mas:hover{background:var(--text)}
+@media(max-width:900px){.ri .flor-x{grid-template-columns:1fr}
+.ri .flor-x-izq{position:static}
+.ri .flor-x-der{min-height:0}}
+@media(max-width:520px){.ri .ftabs{grid-template-columns:1fr}
+.ri .ftab{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.ri .ftab i{flex-basis:100%;margin-top:2px}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -481,19 +528,20 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
       <p class="ri-lead" style="margin-top:12px">En LivLin leemos cada espacio pétalo por pétalo. Primero diagnosticamos lo que ya existe, luego diseñamos lo que podría florecer y finalmente acompañamos lo que se implementa. Lo planificado es un mapa de posibilidades; lo implementado, la prueba de que florece.</p>
       <p class="flor-ref">Vil du vide mere? <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Revisa el póster de la Flor de la Permacultura en español →</a><br><small>Póster adaptado del libro de David Holmgren, <i>Permaculture: Principles &amp; Pathways Beyond Sustainability</i>.</small></p>
     </div>
-    <div class="flor reveal">
-      <div class="flor-svg" id="flor-svg"></div>
-      <div class="flor-side">
+    <div class="flor-x reveal">
+      <div class="flor-x-izq">
+        <div class="flor-svg" id="flor-svg"></div>
+        <p class="flor-hint"><b>Toca un pétalo</b> para ver sus acciones, una por una.</p>
         <div class="flor-leg">
           <span><i style="background:#E1AA36"></i>Lo encontrado <small>espacios que ya practicaban algo</small></span>
           <span><i style="background:#239BA7"></i>Lo planificado <small>espacios con acciones diseñadas</small></span>
           <span><i style="background:#112E4D"></i>Lo implementado <small>espacios donde ya se hizo</small></span>
         </div>
-        <ol class="flor-lista" id="flor-lista"></ol>
-        <p class="flor-insight" id="flor-insight"></p>
+        <div class="flor-chips" id="flor-lista" role="group" aria-label="Elegir pétalo"></div>
       </div>
+      <div class="flor-x-der" id="flor-panel" aria-live="polite"></div>
     </div>
-    <div class="petalos reveal" id="petalos-cards"></div>
+    <p class="flor-insight" id="flor-insight"></p>
   </div>
 </section>
 
@@ -866,7 +914,7 @@ $('premisas').innerHTML=[
  ['4','Pensar en generaciones, no solo en proyectos','Dejar suelo, árboles y acuerdos para que otros puedan continuar, adaptar y mejorar.',`${rp(R.sistemas.arboles)} árboles frutales plantados y ${rp(R.espacios)} espacios con diagnóstico y seguimiento en la plataforma.`]
 ].map(([n,t,p,e])=>`<div class="prem"><em>PREMISA ${n}</em><h4>${t}</h4><p>${p}</p><div class="ev">${e}</div></div>`).join('');
 
-// ---- Flor de la Permacultura: radar + tarjetas por pétalo
+// ---- Flor de la Permacultura interactiva: pétalos clicables con sus acciones
 const PET=R.petalos, NP=PET.length;
 const CORTO=['Tierra y naturaleza','Construcción','Herramientas y tecnología','Educación y cultura','Salud y bienestar','Finanzas y economía','Tenencia y gobernación'];
 const LECT=[
@@ -878,41 +926,71 @@ const LECT=[
  'Economías de cercanía: producir, compartir y consumir con sentido, sin depender de más de lo necesario.',
  'Los espacios se sostienen cuando las personas se organizan: vecinos que se conectan y acuerdan cómo cuidar lo común.'
 ];
-const COL={obs:'#E1AA36',pot:'#239BA7',imp:'#112E4D'};
-(function(){
-  const cx=230,cy=225,rad=150,pt=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/NP;return [cx+Math.cos(a)*rad*v,cy+Math.sin(a)*rad*v]};
-  const poly=(k,f)=>PET.map((p,i)=>pt(i,Math.max(.04,p['espacios_'+k]/p.espacios_total)).map(n=>n.toFixed(1)).join(',')).join(' ');
-  let g='';
-  [.25,.5,.75,1].forEach(v=>{g+=`<polygon points="${PET.map((_,i)=>pt(i,v).map(n=>n.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d9d5c4" stroke-width="1"/>`});
-  PET.forEach((_,i)=>{const [x,y]=pt(i,1);g+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d9d5c4"/>`});
-  g+=`<polygon points="${poly('pot')}" fill="${COL.pot}" fill-opacity=".22" stroke="${COL.pot}" stroke-width="2.5"/>`;
-  g+=`<polygon points="${poly('obs')}" fill="${COL.obs}" fill-opacity=".28" stroke="${COL.obs}" stroke-width="2.5"/>`;
-  g+=`<polygon points="${poly('impl')}" fill="${COL.imp}" fill-opacity=".55" stroke="${COL.imp}" stroke-width="2.5"/>`;
-  PET.forEach((p,i)=>{const [x,y]=pt(i,1.2);g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="14" fill="#112E4D"/><text x="${x.toFixed(1)}" y="${(y+5).toFixed(1)}" text-anchor="middle" font-size="14" font-weight="800" fill="#fff" font-family="Montserrat,sans-serif">${i+1}</text>`});
-  g+=`<text x="${cx}" y="${cy-rad-1}" font-size="0"></text>`;
-  $('flor-svg').innerHTML=`<svg viewBox="0 0 460 450" role="img" aria-label="Flor de la Permacultura: lo encontrado, lo planificado y lo implementado por pétalo">${g}</svg>`;
-})();
-$('flor-lista').innerHTML=CORTO.map(n=>`<li>${n}</li>`).join('');
+const COL={o:'#E1AA36',p:'#239BA7',i:'#112E4D'};
+const ETAPA={
+ o:{t:'Lo encontrado',k:'espacios_obs',a:'acciones_obs',d:'Prácticas que el espacio ya tenía cuando hicimos el diagnóstico.'},
+ p:{t:'Lo planificado',k:'espacios_pot',a:'acciones_pot',d:'Acciones que el plan maestro propone para que el espacio florezca.'},
+ i:{t:'Lo implementado',k:'espacios_impl',a:'acciones_impl',d:'Acciones que ya se pusieron en práctica y quedaron registradas en la bitácora.'}
+};
+const FL={sel:0,etapa:'i',todas:false,q:''};
+function florSVG(){
+  const cx=260,cy=262,r0=54,L=172,W=40;let g='';
+  g+=`<circle cx="${cx}" cy="${cy}" r="${r0-4}" fill="#E7F6EE" stroke="#bfe3cf" stroke-width="2"/>`;
+  g+=['Ética y','principios','de diseño'].map((t,k)=>`<text x="${cx}" y="${cy-9+k*15}" text-anchor="middle" font-size="12" font-weight="700" fill="#1B6B45" font-family="Montserrat,sans-serif">${t}</text>`).join('');
+  PET.forEach((p,i)=>{
+    const ang=-90+i*360/NP,n=p.espacios_total,on=i===FL.sel;
+    const pc=k=>Math.max(.07,p['espacios_'+k]/n);
+    const el=(len,ry,fill,op)=>{const l=Math.max(16,L*len);return `<ellipse cx="${r0+l/2}" cy="0" rx="${l/2}" ry="${Math.min(ry,l/2)}" fill="${fill}" fill-opacity="${op}"/>`};
+    g+=`<g class="petalo${on?' on':''}" data-p="${i}" transform="translate(${cx} ${cy}) rotate(${ang})" tabindex="0" role="button" aria-pressed="${on}" aria-label="Pétalo ${i+1}: ${p.nombre}. ${p.espacios_impl} de ${n} espacios con acciones implementadas">
+      <ellipse cx="${r0+L/2}" cy="0" rx="${L/2}" ry="${W}" fill="#fff" fill-opacity=".55" stroke="${on?'#112E4D':'#d9d5c4'}" stroke-width="${on?3:1.5}" stroke-dasharray="${on?'0':'5 4'}"/>
+      ${el(pc('pot'),W-2,'#239BA7',.34)}
+      ${el(pc('obs'),W-10,'#E1AA36',.5)}
+      ${el(pc('impl'),W-19,'#112E4D',.92)}
+    </g>`;
+    const t=ang*Math.PI/180,d=r0+L+26,x=cx+Math.cos(t)*d,y=cy+Math.sin(t)*d;
+    g+=`<g class="petalo-n${on?' on':''}" pointer-events="none"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="15" fill="${on?'#4FB87E':'#112E4D'}"/><text x="${x.toFixed(1)}" y="${(y+5).toFixed(1)}" text-anchor="middle" font-size="14" font-weight="800" fill="#fff" font-family="Montserrat,sans-serif">${i+1}</text></g>`;
+  });
+  return `<svg viewBox="0 0 520 524" role="group" aria-label="Flor de la Permacultura: cada pétalo muestra lo encontrado, lo planificado y lo implementado">${g}</svg>`;
+}
+function florPanel(){
+  const p=PET[FL.sel],n=p.espacios_total,E=ETAPA[FL.etapa],key=FL.etapa;
+  const tabs=Object.keys(ETAPA).map(k=>{const e=ETAPA[k];return `<button type="button" class="ftab${k===FL.etapa?' on':''}" data-e="${k}" style="--c:${COL[k]}" aria-pressed="${k===FL.etapa}"><b>${e.t}</b><span>${p[e.k]} de ${n} espacios</span><i><u style="width:${Math.round(p[e.k]/n*100)}%"></u></i></button>`}).join('');
+  const q=FL.q.trim().toLowerCase();
+  const lista=p.acciones.filter(a=>a[key]>0&&(!q||a.a.toLowerCase().includes(q))).sort((a,b)=>b[key]-a[key]||a.a.localeCompare(b.a,'es'));
+  const total=lista.length, vis=FL.todas?lista:lista.slice(0,8);
+  const filas=vis.map(a=>{const c=a[key];return `<li><span class="ac-n" style="background:${COL[key]}">${c}</span><div><b>${a.a}</b><small>en ${c} de ${n} espacio${c>1?'s':''}</small>${key==='i'&&a.esp.length?`<div class="ac-esp">${a.esp.map(e=>`<em>${e}</em>`).join('')}</div>`:''}</div></li>`}).join('');
+  const vacio=!total?`<p class="ac-vacio">${q?'No hay acciones que coincidan con la búsqueda.':(key==='i'?'Aún no hay acciones implementadas en este pétalo: es una oportunidad abierta.':'Sin registros en esta etapa.')}</p>`:'';
+  return `<div class="fp-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
+   <p class="fp-lect">${LECT[p.i]}</p>
+   <div class="ftabs">${tabs}</div>
+   <p class="fp-desc">${E.d} <b>${p[E.a]} acciones registradas</b> (una misma acción puede repetirse en varios espacios).</p>
+   <input type="search" class="fp-q" id="fp-q" placeholder="Buscar una acción de este pétalo" value="${FL.q.replace(/"/g,'&quot;')}" aria-label="Buscar una acción">
+   <ul class="ac-lista">${filas}</ul>${vacio}
+   ${total>8?`<button type="button" class="fp-mas" id="fp-mas">${FL.todas?'Ver menos':`Ver las ${total} acciones`}</button>`:''}`;
+}
+function florPintar(foco){
+  $('flor-svg').innerHTML=florSVG();
+  $('flor-lista').innerHTML=CORTO.map((n,i)=>`<button type="button" class="fchip${i===FL.sel?' on':''}" data-p="${i}" aria-pressed="${i===FL.sel}"><b>${i+1}</b>${n}</button>`).join('');
+  $('flor-panel').innerHTML=florPanel();
+  if(foco==='q'){const e=$('fp-q');e.focus();e.setSelectionRange(e.value.length,e.value.length)}
+}
+function florElegir(i){FL.sel=i;FL.todas=false;FL.q='';const p=PET[i];FL.etapa=p.acciones_impl>0?'i':'p';florPintar()}
+const florRaiz=document.querySelector('.flor-x');
+florRaiz.addEventListener('click',e=>{
+  const pe=e.target.closest('[data-p]');
+  if(pe){florElegir(+pe.dataset.p); if(innerWidth<=900){$('flor-panel').scrollIntoView({behavior:'smooth',block:'nearest'})} return}
+  const tb=e.target.closest('.ftab'); if(tb){FL.etapa=tb.dataset.e;FL.todas=false;FL.q='';florPintar();return}
+  if(e.target.closest('#fp-mas')){FL.todas=!FL.todas;florPintar()}
+});
+florRaiz.addEventListener('input',e=>{if(e.target.id==='fp-q'){FL.q=e.target.value;FL.todas=false;florPintar('q')}});
+florRaiz.addEventListener('keydown',e=>{const pe=e.target.closest('.petalo');if(pe&&(e.key==='Enter'||e.key===' ')){e.preventDefault();florElegir(+pe.dataset.p)}});
+florElegir(0);
 (function(){
   const imp=[...PET].sort((a,b)=>b.acciones_impl-a.acciones_impl)[0];
   const tp=PET.reduce((s,p)=>s+p.acciones_pot,0),ti=PET.reduce((s,p)=>s+p.acciones_impl,0);
   const br=[...PET].filter(p=>p.acciones_pot>0).sort((a,b)=>(a.acciones_impl/a.acciones_pot)-(b.acciones_impl/b.acciones_pot))[0];
   $('flor-insight').innerHTML=`Se proyectaron <b>${nf(tp)}</b> acciones y ya florecen <b>${nf(ti)}</b>. Donde más se ha implementado: <b>${CORTO[imp.i]}</b> (${imp.acciones_impl} acciones). Donde más esperan por florecer: <b>${CORTO[br.i]}</b> (${br.acciones_pot} proyectadas, ${br.acciones_impl} implementada${br.acciones_impl===1?'':'s'}).`;
 })();
-const lst=(a,k)=>a.slice(0,k).map(x=>x.accion).join(', ');
-const nombreCaso=c=>c.publico?c.espacio:c.espacio;
-$('petalos-cards').innerHTML=PET.map(p=>{
-  const n=p.espacios_total,pc=v=>Math.round(v/n*100);
-  const et=(c,t,esp,sub,det)=>`<div class="etapa" style="--c:${c}"><div class="tt"><span>${t}</span><b>${esp} de ${n} espacios</b></div><div class="bar2"><i style="width:${pc(esp)}%"></i></div><p>${sub}${det?': '+det:''}</p></div>`;
-  const casos=p.casos.slice(0,4).map(c=>`<span>${c.espacio} · ${c.accion.length>46?c.accion.slice(0,44)+'…':c.accion}</span>`).join('');
-  return `<article class="pet">
-   <div class="pet-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
-   <div class="pet-lect">${LECT[p.i]}</div>
-   ${et(COL.obs,'Lo encontrado',p.espacios_obs,`${p.acciones_obs} prácticas ya presentes`,lst(p.top_obs,3))}
-   ${et(COL.pot,'Lo planificado',p.espacios_pot,`${p.acciones_pot} acciones proyectadas`,lst(p.top_pot,3))}
-   ${et(COL.imp,'Lo implementado',p.espacios_impl,p.acciones_impl?`${p.acciones_impl} acciones en práctica`:'Aún sin implementar; es una oportunidad abierta',lst(p.impl,4))}
-   ${casos?`<div class="pet-casos">${casos}</div>`:''}
-  </article>`}).join('');
 
 // ---- Contadores y reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{

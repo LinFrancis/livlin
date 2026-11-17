@@ -597,11 +597,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Jardines comestibles en patios pequeños",
+     "accion": "Huertos en macetas recicladas",
      "n": 9
     },
     {
-     "accion": "Huertos en macetas recicladas",
+     "accion": "Jardines comestibles en patios pequeños",
      "n": 9
     },
     {
@@ -627,11 +627,11 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Camas de cultivo autorregantes",
+     "accion": "Compostera doméstica",
      "n": 2
     },
     {
-     "accion": "Compostera doméstica",
+     "accion": "Camas de cultivo autorregantes",
      "n": 2
     },
     {
@@ -651,11 +651,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Compostaje comunitario en el barrio",
+     "accion": "Camas de cultivo biointensivo",
      "n": 1
     },
     {
-     "accion": "Camas de cultivo biointensivo",
+     "accion": "Compostaje comunitario en el barrio",
      "n": 1
     }
    ],
@@ -707,6 +707,615 @@ window.REPORTE = {
      "comuna": "Providencia",
      "accion": "Huertos en espacios públicos recuperados",
      "publico": true
+    }
+   ],
+   "acciones": [
+    {
+     "a": "Plantación de árboles frutales urbanos",
+     "o": 4,
+     "p": 7,
+     "i": 3,
+     "esp": [
+      "Hogar en Las Condes",
+      "Hogar en Providencia",
+      "Hogar en Santo Domingo"
+     ]
+    },
+    {
+     "a": "Vermicompostaje doméstico",
+     "o": 3,
+     "p": 7,
+     "i": 3,
+     "esp": [
+      "Hogar en La Reina",
+      "Hogar en Providencia",
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Guerrilla gardening",
+     "o": 1,
+     "p": 5,
+     "i": 3,
+     "esp": [
+      "Edificio Nova",
+      "Lavaseco Florencia",
+      "Rende Bú Café"
+     ]
+    },
+    {
+     "a": "Jardines medicinales urbanos",
+     "o": 2,
+     "p": 6,
+     "i": 2,
+     "esp": [
+      "CECOSF Villa Olimpica",
+      "Hogar en Santo Domingo"
+     ]
+    },
+    {
+     "a": "Camas de cultivo autorregantes",
+     "o": 0,
+     "p": 2,
+     "i": 2,
+     "esp": [
+      "Hogar en La Reina",
+      "Hogar en Providencia"
+     ]
+    },
+    {
+     "a": "Compostera doméstica",
+     "o": 0,
+     "p": 2,
+     "i": 2,
+     "esp": [
+      "Hogar en La Reina",
+      "Hogar en Providencia"
+     ]
+    },
+    {
+     "a": "Huertos en macetas recicladas",
+     "o": 2,
+     "p": 9,
+     "i": 1,
+     "esp": [
+      "Rende Bú Café"
+     ]
+    },
+    {
+     "a": "Camas de cultivo biointensivo",
+     "o": 1,
+     "p": 8,
+     "i": 1,
+     "esp": [
+      "CECOSF Villa Olimpica"
+     ]
+    },
+    {
+     "a": "Guardar semillas en casa",
+     "o": 4,
+     "p": 7,
+     "i": 1,
+     "esp": [
+      "Hogar en Providencia"
+     ]
+    },
+    {
+     "a": "Huertos en balcones y terrazas",
+     "o": 3,
+     "p": 6,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Huertos en patios comunitarios",
+     "o": 1,
+     "p": 6,
+     "i": 1,
+     "esp": [
+      "Edificio Nova"
+     ]
+    },
+    {
+     "a": "Mejorar sistema de recolección de agua. Ponerle un filtro.",
+     "o": 0,
+     "p": 5,
+     "i": 1,
+     "esp": [
+      "Hogar en Las Condes"
+     ]
+    },
+    {
+     "a": "Riego por goteo casero",
+     "o": 1,
+     "p": 4,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Compostaje comunitario en el barrio",
+     "o": 1,
+     "p": 3,
+     "i": 1,
+     "esp": [
+      "CECOSF Villa Olimpica"
+     ]
+    },
+    {
+     "a": "Huertos en espacios públicos recuperados",
+     "o": 1,
+     "p": 2,
+     "i": 1,
+     "esp": [
+      "Lavaseco Florencia"
+     ]
+    },
+    {
+     "a": "Restauración de quebrada o corredor ripariano",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Compostaje sin lombrices",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Hogar en Santo Domingo"
+     ]
+    },
+    {
+     "a": "Macetas de cultivo en geotextil",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "germinar semillas para su cultivo",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Jardines comestibles en patios pequeños",
+     "o": 2,
+     "p": 9,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Huertos verticales en muros o cercos",
+     "o": 2,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jardines para abejas nativas",
+     "o": 2,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Barriles recolectores de agua",
+     "o": 3,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Intercambio de semillas entre vecinos",
+     "o": 2,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de variedades locales",
+     "o": 1,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de microgreens",
+     "o": 0,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Microhuertos en ventanas",
+     "o": 0,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Corredores de polinizadores",
+     "o": 3,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Plantación de especies nativas en jardines",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Asociación y rotación de cultivos",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Captación de agua lluvia en casas",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Germinados en casa",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jardines aromáticos",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Milpa (maíz, poroto y zapallo)",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Refugios para insectos",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reutilizar agua para riego",
+     "o": 2,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de hongos comestibles",
+     "o": 1,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Compostaje en baldes",
+     "o": 4,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bancos comunitarios de semillas",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Propagación de plantas nativas",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Siembra directa sin labranza (Fukuoka)",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Captación de agua lluvia en edificios",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de microorganismos eficientes",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Multiplicación de plantas por esquejes",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reutilización de aguas grises para riego",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Acolchado del suelo (mulch)",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bebederos para aves",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bibliotecas de semillas",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bosque comestible (food forest)",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Espiral de hierbas",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Hacer Infografías y Letreros",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jardines de mariposas",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Micro zanjas de infiltración",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Duchas cortas",
+     "o": 5,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Creación de suelo vivo en macetas",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Fabricación de té de compost",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Huertos escolares",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Mantención del patio ordenado",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo en bolsas de cultivo o contenedores textiles",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Huertos en azoteas o techos planos",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cerrar la llave al lavar platos",
+     "o": 6,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de plantas de interior y suculentas",
+     "o": 3,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Sistemas de infiltración en patios",
+     "o": 2,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Núcleos de agroforestería sintrópica",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Poda y cobertura (chop and drop)",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Control de cárcavas y erosión",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de setas en café reciclado",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Micro humedales artificiales",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Núcleo de bosque Miyawaki",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Tranque o acumulador de escorrentía",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Zanjas de infiltración en curvas de nivel",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bolas de semillas (nendo dango)",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Compostaje bokashi",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cortina cortaviento multipropósito",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Huertos en centros culturales",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Hügelkultur (bancal de troncos)",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reparar fugas de agua",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Restauración de pequeños espacios degradados",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de bioles y biofertilizantes",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Vivero comunitario de plantas nativas",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
     }
    ]
   },
@@ -755,19 +1364,19 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Jardines verticales comestibles",
-     "n": 1
-    },
-    {
      "accion": "Balcones verdes",
      "n": 1
     },
     {
-     "accion": "Construcción con materiales reciclados",
+     "accion": "Jardines verticales comestibles",
      "n": 1
     },
     {
      "accion": "Escaleras y senderos con materiales reutilizados",
+     "n": 1
+    },
+    {
+     "accion": "Construcción con materiales reciclados",
      "n": 1
     }
    ],
@@ -808,6 +1417,229 @@ window.REPORTE = {
      "accion": "Escaleras y senderos con materiales reutilizados",
      "publico": false
     }
+   ],
+   "acciones": [
+    {
+     "a": "Muros verdes",
+     "o": 2,
+     "p": 5,
+     "i": 2,
+     "esp": [
+      "Hogar en Providencia",
+      "Rende Bú Café"
+     ]
+    },
+    {
+     "a": "Construcción con materiales reciclados",
+     "o": 4,
+     "p": 5,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Escaleras y senderos con materiales reutilizados",
+     "o": 1,
+     "p": 3,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Balcones verdes",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Jardines verticales comestibles",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Sombreamiento natural con plantas",
+     "o": 3,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de pallets para jardinería",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Sendero interpretativo",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Talleres compartidos",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Muros interiores de tierra o barro",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Pinturas naturales",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Pérgolas verdes",
+     "o": 0,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de materiales naturales en remodelaciones",
+     "o": 3,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Aislación con materiales naturales",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Construcción de mini invernaderos",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Techos verdes",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reutilización de contenedores",
+     "o": 5,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Diseño solar pasivo",
+     "o": 4,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Patios interiores con vegetación",
+     "o": 4,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Enredaderas en fachadas",
+     "o": 3,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Baño seco compostero",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bioconstrucción en ampliaciones",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Espacios de compostaje en edificios",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cerco o soportes que marcan los bordes de la huerta",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Huertos en condominios",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Muro Trombe",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Muro de contención en ladera",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de ventanas recicladas para invernaderos",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Ventilación cruzada en viviendas",
+     "o": 3,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cocinas comunitarias",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    }
    ]
   },
   {
@@ -837,11 +1669,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Deshidratación solar",
      "n": 10
     },
     {
-     "accion": "Deshidratación solar",
+     "accion": "Paneles solares domésticos",
      "n": 10
     },
     {
@@ -855,11 +1687,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Aerogenerador eólico doméstico",
      "n": 1
     },
     {
-     "accion": "Aerogenerador eólico doméstico",
+     "accion": "Paneles solares domésticos",
      "n": 1
     },
     {
@@ -922,6 +1754,225 @@ window.REPORTE = {
      "accion": "Sistemas de riego automatizado de bajo consumo",
      "publico": false
     }
+   ],
+   "acciones": [
+    {
+     "a": "Deshidratación solar",
+     "o": 1,
+     "p": 10,
+     "i": 1,
+     "esp": [
+      "Hogar en La Reina"
+     ]
+    },
+    {
+     "a": "Paneles solares domésticos",
+     "o": 1,
+     "p": 10,
+     "i": 1,
+     "esp": [
+      "Hogar en Providencia"
+     ]
+    },
+    {
+     "a": "Sistemas de riego automatizado de bajo consumo",
+     "o": 1,
+     "p": 5,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Reciclaje",
+     "o": 8,
+     "p": 3,
+     "i": 1,
+     "esp": [
+      "Hogar en La Reina"
+     ]
+    },
+    {
+     "a": "Usar ampolletas LED",
+     "o": 5,
+     "p": 3,
+     "i": 1,
+     "esp": [
+      "Hogar en La Reina"
+     ]
+    },
+    {
+     "a": "Aerogenerador eólico doméstico",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "Hogar en Providencia"
+     ]
+    },
+    {
+     "a": "Página web del espacio",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Aucca"
+     ]
+    },
+    {
+     "a": "Sistemas de almacenamiento de agua",
+     "o": 2,
+     "p": 9,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Sistemas solares portátiles",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Usar electrodomésticos de bajo consumo",
+     "o": 3,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Fermentación de alimentos",
+     "o": 2,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Usar regletas con interruptor",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Calentadores solares de agua",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Desconectar cargadores",
+     "o": 3,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Conservas caseras",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Secadores solares de alimentos",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Almacenamiento natural de alimentos",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cocinas solares",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Refrigeración pasiva",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Sensores de humedad del suelo",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Sistemas de captación de condensación",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Apagar luces cuando no se usan",
+     "o": 8,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Filtros de agua domésticos",
+     "o": 2,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Carros para transportar cosechas",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Estufas rocket",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Uso de bicicleta",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Biofiltros de aguas grises",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Hornos de barro urbanos",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Talleres comunitarios de reparación de bicicletas",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    }
    ]
   },
   {
@@ -945,17 +1996,17 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Arte con materiales reciclados",
+     "accion": "Talleres de compostaje",
      "n": 3
     }
    ],
    "top_pot": [
     {
-     "accion": "Redes de huertos urbanos",
+     "accion": "Talleres de huertos urbanos",
      "n": 9
     },
     {
-     "accion": "Talleres de huertos urbanos",
+     "accion": "Redes de huertos urbanos",
      "n": 9
     },
     {
@@ -973,15 +2024,15 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Material educativo e infografías",
-     "n": 1
-    },
-    {
      "accion": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
      "n": 1
     },
     {
      "accion": "Taller de cultura regenerativa",
+     "n": 1
+    },
+    {
+     "accion": "Material educativo e infografías",
      "n": 1
     },
     {
@@ -1031,6 +2082,280 @@ window.REPORTE = {
      "comuna": "Algarrobo",
      "accion": "germinar semillas para su cultivo",
      "publico": false
+    }
+   ],
+   "acciones": [
+    {
+     "a": "Talleres de huertos urbanos",
+     "o": 3,
+     "p": 9,
+     "i": 2,
+     "esp": [
+      "CECOSF Villa Olimpica",
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Aprendizaje basado en huertos",
+     "o": 4,
+     "p": 6,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Capacitación comunitaria en manejo de huerta, compostera y plantas medicinales",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "CECOSF Villa Olimpica"
+     ]
+    },
+    {
+     "a": "Material educativo e infografías",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "CECOSF Villa Olimpica"
+     ]
+    },
+    {
+     "a": "Taller de cultura regenerativa",
+     "o": 0,
+     "p": 1,
+     "i": 1,
+     "esp": [
+      "CECOSF Villa Olimpica"
+     ]
+    },
+    {
+     "a": "germinar semillas para su cultivo",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Hogar en Algarrobo"
+     ]
+    },
+    {
+     "a": "Redes de huertos urbanos",
+     "o": 1,
+     "p": 9,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Practicar agroecología",
+     "o": 1,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de semillas",
+     "o": 1,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Talleres de agroecología urbana",
+     "o": 1,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de consumo local",
+     "o": 1,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Practicar meditación",
+     "o": 0,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Talleres de compostaje",
+     "o": 3,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cursos de diseño regenerativo",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Intercambio de plantas",
+     "o": 3,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Estudiar sobre regeneración",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Intercambio de saberes tradicionales",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de economía solidaria",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Practicar tai chi",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Programas de voluntariado ambiental",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Arte con materiales reciclados",
+     "o": 3,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Participar en talleres de regeneración",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Mingas comunitarias",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Programas educativos en jardines escolares",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Ferias de agricultura urbana",
+     "o": 0,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Practicar yoga",
+     "o": 2,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Festivales de semillas",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Murales ecológicos",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bibliotecas ecológicas",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Actividades artísticas comunitarias en el territorio",
+     "o": 2,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jornadas de limpieza del territorio",
+     "o": 2,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jornadas educativas para infancias",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Nadar en el mar",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cine Social",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Murales con temáticas medioambientales",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Programas de mentoría en agroecología",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Talleres permanentes de educación en salud y bienestar",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
     }
    ]
   },
@@ -1086,6 +2411,164 @@ window.REPORTE = {
      "accion": "Jardinería terapéutica",
      "publico": false
     }
+   ],
+   "acciones": [
+    {
+     "a": "Jardinería terapéutica",
+     "o": 2,
+     "p": 6,
+     "i": 1,
+     "esp": [
+      "Hogar en Las Condes"
+     ]
+    },
+    {
+     "a": "Dietas agroecológicas",
+     "o": 0,
+     "p": 10,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Espacios de contemplación",
+     "o": 2,
+     "p": 9,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cultivo de plantas medicinales",
+     "o": 3,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Meditación en huertos",
+     "o": 1,
+     "p": 8,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Consumo de alimentos locales",
+     "o": 3,
+     "p": 7,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Grupos de apoyo comunitario",
+     "o": 3,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Preparación de infusiones",
+     "o": 3,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Caminatas ecológicas",
+     "o": 1,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Espacios de cuidado colectivo",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de cuidado mutuo",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cocina saludable comunitaria",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Deporte",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Yoga comunitario",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Alimentación basada en plantas",
+     "o": 3,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Tai chi en parques",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bicicleteadas comunitarias",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Baños de bosque urbanos",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Apoyo al bienestar espiritual y emocional",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Atención de salud familiar comunitaria",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Preparación de pomadas",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Preparación de tinturas",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    }
    ]
   },
   {
@@ -1105,11 +2588,11 @@ window.REPORTE = {
      "n": 7
     },
     {
-     "accion": "Evitar plásticos de un solo uso",
+     "accion": "Reparación de objetos",
      "n": 4
     },
     {
-     "accion": "Reparación de objetos",
+     "accion": "Evitar plásticos de un solo uso",
      "n": 4
     }
    ],
@@ -1150,6 +2633,201 @@ window.REPORTE = {
      "accion": "Producción de alimentos locales",
      "publico": false
     }
+   ],
+   "acciones": [
+    {
+     "a": "Compras colectivas de alimentos",
+     "o": 3,
+     "p": 7,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Producción de alimentos locales",
+     "o": 1,
+     "p": 7,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Comprar a granel",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Mercados agroecológicos",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Evitar plásticos de un solo uso",
+     "o": 4,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Compras a productores locales",
+     "o": 1,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de intercambio de servicios",
+     "o": 1,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Bancos de tiempo",
+     "o": 0,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reutilización de materiales",
+     "o": 3,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reducción de consumo",
+     "o": 2,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Ferias de intercambio",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Evitar envases innecesarios",
+     "o": 7,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Ahorro entre amistades (polla)",
+     "o": 2,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Educación ambiental",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Plataformas de trueque",
+     "o": 0,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Reparación de objetos",
+     "o": 4,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Diseño de huertos urbanos",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Agricultura apoyada por la comunidad (CSA)",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cooperativas de consumo",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Compartir herramientas",
+     "o": 3,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Consultoría regenerativa",
+     "o": 2,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Viveros urbanos",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Canastas comunitarias",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Comprar colectivamente",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Comprar productos locales",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Cooperativas de producción",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Monedas locales",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    }
    ]
   },
   {
@@ -1169,11 +2847,11 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Participar en organizaciones locales",
+     "accion": "Defensa de áreas verdes",
      "n": 2
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Participar en organizaciones locales",
      "n": 2
     }
    ],
@@ -1183,11 +2861,11 @@ window.REPORTE = {
      "n": 10
     },
     {
-     "accion": "Defensa de áreas verdes",
+     "accion": "Creación de huertos comunitarios",
      "n": 6
     },
     {
-     "accion": "Organizar actividades de barrio",
+     "accion": "Defensa de áreas verdes",
      "n": 6
     }
    ],
@@ -1213,6 +2891,159 @@ window.REPORTE = {
      "comuna": "Talagante",
      "accion": "Sistema de monitoreo, evaluación y aprendizaje (MEL)",
      "publico": true
+    }
+   ],
+   "acciones": [
+    {
+     "a": "Redes de agroecología urbana",
+     "o": 1,
+     "p": 10,
+     "i": 1,
+     "esp": [
+      "Hogar en San Miguel"
+     ]
+    },
+    {
+     "a": "Sistema de monitoreo, evaluación y aprendizaje (MEL)",
+     "o": 0,
+     "p": 0,
+     "i": 1,
+     "esp": [
+      "Aucca"
+     ]
+    },
+    {
+     "a": "Defensa de áreas verdes",
+     "o": 2,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Creación de huertos comunitarios",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Organizar actividades de barrio",
+     "o": 1,
+     "p": 6,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Conectar con vecinos",
+     "o": 6,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Participar en organizaciones locales",
+     "o": 2,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Asambleas barriales",
+     "o": 1,
+     "p": 5,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de resiliencia comunitaria",
+     "o": 1,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Mesas ambientales locales",
+     "o": 0,
+     "p": 4,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Jardines comunitarios",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Participar en huertos comunitarios",
+     "o": 1,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Definir programa de trabajo colectivo entre miembros del grupo humano",
+     "o": 0,
+     "p": 3,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Recuperación de sitios eriazos",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Redes de transición urbana",
+     "o": 1,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Co-definir visión conjunta de propósito del grupo",
+     "o": 0,
+     "p": 2,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Consejos comunitarios",
+     "o": 1,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Comunidades intencionales urbanas",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Parques comestibles urbanos",
+     "o": 0,
+     "p": 1,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Acuerdos de uso y subdivisión del terreno compartido",
+     "o": 2,
+     "p": 0,
+     "i": 0,
+     "esp": []
+    },
+    {
+     "a": "Participación en planificación urbana",
+     "o": 1,
+     "p": 0,
+     "i": 0,
+     "esp": []
     }
    ]
   }
