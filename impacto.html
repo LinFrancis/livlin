@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=19">
+  <link rel="stylesheet" href="/css/styles.css?v=20">
   <link rel="stylesheet" href="/css/casos.css?v=1">
   <link rel="stylesheet" href="/css/gestor-trabajos.css?v=1">
   <link rel="stylesheet" href="/css/espacios-ejemplos.css?v=3">
@@ -73,7 +73,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
 .ri .story img{border-radius:var(--r);box-shadow:var(--shadow);width:100%;aspect-ratio:4/5;object-fit:cover}
 .ri .story p{margin-bottom:1em;color:var(--text-soft)}
-.ri .quote{border-left:4px solid var(--green-dark);padding:4px 0 4px 18px;font-size:1.18rem;font-weight:600;color:var(--text);margin:22px 0}
+.ri .quote{padding:4px 0;font-size:1.18rem;font-weight:600;color:var(--text);margin:22px 0}
 .ri /* timeline */
 .cream{background:var(--cream)}
 .ri .months{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;align-items:end;height:260px;margin-top:40px;padding-bottom:6px;border-bottom:2px solid var(--border)}
@@ -264,7 +264,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .pet-h .pnum{flex:none;width:34px;height:34px;border-radius:50%;background:var(--text);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
 .ri .pet-h h3{font-size:1.08rem;line-height:1.25}
 .ri .pet-h small{display:block;font-size:.78rem;color:var(--muted);font-weight:500;margin-top:2px}
-.ri .pet-lect{font-size:.9rem;font-style:italic;color:var(--text-soft);border-left:3px solid var(--green-light);padding-left:12px}
 .ri .etapa{font-size:.84rem;line-height:1.45}
 .ri .etapa .tt{display:flex;justify-content:space-between;gap:8px;font-weight:800;font-size:.8rem}
 .ri .etapa .tt b{color:var(--c)}
@@ -333,7 +332,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .fp-h h3{font-size:1.15rem;line-height:1.25}
 .ri .fp-h small{display:block;font-size:.76rem;color:var(--muted);font-weight:500;margin-top:3px;line-height:1.45}
 .ri .fp-h .pnum{flex:none;width:36px;height:36px;border-radius:50%;background:var(--text);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
-.ri .fp-lect{font-size:.92rem;font-style:italic;color:var(--text-soft);border-left:3px solid var(--green-light);padding-left:12px;margin:14px 0}
 .ri .ftabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .ri .ftab{border:1px solid var(--border);background:#faf9f4;border-radius:14px;padding:10px 12px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:.2s}
 .ri .ftab b{font-size:.78rem;color:var(--text)}
@@ -994,15 +992,6 @@ $('premisas').innerHTML=[
 // ---- Flor de la Permacultura interactiva: pétalos clicables con sus acciones
 const PET=R.petalos, NP=PET.length;
 const CORTO=PET.map(p=>p.nombre);
-const LECT=[
- 'Aquí la regeneración se ve primero: agroecología urbana, suelo vivo, agua cuidada y más especies conviviendo.',
- 'Muros, balcones y estructuras que dejan de ser superficies inertes y se vuelven parte del sistema vivo.',
- 'Tecnología simple y apropiada que reduce la dependencia de lo fósil y devuelve autonomía a quienes habitan el lugar.',
- 'Cada huerta es una sala de clases: aprender haciendo es lo que hace que el cambio perdure.',
- 'Alimento vivo, plantas medicinales y espacios de contemplación: cuidar el territorio también es cuidarnos.',
- 'Economías de cercanía: producir, compartir y consumir con sentido, sin depender de más de lo necesario.',
- 'Los espacios se sostienen cuando las personas se organizan: vecinos que se conectan y acuerdan cómo cuidar lo común.'
-];
 // Colores del póster original de la Flor de la Permacultura (tonos vivos, con transparencia entre pétalos)
 const COLP=['#A9D28D','#F3EE8F','#FBBA6E','#EE8189','#C28BCB','#8D8FD0','#8ED0E4'];
 const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255,m=1-f;return '#'+[r,g,b].map(v=>Math.round(v*m).toString(16).padStart(2,'0')).join('')};
@@ -1058,7 +1047,6 @@ function florPanel(){
   const filas=vis.map(a=>{const c=a[key];return `<li><span class="ac-n" style="background:${colE(p.i,key)}">${c}</span><div><b>${a.a}</b><small>en ${c} de ${n} espacio${c>1?'s':''}</small>${key==='i'&&a.esp.length?`<div class="ac-esp">${a.esp.map(e=>`<em>${e}</em>`).join('')}</div>`:''}</div></li>`}).join('');
   const vacio=!total?`<p class="ac-vacio">${q?'No hay acciones que coincidan con la búsqueda.':(key==='i'?'Aún no hay acciones implementadas en este pétalo: es una oportunidad abierta.':'Sin registros en esta etapa.')}</p>`:'';
   return `<div class="fp-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
-   <p class="fp-lect">${LECT[p.i]}</p>
    <div class="ftabs">${tabs}</div>
    <p class="fp-desc"><b>${E.t}: ${num(p[E.sc])} de 10.</b> ${E.d} ${E.lista}: <b>${p[E.a]}</b>, en ${p[E.k]} de ${n} espacios con diagnóstico.</p>
    <input type="search" class="fp-q" id="fp-q" placeholder="Buscar una acción de este pétalo" value="${FL.q.replace(/"/g,'&quot;')}" aria-label="Buscar una acción">
