@@ -4,7 +4,7 @@ window.REPORTE = {
   "nombre": "Primer año",
   "inicio": "2025-11-30",
   "aniversario": "2026-11-30",
-  "corte": "2026-11-17",
+  "corte": "2026-11-18",
   "respaldo": "backup_visits_antes_de_dron_2026-11-17.json"
  },
  "personas": 686,
@@ -572,7 +572,7 @@ window.REPORTE = {
  "petalos": [
   {
    "i": 0,
-   "nombre": "Administración de la Tierra y de la Naturaleza",
+   "nombre": "Manejo de la Tierra y la Naturaleza",
    "subtitulo": "huertos biointensivos, bosques comestibles, conservación de semillas, agricultura biológica, agroforestería y cosecha de agua",
    "ini": 3.18,
    "act": 5.15,
@@ -655,11 +655,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Camas de cultivo biointensivo",
+     "accion": "Compostaje comunitario en el barrio",
      "n": 1
     },
     {
-     "accion": "Compostaje comunitario en el barrio",
+     "accion": "Camas de cultivo biointensivo",
      "n": 1
     }
    ],
@@ -1360,7 +1360,7 @@ window.REPORTE = {
   },
   {
    "i": 1,
-   "nombre": "Construcción",
+   "nombre": "Ambientes Construidos",
    "subtitulo": "diseño solar pasivo, materiales de construcción naturales, manejo del agua y reciclaje de desechos, y construcción resiliente",
    "ini": 2.35,
    "act": 3.06,
@@ -1383,7 +1383,7 @@ window.REPORTE = {
      "n": 4
     },
     {
-     "accion": "Diseño solar pasivo",
+     "accion": "Construcción con materiales reciclados",
      "n": 4
     }
    ],
@@ -1407,11 +1407,11 @@ window.REPORTE = {
      "n": 2
     },
     {
-     "accion": "Jardines verticales comestibles",
+     "accion": "Balcones verdes",
      "n": 1
     },
     {
-     "accion": "Balcones verdes",
+     "accion": "Jardines verticales comestibles",
      "n": 1
     },
     {
@@ -1716,11 +1716,11 @@ window.REPORTE = {
    ],
    "top_pot": [
     {
-     "accion": "Paneles solares domésticos",
+     "accion": "Deshidratación solar",
      "n": 10
     },
     {
-     "accion": "Deshidratación solar",
+     "accion": "Paneles solares domésticos",
      "n": 10
     },
     {
@@ -1734,15 +1734,11 @@ window.REPORTE = {
      "n": 1
     },
     {
-     "accion": "Aerogenerador eólico doméstico",
-     "n": 1
-    },
-    {
      "accion": "Paneles solares domésticos",
      "n": 1
     },
     {
-     "accion": "Deshidratación solar",
+     "accion": "Aerogenerador eólico doméstico",
      "n": 1
     },
     {
@@ -1751,6 +1747,10 @@ window.REPORTE = {
     },
     {
      "accion": "Reciclaje",
+     "n": 1
+    },
+    {
+     "accion": "Deshidratación solar",
      "n": 1
     },
     {
@@ -2054,17 +2054,17 @@ window.REPORTE = {
      "n": 3
     },
     {
-     "accion": "Talleres de compostaje",
+     "accion": "Arte con materiales reciclados",
      "n": 3
     }
    ],
    "top_pot": [
     {
-     "accion": "Talleres de huertos urbanos",
+     "accion": "Redes de huertos urbanos",
      "n": 9
     },
     {
-     "accion": "Redes de huertos urbanos",
+     "accion": "Talleres de huertos urbanos",
      "n": 9
     },
     {
@@ -2433,7 +2433,7 @@ window.REPORTE = {
   },
   {
    "i": 4,
-   "nombre": "Salud y Bienestar Espiritual",
+   "nombre": "Bienestar Físico y Espiritual",
    "subtitulo": "medicina complementaria e integral, yoga, tai chi y otras disciplinas del cuerpo, la mente y el espíritu",
    "ini": 2.0,
    "act": 2.03,
@@ -2663,7 +2663,7 @@ window.REPORTE = {
   },
   {
    "i": 5,
-   "nombre": "Finanzas y Economía",
+   "nombre": "Economía y Finanzas",
    "subtitulo": "mercados locales de agricultores, agricultura sostenida por la comunidad, comercio justo y redes de trabajo voluntario en granjas orgánicas",
    "ini": 2.35,
    "act": 2.45,
@@ -2682,21 +2682,21 @@ window.REPORTE = {
      "n": 7
     },
     {
-     "accion": "Evitar plásticos de un solo uso",
+     "accion": "Reparación de objetos",
      "n": 4
     },
     {
-     "accion": "Reparación de objetos",
+     "accion": "Evitar plásticos de un solo uso",
      "n": 4
     }
    ],
    "top_pot": [
     {
-     "accion": "Producción de alimentos locales",
+     "accion": "Compras colectivas de alimentos",
      "n": 7
     },
     {
-     "accion": "Compras colectivas de alimentos",
+     "accion": "Producción de alimentos locales",
      "n": 7
     },
     {
@@ -2926,7 +2926,7 @@ window.REPORTE = {
   },
   {
    "i": 6,
-   "nombre": "Tenencia de la Tierra y Gobernación Comunitaria",
+   "nombre": "Tenencia de la Tierra y Gobierno Comunitario",
    "subtitulo": "cooperativas, toma de decisiones por consenso, compartir viviendas, ecoaldeas y derechos de uso tradicionales",
    "ini": 1.41,
    "act": 1.56,
@@ -2945,11 +2945,11 @@ window.REPORTE = {
      "n": 6
     },
     {
-     "accion": "Participar en organizaciones locales",
+     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
      "n": 2
     },
     {
-     "accion": "Acuerdos de uso y subdivisión del terreno compartido",
+     "accion": "Participar en organizaciones locales",
      "n": 2
     }
    ],
@@ -2959,11 +2959,11 @@ window.REPORTE = {
      "n": 10
     },
     {
-     "accion": "Organizar actividades de barrio",
+     "accion": "Creación de huertos comunitarios",
      "n": 6
     },
     {
-     "accion": "Creación de huertos comunitarios",
+     "accion": "Organizar actividades de barrio",
      "n": 6
     }
    ],

@@ -752,7 +752,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
       <div><h3>Cultivo nuevo</h3><p>Metros cuadrados de camas de cultivo construidas por LivLin. El cultivo que ya existía antes se cuenta aparte.</p></div>
       <div><h3>Fechas</h3><p>Algunas fechas de eventos son aproximadas y así están anotadas en el registro de cada proyecto.</p></div>
       <div><h3>Cómo se calculan los puntajes de la flor</h3><p>Es el mismo método de la plataforma de Indagación Regenerativa. Cada pétalo se califica de 0 a 10 según la cantidad de acciones: ninguna es 0; 1 a 2 es 2; 3 a 5 es 4; 6 a 9 es 6; 10 a 14 es 8 y 15 o más es 10. El <b>estado inicial</b> cuenta las prácticas que ya existían; el <b>potencial futuro</b> suma las acciones planificadas, con más peso para las de mayor envergadura; y el <b>estado actual</b> avanza del inicial hacia el potencial según el esfuerzo ya implementado. El reporte muestra el promedio de los proyectos con diagnóstico.</p></div>
-      <div><h3>Flor de la Permacultura</h3><p>Mapa de siete campos que parte de la ética y los principios de diseño (Holmgren): administración de la tierra y de la naturaleza, construcción, herramientas y tecnología, educación y cultura, salud y bienestar espiritual, finanzas y economía, y tenencia de la tierra y gobernación comunitaria. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora. <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Saber más →</a></p></div>
+      <div><h3>Flor de la Permacultura</h3><p>Mapa de siete campos que parte de la ética y los principios de diseño (Holmgren): manejo de la tierra y la naturaleza, ambientes construidos, herramientas y tecnología, educación y cultura, bienestar físico y espiritual, economía y finanzas, y tenencia de la tierra y gobierno comunitario. «Encontrado» es lo que el diagnóstico registró; «planificado», lo que el plan maestro proyectó; «implementado», lo registrado en la bitácora. <a href="https://files.permacultureprinciples.com/downloads/Pc_Flower_Poster_ES.pdf" target="_blank" rel="noopener">Saber más →</a></p></div>
       <div><h3>Marco interpretativo</h3><p>Mason Bustos, F. (2025). <i>Introducción al enfoque de la regeneración. Material de apoyo para la docencia regenerativa.</i> LivLin. <a href="https://doi.org/10.17605/OSF.IO/UCDEH" target="_blank" rel="noopener">doi.org/10.17605/OSF.IO/UCDEH</a></p></div>
       <div><h3>Privacidad</h3><p>Los hogares aparecen con ubicación aproximada y sin nombre.</p></div>
     </div>
@@ -837,7 +837,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
   </button>
 
     <script src="js/script.js?v=7"></script>
-  <script src="js/impacto-datos.js?v=4"></script>
+  <script src="js/impacto-datos.js?v=5"></script>
   <script src="js/casos.js"></script>
   <script src="js/gestor-trabajos.js?v=1"></script>
   <script src="js/impacto-geo.js?v=1"></script>
@@ -970,7 +970,7 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
   const P0=(R.petalos&&R.petalos[0])||{espacios_impl:0};
   $('retos').innerHTML=[
    ['Cambio climático','Soluciones locales a un desafío que es global.',`${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo agroecológico urbano nuevo.`],
-   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de administración de la tierra y de la naturaleza.`],
+   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de manejo de la tierra y la naturaleza.`],
    ['Contaminación en todo el mundo','Los residuos pueden volver a ser recursos.',`${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
    ['Pérdida de lazos comunitarios','Frente al exceso de individualismo en ciertas culturas.',`${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
    ['Declive nutricional de los alimentos','Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.','Alimentos agroecológicos, cultivados cerca de quien los come, con suelo vivo y sin insumos sintéticos.']
@@ -1005,8 +1005,7 @@ const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&
 // Series del radar: estado inicial, estado actual y potencial futuro (mismos colores en leyenda, panel y gráfico)
 const COLS={o:'#E1AA36',i:'#112E4D',p:'#239BA7'};
 const colE=(i,k)=>COLS[k];
-const LINEAS_RADAR=[['Administración','de la Tierra y','de la Naturaleza'],['Construcción'],['Herramientas','y Tecnología'],['Educación','y Cultura'],['Salud y Bienestar','Espiritual'],['Finanzas','y Economía'],['Tenencia de','la Tierra y','Gobernación','Comunitaria']];
-const NOMBRE_PET=[['ADMINISTRACIÓN','DE LA TIERRA Y','DE LA NATURALEZA'],['CONSTRUCCIÓN'],['HERRAMIENTAS','Y TECNOLOGÍA'],['EDUCACIÓN','Y CULTURA'],['SALUD Y','BIENESTAR','ESPIRITUAL'],['FINANZAS','Y ECONOMÍA'],['TENENCIA DE LA','TIERRA Y','GOBERNACIÓN','COMUNITARIA']];
+const LINEAS_RADAR=[['Manejo de la Tierra','y la Naturaleza'],['Ambientes','Construidos'],['Herramientas','y Tecnología'],['Educación','y Cultura'],['Bienestar Físico','y Espiritual'],['Economía','y Finanzas'],['Tenencia de','la Tierra y Gobierno','Comunitario']];
 const num=v=>(+v).toLocaleString('es-CL',{maximumFractionDigits:2});
 // o = Estado inicial (ERP), i = Estado actual (AIMP), p = Potencial futuro (HRP)
 const ETAPA={
