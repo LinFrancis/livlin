@@ -414,6 +414,17 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .flor-det[open] summary::before{content:"– "}
 .ri .flor-det .flor-insight{margin-top:8px}
 @media(max-width:520px){.ri .petalo-nombre{font-size:17px;stroke-width:4.5px}}
+.ri .flor-svg svg{max-width:640px;filter:none}
+.ri .petalo{cursor:pointer;transition:opacity .2s}
+.ri .petalo:hover path{fill-opacity:.5}
+.ri .petalo:focus{outline:none}
+.ri .petalo:focus-visible path{stroke:#2b2b2b;stroke-width:3}
+.ri .rad-nombre{font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;fill:var(--pc,#222);cursor:pointer}
+.ri .petalo-etq.on .rad-nombre{text-decoration:underline;text-underline-offset:4px}
+.ri .rad-esc{font-size:12px;fill:#8895a1;font-weight:700}
+.ri .flor-leg i.ln{width:34px;height:12px}
+@media(max-width:520px){.ri .rad-nombre{font-size:23px}
+.ri .rad-esc{font-size:18px}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -584,10 +595,10 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
         <div class="flor-svg" id="flor-svg"></div>
         <p class="flor-hint"><b>Toca un pétalo</b> para ver sus acciones, una por una.</p>
         <div class="flor-leg">
-          <p class="flor-leg-t">Cada pétalo tiene tres capas. Mientras más grande es la capa, más avanzado está ese pétalo:</p>
-          <span><i class="cap cap1"></i><b>Núcleo oscuro: estado inicial</b> <small>lo que el lugar ya tenía</small></span>
-          <span><i class="cap cap2"></i><b>Capa media: estado actual</b> <small>lo que se ha logrado</small></span>
-          <span><i class="cap cap3"></i><b>Capa clara: potencial futuro</b> <small>lo que puede llegar a ser</small></span>
+          <p class="flor-leg-t">Mientras más lejos del centro, más avanzado está el pétalo (de 0 a 10):</p>
+          <span><i class="ln" style="background:#E1AA36"></i><b>Estado inicial</b> <small>lo que el lugar ya tenía</small></span>
+          <span><i class="ln" style="background:#112E4D"></i><b>Estado actual</b> <small>lo que se ha logrado</small></span>
+          <span><i class="ln" style="background:#239BA7"></i><b>Potencial futuro</b> <small>lo que puede llegar a ser</small></span>
         </div>
         <div class="flor-chips" id="flor-lista" role="group" aria-label="Elegir pétalo"></div>
       </div>
@@ -996,9 +1007,10 @@ const LECT=[
 const COLP=['#A9D28D','#F3EE8F','#FBBA6E','#EE8189','#C28BCB','#8D8FD0','#8ED0E4'];
 const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255,m=1-f;return '#'+[r,g,b].map(v=>Math.round(v*m).toString(16).padStart(2,'0')).join('')};
 // Mismo cálculo que el «Análisis por dimensión» del dashboard de la plataforma (puntajes 0-10, promedio de los proyectos con diagnóstico)
-// Capas de cada pétalo, con el color del póster: núcleo oscuro = estado inicial, capa media = estado actual, capa clara = potencial futuro
-const TONO={o:.52,i:.26,p:.06};
-const colE=(i,k)=>dark(COLP[i],TONO[k]);
+// Series del radar: estado inicial, estado actual y potencial futuro (mismos colores en leyenda, panel y gráfico)
+const COLS={o:'#E1AA36',i:'#112E4D',p:'#239BA7'};
+const colE=(i,k)=>COLS[k];
+const LINEAS_RADAR=[['Tierra y','naturaleza'],['Construcción'],['Herramientas','y tecnología'],['Educación','y cultura'],['Salud y','bienestar'],['Finanzas','y economía'],['Tenencia y','gobernación']];
 const NOMBRE_PET=[['ADMINISTRACIÓN','DE LA TIERRA Y','DE LA NATURALEZA'],['CONSTRUCCIÓN'],['HERRAMIENTAS','Y TECNOLOGÍA'],['EDUCACIÓN','Y CULTURA'],['SALUD Y','BIENESTAR','ESPIRITUAL'],['FINANZAS','Y ECONOMÍA'],['TENENCIA DE LA','TIERRA Y','GOBERNACIÓN','COMUNITARIA']];
 const num=v=>(+v).toLocaleString('es-CL',{maximumFractionDigits:2});
 // o = Estado inicial (ERP), i = Estado actual (AIMP), p = Potencial futuro (HRP)
@@ -1010,27 +1022,33 @@ const ETAPA={
 const ORDEN_E=['o','i','p'];
 const FL={sel:0,etapa:'i',todas:false,q:''};
 function florSVG(){
-  const cx=320,cy=320,C=148,RX=152,RY=92;let bases='',capas='',nombres='',contorno='';
-  // orden del póster: «Herramientas y tecnología» a la derecha; los demás siguen en sentido horario
-  const ang=i=>-5+(i-2)*360/NP;
+  const cx=380,cy=340,R=185,paso=2*Math.PI/NP,a0=-Math.PI/2;
+  const A=i=>a0+i*paso;
+  const pt=(i,v)=>[cx+Math.cos(A(i))*R*Math.min(v,10)/10,cy+Math.sin(A(i))*R*Math.min(v,10)/10];
+  const poly=f=>PET.map((p,i)=>pt(i,f(p)).map(n=>n.toFixed(1)).join(',')).join(' ');
+  let g='';
+  // sectores de color (uno por pétalo, con el color del póster) que también sirven para elegir
   PET.forEach((p,i)=>{
-    const a=ang(i),on=i===FL.sel,tr=`translate(${cx} ${cy}) rotate(${a})`;
-    // el largo de cada capa es el puntaje de 0 a 10 (el pétalo completo equivale a 10), igual que en la plataforma
-    const capa=(v,ry,fill,borde)=>{const l=Math.max(26,2*RX*Math.min(v,10)/10);return `<ellipse cx="${C-RX+l/2}" cy="0" rx="${l/2}" ry="${Math.min(ry,l/2)}" fill="${fill}" ${borde||''}/>`};
-    bases+=`<g class="petalo${on?' on':''}" data-p="${i}" transform="${tr}" tabindex="0" role="button" aria-pressed="${on}" aria-label="Pétalo ${i+1}: ${p.nombre}. Estado inicial ${num(p.ini)} de 10, estado actual ${num(p.act)} y potencial futuro ${num(p.pot)}"><ellipse class="pet-base" cx="${C}" cy="0" rx="${RX}" ry="${RY}" fill="${COLP[i]}" fill-opacity=".55" style="mix-blend-mode:multiply"/></g>`;
-    capas+=`<g transform="${tr}" pointer-events="none">${capa(p.pot,RY-6,dark(COLP[i],TONO.p),`fill-opacity=".75" stroke="${dark(COLP[i],.45)}" stroke-width="1.6" stroke-dasharray="5 4"`)}${capa(p.act,RY-24,colE(i,'i'))}${capa(p.ini,RY-42,colE(i,'o'))}</g>`;
-    if(on)contorno=`<g transform="${tr}" pointer-events="none"><ellipse cx="${C}" cy="0" rx="${RX}" ry="${RY}" fill="none" stroke="#2b2b2b" stroke-width="4"/></g>`;
-    const t=a*Math.PI/180,d=C+RX*.50,x=cx+Math.cos(t)*d,y=cy+Math.sin(t)*d,L=NOMBRE_PET[i],lh=15;
-    nombres+=`<text class="petalo-nombre" x="${x.toFixed(1)}" y="${(y-(L.length-1)*lh/2+5).toFixed(1)}" text-anchor="middle">${L.map((l,k)=>`<tspan x="${x.toFixed(1)}" dy="${k?lh:0}">${l}</tspan>`).join('')}</text>`;
+    const on=i===FL.sel,r=R+14,x1=cx+Math.cos(A(i)-paso/2)*r,y1=cy+Math.sin(A(i)-paso/2)*r,x2=cx+Math.cos(A(i)+paso/2)*r,y2=cy+Math.sin(A(i)+paso/2)*r;
+    g+=`<g class="petalo${on?' on':''}" data-p="${i}" tabindex="0" role="button" aria-pressed="${on}" aria-label="Pétalo ${i+1}: ${p.nombre}. Estado inicial ${num(p.ini)} de 10, estado actual ${num(p.act)} y potencial futuro ${num(p.pot)}"><path d="M${cx} ${cy} L${x1.toFixed(1)} ${y1.toFixed(1)} A${r} ${r} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)} Z" fill="${COLP[i]}" fill-opacity="${on?.55:.30}" stroke="#fff" stroke-width="2"/></g>`;
   });
-  // espiral del póster: va de lo personal y local hacia lo colectivo y global
-  const pts=[];
-  for(let th=0;th<=2*Math.PI*1.85;th+=.07){const r=78+th/(2*Math.PI)*17;pts.push([cx+Math.cos(th-1.1)*r,cy+Math.sin(th-1.1)*r])}
-  const e=pts[pts.length-1],q=pts[pts.length-3],ta=Math.atan2(e[1]-q[1],e[0]-q[0]),af=(dx,dy)=>[e[0]+Math.cos(ta)*dx-Math.sin(ta)*dy,e[1]+Math.sin(ta)*dx+Math.cos(ta)*dy];
-  const A=af(20,0),B=af(-6,-13),Cc=af(-6,13);
-  const espiral=`<path d="M${pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L')}" fill="none" stroke="#D4144C" stroke-width="7" stroke-linecap="round" pointer-events="none"/><polygon points="${A.map(v=>v.toFixed(1)).join(',')} ${B.map(v=>v.toFixed(1)).join(',')} ${Cc.map(v=>v.toFixed(1)).join(',')}" fill="#D4144C" pointer-events="none"/>`;
-  const centro=`<circle cx="${cx}" cy="${cy}" r="64" fill="#fff" stroke="#D4144C" stroke-width="7" pointer-events="none"/>`+['La Ética y','los Principios','de Diseño'].map((t,k)=>`<text x="${cx}" y="${cy-9+k*17}" text-anchor="middle" font-size="14" font-weight="700" fill="#3a3a3a" font-family="Montserrat,sans-serif" pointer-events="none">${t}</text>`).join('');
-  return `<svg viewBox="0 0 640 640" role="group" aria-label="Flor de la Permacultura: en cada pétalo, el núcleo oscuro es el estado inicial, la capa media el estado actual y la capa clara el potencial futuro">${bases}${capas}${contorno}${espiral}${centro}<g pointer-events="none">${nombres}</g></svg>`;
+  // anillos y ejes
+  [2,4,6,8,10].forEach(v=>{g+=`<polygon points="${PET.map((_,i)=>pt(i,v).map(n=>n.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="${v===10?'#9aa5b1':'#cfd6dc'}" stroke-width="${v===10?1.6:1}" pointer-events="none"/>`});
+  PET.forEach((_,i)=>{const [x,y]=pt(i,10);g+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#cfd6dc" pointer-events="none"/>`});
+  g+=`<text x="${cx+6}" y="${(cy-R*.5+4).toFixed(1)}" class="rad-esc" pointer-events="none">5</text><text x="${cx+6}" y="${(cy-R+4).toFixed(1)}" class="rad-esc" pointer-events="none">10</text>`;
+  // series: potencial (la más grande), actual e inicial
+  const serie=(f,col,fo,extra)=>`<polygon points="${poly(f)}" fill="${col}" fill-opacity="${fo}" stroke="${col}" stroke-width="2.5" stroke-linejoin="round" ${extra||''} pointer-events="none"/>`;
+  g+=serie(p=>p.pot,COLS.p,.12,'stroke-dasharray="7 5"')+serie(p=>p.act,COLS.i,.28)+serie(p=>p.ini,COLS.o,.55);
+  // puntos con su valor al pasar el cursor
+  [['pot','p'],['act','i'],['ini','o']].forEach(([f,k])=>PET.forEach((p,i)=>{const [x,y]=pt(i,p[f]);g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" fill="#fff" stroke="${COLS[k]}" stroke-width="2.5"><title>${ETAPA[k].t}: ${num(p[f])} de 10</title></circle>`}));
+  // nombres (con el color del póster), fuera del radar
+  PET.forEach((p,i)=>{
+    const on=i===FL.sel,t=A(i),x=cx+Math.cos(t)*(R+30),y=cy+Math.sin(t)*(R+30),L=LINEAS_RADAR[i],lh=18;
+    const c=Math.cos(t),anc=Math.abs(c)<.3?'middle':(c>0?'start':'end');
+    const y0=Math.abs(Math.sin(t))>.8?(Math.sin(t)<0?y-(L.length-1)*lh:y+12):y-(L.length-1)*lh/2+5;
+    g+=`<g class="petalo-etq${on?' on':''}" data-p="${i}"><text class="rad-nombre" x="${x.toFixed(1)}" y="${y0.toFixed(1)}" text-anchor="${anc}" style="--pc:${dark(COLP[i],.45)}">${L.map((l,k)=>`<tspan x="${x.toFixed(1)}" dy="${k?lh:0}">${l}</tspan>`).join('')}</text></g>`;
+  });
+  return `<svg viewBox="0 55 760 540" role="group" aria-label="Gráfico radar de la Flor de la Permacultura: estado inicial, estado actual y potencial futuro de cada pétalo, de 0 a 10">${g}</svg>`;
 }
 function florPanel(){
   const p=PET[FL.sel],n=p.espacios_total,E=ETAPA[FL.etapa],key=FL.etapa;
