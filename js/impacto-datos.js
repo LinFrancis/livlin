@@ -573,7 +573,7 @@ window.REPORTE = {
   {
    "i": 0,
    "nombre": "Manejo de la Tierra y la Naturaleza",
-   "subtitulo": "huertos biointensivos, bosques comestibles, conservación de semillas, agricultura biológica, agroforestería y cosecha de agua",
+   "subtitulo": "huertos biointensivos, bosques comestibles, conservación de semillas, agroecología, agroforestería y cosecha de agua",
    "ini": 3.18,
    "act": 5.15,
    "pot": 8.59,
