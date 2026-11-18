@@ -429,6 +429,16 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .flor-leg i.ln{width:34px;height:12px}
 @media(max-width:520px){.ri .rad-nombre{font-size:19px}
 .ri .rad-esc{font-size:18px}}
+.ri .retos{grid-template-columns:1fr;gap:14px}
+.ri .reto{flex-direction:row;align-items:stretch;gap:0;padding:0;overflow:hidden}
+.ri .reto .reto-ev{flex:1.7;border:0;border-radius:0;background:transparent;padding:20px 24px;display:flex;flex-direction:column;gap:6px}
+.ri .reto-ev b{font-size:1.1rem}
+.ri .reto-ev p{margin:0;font-size:.95rem;line-height:1.55;color:var(--text-soft)}
+.ri .reto .fuente{font-size:.78rem;color:var(--muted);line-height:1.4;margin-top:2px}
+.ri .reto .fuente a{color:var(--teal-dark);text-decoration:underline;text-underline-offset:2px}
+.ri .reto .loc{flex:1;margin:0;border:0;border-radius:0;border-left:1px solid var(--border);background:var(--cream);padding:20px 22px;display:flex;flex-direction:column;justify-content:center;font-size:.92rem}
+@media(max-width:720px){.ri .reto{flex-direction:column}
+.ri .reto .loc{border-left:0;border-top:1px solid var(--border)}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
 
@@ -970,13 +980,29 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
 // ---- Desafíos globales (marco del taller): desafío global + respuesta local con datos
 (function(){
   const P0=(R.petalos&&R.petalos[0])||{espacios_impl:0};
+  const FUENTE=(t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
   $('retos').innerHTML=[
-   ['Cambio climático','Soluciones locales a un desafío que es global.',`${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo agroecológico urbano nuevo.`],
-   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de manejo de la tierra y la naturaleza.`],
-   ['Contaminación en todo el mundo','Los residuos pueden volver a ser recursos.',`${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
-   ['Pérdida de lazos comunitarios','Frente al exceso de individualismo en ciertas culturas.',`${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
-   ['Declive nutricional de los alimentos','Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.','Alimentos agroecológicos, cultivados cerca de quien los come, con suelo vivo y sin insumos sintéticos.']
-  ].map(([t,d,l])=>`<div class="reto"><em>Desafío global</em><b>${t}</b><span>${d}</span><div class="loc"><small>Respuesta local</small>${l}</div></div>`).join('');
+   ['Cambio climático',
+    'Las actividades humanas han calentado el planeta 1,1 °C respecto de 1850-1900. Con las políticas vigentes, el calentamiento superaría 1,5 °C este siglo.',
+    FUENTE('IPCC, Sexto Informe de Evaluación (2023)','https://www.wri.org/insights/2023-ipcc-ar6-synthesis-report-climate-change-findings'),
+    `${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo agroecológico urbano nuevo.`],
+   ['Pérdida de biodiversidad',
+    'Las poblaciones de vertebrados monitoreadas cayeron en promedio un 73 % entre 1970 y 2020; en América Latina y el Caribe, un 95 %.',
+    FUENTE('WWF, Informe Planeta Vivo (2024)','https://www.worldwildlife.org/news/press-releases/catastrophic-73-decline-in-the-average-size-of-global-wildlife-populations-in-just-50-years-reveals-a-system-in-peril/'),
+    `${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de manejo de la tierra y la naturaleza.`],
+   ['Contaminación en todo el mundo',
+    'La contaminación causa cerca de 9 millones de muertes al año, una de cada seis en el mundo.',
+    FUENTE('The Lancet Planetary Health, Comisión sobre contaminación y salud (2022)','https://weforum.org/agenda/2022/05/pollution-largest-existential-threat-humans-9-million-deaths/'),
+    `${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
+   ['Pérdida de lazos comunitarios',
+    'Una de cada seis personas en el mundo vive con soledad, asociada a unas 871.000 muertes al año.',
+    FUENTE('OMS, Comisión de Conexión Social (2025)','https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death'),
+    `${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
+   ['Declive nutricional de los alimentos',
+    'Entre 1950 y 1999, 43 hortalizas mostraron descensos aparentes en seis nutrientes (de 6 % a 38 %), atribuidos sobre todo a variedades que priorizan el rendimiento. Es un tema en debate.',
+    FUENTE('Davis, Epp y Riordan, J. Am. Coll. Nutr. (2004)','https://pubmed.ncbi.nlm.nih.gov/15637215/'),
+    'Alimentos agroecológicos, cultivados cerca de quien los come, con suelo vivo y sin insumos sintéticos.']
+  ].map(([t,e,f,l])=>`<div class="reto"><div class="reto-ev"><em>Desafío global</em><b>${t}</b><p>${e}</p><small class="fuente">Fuente: ${f}</small></div><div class="loc"><small>Respuesta local</small>${l}</div></div>`).join('');
 })();
 
 // ---- Premisas del marco interpretativo
