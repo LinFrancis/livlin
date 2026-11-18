@@ -423,7 +423,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .petalo-etq.on .rad-nombre{text-decoration:underline;text-underline-offset:4px}
 .ri .rad-esc{font-size:12px;fill:#8895a1;font-weight:700}
 .ri .flor-leg i.ln{width:34px;height:12px}
-@media(max-width:520px){.ri .rad-nombre{font-size:23px}
+@media(max-width:520px){.ri .rad-nombre{font-size:19px}
 .ri .rad-esc{font-size:18px}}
 .ri{overflow-x:hidden}.ri p{color:inherit}.ri h1,.ri h2,.ri h3{color:inherit;letter-spacing:-.01em;font-family:'Montserrat',sans-serif}
 .ri .ri-hero h1{font-size:clamp(2.6rem,8vw,5.6rem)}.ri h2{font-size:clamp(1.7rem,4vw,2.6rem)}.ri h3{font-size:1.05rem}
@@ -975,7 +975,7 @@ $('tabla-cuencas').innerHTML='<thead><tr><th>Cuenca</th><th>Subcuenca</th><th>Es
   const P0=(R.petalos&&R.petalos[0])||{espacios_impl:0};
   $('retos').innerHTML=[
    ['Cambio climático','Soluciones locales a un desafío que es global.',`${R.sistemas.arboles} árboles frutales plantados y ${nf(R.cultivo.nuevo_m2,1)} m² de cultivo agroecológico urbano nuevo.`],
-   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de tierra y naturaleza.`],
+   ['Pérdida de biodiversidad','Cada espacio que recupera vida suma al conjunto.',`${P0.espacios_impl} de ${P0.espacios_total} espacios con diagnóstico ya implementan acciones de administración de la tierra y de la naturaleza.`],
    ['Contaminación en todo el mundo','Los residuos pueden volver a ser recursos.',`${nf(R.sistemas.compost_l)} L de capacidad de compostaje: los residuos se vuelven abono.`],
    ['Pérdida de lazos comunitarios','Frente al exceso de individualismo en ciertas culturas.',`${R.talleres} talleres con ${R.asistentes} asistentes, en comunidades y hogares.`],
    ['Declive nutricional de los alimentos','Los cultivados de manera industrial. Podemos tener cuerpos sanos y proyectar presentes y futuros sanos.','Alimentos agroecológicos, cultivados cerca de quien los come, con suelo vivo y sin insumos sintéticos.']
@@ -993,7 +993,7 @@ $('premisas').innerHTML=[
 
 // ---- Flor de la Permacultura interactiva: pétalos clicables con sus acciones
 const PET=R.petalos, NP=PET.length;
-const CORTO=['Tierra y naturaleza','Construcción','Herramientas y tecnología','Educación y cultura','Salud y bienestar','Finanzas y economía','Tenencia y gobernación'];
+const CORTO=PET.map(p=>p.nombre);
 const LECT=[
  'Aquí la regeneración se ve primero: agroecología urbana, suelo vivo, agua cuidada y más especies conviviendo.',
  'Muros, balcones y estructuras que dejan de ser superficies inertes y se vuelven parte del sistema vivo.',
@@ -1010,7 +1010,7 @@ const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&
 // Series del radar: estado inicial, estado actual y potencial futuro (mismos colores en leyenda, panel y gráfico)
 const COLS={o:'#E1AA36',i:'#112E4D',p:'#239BA7'};
 const colE=(i,k)=>COLS[k];
-const LINEAS_RADAR=[['Tierra y','naturaleza'],['Construcción'],['Herramientas','y tecnología'],['Educación','y cultura'],['Salud y','bienestar'],['Finanzas','y economía'],['Tenencia y','gobernación']];
+const LINEAS_RADAR=[['Administración','de la Tierra y','de la Naturaleza'],['Construcción'],['Herramientas','y Tecnología'],['Educación','y Cultura'],['Salud y Bienestar','Espiritual'],['Finanzas','y Economía'],['Tenencia de','la Tierra y','Gobernación','Comunitaria']];
 const NOMBRE_PET=[['ADMINISTRACIÓN','DE LA TIERRA Y','DE LA NATURALEZA'],['CONSTRUCCIÓN'],['HERRAMIENTAS','Y TECNOLOGÍA'],['EDUCACIÓN','Y CULTURA'],['SALUD Y','BIENESTAR','ESPIRITUAL'],['FINANZAS','Y ECONOMÍA'],['TENENCIA DE LA','TIERRA Y','GOBERNACIÓN','COMUNITARIA']];
 const num=v=>(+v).toLocaleString('es-CL',{maximumFractionDigits:2});
 // o = Estado inicial (ERP), i = Estado actual (AIMP), p = Potencial futuro (HRP)
