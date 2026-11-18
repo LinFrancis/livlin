@@ -331,6 +331,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 .ri .fp-h{display:flex;gap:12px;align-items:flex-start}
 .ri .fp-h h3{font-size:1.15rem;line-height:1.25}
 .ri .fp-h small{display:block;font-size:.76rem;color:var(--muted);font-weight:500;margin-top:3px;line-height:1.45}
+.ri .fp-intro{margin:12px 0 4px;font-size:.95rem;line-height:1.6;color:var(--text-soft)}
 .ri .fp-h .pnum{flex:none;width:36px;height:36px;border-radius:50%;background:var(--text);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
 .ri .ftabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .ri .ftab{border:1px solid var(--border);background:#faf9f4;border-radius:14px;padding:10px 12px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:.2s}
@@ -987,6 +988,15 @@ $('premisas').innerHTML=[
 // ---- Flor de la Permacultura interactiva: pétalos clicables con sus acciones
 const PET=R.petalos, NP=PET.length;
 const CORTO=PET.map(p=>p.nombre);
+const INTRO=[
+ 'Cómo cuidamos y producimos con el suelo, el agua, las plantas y los ecosistemas. Reúne los huertos biointensivos, los bosques comestibles, la conservación de semillas, la agricultura biológica, la agroforestería y la cosecha de agua.',
+ 'Cómo diseñamos y construimos los lugares donde vivimos. Reúne el diseño solar pasivo y los materiales de construcción natural.',
+ 'Las herramientas simples y apropiadas que nos hacen menos dependientes de lo fósil. Reúne la reutilización y el reciclaje creativo, las herramientas manuales, las bicicletas, las cocinas eficientes, el biochar y las energías renovables a pequeña escala.',
+ 'Cómo aprendemos juntos y cambiamos la cultura. Reúne la educación alternativa, las artes y la música participativa, la ecología social, la investigación activa y la cultura de la transición.',
+ 'El cuidado del cuerpo, la mente y el espíritu. Reúne la medicina complementaria e integral, el yoga, el tai chi y otras disciplinas del bienestar.',
+ 'Economías locales y colaborativas, que ponen la vida al centro. Reúne los mercados de agricultores, la agricultura sostenida por la comunidad, el comercio justo y las redes de trabajo voluntario en granjas orgánicas.',
+ 'Cómo nos organizamos y quién decide sobre el territorio. Reúne las cooperativas, las decisiones por consenso, la vivienda compartida, las ecoaldeas y los derechos de uso tradicionales.'
+];
 // Colores del póster original de la Flor de la Permacultura (tonos vivos, con transparencia entre pétalos)
 const COLP=['#A9D28D','#F3EE8F','#FBBA6E','#EE8189','#C28BCB','#8D8FD0','#8ED0E4'];
 const dark=(hex,f)=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255,m=1-f;return '#'+[r,g,b].map(v=>Math.round(v*m).toString(16).padStart(2,'0')).join('')};
@@ -1041,7 +1051,8 @@ function florPanel(){
   const total=lista.length, vis=FL.todas?lista:lista.slice(0,8);
   const filas=vis.map(a=>{const c=a[key];return `<li><span class="ac-n" style="background:${colE(p.i,key)}">${c}</span><div><b>${a.a}</b><small>en ${c} de ${n} espacio${c>1?'s':''}</small>${key==='i'&&a.esp.length?`<div class="ac-esp">${a.esp.map(e=>`<em>${e}</em>`).join('')}</div>`:''}</div></li>`}).join('');
   const vacio=!total?`<p class="ac-vacio">${q?'No hay acciones que coincidan con la búsqueda.':(key==='i'?'Aún no hay acciones implementadas en este pétalo: es una oportunidad abierta.':'Sin registros en esta etapa.')}</p>`:'';
-  return `<div class="fp-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3><small>Campos asociados: ${p.subtitulo}</small></div></div>
+  return `<div class="fp-h"><div class="pnum">${p.i+1}</div><div><h3>${p.nombre}</h3></div></div>
+   <p class="fp-intro">${INTRO[p.i]}</p>
    <div class="ftabs">${tabs}</div>
    <p class="fp-desc"><b>${E.t}: ${num(p[E.sc])} de 10.</b> ${E.d} ${E.lista}: <b>${p[E.a]}</b>, en ${p[E.k]} de ${n} espacios con diagnóstico.</p>
    <input type="search" class="fp-q" id="fp-q" placeholder="Buscar una acción de este pétalo" value="${FL.q.replace(/"/g,'&quot;')}" aria-label="Buscar una acción">
