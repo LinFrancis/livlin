@@ -362,15 +362,18 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
 @media(max-width:520px){.ri .ftabs{grid-template-columns:1fr}
 .ri .ftab{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 10px}
 .ri .ftab i{flex-basis:100%;margin-top:2px}}
-.ri .ri-index{position:fixed;left:0;right:0;top:var(--nav-h,72px);z-index:900;background:rgba(250,249,244,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);transform:translateY(-130%);transition:transform .3s}
-.ri .ri-index.on{transform:none}
+.ri .ri-index{position:static !important;top:auto !important;transform:none !important;background:#FAF9F4;border-bottom:1px solid var(--border);border-top:1px solid var(--border)}
+.ri .ri-top{position:fixed;left:18px;bottom:22px;z-index:900;background:var(--text);color:#fff;font-weight:700;font-size:.85rem;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.22);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+.ri .ri-top.on{opacity:1;pointer-events:auto;transform:none}
+.ri .ri-top:hover{background:var(--teal-dark);color:#fff}
 .ri .ri-index-in{max-width:var(--max);margin:0 auto;padding:0 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
 .ri .ri-index-in::-webkit-scrollbar{display:none}
 .ri .ri-index a{flex:none;padding:12px 12px;font-size:.8rem;font-weight:700;color:var(--text-soft);border-bottom:3px solid transparent;text-decoration:none}
 .ri .ri-index a:hover{color:var(--teal)}
 .ri .ri-index a.act{color:var(--text);border-bottom-color:var(--green-dark)}
 .ri .ri-index a.ri-index-res{margin-left:auto;color:var(--teal-dark)}
-.ri section[id]{scroll-margin-top:120px}
+.ri section[id]{scroll-margin-top:90px}
+.ri .ri-index{scroll-margin-top:90px}
 .ri .ri-hero .corte-link{display:inline-block;margin-top:10px;color:#7ADAA5;font-weight:700;font-size:.9rem;text-decoration:underline;text-underline-offset:3px}
 .ri .flor-svg svg{max-width:620px;filter:drop-shadow(0 8px 22px rgba(17,46,77,.10))}
 .ri .petalo{cursor:pointer;transition:opacity .2s,filter .2s}
@@ -492,6 +495,7 @@ nav{position:sticky;top:0;z-index:20;background:rgba(250,249,244,.92);backdrop-f
     <a href="impacto-resumen.html" class="ri-index-res">Resumen de 1 página →</a>
   </div>
 </nav>
+<a href="#ri-index" class="ri-top" id="ri-top" aria-label="Volver al menú del reporte">↑ Menú</a>
 
 <section class="numbers" id="numeros">
   <div class="wrap">
@@ -1089,16 +1093,11 @@ florElegir(0);
    </div>`;
 })();
 
-// ---- Índice fijo: aparece al pasar la portada y marca la sección actual
+// ---- Menú del reporte (dentro de la página) y botón «↑ Menú» al bajar
 (function(){
-  const idx=$('ri-index'), hero=document.querySelector('.ri-hero'), nav=document.querySelector('.navbar');
-  const ajustar=()=>{const h=nav?Math.round(nav.getBoundingClientRect().height):72;document.documentElement.style.setProperty('--nav-h',h+'px')};
-  ajustar();window.addEventListener('resize',ajustar);
-  const mostrar=()=>idx.classList.toggle('on',hero.getBoundingClientRect().bottom<(nav?nav.getBoundingClientRect().height:72)+8);
+  const idx=$('ri-index'), btn=$('ri-top');
+  const mostrar=()=>btn.classList.toggle('on',idx.getBoundingClientRect().bottom<0);
   mostrar();window.addEventListener('scroll',mostrar,{passive:true});
-  const enlaces=[...idx.querySelectorAll('a[href^="#"]')],ids=a=>(a.dataset.s||a.getAttribute('href').slice(1)).split(' '),secs=enlaces.flatMap(a=>ids(a).map(i=>document.getElementById(i)));
-  const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){enlaces.forEach(a=>a.classList.toggle('act',ids(a).includes(e.target.id)));const a=idx.querySelector('a.act');if(a)a.scrollIntoView({block:'nearest',inline:'center'})}}),{rootMargin:'-30% 0px -60% 0px'});
-  secs.forEach(sc=>sc&&io2.observe(sc));
 })();
 
 // ---- Contadores y reveal
